@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Godot-Specific Ignores
+.DS_Store
+*~
+.import/
+logs/
