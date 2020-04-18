@@ -12,15 +12,19 @@
 script = ExtResource( 1 )
 
 [node name="TamagotchiTextBox" parent="." instance=ExtResource( 4 )]
-position = Vector2( 0, 232 )
+position = Vector2( 0, 435 )
+scale = Vector2( 5, 5 )
 
 [node name="Tamagotchi" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 5, 5 )
 
 [node name="VNTextBox" parent="." instance=ExtResource( 3 )]
-position = Vector2( 192, 232 )
+position = Vector2( 360, 435 )
+scale = Vector2( 5, 5 )
 
 [node name="CharacterView" parent="." instance=ExtResource( 5 )]
-position = Vector2( 192, 0 )
+position = Vector2( 360, 4 )
+scale = Vector2( 5, 5 )
 
 [node name="DialogManager" type="Node" parent="."]
 script = ExtResource( 6 )

@@ -7,4 +7,5 @@ func _ready():
 
 
 func set_label(label):
+	
 	$TextBox/Label.text = label

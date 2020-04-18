@@ -2,36 +2,30 @@
 
 [ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://UIContainer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Resources/Graphics/abstract-background-4756987_640.jpg" type="Texture" id=3]
 [ext_resource path="res://UIContainer.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Graphics/VPS/Screen.png" type="Texture" id=5]
 
 [node name="Screen" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = 32.0
-margin_top = 40.0
-margin_right = 163.0
-margin_bottom = 164.0
-rect_scale = Vector2( 0.975791, 1.03561 )
-size_flags_horizontal = 7
-size_flags_vertical = 7
-texture = ExtResource( 3 )
-expand = true
-stretch_mode = 2
+margin_left = 3.50618
+margin_top = 5.11095
+margin_right = 67.5062
+margin_bottom = 76.1109
+texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 91.9434, 92.4151 )
-scale = Vector2( 0.0902955, 0.0902955 )
+position = Vector2( 32, 48 )
+scale = Vector2( 0.0556879, 0.0484998 )
 frames = ExtResource( 1 )
+frame = 1
 speed_scale = 0.2
 playing = true
 
 [node name="UIContainer" parent="." instance=ExtResource( 2 )]
-margin_left = 28.0
-margin_top = 134.0
-margin_right = 175.0
-margin_bottom = 178.0
+margin_bottom = 17.0
+rect_scale = Vector2( 1, 1 )
 script = ExtResource( 4 )
