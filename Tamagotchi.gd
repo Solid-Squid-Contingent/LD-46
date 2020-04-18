@@ -68,7 +68,7 @@ func age_up() -> void:
 		emit_signal("switch_to_sick")
 	
 func is_satisfied(need) -> bool:
-	if need == 100:
+	if need >= 100:
 		return true
 	return false
 
