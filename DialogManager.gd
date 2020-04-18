@@ -2,6 +2,8 @@ extends Node
 
 export(String, FILE) var startFileName
 
+var choiceButtonScene = preload("res://ChoiceButton.tscn")
+
 var data
 var dataPosition
 var dialogChoices
@@ -11,10 +13,6 @@ var maxDataPosition
 func _ready():
 	loadFile(startFileName)
 	
-	printNextDialogLine()
-	printNextDialogLine()
-	printNextDialogLine()
-	printNextDialogLine()
 	printNextDialogLine()
 	printNextDialogLine()
 
@@ -35,20 +33,25 @@ func loadFile(fileName):
 	maxDataPosition = [data["next"].size()]
 
 
-func printNextDialogLine():
+func getCurrentDialogData():
 	var currentData = data
 	for i in range(dataPosition.size()):
 		currentData = currentData["next"][dataPosition[i]]
 		if i < dataPosition.size() -1:
 			currentData = currentData["choices"][dialogChoices[i]]
+	return currentData
+
+
+func printNextDialogLine():
+	var currentData = getCurrentDialogData()
 		
 	print(currentData["name"], ": ", currentData["text"])
 	if currentData.has("choices"):
-		var choice = 0 #TODO
-		
-		dialogChoices.push_back(choice)
-		dataPosition.push_back(0)
-		maxDataPosition.push_back(currentData["choices"][choice]["next"].size())
+		for i in range(currentData["choices"].size()):
+			var button = choiceButtonScene.instance()
+			button.setLabel(currentData["choices"][i]["text"]) 
+			button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
+			get_node("/root/Main/CharacterView/ChoiceButtonContainer").add_child(button)
 	else:
 		while dataPosition.size() > 1 and \
 		 	  dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
@@ -59,6 +62,11 @@ func printNextDialogLine():
 		dataPosition[dataPosition.size() - 1] += 1
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_ChoiceButtonPressed(choice):
+	var currentData = getCurrentDialogData()
+	
+	dialogChoices.push_back(choice)
+	dataPosition.push_back(0)
+	maxDataPosition.push_back(currentData["choices"][choice]["next"].size())
+	
+	printNextDialogLine()
