@@ -12,6 +12,8 @@ var awakeness: float = 100
 var fun: float = 100
 var happiness: float = 100
 
+export(float) var needGain = 10
+
 onready var fullProgressBar = $UIContainer/FullnessUI/TextureProgress
 onready var awakeProgressBar = $UIContainer/AwakenessUI/TextureProgress
 onready var funProgressBar = $UIContainer/FunUI/TextureProgress
@@ -25,9 +27,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	reduce_all_needs(delta * 2)
-	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
-		die()
-	update_progress_bars()
 	
 	age += delta
 	if stage < 2 and age > 100:
@@ -36,15 +35,24 @@ func _process(delta):
 
 func reduce_fullness(amount):
 	fullness -= amount
+	fullProgressBar.value = fullness
+	die_if_dead()
 
 func reduce_awakeness(amount):
 	awakeness -= amount
+	awakeProgressBar.value = awakeness
+	die_if_dead()
 
 func reduce_fun(amount):
 	fun -= amount
+	funProgressBar.value = fun
+	die_if_dead()
 
 func reduce_happiness(amount):
 	happiness -= amount
+	petHappyProgressBar.value = happiness
+	sickHappyProgressBar.value = happiness
+	die_if_dead()
 
 func reduce_all_needs(amount):
 	reduce_fullness(amount)
@@ -52,12 +60,9 @@ func reduce_all_needs(amount):
 	reduce_fun(amount)
 	reduce_happiness(amount)
 
-func update_progress_bars() -> void:
-	fullProgressBar.value = fullness
-	awakeProgressBar.value = awakeness
-	funProgressBar.value = fun
-	petHappyProgressBar.value = happiness
-	sickHappyProgressBar.value = happiness
+func die_if_dead():
+	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
+		die()
 	
 func die() -> void:
 	emit_signal("tamagotchi_died")
@@ -77,14 +82,14 @@ func _on_FoodButton_pressed() -> void:
 		#play nono animation
 		pass
 	else:
-		fullness = fullness + 10
+		fullness = min(fullness + needGain, 100)
 
 func _on_SleepButton_pressed():
 	if is_satisfied(awakeness):
 		#play nono animation
 		pass
 	else:
-		awakeness = awakeness + 10
+		awakeness = min(awakeness + needGain, 100)
 
 
 func _on_PlayButton_pressed():
@@ -92,7 +97,7 @@ func _on_PlayButton_pressed():
 		#play nono animation
 		pass
 	else:
-		fun = fun + 10
+		fun = min(fun + needGain, 100)
 
 
 func _on_ExtraButton_pressed():
@@ -100,4 +105,4 @@ func _on_ExtraButton_pressed():
 		#play nono animation
 		pass
 	else:
-		happiness = happiness + 10
+		happiness = min(happiness + needGain, 100)
