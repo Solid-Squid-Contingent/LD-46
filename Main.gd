@@ -4,10 +4,6 @@ extends Node2D
 func _ready():
 	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 func game_over() -> void:
 	get_tree().paused = true
 	$GameOverScreen.popup()
