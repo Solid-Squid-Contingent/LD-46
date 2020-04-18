@@ -1,35 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://GameOverScreen.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Graphics/swimming-pool-4942724_640.jpg" type="Texture" id=2]
 
-[node name="GameOverScreen" type="PopupPanel"]
+[node name="GameOverScreen" type="TextureRect"]
 pause_mode = 2
-visible = true
-anchor_left = -0.025
-anchor_top = -0.022
-anchor_right = -0.025
-anchor_bottom = -0.022
-margin_left = 80.0
-margin_top = 71.92
-margin_right = 592.0
-margin_bottom = 327.92
+margin_right = 640.0
+margin_bottom = 360.0
+texture = ExtResource( 2 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 margin_left = 4.0
 margin_top = 4.0
-margin_right = 508.0
-margin_bottom = 252.0
+margin_right = 636.0
+margin_bottom = 356.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2"]
-margin_right = 504.0
-margin_bottom = 224.0
+margin_right = 632.0
+margin_bottom = 328.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -37,8 +29,8 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/MarginContainer"]
-margin_right = 504.0
-margin_bottom = 224.0
+margin_right = 632.0
+margin_bottom = 328.0
 text = "
 
 
@@ -47,21 +39,21 @@ text = "
 
 
 
-										Game Over"
+																														Game Over"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
-margin_top = 228.0
-margin_right = 504.0
-margin_bottom = 248.0
+margin_top = 332.0
+margin_right = 632.0
+margin_bottom = 352.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="QuitButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
-margin_right = 250.0
+margin_right = 314.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -81,8 +73,8 @@ margin_bottom = 7.0
 text = "Quit"
 
 [node name="RestartButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
-margin_left = 254.0
-margin_right = 504.0
+margin_left = 318.0
+margin_right = 632.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

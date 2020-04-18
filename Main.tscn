@@ -22,10 +22,6 @@ position = Vector2( 192, 232 )
 position = Vector2( 192, 0 )
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 6 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 640.0
-margin_bottom = 360.0
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]

@@ -35,6 +35,7 @@ __meta__ = {
 position = Vector2( 91.9434, 92.4151 )
 scale = Vector2( 0.0902955, 0.0902955 )
 frames = ExtResource( 2 )
+frame = 1
 speed_scale = 0.2
 playing = true
 

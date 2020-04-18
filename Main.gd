@@ -16,7 +16,7 @@ func _ready():
 #	pass
 func game_over() -> void:
 	get_tree().paused = true
-	$GameOverScreen.popup_centered_ratio()
+	$GameOverScreen.popup()
 
 func restart_game() -> void:
 	get_tree().reload_current_scene()
