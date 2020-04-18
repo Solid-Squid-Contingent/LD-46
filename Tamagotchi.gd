@@ -14,11 +14,11 @@ var happiness: float = 100
 
 export(float) var needGain = 10
 
-onready var fullProgressBar = $UIContainer/FullnessUI/TextureProgress
-onready var awakeProgressBar = $UIContainer/AwakenessUI/TextureProgress
-onready var funProgressBar = $UIContainer/FunUI/TextureProgress
-onready var petHappyProgressBar = $UIContainer/PetHappinessUI/TextureProgress
-onready var sickHappyProgressBar = $UIContainer/SickHappinessUI/TextureProgress
+onready var fullProgressBar = $Screen/UIContainer/FullnessUI/TextureProgress
+onready var awakeProgressBar = $Screen/UIContainer/AwakenessUI/TextureProgress
+onready var funProgressBar = $Screen/UIContainer/FunUI/TextureProgress
+onready var petHappyProgressBar = $Screen/UIContainer/PetHappinessUI/TextureProgress
+onready var sickHappyProgressBar = $Screen/UIContainer/SickHappinessUI/TextureProgress
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
