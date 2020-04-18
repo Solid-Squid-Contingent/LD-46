@@ -18,7 +18,3 @@ func _on_QuitButton_pressed():
 
 func _on_RestartButton_pressed():
 	emit_signal("RestartButton_pressed")
-
-
-func _on_GameOverScreen_QuitButton_pressed():
-	pass # Replace with function body.
