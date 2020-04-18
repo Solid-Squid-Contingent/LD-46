@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="VNTextBox" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+scale = Vector2( 1, 1.6 )
+color = Color( 0, 0.0313726, 0.298039, 1 )
+polygon = PoolVector2Array( 0, 0, 448, 0, 448, 80, 0, 80 )

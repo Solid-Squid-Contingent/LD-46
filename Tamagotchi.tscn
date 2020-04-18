@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Ressources/Graphics/abstract-background-4756987_640.jpg" type="Texture" id=1]
 [ext_resource path="res://Ressources/Animations/cassy.tres" type="SpriteFrames" id=2]
 [ext_resource path="res://TextureButton.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Ressources/Graphics/tamgotchiframe.png" type="Texture" id=4]
+[ext_resource path="res://Frame.tscn" type="PackedScene" id=4]
 [ext_resource path="res://TamagotchiUIElement.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tamagotchi.gd" type="Script" id=6]
 
 [sub_resource type="StreamTexture" id=1]
 load_path = "res://.import/night-sleep.png-45fe1e690b7dc6e0ba78657d6cf273c9.stex"
@@ -19,93 +20,93 @@ load_path = "res://.import/forearm.png-fb3ae214b035fcfd68800d62a865db2f.stex"
 load_path = "res://.import/overdose.png-da601d93ab27333cac3d55631df3047c.stex"
 
 [node name="Tamagotchi" type="Node2D"]
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 
+[node name="Frame" parent="." instance=ExtResource( 4 )]
+
 [node name="Background" type="TextureRect" parent="."]
-margin_top = 227.492
-margin_right = 133.0
-margin_bottom = 360.492
+margin_left = 32.0
+margin_top = 40.0
+margin_right = 163.0
+margin_bottom = 164.0
+rect_scale = Vector2( 0.975791, 1.03561 )
 size_flags_horizontal = 7
 size_flags_vertical = 7
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Frame" type="TextureRect" parent="."]
-margin_top = 227.492
-margin_right = 133.0
-margin_bottom = 360.492
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 66, 266.264 )
-scale = Vector2( 0.06, 0.06 )
+position = Vector2( 91.9434, 92.4151 )
+scale = Vector2( 0.0902955, 0.0902955 )
 frames = ExtResource( 2 )
 speed_scale = 0.2
 playing = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="ButtonContainer" type="MarginContainer" parent="."]
-margin_top = 320.345
-margin_right = 133.0
-margin_bottom = 361.345
-custom_constants/margin_top = 8
+margin_left = 32.0
+margin_top = 180.0
+margin_right = 160.0
+margin_bottom = 204.0
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ButtonContainer"]
-margin_top = 8.0
-margin_right = 133.0
-margin_bottom = 41.0
+[node name="CenterContainer" type="CenterContainer" parent="ButtonContainer"]
+margin_right = 128.0
+margin_bottom = 24.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonContainer/CenterContainer"]
+margin_left = 15.0
+margin_top = 4.0
+margin_right = 112.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 0
+custom_constants/separation = 11
 alignment = 1
-__meta__ = {
-"_edit_lock_": true
-}
 
-[node name="FoodButton" parent="ButtonContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 2.0
-margin_right = 34.0
-margin_bottom = 33.0
+[node name="FoodButton" parent="ButtonContainer/CenterContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_right = 16.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="SleepButton" parent="ButtonContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 34.0
-margin_right = 66.0
-margin_bottom = 33.0
+[node name="SleepButton" parent="ButtonContainer/CenterContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 27.0
+margin_right = 43.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="PlayButton" parent="ButtonContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 66.0
-margin_right = 98.0
-margin_bottom = 33.0
+[node name="PlayButton" parent="ButtonContainer/CenterContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 54.0
+margin_right = 70.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="ExtraButton" parent="ButtonContainer/HBoxContainer" instance=ExtResource( 3 )]
-margin_left = 98.0
-margin_right = 130.0
-margin_bottom = 33.0
+[node name="ExtraButton" parent="ButtonContainer/CenterContainer/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 81.0
+margin_right = 97.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="UIContainer" type="MarginContainer" parent="."]
-margin_left = 6.0
-margin_top = 300.0
-margin_right = 126.0
-margin_bottom = 330.0
+margin_left = 40.0
+margin_top = 141.0
+margin_right = 160.0
+margin_bottom = 171.0
+rect_scale = Vector2( 0.924281, 0.924281 )
 __meta__ = {
-"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -142,7 +143,7 @@ stretch_mode = 6
 [node name="SickUI" parent="UIContainer/HBoxContainer" instance=ExtResource( 5 )]
 visible = false
 margin_left = 96.0
-margin_right = 120.0
+margin_right = 119.0
 size_flags_horizontal = 3
 texture = SubResource( 4 )
 stretch_mode = 6
