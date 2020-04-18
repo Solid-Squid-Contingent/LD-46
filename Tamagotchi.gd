@@ -31,6 +31,7 @@ func _process(delta):
 	
 	if (age > 100):
 		age_up()
+		age = 0
 	
 	fullProgressBar.value = fullness
 	awakeProgressBar.value = awakeness
