@@ -1,0 +1,65 @@
+[
+	{
+		"name" : "Lloyd",
+		"text" : "Hi, I'm Lloyd"
+	},
+	{
+		"name" : "Lloyd",
+		"text" : "How are you?",
+		"reduce_fullness": 50,
+		"choices" :
+		[
+			{
+				"text" : "Good",
+				"next" :
+				[
+					{
+						"name" : "Lloyd",
+						"text" : "That's great!"
+					},
+					{
+						"name" : "Lloyd",
+						"text" : "But how are you really?",
+						"choices" :
+						[
+							{
+								"text" : "Still Good",
+								"next" :
+								[
+									{
+										"name" : "Lloyd",
+										"text" : "That's actually great!"
+									}
+								]
+							},
+							{
+								"text" : "Horrible",
+								"next" :
+								[
+									{
+										"name" : "Lloyd",
+										"text" : "OH NOOOOOOOOOOOOOOOOOOOOOOOOOOO!"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"text" : "Horrible",
+				"next" :
+				[
+					{
+						"name" : "Lloyd",
+						"text" : "OH NOOOOOOOOOOOOOOOOOOOOOOOOOOO!"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Lloyd",
+		"text" : "Anyways... Get rid, squid!"
+	}
+]

@@ -106,3 +106,23 @@ func _on_ExtraButton_pressed():
 		pass
 	else:
 		happiness = min(happiness + needGain, 100)
+
+
+func _on_DialogManager_reduce_awakeness(amount):
+	reduce_awakeness(amount)
+
+
+func _on_DialogManager_reduce_fullness(amount):
+	reduce_fullness(amount)
+
+
+func _on_DialogManager_reduce_fun(amount):
+	reduce_fun(amount)
+
+
+func _on_DialogManager_reduce_happiness(amount):
+	reduce_happiness(amount)
+
+
+func _on_DialogManager_reduce_everything(amount):
+	reduce_all_needs(amount)
