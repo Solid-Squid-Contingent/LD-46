@@ -12,6 +12,9 @@ var awakeness: float = 100
 var fun: float = 100
 var happiness: float = 100
 
+var needDecay: float = 0
+export(int) var needDecayPerSecond: int = 1
+
 export(float) var needGain = 10
 
 onready var fullProgressBar = $Screen/UIContainer/FullnessUI/TextureProgress
@@ -23,10 +26,14 @@ onready var sickHappyProgressBar = $Screen/UIContainer/SickHappinessUI/TexturePr
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	emit_signal("switch_to_pet")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	reduce_all_needs(delta * 2)
+	needDecay += delta * needDecayPerSecond
+	if needDecay > 10:
+		reduce_all_needs(10)
+		needDecay -= 10
 	
 	age += delta
 	if stage < 2 and age > 100:

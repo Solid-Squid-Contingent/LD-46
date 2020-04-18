@@ -1,40 +1,13 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Resources/Graphics/abstract-background-4756987_640.jpg" type="Texture" id=1]
+[ext_resource path="res://Resources/Graphics/VPS/vps_text.png" type="Texture" id=2]
 
 [node name="TamagotchiTextBox" type="Node2D"]
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2( 1, 1.6 )
-color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( 0, 0, 192, 0, 192, 32, 192, 80, 0, 80 )
-
-[node name="Polygon2D2" type="Polygon2D" parent="."]
-position = Vector2( 0, 2.26415 )
-scale = Vector2( 1, 1.71698 )
-color = Color( 0.211765, 0.211765, 0.211765, 1 )
-polygon = PoolVector2Array( 8, -1.31868, 96, -1.31868, 184, -1.31868, 184, 68.5714, 8, 68.5714 )
-
-[node name="Polygon2D3" type="Polygon2D" parent="."]
-position = Vector2( 0, -24.1905 )
-scale = Vector2( 1, 2.16667 )
-color = Color( 0.309804, 0.309804, 0.309804, 1 )
-polygon = PoolVector2Array( 16, 14.8571, 16, 62.8571, 176, 62.8571, 176, 14.8571 )
-
-[node name="Polygon2D4" type="Polygon2D" parent="."]
-position = Vector2( 0, -19.2 )
-scale = Vector2( 1, 2.2 )
-color = Color( 0, 0, 0, 1 )
-polygon = PoolVector2Array( 24, 16, 24, 56, 168, 56, 168, 16 )
-
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 32.0
-margin_top = 24.0
-margin_right = 160.0
-margin_bottom = 96.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 2
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
