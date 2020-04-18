@@ -17,7 +17,7 @@ func spawnEnemy():
 	var enemy = enemyScene.instance()
 	$EnemySpawnPath/EnemySpawnLocation.unit_offset = randf()
 	enemy.position = $EnemySpawnPath/EnemySpawnLocation.position
-	$Background.add_child(enemy)
+	add_child(enemy)
 
 
 func moveLeft():

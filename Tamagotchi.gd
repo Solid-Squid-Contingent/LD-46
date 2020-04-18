@@ -18,11 +18,11 @@ export(int) var needDecayPerSecond: int = 1
 
 export(float) var needGain = 10
 
-onready var fullProgressBar = $Screen/UIContainer/FullnessUI/TextureProgress
-onready var awakeProgressBar = $Screen/UIContainer/AwakenessUI/TextureProgress
-onready var funProgressBar = $Screen/UIContainer/FunUI/TextureProgress
-onready var petHappyProgressBar = $Screen/UIContainer/PetHappinessUI/TextureProgress
-onready var sickHappyProgressBar = $Screen/UIContainer/SickHappinessUI/TextureProgress
+onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
+onready var awakeProgressBar = $Screen/HomeScreen/UIContainer/AwakenessUI/TextureProgress
+onready var funProgressBar = $Screen/HomeScreen/UIContainer/FunUI/TextureProgress
+onready var petHappyProgressBar = $Screen/HomeScreen/UIContainer/PetHappinessUI/TextureProgress
+onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessUI/TextureProgress
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -102,31 +102,31 @@ func is_satisfied(need) -> bool:
 	return false
 
 func switch_to_minigame():
-	$Screen.visible = false
-	$MinigameScreen.visible = true
+	$Screen/HomeScreen.visible = false
+	$Screen/MinigameScreen.visible = true
 	minigame = true
 
-func switch_to_normal():
-	$Screen.visible = true
-	$MinigameScreen.visible = false
+func switch_to_home():
+	$Screen/HomeScreen.visible = true
+	$Screen/MinigameScreen.visible = false
 	minigame = false
 
 func _on_FoodButton_pressed():
 	if minigame:
-		$MinigameScreen.moveLeft()
+		$Screen/MinigameScreen.moveLeft()
 	else:
 		change_fullness(needGain)
 
 func _on_SleepButton_pressed():
 	if minigame:
-		$MinigameScreen.shoot()
+		$Screen/MinigameScreen.shoot()
 	else:
 		change_awakeness(needGain)
 
 
 func _on_PlayButton_pressed():
 	if minigame:
-		$MinigameScreen.moveRight()
+		$Screen/MinigameScreen.moveRight()
 	else:
 		change_fun(needGain)
 		switch_to_minigame()
@@ -134,9 +134,9 @@ func _on_PlayButton_pressed():
 
 func _on_ExtraButton_pressed():
 	if minigame:
-		switch_to_normal()
+		switch_to_home()
 	else:
-		change_fullness(needGain)
+		change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):

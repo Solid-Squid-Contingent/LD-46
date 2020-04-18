@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://VNTextBox.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Graphics/VNUI/character_dialogue.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/Roboto.tres" type="DynamicFont" id=3]
 
 [node name="VNTextBox" type="Node2D"]
 script = ExtResource( 1 )
@@ -21,6 +22,7 @@ margin_top = 8.0
 margin_right = 152.0
 margin_bottom = 40.0
 mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

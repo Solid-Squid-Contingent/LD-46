@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
-[ext_resource path="res://UIContainer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://UIContainer.gd" type="Script" id=4]
+[ext_resource path="res://TamagotchiMinigameScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TamagotchiHomeScreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Graphics/VPS/Screen.png" type="Texture" id=5]
 
 [node name="Screen" type="Node2D"]
@@ -17,15 +16,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 32, 48 )
-scale = Vector2( 0.0556879, 0.0484998 )
-frames = ExtResource( 1 )
-frame = 1
-speed_scale = 0.2
-playing = true
+[node name="MinigameScreen" parent="." instance=ExtResource( 1 )]
+visible = false
 
-[node name="UIContainer" parent="." instance=ExtResource( 2 )]
-margin_bottom = 17.0
-rect_scale = Vector2( 1, 1 )
-script = ExtResource( 4 )
+[node name="HomeScreen" parent="." instance=ExtResource( 2 )]
