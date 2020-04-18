@@ -24,26 +24,41 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	fullness -= delta
-	awakeness -= delta
-	fun -= delta
-	happiness -= delta
-	
+	reduce_all_needs(delta * 2)
 	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
 		die()
+	update_progress_bars()
 	
 	age += delta
-	
 	if stage < 2 and age > 100:
 		age_up()
 		age = 0
-	
+
+func reduce_fullness(amount):
+	fullness -= amount
+
+func reduce_awakeness(amount):
+	awakeness -= amount
+
+func reduce_fun(amount):
+	fun -= amount
+
+func reduce_happiness(amount):
+	happiness -= amount
+
+func reduce_all_needs(amount):
+	reduce_fullness(amount)
+	reduce_awakeness(amount)
+	reduce_fun(amount)
+	reduce_happiness(amount)
+
+func update_progress_bars() -> void:
 	fullProgressBar.value = fullness
 	awakeProgressBar.value = awakeness
 	funProgressBar.value = fun
 	petHappyProgressBar.value = happiness
 	sickHappyProgressBar.value = happiness
-
+	
 func die() -> void:
 	emit_signal("tamagotchi_died")
 
