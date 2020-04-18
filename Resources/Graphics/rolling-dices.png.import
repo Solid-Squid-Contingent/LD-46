@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rolling-dices.png-7c4a2555163bc30fa7b5aa81c33061d8.stex"
+path="res://.import/rolling-dices.png-fa1b6bad1fa6d7f3dd94e61972d7d3b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/rolling-dices.png"
-dest_files=[ "res://.import/rolling-dices.png-7c4a2555163bc30fa7b5aa81c33061d8.stex" ]
+source_file="res://Resources/Graphics/rolling-dices.png"
+dest_files=[ "res://.import/rolling-dices.png-fa1b6bad1fa6d7f3dd94e61972d7d3b7.stex" ]
 
 [params]
 

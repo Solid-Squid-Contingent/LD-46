@@ -24,7 +24,7 @@ position = Vector2( 192, 0 )
 
 [node name="DialogManager" type="Node" parent="."]
 script = ExtResource( 6 )
-startFileName = "res://Ressources/Dialog/test.json"
+startFileName = "res://Resources/Dialog/test.json"
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false

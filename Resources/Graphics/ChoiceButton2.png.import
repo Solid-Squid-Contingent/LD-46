@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cassy_happy.png-c0fd7824aaf450a191f3e31b25ca421e.stex"
+path="res://.import/ChoiceButton2.png-49a854ff3f4cbc9908bc757805fc5028.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/cassy_happy.png"
-dest_files=[ "res://.import/cassy_happy.png-c0fd7824aaf450a191f3e31b25ca421e.stex" ]
+source_file="res://Resources/Graphics/ChoiceButton2.png"
+dest_files=[ "res://.import/ChoiceButton2.png-49a854ff3f4cbc9908bc757805fc5028.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=0.025
+svg/scale=1.0

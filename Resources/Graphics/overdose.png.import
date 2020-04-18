@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/overdose.png-da601d93ab27333cac3d55631df3047c.stex"
+path="res://.import/overdose.png-8753b521349c41e3ed2f209db4753e6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/overdose.png"
-dest_files=[ "res://.import/overdose.png-da601d93ab27333cac3d55631df3047c.stex" ]
+source_file="res://Resources/Graphics/overdose.png"
+dest_files=[ "res://.import/overdose.png-8753b521349c41e3ed2f209db4753e6c.stex" ]
 
 [params]
 

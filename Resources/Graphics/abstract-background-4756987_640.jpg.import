@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/night-sleep.png-45fe1e690b7dc6e0ba78657d6cf273c9.stex"
+path="res://.import/abstract-background-4756987_640.jpg-ba67ed4d5b5df25756ebd718d9346101.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/night-sleep.png"
-dest_files=[ "res://.import/night-sleep.png-45fe1e690b7dc6e0ba78657d6cf273c9.stex" ]
+source_file="res://Resources/Graphics/abstract-background-4756987_640.jpg"
+dest_files=[ "res://.import/abstract-background-4756987_640.jpg-ba67ed4d5b5df25756ebd718d9346101.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

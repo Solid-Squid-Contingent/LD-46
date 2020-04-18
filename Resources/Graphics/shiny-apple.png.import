@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shiny-apple-full.png-dbc9bfb6affa4ee44004b289c033175e.stex"
+path="res://.import/shiny-apple.png-c9014be2d023f372c8ff1e4cc69b27af.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/shiny-apple-full.png"
-dest_files=[ "res://.import/shiny-apple-full.png-dbc9bfb6affa4ee44004b289c033175e.stex" ]
+source_file="res://Resources/Graphics/shiny-apple.png"
+dest_files=[ "res://.import/shiny-apple.png-c9014be2d023f372c8ff1e4cc69b27af.stex" ]
 
 [params]
 

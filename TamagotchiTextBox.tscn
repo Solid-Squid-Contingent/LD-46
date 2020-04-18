@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Ressources/Graphics/abstract-background-4756987_640.jpg" type="Texture" id=1]
+[ext_resource path="res://Resources/Graphics/abstract-background-4756987_640.jpg" type="Texture" id=1]
 
 [node name="TamagotchiTextBox" type="Node2D"]
 

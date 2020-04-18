@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shiny-apple.png-2b27c926281b8962fc50f42ec20e8156.stex"
+path="res://.import/tamgotchiframe.png-bc8d6182a27cbc3fbb037afb3f8da78e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/shiny-apple.png"
-dest_files=[ "res://.import/shiny-apple.png-2b27c926281b8962fc50f42ec20e8156.stex" ]
+source_file="res://Resources/Graphics/tamgotchiframe.png"
+dest_files=[ "res://.import/tamgotchiframe.png-bc8d6182a27cbc3fbb037afb3f8da78e.stex" ]
 
 [params]
 

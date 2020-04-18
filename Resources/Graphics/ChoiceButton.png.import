@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/swimming-pool-4942724_1920.jpg-9edeebeefacedeb788478c3d01e185b9.stex"
+path="res://.import/ChoiceButton.png-b06bfaa04a05e80a4f15208aa1e07301.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressources/Graphics/swimming-pool-4942724_1920.jpg"
-dest_files=[ "res://.import/swimming-pool-4942724_1920.jpg-9edeebeefacedeb788478c3d01e185b9.stex" ]
+source_file="res://Resources/Graphics/ChoiceButton.png"
+dest_files=[ "res://.import/ChoiceButton.png-b06bfaa04a05e80a4f15208aa1e07301.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

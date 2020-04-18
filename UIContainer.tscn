@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Ressources/Graphics/overdose.png" type="Texture" id=1]
-[ext_resource path="res://Ressources/Graphics/shiny-apple.png" type="Texture" id=2]
-[ext_resource path="res://Ressources/Graphics/rolling-dices.png" type="Texture" id=3]
-[ext_resource path="res://Ressources/Graphics/forearm.png" type="Texture" id=4]
-[ext_resource path="res://Ressources/Graphics/night-sleep.png" type="Texture" id=5]
-[ext_resource path="res://Ressources/Graphics/shiny-apple-full.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Graphics/overdose.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Graphics/shiny-apple.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Graphics/rolling-dices.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Graphics/forearm.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Graphics/night-sleep.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Graphics/shiny-apple-full.png" type="Texture" id=6]
 
 [node name="UIContainer" type="MarginContainer"]
 margin_right = 147.0
