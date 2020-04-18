@@ -64,10 +64,10 @@ func die_if_dead():
 	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
 		die()
 	
-func die() -> void:
+func die():
 	emit_signal("tamagotchi_died")
 
-func age_up() -> void:
+func age_up():
 	stage += 1
 	if (stage == 2):
 		emit_signal("switch_to_sick")
@@ -77,7 +77,7 @@ func is_satisfied(need) -> bool:
 		return true
 	return false
 
-func _on_FoodButton_pressed() -> void:
+func _on_FoodButton_pressed():
 	if is_satisfied(fullness):
 		#play nono animation
 		pass

@@ -4,18 +4,18 @@ extends Node2D
 func _ready():
 	pass
 
-func game_over() -> void:
+func game_over():
 	get_tree().paused = true
 	$GameOverScreen.popup()
 
-func restart_game() -> void:
+func restart_game():
 	get_tree().reload_current_scene()
 	get_tree().paused = false
 
-func quit_game() -> void:
+func quit_game():
 	get_tree().quit()
 
-func _on_Tamagotchi_tamagotchi_died() -> void:
+func _on_Tamagotchi_tamagotchi_died():
 	game_over()
 
 func _on_GameOverScreen_QuitButton_pressed():
