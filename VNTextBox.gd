@@ -1,4 +1,4 @@
-extends TextureButton
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -7,4 +7,4 @@ func _ready():
 
 
 func set_label(label):
-	$Label.text = label
+	$TextBox/Label.text = label
