@@ -1,0 +1,109 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GameOverScreen.gd" type="Script" id=1]
+
+[node name="GameOverScreen" type="PopupPanel"]
+pause_mode = 2
+visible = true
+anchor_left = -0.025
+anchor_top = -0.022
+anchor_right = -0.025
+anchor_bottom = -0.022
+margin_left = 80.0
+margin_top = 71.92
+margin_right = 592.0
+margin_bottom = 327.92
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 508.0
+margin_bottom = 252.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2"]
+margin_right = 504.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/MarginContainer"]
+margin_right = 504.0
+margin_bottom = 224.0
+text = "
+
+
+
+
+
+
+
+										Game Over"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
+margin_top = 228.0
+margin_right = 504.0
+margin_bottom = 248.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer2/VBoxContainer/QuitButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -7.0
+margin_right = 20.0
+margin_bottom = 7.0
+text = "Quit"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
+margin_left = 254.0
+margin_right = 504.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer2/VBoxContainer/RestartButton"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -22.0
+margin_top = -8.0
+margin_right = 23.0
+margin_bottom = 6.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="VBoxContainer2/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
