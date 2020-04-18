@@ -1,5 +1,11 @@
 extends Node
 
+signal reduce_fullness(amount)
+signal reduce_awakeness(amount)
+signal reduce_fun(amount)
+signal reduce_happiness(amount)
+signal reduce_everything(amount)
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://ChoiceButton.tscn")
@@ -52,6 +58,7 @@ func print_next_dialog_line():
 	var currentData = get_current_dialog_data()
 		
 	vnTextBox.set_label(currentData["name"] + ": " + currentData["text"])
+	execute_side_effects(currentData)
 	
 	if currentData.has("choices"):
 		for i in range(currentData["choices"].size()):
@@ -69,6 +76,12 @@ func print_next_dialog_line():
 			dialogChoices.pop_back()
 			
 		dataPosition[dataPosition.size() - 1] += 1
+
+
+func execute_side_effects(currentData):
+	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
+		if currentData.has(need):
+			emit_signal(need, currentData[need])
 
 
 func _on_ChoiceButtonPressed(choice):

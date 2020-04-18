@@ -25,8 +25,14 @@ position = Vector2( 192, 0 )
 [node name="DialogManager" type="Node" parent="."]
 script = ExtResource( 6 )
 startFileName = "res://Ressources/Dialog/test.json"
+
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
+[connection signal="reduce_awakeness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_awakeness"]
+[connection signal="reduce_everything" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_everything"]
+[connection signal="reduce_fullness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fullness"]
+[connection signal="reduce_fun" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fun"]
+[connection signal="reduce_happiness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_happiness"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]

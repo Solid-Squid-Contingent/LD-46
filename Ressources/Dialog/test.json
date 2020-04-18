@@ -6,6 +6,7 @@
 	{
 		"name" : "Lloyd",
 		"text" : "How are you?",
+		"reduce_fullness": 50,
 		"choices" :
 		[
 			{
