@@ -32,11 +32,13 @@ func _unhandled_input(event):
 func load_file(fileName):
 	var data_file = File.new()
 	if data_file.open(fileName, File.READ) != OK:
+		print("File could not be read.")
 		return
 	var data_text = data_file.get_as_text()
 	data_file.close()
 	var data_parse = JSON.parse(data_text)
 	if data_parse.error != OK:
+		print("File could not be parsed as JSON.")
 		return
 		
 	data = {"next" : data_parse.result}
