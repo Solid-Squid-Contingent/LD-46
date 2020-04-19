@@ -16,6 +16,10 @@ func show_screen(screen):
 	get_tree().paused = true
 	screen.popup()
 
+func hide_screen(screen):
+	get_tree().paused = false
+	screen.go_away()
+
 func restart_game():
 	get_tree().reload_current_scene()
 	get_tree().paused = false
@@ -31,3 +35,12 @@ func _on_GameOverScreen_QuitButton_pressed():
 
 func _on_GameOverScreen_RestartButton_pressed():
 	restart_game()
+
+
+func _on_DialogManager_new_chapter(number, subtitle):
+	show_new_chapter(number, subtitle)
+
+
+func _on_ChapterScreen_gui_input(event):
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		hide_screen($ChapterScreen)

@@ -6,6 +6,7 @@
 	{
 		"name" : "Squid",
 		"text" : "Nothing, sir! ttttt",
+		"new_chapter": "Prologue",
 		"background" : "thunderstorm"
 	},
 	{
@@ -15,6 +16,7 @@
 	},{
 		"name" : "Squid",
 		"text" : "Yessssssssssssss",
+		"new_chapter": "Seeds of Friedship",
 		"characters": ["thief", "cat"]
 	},
 	{

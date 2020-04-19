@@ -8,7 +8,7 @@ onready var label = $TextBox/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	show_all_text()
 
 func set_text(text):
 	label.bbcode_text = text
