@@ -16,7 +16,7 @@ func set_text(text):
 	$ShowTextTimer.start()
 
 func set_name(name):
-	nameLabel.bbcode_text = name + ":"
+	nameLabel.bbcode_text = "[b]" + name + ":[/b]"
 
 
 func all_text_appeared():

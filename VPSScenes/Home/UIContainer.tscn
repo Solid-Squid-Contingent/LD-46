@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Resources/Graphics/VPSUI/play_5.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Graphics/VPSUI/sleep_5.png" type="Texture" id=2]
@@ -11,11 +11,13 @@
 [ext_resource path="res://Resources/Graphics/VPSUI/pet_5.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Graphics/VPSUI/health_5.png" type="Texture" id=10]
 [ext_resource path="res://Resources/Graphics/VPS/vps_unit.png" type="Texture" id=11]
+[ext_resource path="res://VPSScripts/Home/UIContainer.gd" type="Script" id=12]
 
 [node name="UIContainer" type="MarginContainer"]
 margin_right = 72.0
 margin_bottom = 16.0
 rect_scale = Vector2( 0.924281, 0.924281 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
