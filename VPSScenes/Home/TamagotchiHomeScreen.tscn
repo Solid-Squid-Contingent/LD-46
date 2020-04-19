@@ -1,8 +1,7 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Resources/Animations/Squid/egg.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://VPSScenes/Home/UIContainer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://VPSScripts/Home/UIContainer.gd" type="Script" id=3]
 [ext_resource path="res://Resources/Animations/Squid/baby.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://Resources/Animations/Squid/adult.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Resources/Graphics/Squid/Old/Eating/old_eating_1.png" type="Texture" id=6]
@@ -38,15 +37,15 @@ animations = [ {
 "name": "eat",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "happy",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "sad",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "happy",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 9 ) ],
 "loop": true,
@@ -65,7 +64,6 @@ script = ExtResource( 20 )
 [node name="UIContainer" parent="." instance=ExtResource( 2 )]
 margin_bottom = 17.0
 rect_scale = Vector2( 1, 1 )
-script = ExtResource( 3 )
 
 [node name="EggSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 35.8952, 49.3454 )
@@ -95,4 +93,6 @@ animation = "idle"
 
 [node name="AnimationTimer" type="Timer" parent="."]
 one_shot = true
+[connection signal="switch_to_pet" from="." to="UIContainer" method="_on_HomeScreen_switch_to_pet"]
+[connection signal="switch_to_sick" from="." to="UIContainer" method="_on_HomeScreen_switch_to_sick"]
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_AnimationTimer_timeout"]
