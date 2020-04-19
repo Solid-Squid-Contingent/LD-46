@@ -40,6 +40,7 @@ script = ExtResource( 10 )
 
 [node name="ChapterScreen" parent="." instance=ExtResource( 8 )]
 visible = false
+[connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]

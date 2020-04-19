@@ -1,12 +1,20 @@
 extends Node2D
+signal new_chapter(number, subtitle)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
 
 func game_over():
+	show_screen($GameOverScreen)
+
+func show_new_chapter(number, subtitle):
+	emit_signal("new_chapter", number, subtitle)
+	show_screen($ChapterScreen)
+
+func show_screen(screen):
 	get_tree().paused = true
-	$GameOverScreen.popup()
+	screen.popup()
 
 func restart_game():
 	get_tree().reload_current_scene()

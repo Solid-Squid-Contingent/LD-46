@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Fonts/orange-kid-italics.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=4]
+[ext_resource path="res://VNScenes/ChapterScreen.gd" type="Script" id=5]
 
 [node name="ChapterScreen" type="TextureRect"]
 margin_right = 538.0
@@ -11,11 +12,12 @@ margin_bottom = 303.0
 rect_scale = Vector2( 2.23, 2.23 )
 texture = ExtResource( 4 )
 expand = true
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Chapter Label" type="RichTextLabel" parent="."]
+[node name="ChapterLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
