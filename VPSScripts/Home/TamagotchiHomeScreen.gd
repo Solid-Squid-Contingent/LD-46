@@ -20,6 +20,8 @@ onready var allSprites = [
 func _ready():
 	pass # Replace with function body.
 
+func is_animating() -> bool:
+	return not animationTimer.is_stopped()
 
 func _on_Screen_eat():
 	for sprite in allSprites:
@@ -29,6 +31,7 @@ func _on_Screen_eat():
 func _on_Screen_start_sleeping():
 	for sprite in allSprites:
 		sprite.animation = "sleep"
+	animationTimer.stop()
 
 func _on_Screen_end_sleeping():
 	for sprite in allSprites:
