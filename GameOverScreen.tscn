@@ -11,6 +11,9 @@ texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 margin_left = 4.0
