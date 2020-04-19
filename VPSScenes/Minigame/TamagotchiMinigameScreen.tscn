@@ -8,14 +8,15 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 0.418121, 72, 0, 0, 0, 0, 64.4181, 72 )
 }
 
-[node name="Screen" type="Node2D"]
+[node name="Screen" type="Node2D" groups=[
+"minigame_objects",
+]]
 script = ExtResource( 2 )
 
 [node name="Player" type="AnimatedSprite" parent="."]
 position = Vector2( 32, 40 )
 scale = Vector2( 0.04, 0.04 )
 frames = ExtResource( 1 )
-frame = 1
 speed_scale = 0.2
 playing = true
 
