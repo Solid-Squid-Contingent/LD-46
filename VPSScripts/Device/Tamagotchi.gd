@@ -97,8 +97,7 @@ func change_fullness(amount):
 			emit_signal("eat")
 		fullness = min(fullness + amount, 100)
 		fullProgressBar.value = fullness
-		die_if_dead()
-		be_sad_if_not_cared_for()
+		react_to_low_needs()
 
 func change_awakeness(amount):
 	if amount > 0 and is_satisfied(awakeness):
@@ -106,8 +105,7 @@ func change_awakeness(amount):
 	else:
 		awakeness = min(awakeness + amount, 100)
 		awakeProgressBar.value = awakeness
-		die_if_dead()
-		be_sad_if_not_cared_for()
+		react_to_low_needs()
 
 func change_fun(amount):
 	if amount > 0 and is_satisfied(fun):
@@ -115,8 +113,7 @@ func change_fun(amount):
 	else:
 		fun = min(fun + amount, 100)
 		funProgressBar.value = fun
-		die_if_dead()
-		be_sad_if_not_cared_for()
+		react_to_low_needs()
 
 func change_happiness(amount):
 	if amount > 0 and is_satisfied(happiness):
@@ -127,8 +124,7 @@ func change_happiness(amount):
 		happiness = min(happiness + amount, 100)
 		petHappyProgressBar.value = happiness
 		sickHappyProgressBar.value = happiness
-		die_if_dead()
-		be_sad_if_not_cared_for()
+		react_to_low_needs()
 
 func change_all_needs(amount):
 	change_fullness(amount)
@@ -145,7 +141,11 @@ func be_sad_if_not_cared_for():
 		emit_signal("sad")
 	else:
 		emit_signal("not_sad")
-	
+
+func react_to_low_needs():
+	die_if_dead()
+	be_sad_if_not_cared_for()
+
 func die():
 	emit_signal("tamagotchi_died")
 

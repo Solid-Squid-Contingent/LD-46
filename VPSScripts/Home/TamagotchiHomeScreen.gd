@@ -67,8 +67,8 @@ func _on_Screen_not_sad():
 
 
 func _on_Screen_switch_to_pet():
-	pass # Replace with function body.
+	emit_signal("switch_to_pet")
 
 
 func _on_Screen_switch_to_sick():
-	pass # Replace with function body.
+	emit_signal("switch_to_sick")
