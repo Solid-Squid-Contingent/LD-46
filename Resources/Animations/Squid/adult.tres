@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Happy/adult_happy1.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Happy/adult_happy2.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Idle/adult_idle2.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Refuse/adult_refuse_1.png" type="Texture" id=4]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Refuse/adult_refuse_2.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Idle/adult_idle1.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Eating/adult_eating_1.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Eating/adult_eating_2.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Sad/adult_sad_1.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Sad/adult_sad_2.png" type="Texture" id=10]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Sleep/adult_sleep_1.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Talk/adult_talk_2.png" type="Texture" id=12]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Sleep/adult_sleep_2.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Graphics/Squid/Adult/Talk/adult_talk_1.png" type="Texture" id=14]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "refuse",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "eat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "sad",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "talk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "sleep",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "happy",
+"speed": 1.0
+} ]

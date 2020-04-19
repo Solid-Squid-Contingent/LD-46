@@ -64,6 +64,14 @@ margin_right = 60.6821
 margin_bottom = 84.15
 size_flags_horizontal = 3
 size_flags_vertical = 3
+[connection signal="eat" from="." to="Screen" method="_on_Tamagotchi_eat"]
+[connection signal="end_sleeping" from="." to="Screen" method="_on_Tamagotchi_end_sleeping"]
+[connection signal="end_talking" from="." to="Screen" method="_on_Tamagotchi_end_talking"]
+[connection signal="happy" from="." to="Screen" method="_on_Tamagotchi_happy"]
+[connection signal="refuse" from="." to="Screen" method="_on_Tamagotchi_refuse"]
+[connection signal="sad" from="." to="Screen" method="_on_Tamagotchi_sad"]
+[connection signal="start_sleeping" from="." to="Screen" method="_on_Tamagotchi_start_sleeping"]
+[connection signal="start_talking" from="." to="Screen" method="_on_Tamagotchi_start_talking"]
 [connection signal="pressed" from="FoodButton" to="." method="_on_FoodButton_pressed"]
 [connection signal="pressed" from="SleepButton" to="." method="_on_SleepButton_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
