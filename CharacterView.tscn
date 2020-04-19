@@ -5,8 +5,8 @@
 [node name="CharacterView" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 448.0
-margin_bottom = 232.0
+margin_right = 168.0
+margin_bottom = 87.0
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 6
@@ -15,8 +15,8 @@ __meta__ = {
 }
 
 [node name="ChoiceButtonContainer" type="VBoxContainer" parent="."]
-margin_right = 448.0
-margin_bottom = 232.0
+margin_right = 168.0
+margin_bottom = 87.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false

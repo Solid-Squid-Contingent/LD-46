@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://TamagotchiMinigameScreen.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0.418121, 72, 0, 0, 0, 0, 64.4181, 72 )
+}
+
+[node name="Screen" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Player" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 40 )
+scale = Vector2( 0.04, 0.04 )
+frames = ExtResource( 1 )
+frame = 1
+speed_scale = 0.2
+playing = true
+
+[node name="EnemySpawnPath" type="Path2D" parent="."]
+position = Vector2( -0.418121, 0 )
+curve = SubResource( 1 )
+
+[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemySpawnPath"]
+position = Vector2( 0.418121, 72 )

@@ -6,59 +6,84 @@ signal tamagotchi_died
 
 var age: float = 0
 var stage: int = 0
+var minigame: bool = false
 
 var fullness: float = 100
 var awakeness: float = 100
 var fun: float = 100
 var happiness: float = 100
 
+var needDecay: float = 0
+export(int) var needDecayPerSecond: int = 1
+
 export(float) var needGain = 10
 
-onready var fullProgressBar = $Screen/UIContainer/FullnessUI/TextureProgress
-onready var awakeProgressBar = $Screen/UIContainer/AwakenessUI/TextureProgress
-onready var funProgressBar = $Screen/UIContainer/FunUI/TextureProgress
-onready var petHappyProgressBar = $Screen/UIContainer/PetHappinessUI/TextureProgress
-onready var sickHappyProgressBar = $Screen/UIContainer/SickHappinessUI/TextureProgress
+onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
+onready var awakeProgressBar = $Screen/HomeScreen/UIContainer/AwakenessUI/TextureProgress
+onready var funProgressBar = $Screen/HomeScreen/UIContainer/FunUI/TextureProgress
+onready var petHappyProgressBar = $Screen/HomeScreen/UIContainer/PetHappinessUI/TextureProgress
+onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessUI/TextureProgress
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	emit_signal("switch_to_pet")
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	reduce_all_needs(delta * 2)
-	
-	age += delta
-	if stage < 2 and age > 100:
-		age_up()
-		age = 0
+	if not minigame:
+		needDecay += delta * needDecayPerSecond
+		if needDecay > 10:
+			change_all_needs(-10)
+			needDecay -= 10
+		
+		age += delta
+		if stage < 2 and age > 100:
+			age_up()
+			age = 0
 
-func reduce_fullness(amount):
-	fullness -= amount
-	fullProgressBar.value = fullness
-	die_if_dead()
+func change_fullness(amount):
+	if amount > 0 and is_satisfied(fullness):
+		#play nono animation
+		pass
+	else:
+		fullness = min(fullness + amount, 100)
+		fullProgressBar.value = fullness
+		die_if_dead()
 
-func reduce_awakeness(amount):
-	awakeness -= amount
-	awakeProgressBar.value = awakeness
-	die_if_dead()
+func change_awakeness(amount):
+	if amount > 0 and is_satisfied(awakeness):
+		#play nono animation
+		pass
+	else:
+		awakeness = min(awakeness + amount, 100)
+		awakeProgressBar.value = awakeness
+		die_if_dead()
 
-func reduce_fun(amount):
-	fun -= amount
-	funProgressBar.value = fun
-	die_if_dead()
+func change_fun(amount):
+	if amount > 0 and is_satisfied(fun):
+		#play nono animation
+		pass
+	else:
+		fun = min(fun + amount, 100)
+		funProgressBar.value = fun
+		die_if_dead()
 
-func reduce_happiness(amount):
-	happiness -= amount
-	petHappyProgressBar.value = happiness
-	sickHappyProgressBar.value = happiness
-	die_if_dead()
+func change_happiness(amount):
+	if amount > 0 and is_satisfied(happiness):
+		#play nono animation
+		pass
+	else:
+		happiness = min(happiness + amount, 100)
+		petHappyProgressBar.value = happiness
+		sickHappyProgressBar.value = happiness
+		die_if_dead()
 
-func reduce_all_needs(amount):
-	reduce_fullness(amount)
-	reduce_awakeness(amount)
-	reduce_fun(amount)
-	reduce_happiness(amount)
+func change_all_needs(amount):
+	change_fullness(amount)
+	change_awakeness(amount)
+	change_fun(amount)
+	change_happiness(amount)
 
 func die_if_dead():
 	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
@@ -77,52 +102,61 @@ func is_satisfied(need) -> bool:
 		return true
 	return false
 
+func switch_to_minigame():
+	$Screen/HomeScreen.visible = false
+	$Screen/MinigameScreen.visible = true
+	$Screen/MinigameScreen.paused = false
+	minigame = true
+
+func switch_to_home():
+	$Screen/HomeScreen.visible = true
+	$Screen/MinigameScreen.visible = false
+	$Screen/MinigameScreen.paused = true
+	minigame = false
+
 func _on_FoodButton_pressed():
-	if is_satisfied(fullness):
-		#play nono animation
-		pass
+	if minigame:
+		$Screen/MinigameScreen.moveLeft()
 	else:
-		fullness = min(fullness + needGain, 100)
+		change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if is_satisfied(awakeness):
-		#play nono animation
-		pass
+	if minigame:
+		$Screen/MinigameScreen.shoot()
 	else:
-		awakeness = min(awakeness + needGain, 100)
+		change_awakeness(needGain)
 
 
 func _on_PlayButton_pressed():
-	if is_satisfied(fun):
-		#play nono animation
-		pass
+	if minigame:
+		$Screen/MinigameScreen.moveRight()
 	else:
-		fun = min(fun + needGain, 100)
+		change_fun(needGain)
+		switch_to_minigame()
 
 
 func _on_ExtraButton_pressed():
-	if is_satisfied(happiness):
-		#play nono animation
-		pass
+	if minigame:
+		switch_to_home()
 	else:
-		happiness = min(happiness + needGain, 100)
+		change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):
-	reduce_awakeness(amount)
+	change_awakeness(-amount)
 
 
 func _on_DialogManager_reduce_fullness(amount):
-	reduce_fullness(amount)
+	change_fullness(-amount)
 
 
 func _on_DialogManager_reduce_fun(amount):
-	reduce_fun(amount)
+	change_fun(-amount)
 
 
 func _on_DialogManager_reduce_happiness(amount):
-	reduce_happiness(amount)
+	change_happiness(-amount)
 
 
 func _on_DialogManager_reduce_everything(amount):
-	reduce_all_needs(amount)
+	change_all_needs(-amount)

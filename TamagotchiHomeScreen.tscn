@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://UIContainer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UIContainer.gd" type="Script" id=3]
+
+[node name="HomeScreen" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 32, 48 )
+scale = Vector2( 0.0556879, 0.0484998 )
+frames = ExtResource( 1 )
+speed_scale = 0.2
+playing = true
+
+[node name="UIContainer" parent="." instance=ExtResource( 2 )]
+margin_bottom = 17.0
+rect_scale = Vector2( 1, 1 )
+script = ExtResource( 3 )
