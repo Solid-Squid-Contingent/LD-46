@@ -105,13 +105,11 @@ func is_satisfied(need) -> bool:
 func switch_to_minigame():
 	$Screen/HomeScreen.visible = false
 	$Screen/MinigameScreen.visible = true
-	$Screen/MinigameScreen.paused = false
 	minigame = true
 
 func switch_to_home():
 	$Screen/HomeScreen.visible = true
 	$Screen/MinigameScreen.visible = false
-	$Screen/MinigameScreen.paused = true
 	minigame = false
 
 func _on_FoodButton_pressed():

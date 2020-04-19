@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/food_0.png-ceabacf14ebbf8a91f93a8178e297b28.stex"
+path="res://.import/food_0.png-fc75afc00efb9465bc71cd91a40e4891.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Graphics/TamagotchiUI/food_0.png"
-dest_files=[ "res://.import/food_0.png-ceabacf14ebbf8a91f93a8178e297b28.stex" ]
+source_file="res://Resources/Graphics/VPSUI/food_0.png"
+dest_files=[ "res://.import/food_0.png-fc75afc00efb9465bc71cd91a40e4891.stex" ]
 
 [params]
 

@@ -1,7 +1,7 @@
 extends Node2D
 
 var timePassed : float = 5
-var enemyScene = preload("res://MinigameEnemy.tscn")
+var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

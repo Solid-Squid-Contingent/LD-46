@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
-[ext_resource path="res://MinigameEnemy.gd" type="Script" id=2]
+[ext_resource path="res://VPSScripts/Minigame/MinigameEnemy.gd" type="Script" id=2]
 
 [node name="AnimatedSprite" type="AnimatedSprite"]
 scale = Vector2( 0.04, 0.04 )

@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Tamagotchi.tscn" type="PackedScene" id=2]
-[ext_resource path="res://VNTextBox.tscn" type="PackedScene" id=3]
-[ext_resource path="res://TamagotchiTextBox.tscn" type="PackedScene" id=4]
-[ext_resource path="res://CharacterView.tscn" type="PackedScene" id=5]
-[ext_resource path="res://DialogManager.gd" type="Script" id=6]
+[ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
+[ext_resource path="res://VNScenes/VNTextBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://VPSScenes/Textbox/TamagotchiTextBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://VNScenes/CharacterView.tscn" type="PackedScene" id=5]
+[ext_resource path="res://VNScripts/DialogManager.gd" type="Script" id=6]
 [ext_resource path="res://GameOverScreen.tscn" type="PackedScene" id=7]
 
 [node name="Main" type="Node2D"]
@@ -32,10 +32,5 @@ startFileName = "res://Resources/Dialog/test.json"
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
-[connection signal="reduce_awakeness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_awakeness"]
-[connection signal="reduce_everything" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_everything"]
-[connection signal="reduce_fullness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fullness"]
-[connection signal="reduce_fun" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fun"]
-[connection signal="reduce_happiness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_happiness"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]

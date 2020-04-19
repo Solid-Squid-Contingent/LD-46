@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button_pressed.png-e307363df492bfeba87e4a67df3b498e.stex"
+path="res://.import/pet_0.png-19552da66b8d2c78222d243a17f55e4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Graphics/TamagotchiUI/button_pressed.png"
-dest_files=[ "res://.import/button_pressed.png-e307363df492bfeba87e4a67df3b498e.stex" ]
+source_file="res://Resources/Graphics/VPSUI/pet_0.png"
+dest_files=[ "res://.import/pet_0.png-19552da66b8d2c78222d243a17f55e4c.stex" ]
 
 [params]
 

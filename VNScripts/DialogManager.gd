@@ -8,7 +8,7 @@ signal reduce_everything(amount)
 
 export(String, FILE) var startFileName
 
-var choiceButtonScene = preload("res://ChoiceButton.tscn")
+var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
 onready var vnTextBox = get_node("/root/Main/VNTextBox")
 onready var choiceButtonContainer = get_node("/root/Main/CharacterView/ChoiceButtonContainer")
 

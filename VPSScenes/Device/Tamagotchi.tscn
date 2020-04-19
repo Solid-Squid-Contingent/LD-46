@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://TamagotchiScreen.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TextureButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://VPSScenes/Device/TamagotchiScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://VPSScenes/Device/TextureButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Resources/Graphics/VPS/shading_overlay.png" type="Texture" id=4]
-[ext_resource path="res://Tamagotchi.gd" type="Script" id=6]
+[ext_resource path="res://VPSScripts/Device/Tamagotchi.gd" type="Script" id=6]
 [ext_resource path="res://Resources/Graphics/VPS/vps_unit.png" type="Texture" id=7]
 
 [node name="Tamagotchi" type="Node2D"]

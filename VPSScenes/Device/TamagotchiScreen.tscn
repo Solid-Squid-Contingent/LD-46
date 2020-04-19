@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://TamagotchiMinigameScreen.tscn" type="PackedScene" id=1]
-[ext_resource path="res://TamagotchiHomeScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://VPSScenes/Home/TamagotchiHomeScreen.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Graphics/VPS/Screen.png" type="Texture" id=5]
 
 [node name="Screen" type="Node2D"]
