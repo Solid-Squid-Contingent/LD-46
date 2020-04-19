@@ -1,0 +1,237 @@
+[
+	{
+		"background" : "living room",
+		"characters" : "lucas young",
+		"music" : "everyday",
+		"name" : "Lucas",
+		"text" : "[i]Today is my last day with Mom.\nOur living room is quiet.\nMore quiet than usual.\nMom turned off the TV to talk with me.\nShe normally wouldn’t turn it off just to talk.\nBut today is different.\nShe produces a small plastic device from her pocket.\nI have seen it before. Many times.\nIt is her Tamagotchi. She’s had it for…\nWell as long as I can remember.[/i]"
+	},
+	{
+		"name" : "Mom",
+		"characters" : ["christine","lucasyoung"],
+		"text" : "I want to give something to you, Lucas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "A present?"
+	},
+	{
+		"name" : "Mom",
+		"text" : "Yes, a present."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]She opens my tiny hand and puts her Tamagotchi in it.[/i]"
+	},
+	{
+		"name" : "Mom",
+		"text" : "Isn't it cute?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Yes Mom! It’s adorable."
+	},
+	{
+		"name" : "Mom",
+		"text" : "Hehe.\nThat it is.\nAnd you know what?\nIt even helped me throughout my life.\nIt encouraged and supported me.\nCan you believe that?\nBut you have to promise me one thing, honey.\nYou will have to look out for it. Care for it."
+	},
+	{
+		"name" : "Mom",
+		"text" : "Can you do that for me, Lucas?",
+		"choices" :
+		[
+			{
+				"text" : "Yes!",
+				"next" :
+				[
+					{
+						"name" : "Mom",
+						"text" : "That’s the spirit!"
+					}
+				]
+			},
+			{
+				"text" : "I will try my best.",
+				"next" :
+				[
+					{
+						"name" : "Mom",
+						"text" : "I know you will, hon."
+					}
+				]
+			},
+			{
+				"text" : "I don't know if I can.",
+				"next" :
+				[
+					{
+						"name" : "Mom",
+						"text" : "I’m sure you two will be fine. Just remember to feed it every now and then."
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Mom",
+		"text" : "This Tamagotchi means a lot to me.\nAnd that’s exactly why I’m giving it to you.\nI can’t really look after it when I’m at the bottom of the ocean."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Do you really have to go Mom?\nTo the bottom of the ocean? Isn’t that dangerous?\n[i]Mom suddenly falls silent and looks out the window as if searching for something.\nHer gaze returns to me and I see her smiling gently.[/i]"
+	},
+	{
+		"name" : "Mom",
+		"text" : "Yeah. I think that is my calling.\nWell... and it also is my responsibility.\nMy team and I have been working day and night for this project, you know?\nIt would be like... letting your friends down after you promised them something."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Narrator: I look down in defeat.\nMy effort of convincing my mother to stay was - as always - fruitless.\nMaybe she will listen to me when I’m older. For now I can only hope.[/i]"
+	},
+	{
+		"name" : "Mom",
+		"text" : "Oh, don’t be sad. This is not the first time I have been gone for a few days, is it?\nYour aunt will take care of you.\nAnd this time you even have a little friend for emotional support."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Do you mean the Squid?"
+	},
+	{
+		"name" : "Mom",
+		"text" : "hat’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count.\nIn many ways it is more reliable than a real friend…\nBut of course no substitute for one.\nNow, as this day will be our last for a while, why don’t you go ahead and say where you want to go for dinner? We can go anywhere you want."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Anywhere?\nEven Ryan's Burger Joint?"
+	},
+	{
+		"name" : "Mom",
+		"text" : "[i]Sigh[/i] Even Ryan's Burger Joint, yes."
+	},
+	{
+		"name": "Squid",
+		"reduce_fullness" : 85,
+		"text": "I’m really hungry!"
+	},
+	{
+		"text": "Oh, another one’s hungry?"
+	},
+	{
+		"name": "Lucas",
+		"text": "It talks?"
+	},
+	{
+		"name": "Mom",
+		"text": "Yes, occasionally. You know I wasn’t joking when I said the squid gave me advice and encouraged me.\nWell to be fair it usually demands more than it gives, haha.\n… Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
+	},
+	{
+		"name": "Lucas",
+		"text": "Mom! I’m not a baby anymore."
+	},
+	{
+		"name": "Mom",
+		"text": "I’m just pulling your leg. You are much more mature than I was with ten you know?\nBut why don’t you use that chance to get a hang of the Tamagotchi?\n-- Feed Tamagotchi to advance\nYeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit.\n But sometimes it will have other needs besides food. Like bathing. Playing.\nYou know, just like everyone else.\nExcept unlike everyone else it can’t take care of these things on its own."
+	},
+	{
+		"name": "Lucas",
+		"text": "Leave them to me!"
+	},
+	{
+		"name": "Squid",
+		"text": "Let’s be friends!"
+	},
+	{
+		"name": "Lucas",
+		"text": "Whoa, did it just respond to me?"
+	},
+	{
+		"name": "Mom",
+		"text": "Maybe. Hehe. \nSometimes I really think it has a mind of its own.\nWell then… Let’s go to Ryan’s Burger Joint."
+	},
+	{
+		"name": "Lucas",
+		"text": "Yeah!"
+	},
+	{
+		"background" : "city",
+		"characters" : [],
+		"music" : "everyday",
+		"text" : "[i]We enjoyed our dinner at Ryan’s Burger Joint. The best burger joint in town, at least I think so.\nIt’s little more than a rundown shack which happens to offer food.\nI don’t blame Mum for not being a big fan, but their salmon steak burgers are to die for.\nIt’s my last day with Mom. Maybe for a long time.\nShe didn’t actually say for how long she will be gone.\nI will miss her.[/i]"
+	},
+	{
+		"background" : "black",
+		"music" : "",
+		"reduce_happiness" :  85,
+		"reduce_awakeness" : 85,
+		"reduce_fun" : 85,
+		"text" : "[i]A week passed, which felt like a year or more.\nEvery time someone rang our doorbell I rushed down from my room before my aunt could even rise from her chair.\nIt always was the post or people my aunt chased away.\nToday is different though. Today my aunt let people in.\nScary looking people with grim faces.\nNot cute faces like my needy squid.\nBut maybe I shouldn’t compare people to my squid.\nThe scary people with grim faces made my aunt cry and then they left.[/i]"
+	},
+	{
+		"background" : "living room",
+		"characters" : "lucas young",
+		"music" : "everyday",
+		"reduce_happiness" : 85,
+		"name" : "Squid",
+		"text" : "Are you lonely? I am lonely."
+	},
+	{
+		"name" : "Lucas",
+		"text " : "So you want my attention, huh? You know, I think I understand you little one.\nYeah… Guess I’m lonely too. I hope Mum will be back soon.\n[i]The squid was in constant need of playing and talked to me quite a bit but not once throughout this week it asked for food.\nMaybe our time at Ryan’s filled it up for good.[/i]"
+	},
+	{
+		"name" : "Aunt Mary",
+		"text " : "Can you come down for a bit Lucas?"
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"music" : "sad",
+		"name" : "Lucas",
+		"text" : "My aunt's voice is hoarse and quieter than usual.\nI walk down the stairs and I hear my aunt sobbing."
+	},
+	{
+		"background" : "living room",
+		"characters" : "lucas young",
+		"text" : "[i]I feel bad for not having been at her side when those guys came, but she sent me upstairs.[/i]\nDid these men threaten you?\nI think they were really scary."
+	},
+	{
+		"name" : "Aunt Mary",
+		"text" : "No… It was nothing like that Lucas.\nPlease, come sit with me here for a second."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Narrator: I can see her trying her hardest to hold back her tears.\nMaybe she is embarrassed. I wish I could tell her that I don’t mind.[/i]"
+	},
+	{
+		"name" : "Aunt Mary",
+		"text" : "Chris- …"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Her voice shakes and she takes a few seconds to collect herself.[/i]"
+	},
+	{
+		"name" : "Aunt Mary",
+		"text" : "Your mother is missing.\nThey lost contact with her submarine a few days ago.\nShe- … they think she is dead."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I heard what my aunt said but I can’t really make sense of them.\nShe must have seen my lost expression and explained it to me again.\nAnd again.\nAnd now I think I know what she means.\nDespite my aunt being there I feel like I’m alone.\nI don’t really remember what happened afterwards.\nI must have cried.\nMy pillow is soaked…[/i]"
+	},
+	{
+		"reduce_fun" : 85,
+		"name" : "Squid",
+		"text" : "Don’t be sad. Play with me!"
+	},
+	{
+		"text" : "… How do you know I’m sad?\n…\nNot about to respond to me, are you?\nMum said I wouldn’t be alone. That I had you.\nBut I still feel alone."
+	},
+	{
+		"reduce_happiness" : 85,
+		"name" : "Squid",
+		"text" : "Are you lonely? I am lonely."
+	},
+	{
+		"text" : "You really have a mind of your own, don’t you?\n[i]I laugh but soon my laughing returns to sobbing.\nBut it feels less painful now.\nMaybe I’m not alone after all.[/i]"
+	}
+]
