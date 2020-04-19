@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Fonts/orange-kid-italics.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=4]
+
+[node name="ChapterScreen" type="TextureRect"]
+margin_right = 538.0
+margin_bottom = 303.0
+rect_scale = Vector2( 2.23, 2.23 )
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Chapter Label" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -269.0
+margin_top = -72.1255
+margin_right = 1525.0
+margin_bottom = 149.874
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/italics_font = ExtResource( 2 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Chapter 2"
+text = "Chapter 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtitle" type="RichTextLabel" parent="."]
+margin_top = 157.331
+margin_right = 2691.0
+margin_bottom = 701.331
+rect_scale = Vector2( 0.2, 0.2 )
+custom_fonts/italics_font = ExtResource( 2 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]A Dark Beginning"
+text = "A Dark Beginning"
+__meta__ = {
+"_edit_use_anchors_": false
+}

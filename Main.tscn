@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://VNScenes/CharacterView.tscn" type="PackedScene" id=5]
 [ext_resource path="res://VNScripts/DialogManager.gd" type="Script" id=6]
 [ext_resource path="res://GameOverScreen.tscn" type="PackedScene" id=7]
+[ext_resource path="res://VNScenes/ChapterScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://AudioPlayer.gd" type="Script" id=10]
 
 [node name="Main" type="Node2D"]
@@ -36,6 +37,9 @@ visible = false
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 10 )
+
+[node name="ChapterScreen" parent="." instance=ExtResource( 8 )]
+visible = false
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]
