@@ -23,30 +23,30 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "refuse",
-"speed": 2.0
-}, {
 "frames": [ ExtResource( 16 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "eat",
-"speed": 5.0
+"name": "refuse",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "sad",
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "happy",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "sad",
-"speed": 6.0
+"name": "eat",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 9 ) ],
 "loop": true,
@@ -95,4 +95,6 @@ animation = "idle"
 
 [node name="AnimationTimer" type="Timer" parent="."]
 one_shot = true
+[connection signal="switch_to_pet" from="." to="UIContainer" method="_on_HomeScreen_switch_to_pet"]
+[connection signal="switch_to_sick" from="." to="UIContainer" method="_on_HomeScreen_switch_to_sick"]
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_AnimationTimer_timeout"]

@@ -1,11 +1,9 @@
 extends Node2D
 
-signal eat
-signal start_sleeping
-signal end_sleeping
-signal happy
-signal refuse
-signal sad
+signal switch_to_pet
+signal switch_to_sick
+
+var currentIdleAnimation = "idle"
 
 export(float) var animationLength = 2
 
@@ -35,7 +33,7 @@ func _on_Screen_start_sleeping():
 
 func _on_Screen_end_sleeping():
 	for sprite in allSprites:
-		sprite.animation = "idle"
+		sprite.animation = currentIdleAnimation
 
 func _on_Screen_happy():
 	for sprite in allSprites:
@@ -48,10 +46,29 @@ func _on_Screen_refuse():
 		animationTimer.start(animationLength)
 
 func _on_Screen_sad():
+	currentIdleAnimation = "sad"
 	for sprite in allSprites:
-		sprite.animation = "sad"
-		animationTimer.start(animationLength)
+		sprite.animation = currentIdleAnimation
 
 func _on_AnimationTimer_timeout():
 	for sprite in allSprites:
-		sprite.animation = "idle"
+		sprite.animation = currentIdleAnimation
+
+func _on_Screen_end_talking():
+	for sprite in allSprites:
+		sprite.animation = currentIdleAnimation
+
+func _on_Screen_start_talking():
+	for sprite in allSprites:
+		sprite.animation = "talk"
+
+func _on_Screen_not_sad():
+	currentIdleAnimation = "idle"
+
+
+func _on_Screen_switch_to_pet():
+	pass # Replace with function body.
+
+
+func _on_Screen_switch_to_sick():
+	pass # Replace with function body.
