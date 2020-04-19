@@ -39,7 +39,6 @@ visible = false
 script = ExtResource( 10 )
 
 [node name="ChapterScreen" parent="." instance=ExtResource( 8 )]
-pause_mode = 2
 visible = false
 mouse_filter = 0
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
@@ -61,4 +60,5 @@ mouse_filter = 0
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
 [connection signal="finished" from="AudioPlayer" to="AudioPlayer" method="_on_AudioPlayer_finished"]
-[connection signal="gui_input" from="ChapterScreen" to="." method="_on_ChapterScreen_gui_input"]
+[connection signal="gui_input" from="ChapterScreen" to="ChapterScreen" method="_on_ChapterScreen_gui_input"]
+[connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]

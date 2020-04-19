@@ -40,7 +40,5 @@ func _on_GameOverScreen_RestartButton_pressed():
 func _on_DialogManager_new_chapter(number, subtitle):
 	show_new_chapter(number, subtitle)
 
-
-func _on_ChapterScreen_gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		hide_screen($ChapterScreen)
+func _on_ChapterScreen_hide_screen():
+	hide_screen($ChapterScreen)
