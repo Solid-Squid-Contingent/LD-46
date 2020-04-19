@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -38,8 +38,8 @@ script = ExtResource( 10 )
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]
-[connection signal="play_music" from="DialogManager" to="AudioPlayer" method="_on_DialogManager_play_music"]
 [connection signal="all_text_appeared" from="VNTextBox" to="DialogManager" method="_on_VNTextBox_all_text_appeared"]
+[connection signal="play_music" from="DialogManager" to="AudioPlayer" method="_on_DialogManager_play_music"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
 [connection signal="finished" from="AudioPlayer" to="AudioPlayer" method="_on_AudioPlayer_finished"]

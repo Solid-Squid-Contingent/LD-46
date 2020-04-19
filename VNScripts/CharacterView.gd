@@ -29,6 +29,8 @@ onready var backgroundMap = {
 	"mountain": $Background1
 }
 
+onready var foremostBackground = $Background3
+
 export (String) var startingBackground = "field"
 
 # Called when the node enters the scene tree for the first time.
@@ -56,7 +58,7 @@ func flip_character(character):
 func add_character(character: String, position):
 	var new_character = characterMap[character].instance()
 	new_character.position = position
-	add_child(new_character)
+	add_child_below_node(foremostBackground, new_character)
 	currentCharacters.append(new_character)
 	return new_character
 
