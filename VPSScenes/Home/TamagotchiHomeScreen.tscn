@@ -19,7 +19,7 @@
 [ext_resource path="res://Resources/Graphics/Squid/Old/Refuse/old_refuse_1.png" type="Texture" id=17]
 [ext_resource path="res://Resources/Graphics/Squid/Old/Refuse/old_refuse_2.png" type="Texture" id=18]
 [ext_resource path="res://Resources/Graphics/Squid/Old/Sad/old_sad_1.png" type="Texture" id=19]
-[ext_resource path="res://VPSScenes/Home/TamagotchiHomeScreen.gd" type="Script" id=20]
+[ext_resource path="res://VPSScripts/Home/TamagotchiHomeScreen.gd" type="Script" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

@@ -179,19 +179,19 @@ func _on_SleepButton_pressed():
 
 
 func _on_PlayButton_pressed():
-	if minigame:
-		$Screen/MinigameScreen.moveRight()
-	else:
-		change_fun(needGain)
-		switch_to_minigame()
+	if stage != STAGE.egg:
+		if minigame:
+			$Screen/MinigameScreen.moveRight()
+		else:
+			change_fun(needGain)
+			switch_to_minigame()
 
 
 func _on_ExtraButton_pressed():
-	if stage != STAGE.egg:
-		if minigame:
-			switch_to_home()
-		else:
-			change_happiness(needGain)
+	if minigame:
+		switch_to_home()
+	else:
+		change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):
