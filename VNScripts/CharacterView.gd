@@ -29,9 +29,11 @@ onready var backgroundMap = {
 	"mountain": $Background1
 }
 
+export (String) var startingBackground = "field"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	change_background("field")
+	change_background(startingBackground)
 	add_characters(exampleCharacterList1)
 
 func add_characters(listOfCharacters):
