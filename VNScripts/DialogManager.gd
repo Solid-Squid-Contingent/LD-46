@@ -10,6 +10,7 @@ export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
 onready var vnTextBox = get_node("/root/Main/VNTextBox")
+onready var tamagotchiTextBox = get_node("/root/Main/TamagotchiTextBox")
 onready var choiceButtonContainer = get_node("/root/Main/CharacterView/ChoiceButtonContainer")
 
 var data
@@ -27,6 +28,8 @@ func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		if not vnTextBox.all_text_appeared():
 			vnTextBox.show_all_text()
+		elif not tamagotchiTextBox.all_text_appeared():
+			tamagotchiTextBox.show_all_text()
 		elif not inChoice:
 			print_next_dialog_line()
 
@@ -61,9 +64,12 @@ func get_current_dialog_data():
 func print_next_dialog_line():
 	var currentData = get_current_dialog_data()
 	
-	if currentData.has("name"):
-		vnTextBox.set_name(currentData["name"])
-	vnTextBox.set_text(currentData["text"])
+	if currentData.has("name") and currentData["name"] == "Squid":
+		tamagotchiTextBox.set_text(currentData["text"])
+	else:
+		if currentData.has("name"):
+			vnTextBox.set_name(currentData["name"])
+		vnTextBox.set_text(currentData["text"])
 	
 	execute_side_effects(currentData)
 	

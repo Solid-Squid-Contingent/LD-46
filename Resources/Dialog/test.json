@@ -5,6 +5,17 @@
 		"music" : "sad.mp3"
 	},
 	{
+		"name" : "Squid",
+		"text" : "Nothing, sir! ttttt"
+	},
+	{
+		"name" : "Lloyd",
+		"text" : "Really, truly? hmmmm?"
+	},{
+		"name" : "Squid",
+		"text" : "Yessssssssssssss"
+	},
+	{
 		"name" : "Lloyd",
 		"text" : "How are you?",
 		"reduce_fullness": 50,
