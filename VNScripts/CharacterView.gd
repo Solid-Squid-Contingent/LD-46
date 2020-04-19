@@ -11,7 +11,6 @@ var exampleCharacterList1 = ["thief", "cat"]
 var exampleCharacterList2 = ["cat", "thief"]
 
 onready var positions = [
-	
 	[
 		#positions[0][0]
 		$"1CharacterPosition1".position
@@ -63,4 +62,4 @@ func add_character(character: String, position):
 
 func remove_characters():
 	for character in currentCharacters:
-		remove_child(character)
+		character.queue_free()
