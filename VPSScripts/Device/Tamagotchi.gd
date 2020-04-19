@@ -105,7 +105,6 @@ func is_satisfied(need) -> bool:
 func switch_to_minigame():
 	$Screen/HomeScreen.visible = false
 	$Screen/MinigameScreen.visible = true
-	var enemies = get_tree().get_nodes_in_group("minigame_objects")
 	get_tree().call_group("minigame_objects", "unpause")
 	minigame = true
 
