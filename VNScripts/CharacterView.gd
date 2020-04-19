@@ -60,4 +60,4 @@ func add_character(character: String, position):
 
 func remove_characters():
 	for character in currentCharacters:
-		remove_child(character)
+		character.queue_free()
