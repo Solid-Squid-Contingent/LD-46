@@ -1,12 +1,9 @@
-[gd_resource type="SpriteFrames" load_steps=3 format=2]
-
-[ext_resource path="res://Resources/Graphics/cassy_normal.png" type="Texture" id=1]
-[ext_resource path="res://Resources/Graphics/cassy_happy.png" type="Texture" id=2]
+[gd_resource type="SpriteFrames" format=2]
 
 [resource]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"frames": [  ],
 "loop": true,
-"name": "default",
+"name": "New Anim",
 "speed": 5.0
 } ]

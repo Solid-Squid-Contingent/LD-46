@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScenes/Home/TamagotchiHomeScreen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://VPSScenes/Device/TamagotchiScreen.gd" type="Script" id=3]
 [ext_resource path="res://Resources/Graphics/VPS/Screen.png" type="Texture" id=5]
 
 [node name="Screen" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Background" type="TextureRect" parent="."]
 margin_left = 3.50618
@@ -20,3 +22,9 @@ __meta__ = {
 visible = false
 
 [node name="HomeScreen" parent="." instance=ExtResource( 2 )]
+[connection signal="eat" from="." to="HomeScreen" method="_on_Screen_eat"]
+[connection signal="end_sleeping" from="." to="HomeScreen" method="_on_Screen_end_sleeping"]
+[connection signal="happy" from="." to="HomeScreen" method="_on_Screen_happy"]
+[connection signal="refuse" from="." to="HomeScreen" method="_on_Screen_refuse"]
+[connection signal="sad" from="." to="HomeScreen" method="_on_Screen_sad"]
+[connection signal="start_sleeping" from="." to="HomeScreen" method="_on_Screen_start_sleeping"]
