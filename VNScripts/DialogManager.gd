@@ -11,6 +11,9 @@ signal play_music(name)
 signal change_characters(characters)
 signal change_background(background)
 
+signal turn_tamagotchi_on
+signal turn_tamagotchi_off
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
@@ -103,6 +106,12 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("background"):
 		emit_signal("change_background", currentData["background"])
+	
+	if currentData.has("tamagotchi_on"):
+		if currentData["tamagotchi_on"]:
+			emit_signal("turn_tamagotchi_on")
+		else:
+			emit_signal("turn_tamagotchi_off")
 
 
 func _on_ChoiceButtonPressed(choice):
