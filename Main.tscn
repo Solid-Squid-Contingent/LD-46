@@ -56,6 +56,8 @@ mouse_filter = 0
 [connection signal="reduce_fullness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fullness"]
 [connection signal="reduce_fun" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fun"]
 [connection signal="reduce_happiness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_happiness"]
+[connection signal="turn_tamagotchi_off" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_off"]
+[connection signal="turn_tamagotchi_on" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_on"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
 [connection signal="finished" from="AudioPlayer" to="AudioPlayer" method="_on_AudioPlayer_finished"]

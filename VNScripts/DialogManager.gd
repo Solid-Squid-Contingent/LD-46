@@ -11,6 +11,9 @@ signal play_music(name)
 signal change_characters(characters)
 signal change_background(background)
 
+signal turn_tamagotchi_on
+signal turn_tamagotchi_off
+
 signal new_chapter(number, subtitle)
 
 export(String, FILE) var startFileName
@@ -107,6 +110,12 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("background"):
 		emit_signal("change_background", currentData["background"])
+	
+	if currentData.has("tamagotchi_on"):
+		if currentData["tamagotchi_on"]:
+			emit_signal("turn_tamagotchi_on")
+		else:
+			emit_signal("turn_tamagotchi_off")
 	
 	if currentData.has("new_chapter"):
 		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
