@@ -18,6 +18,7 @@ scale = Vector2( 5, 5 )
 
 [node name="Tamagotchi" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 5, 5 )
+agingPerSecond = 20
 
 [node name="TamagotchiTextBox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 435 )
