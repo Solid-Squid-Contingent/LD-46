@@ -1,13 +1,19 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=1]
-[ext_resource path="res://Resources/Graphics/background1.jpg" type="Texture" id=2]
-[ext_resource path="res://Resources/Graphics/background2.jpg" type="Texture" id=3]
-[ext_resource path="res://Resources/Graphics/background3.jpg" type="Texture" id=4]
+[ext_resource path="res://Resources/Graphics/Backgrounds/shallow_sea.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Graphics/Backgrounds/living_room.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Graphics/Backgrounds/shallow_sea_creatures.png" type="Texture" id=4]
 [ext_resource path="res://VNScripts/CharacterView.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Graphics/Backgrounds/office.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Graphics/Backgrounds/deep_sea_eye.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Graphics/Backgrounds/city.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Graphics/Backgrounds/deep_sea.png" type="Texture" id=9]
+[ext_resource path="res://Resources/Graphics/Backgrounds/class.png" type="Texture" id=10]
 
 [node name="CharacterView" type="Node2D"]
 script = ExtResource( 5 )
+startingBackground = "class"
 
 [node name="Black" type="TextureRect" parent="."]
 margin_right = 168.0
@@ -19,36 +25,74 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background1" type="TextureRect" parent="."]
+[node name="BackgroundClass" type="TextureRect" parent="."]
 visible = false
-margin_top = -24.0
 margin_right = 168.0
-margin_bottom = 89.0
-texture = ExtResource( 2 )
-expand = true
-stretch_mode = 5
+margin_bottom = 87.0
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background2" type="TextureRect" parent="."]
+[node name="BackgroundCity" type="TextureRect" parent="."]
+visible = false
 margin_right = 168.0
-margin_bottom = 96.0
-texture = ExtResource( 4 )
-expand = true
-stretch_mode = 5
+margin_bottom = 87.0
+texture = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Background3" type="TextureRect" parent="."]
+[node name="BackgroundDeepSea" type="TextureRect" parent="."]
 visible = false
-margin_top = -14.0
 margin_right = 168.0
-margin_bottom = 99.0
+margin_bottom = 87.0
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundDeepSeaEye" type="TextureRect" parent="."]
+visible = false
+margin_right = 168.0
+margin_bottom = 87.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundLivingRoom" type="TextureRect" parent="."]
+visible = false
+margin_right = 168.0
+margin_bottom = 87.0
 texture = ExtResource( 3 )
-expand = true
-stretch_mode = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundOffice" type="TextureRect" parent="."]
+visible = false
+margin_right = 168.0
+margin_bottom = 87.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundShallowSea" type="TextureRect" parent="."]
+visible = false
+margin_right = 168.0
+margin_bottom = 87.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundShallowSeaCreatures" type="TextureRect" parent="."]
+visible = false
+margin_right = 168.0
+margin_bottom = 87.0
+texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
