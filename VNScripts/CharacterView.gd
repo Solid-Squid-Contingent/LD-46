@@ -11,7 +11,6 @@ var exampleCharacterList1 = ["thief", "cat"]
 var exampleCharacterList2 = ["cat", "thief"]
 
 onready var positions = [
-	
 	[
 		#positions[0][0]
 		$"1CharacterPosition1".position
@@ -30,9 +29,11 @@ onready var backgroundMap = {
 	"mountain": $Background1
 }
 
+export (String) var startingBackground = "field"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	change_background("field")
+	change_background(startingBackground)
 	add_characters(exampleCharacterList1)
 
 func add_characters(listOfCharacters):
@@ -61,4 +62,4 @@ func add_character(character: String, position):
 
 func remove_characters():
 	for character in currentCharacters:
-		remove_child(character)
+		character.queue_free()
