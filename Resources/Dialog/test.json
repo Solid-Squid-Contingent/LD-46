@@ -1,12 +1,12 @@
 [
 	{
 		"name" : "Lloyd",
-		"text" : "Hi, I'm Lloyd",
-		"music" : "sad.mp3"
+		"text" : "Hi, I'm Lloyd"
 	},
 	{
 		"name" : "Lloyd",
 		"text" : "How are you?",
+		"music" : "deep sea",
 		"reduce_fullness": 50,
 		"choices" :
 		[
