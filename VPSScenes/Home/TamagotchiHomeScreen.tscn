@@ -38,6 +38,11 @@ animations = [ {
 "name": "eat",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "happy",
+"speed": 1.0
+}, {
 "frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "sad",
@@ -51,11 +56,6 @@ animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "sleep",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "happy",
 "speed": 1.0
 } ]
 
