@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Graphics/ChoiceButton.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=2]
+[ext_resource path="res://OptionsScreen.gd" type="Script" id=3]
+[ext_resource path="res://BackButton.tscn" type="PackedScene" id=4]
+
+[node name="OptionsScreen" type="TextureRect"]
+margin_right = 1200.0
+margin_bottom = 675.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1200.0
+margin_bottom = 675.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 1200.0
+margin_bottom = 563.0
+custom_constants/margin_right = 30
+custom_constants/margin_left = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer"]
+margin_left = 50.0
+margin_right = 1170.0
+margin_bottom = 563.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/vseparation = -8
+custom_constants/hseparation = 30
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_right = 566.0
+margin_bottom = 193.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Audio:"
+
+[node name="AudioSlider" type="HSlider" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_left = 596.0
+margin_right = 1120.0
+margin_bottom = 193.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_top = 185.0
+margin_right = 566.0
+margin_bottom = 378.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Resolution"
+
+[node name="ResolutionButton" type="OptionButton" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_left = 596.0
+margin_top = 185.0
+margin_right = 1120.0
+margin_bottom = 378.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "1200x600"
+
+[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_top = 370.0
+margin_right = 566.0
+margin_bottom = 563.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Stupidness"
+
+[node name="StupidnessSlider" type="HSlider" parent="VBoxContainer/MarginContainer/GridContainer"]
+margin_left = 596.0
+margin_top = 370.0
+margin_right = 1120.0
+margin_bottom = 563.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 563.0
+margin_right = 1200.0
+margin_bottom = 675.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_bottom = 17
+
+[node name="BackButton" parent="VBoxContainer/MarginContainer2" instance=ExtResource( 4 )]
+margin_right = 1200.0
+margin_bottom = 95.0
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/BackButton" to="." method="_on_BackButton_pressed"]
