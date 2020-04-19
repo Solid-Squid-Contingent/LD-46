@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://VNScripts/VNTextBox.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Graphics/VNUI/character_dialogue.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/Fonts/orange-kid-italics.tres" type="DynamicFont" id=5]
 
 [node name="VNTextBox" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,6 +26,8 @@ margin_right = 2658.0
 margin_bottom = 539.945
 rect_scale = Vector2( 0.05, 0.05 )
 mouse_filter = 2
+custom_fonts/italics_font = ExtResource( 5 )
+custom_fonts/bold_font = ExtResource( 4 )
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "Test"
@@ -38,10 +42,12 @@ margin_top = 2.94452
 margin_right = 736.0
 margin_bottom = 197.945
 rect_scale = Vector2( 0.05, 0.05 )
+custom_fonts/italics_font = ExtResource( 5 )
+custom_fonts/bold_font = ExtResource( 4 )
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 0.847059, 0.847059, 0.45098, 1 )
 bbcode_enabled = true
-bbcode_text = "Person:"
+bbcode_text = "[b]Person:[/b]"
 text = "Person:"
 __meta__ = {
 "_edit_use_anchors_": false
