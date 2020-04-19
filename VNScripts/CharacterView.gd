@@ -11,7 +11,6 @@ var exampleCharacterList1 = ["thief", "cat"]
 var exampleCharacterList2 = ["cat", "thief"]
 
 onready var positions = [
-	
 	[
 		#positions[0][0]
 		$"1CharacterPosition1".position
