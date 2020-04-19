@@ -6,14 +6,17 @@
 	},
 	{
 		"name" : "Squid",
-		"text" : "Nothing, sir! ttttt"
+		"text" : "Nothing, sir! ttttt",
+		"background" : "thunderstorm"
 	},
 	{
 		"name" : "Lloyd",
-		"text" : "Really, truly? hmmmm?"
+		"text" : "Really, truly? hmmmm?",
+		"characters": ["thief"]
 	},{
 		"name" : "Squid",
-		"text" : "Yessssssssssssss"
+		"text" : "Yessssssssssssss",
+		"characters": ["thief", "cat"]
 	},
 	{
 		"name" : "Lloyd",

@@ -6,6 +6,9 @@ signal reduce_fun(amount)
 signal reduce_happiness(amount)
 signal reduce_everything(amount)
 
+signal change_characters(characters)
+signal change_background(background)
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
@@ -89,6 +92,12 @@ func execute_side_effects(currentData):
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
+	
+	if currentData.has("characters"):
+		emit_signal("change_characters", currentData["characters"])
+	
+	if currentData.has("background"):
+		emit_signal("change_background", currentData["background"])
 
 
 func _on_ChoiceButtonPressed(choice):

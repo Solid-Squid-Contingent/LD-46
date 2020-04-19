@@ -63,3 +63,13 @@ func add_character(character: String, position):
 func remove_characters():
 	for character in currentCharacters:
 		character.queue_free()
+	currentCharacters.clear()
+
+
+func _on_DialogManager_change_background(background):
+	change_background(background)
+
+
+func _on_DialogManager_change_characters(characters):
+	remove_characters()
+	add_characters(characters)
