@@ -16,9 +16,9 @@ __meta__ = {
 [node name="Label" type="RichTextLabel" parent="."]
 margin_left = 6.0
 margin_top = 5.0
-margin_right = 616.0
-margin_bottom = 375.0
-rect_scale = Vector2( 0.1, 0.1 )
+margin_right = 489.0
+margin_bottom = 297.0
+rect_scale = Vector2( 0.12, 0.12 )
 custom_fonts/normal_font = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Hello. I'm Squidney"
