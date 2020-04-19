@@ -6,6 +6,8 @@ signal reduce_fun(amount)
 signal reduce_happiness(amount)
 signal reduce_everything(amount)
 
+signal play_music(name)
+
 signal change_characters(characters)
 signal change_background(background)
 
@@ -92,6 +94,9 @@ func execute_side_effects(currentData):
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
+	
+	if currentData.has("music"):
+		emit_signal("play_music", currentData["music"])
 	
 	if currentData.has("characters"):
 		emit_signal("change_characters", currentData["characters"])

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/deep_sea_loop.ogg-102a4fe1027868c655016964469b3726.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/deep_sea_loop.ogg"
+dest_files=[ "res://.import/deep_sea_loop.ogg-102a4fe1027868c655016964469b3726.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
