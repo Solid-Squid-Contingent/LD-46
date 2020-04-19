@@ -31,15 +31,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	needDecay += delta * needDecayPerSecond
-	if needDecay > 10:
-		change_all_needs(-10)
-		needDecay -= 10
-	
-	age += delta
-	if stage < 2 and age > 100:
-		age_up()
-		age = 0
+	if not minigame:
+		needDecay += delta * needDecayPerSecond
+		if needDecay > 10:
+			change_all_needs(-10)
+			needDecay -= 10
+		
+		age += delta
+		if stage < 2 and age > 100:
+			age_up()
+			age = 0
 
 func change_fullness(amount):
 	if amount > 0 and is_satisfied(fullness):
@@ -104,11 +105,13 @@ func is_satisfied(need) -> bool:
 func switch_to_minigame():
 	$Screen/HomeScreen.visible = false
 	$Screen/MinigameScreen.visible = true
+	$Screen/MinigameScreen.paused = false
 	minigame = true
 
 func switch_to_home():
 	$Screen/HomeScreen.visible = true
 	$Screen/MinigameScreen.visible = false
+	$Screen/MinigameScreen.paused = true
 	minigame = false
 
 func _on_FoodButton_pressed():
