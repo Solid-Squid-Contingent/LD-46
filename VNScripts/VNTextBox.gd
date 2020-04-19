@@ -3,16 +3,20 @@ extends Node2D
 signal all_text_appeared
 
 onready var label = $TextBox/Label
+onready var nameLabel = $TextBox/NameLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 
-func set_label(labelText):
-	label.bbcode_text = labelText
+func set_text(text):
+	label.bbcode_text = text
 	label.set_visible_characters(0)
 	$ShowTextTimer.start()
+
+func set_name(name):
+	nameLabel.bbcode_text = name + ":"
 
 
 func all_text_appeared():

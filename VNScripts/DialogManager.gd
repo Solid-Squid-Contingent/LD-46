@@ -60,8 +60,11 @@ func get_current_dialog_data():
 
 func print_next_dialog_line():
 	var currentData = get_current_dialog_data()
-		
-	vnTextBox.set_label(currentData["name"] + ": " + currentData["text"])
+	
+	if currentData.has("name"):
+		vnTextBox.set_name(currentData["name"])
+	vnTextBox.set_text(currentData["text"])
+	
 	execute_side_effects(currentData)
 	
 	if currentData.has("choices"):
