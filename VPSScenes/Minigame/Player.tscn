@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 10.6203
+height = 23.441
+
+[node name="Player" type="Area2D"]
+scale = Vector2( 0.1, 0.1 )
+collision_mask = 2
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -1.90882, 0.0297222 )
+scale = Vector2( 0.04, 0.04 )
+frames = ExtResource( 1 )
+frame = 1
+speed_scale = 0.2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.00932026, -0.0657787 )
+shape = SubResource( 1 )
