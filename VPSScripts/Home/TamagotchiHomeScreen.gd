@@ -7,7 +7,7 @@ signal happy
 signal refuse
 signal sad
 
-var animationLength = 2
+export(float) var animationLength = 2
 
 onready var animationTimer = $AnimationTimer
 
