@@ -36,5 +36,6 @@ visible = false
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]
+[connection signal="all_text_appeared" from="VNTextBox" to="DialogManager" method="_on_VNTextBox_all_text_appeared"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]

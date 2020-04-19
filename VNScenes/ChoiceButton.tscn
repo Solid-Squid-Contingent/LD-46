@@ -26,7 +26,7 @@ mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = ExtResource( 2 )
-text = "Test"
+bbcode_enabled = true
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false

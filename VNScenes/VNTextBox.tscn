@@ -25,7 +25,13 @@ margin_bottom = 701.0
 rect_scale = Vector2( 0.05, 0.05 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 3 )
-text = "The quick brown fox jumps over the lazy dog."
+bbcode_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ShowTextTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.02
+one_shot = true
+[connection signal="timeout" from="ShowTextTimer" to="." method="_on_ShowTextTimer_timeout"]

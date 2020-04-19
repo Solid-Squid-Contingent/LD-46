@@ -24,9 +24,11 @@ func _ready():
 	print_next_dialog_line()
 
 func _unhandled_input(event):
-	if event is InputEventMouseButton and event.pressed and not inChoice:
-		print_next_dialog_line()
-		
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		if not vnTextBox.all_text_appeared():
+			vnTextBox.show_all_text()
+		elif not inChoice:
+			print_next_dialog_line()
 
 
 func load_file(fileName):
@@ -63,12 +65,6 @@ func print_next_dialog_line():
 	execute_side_effects(currentData)
 	
 	if currentData.has("choices"):
-		for i in range(currentData["choices"].size()):
-			var button = choiceButtonScene.instance()
-			button.set_label(currentData["choices"][i]["text"]) 
-			button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
-			choiceButtonContainer.add_child(button)
-		
 		inChoice = true
 	else:
 		while dataPosition.size() > 1 and \
@@ -99,3 +95,13 @@ func _on_ChoiceButtonPressed(choice):
 	inChoice = false
 	
 	print_next_dialog_line()
+
+
+func _on_VNTextBox_all_text_appeared():
+	if inChoice:
+		var currentData = get_current_dialog_data()
+		for i in range(currentData["choices"].size()):
+			var button = choiceButtonScene.instance()
+			button.set_label(currentData["choices"][i]["text"]) 
+			button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
+			choiceButtonContainer.add_child(button)
