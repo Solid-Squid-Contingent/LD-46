@@ -2,7 +2,7 @@
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Graphics/Heart.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/heart_icon.png" type="Texture" id=3]
 
 [node name="MinigameScreen" type="Node2D" groups=[
 "minigame_objects",
@@ -11,6 +11,7 @@ script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 30.2271, 24.2481 )
+scale = Vector2( 1, 1 )
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 margin_left = 5.06842
