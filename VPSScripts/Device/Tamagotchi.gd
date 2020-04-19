@@ -20,6 +20,11 @@ enum STAGE{
 	adult,
 	old}
 
+enum STATE{
+	off,
+	home,
+	minigame}
+
 onready var stageSpriteMap = {
 	STAGE.egg: $Screen/HomeScreen/EggSprite,
 	STAGE.baby: $Screen/HomeScreen/BabySprite,
@@ -28,7 +33,7 @@ onready var stageSpriteMap = {
 
 var age: float = 0
 var stage: int = STAGE.egg
-var minigame: bool = false
+var state: int = STATE.home
 var sleeping: bool = false
 
 var fullness: float = 100
@@ -57,11 +62,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if stage != STAGE.egg:
+	if stage != STAGE.egg and state != STATE.off:
 		needDecay += delta * needDecayPerSecond
 		if needDecay > 10:
 			needDecay -= 10
-			if minigame:
+			if state == STATE.minigame:
 				change_fun(5)
 			elif not sleeping:
 				change_all_needs(-10)
@@ -71,7 +76,7 @@ func _process(delta):
 				change_happiness(-5)
 				change_awakeness(20)
 	
-	if not minigame:
+	if state == STATE.home:
 		age += delta * agingPerSecond
 		if stage < STAGE.old and age > 100:
 			age_up()
@@ -176,37 +181,43 @@ func switch_to_minigame():
 	$Screen/HomeScreen.visible = false
 	$Screen/MinigameScreen.visible = true
 	get_tree().call_group("minigame_objects", "unpause")
-	minigame = true
+	state = STATE.minigame
+
+func switch_to_off():
+	$Screen/HomeScreen.visible = false
+	$Screen/MinigameScreen.visible = false
+	get_tree().call_group("minigame_objects", "pause")
+	state = STATE.off
 
 func switch_to_home():
 	$Screen/HomeScreen.visible = true
 	$Screen/MinigameScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
-	minigame = false
+	state = STATE.home
 
 func _on_FoodButton_pressed():
-	if not is_animating():
+	if not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
-		if minigame:
+		if state == STATE.minigame:
 			$Screen/MinigameScreen.moveLeft()
 		else:
 			change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if not is_animating():
-		if minigame:
+	if not is_animating() and state != STATE.off:
+		if state == STATE.minigame:
 			$Screen/MinigameScreen.shoot()
 		else:
 			toggle_sleep()
 
 
 func _on_PlayButton_pressed():
-	if not is_animating():
+	if not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
 		if stage != STAGE.egg:
-			if minigame:
+			if state == STATE.minigame:
 				$Screen/MinigameScreen.moveRight()
 			else:
 				change_fun(needGain)
@@ -214,10 +225,10 @@ func _on_PlayButton_pressed():
 
 
 func _on_ExtraButton_pressed():
-	if not is_animating():
+	if not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
-		if minigame:
+		if state == STATE.minigame:
 			switch_to_home()
 		else:
 			change_happiness(needGain)
@@ -249,3 +260,11 @@ func _on_TamagotchiTextBox_start_talking():
 
 func _on_TamagotchiTextBox_end_talking():
 	emit_signal("end_talking")
+
+
+func _on_DialogManager_turn_tamagotchi_off():
+	switch_to_off()
+
+
+func _on_DialogManager_turn_tamagotchi_on():
+	switch_to_home()
