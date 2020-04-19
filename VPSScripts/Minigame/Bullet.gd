@@ -1,6 +1,6 @@
 extends Area2D
 
-var paused: bool = true
+var paused: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
