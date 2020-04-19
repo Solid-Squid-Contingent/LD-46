@@ -24,7 +24,7 @@ script = ExtResource( 8 )
 position = Vector2( 360, 435 )
 
 [node name="CharacterView" parent="." instance=ExtResource( 5 )]
-position = Vector2( 360, 4 )
+position = Vector2( 360, 2.38419e-07 )
 scale = Vector2( 5, 5 )
 
 [node name="DialogManager" type="Node" parent="."]
