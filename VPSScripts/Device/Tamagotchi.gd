@@ -10,6 +10,7 @@ signal end_sleeping
 signal happy
 signal refuse
 signal sad
+signal not_sad
 signal start_talking
 signal end_talking
 
@@ -37,6 +38,7 @@ var happiness: float = 100
 
 var needDecay: float = 0
 export(int) var needDecayPerSecond: int = 1
+export(int) var agingPerSecond: int = 5
 
 export(float) var needGain = 10
 
@@ -68,17 +70,23 @@ func _process(delta):
 				change_awakeness(20)
 	
 	if not minigame:
-		age += delta * 5
+		age += delta * agingPerSecond
 		if stage < STAGE.old and age > 100:
 			age_up()
 			age = 0
 
+func is_animating() -> bool:
+	return $Screen/HomeScreen.is_animating()
+
 func toggle_sleep():
-	sleeping = not sleeping
-	if sleeping:
-		emit_signal("start_sleeping")
+	if is_satisfied(awakeness) and not sleeping:
+		emit_signal("refuse")
 	else:
-		emit_signal("end_sleeping")
+		sleeping = not sleeping
+		if sleeping:
+			emit_signal("start_sleeping")
+		else:
+			emit_signal("end_sleeping")
 	
 
 func change_fullness(amount):
@@ -89,20 +97,15 @@ func change_fullness(amount):
 			emit_signal("eat")
 		fullness = min(fullness + amount, 100)
 		fullProgressBar.value = fullness
-		die_if_dead()
+		react_to_low_needs()
 
 func change_awakeness(amount):
 	if amount > 0 and is_satisfied(awakeness):
-		if not sleeping:
-			emit_signal("refuse")
-		else:
-			toggle_sleep()
+		toggle_sleep()
 	else:
-		if amount > 0 and not sleeping:
-			toggle_sleep()
 		awakeness = min(awakeness + amount, 100)
 		awakeProgressBar.value = awakeness
-		die_if_dead()
+		react_to_low_needs()
 
 func change_fun(amount):
 	if amount > 0 and is_satisfied(fun):
@@ -110,7 +113,7 @@ func change_fun(amount):
 	else:
 		fun = min(fun + amount, 100)
 		funProgressBar.value = fun
-		die_if_dead()
+		react_to_low_needs()
 
 func change_happiness(amount):
 	if amount > 0 and is_satisfied(happiness):
@@ -121,7 +124,7 @@ func change_happiness(amount):
 		happiness = min(happiness + amount, 100)
 		petHappyProgressBar.value = happiness
 		sickHappyProgressBar.value = happiness
-		die_if_dead()
+		react_to_low_needs()
 
 func change_all_needs(amount):
 	change_fullness(amount)
@@ -132,7 +135,17 @@ func change_all_needs(amount):
 func die_if_dead():
 	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
 		die()
-	
+
+func be_sad_if_not_cared_for():
+	if fullness <= 15 or awakeness <= 15 or fun <= 15 or happiness <= 15:
+		emit_signal("sad")
+	else:
+		emit_signal("not_sad")
+
+func react_to_low_needs():
+	die_if_dead()
+	be_sad_if_not_cared_for()
+
 func die():
 	emit_signal("tamagotchi_died")
 
@@ -170,38 +183,42 @@ func switch_to_home():
 	minigame = false
 
 func _on_FoodButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if minigame:
-		$Screen/MinigameScreen.moveLeft()
-	else:
-		change_fullness(needGain)
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if minigame:
+			$Screen/MinigameScreen.moveLeft()
+		else:
+			change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if minigame:
-		$Screen/MinigameScreen.shoot()
-	else:
-		toggle_sleep()
+	if not is_animating():
+		if minigame:
+			$Screen/MinigameScreen.shoot()
+		else:
+			toggle_sleep()
 
 
 func _on_PlayButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if stage != STAGE.egg:
-		if minigame:
-			$Screen/MinigameScreen.moveRight()
-		else:
-			change_fun(needGain)
-			switch_to_minigame()
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if stage != STAGE.egg:
+			if minigame:
+				$Screen/MinigameScreen.moveRight()
+			else:
+				change_fun(needGain)
+				switch_to_minigame()
 
 
 func _on_ExtraButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if minigame:
-		switch_to_home()
-	else:
-		change_happiness(needGain)
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if minigame:
+			switch_to_home()
+		else:
+			change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):
