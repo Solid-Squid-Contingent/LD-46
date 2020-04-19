@@ -53,19 +53,21 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if stage != STAGE.egg:
+		needDecay += delta * needDecayPerSecond
+		if needDecay > 10:
+			needDecay -= 10
+			if minigame:
+				change_fun(5)
+			elif not sleeping:
+				change_all_needs(-10)
+			else:
+				change_fullness(-5)
+				change_fun(-5)
+				change_happiness(-5)
+				change_awakeness(20)
+	
 	if not minigame:
-		if stage != STAGE.egg:
-			needDecay += delta * needDecayPerSecond
-			if needDecay > 10:
-				needDecay -= 10
-				if not sleeping:
-					change_all_needs(-10)
-				else:
-					change_fullness(-5)
-					change_fun(-5)
-					change_happiness(-5)
-					change_awakeness(20)
-		
 		age += delta * 5
 		if stage < STAGE.old and age > 100:
 			age_up()
