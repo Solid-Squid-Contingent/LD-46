@@ -1,7 +1,8 @@
 [
 	{
 		"name" : "Lloyd",
-		"text" : "Hi, I'm Lloyd"
+		"text" : "Hi, I'm Lloyd",
+		"music" : "sad.mp3"
 	},
 	{
 		"name" : "Lloyd",
