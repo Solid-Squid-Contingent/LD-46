@@ -1,28 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Graphics/Heart.png" type="Texture" id=3]
 
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0.418121, 72, 0, 0, 0, 0, 64.4181, 72 )
-}
-
-[node name="Screen" type="Node2D" groups=[
+[node name="MinigameScreen" type="Node2D" groups=[
 "minigame_objects",
 ]]
 script = ExtResource( 2 )
 
-[node name="EnemySpawnPath" type="Path2D" parent="."]
-position = Vector2( -0.418121, 0 )
-curve = SubResource( 1 )
-
-[node name="EnemySpawnLocation" type="PathFollow2D" parent="EnemySpawnPath"]
-position = Vector2( 0.418121, 72 )
-
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 32.2201, 42.5173 )
+position = Vector2( 30.2271, 24.2481 )
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 margin_left = 5.06842
@@ -49,4 +37,10 @@ margin_left = 18.0
 margin_right = 23.0
 margin_bottom = 6.0
 texture = ExtResource( 3 )
+
+[node name="EnemySpawnPosition1" type="Position2D" parent="."]
+position = Vector2( 8, 80 )
+
+[node name="EnemySpawnPosition2" type="Position2D" parent="."]
+position = Vector2( 64, 80 )
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]

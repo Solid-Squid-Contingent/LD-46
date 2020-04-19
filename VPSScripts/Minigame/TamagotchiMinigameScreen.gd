@@ -3,7 +3,7 @@ extends Node2D
 var timePassed : float = 5
 var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
-var paused: bool = false
+var paused: bool = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,8 +18,7 @@ func _process(delta):
 
 func spawnEnemy():
 	var enemy = enemyScene.instance()
-	$EnemySpawnPath/EnemySpawnLocation.unit_offset = randf()
-	enemy.position = $EnemySpawnPath/EnemySpawnLocation.position
+	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
 	add_child(enemy)
 
 
