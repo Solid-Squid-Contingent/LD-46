@@ -37,6 +37,7 @@ var happiness: float = 100
 
 var needDecay: float = 0
 export(int) var needDecayPerSecond: int = 1
+export(int) var agingPerSecond: int = 5
 
 export(float) var needGain = 10
 
@@ -68,17 +69,23 @@ func _process(delta):
 				change_awakeness(20)
 	
 	if not minigame:
-		age += delta * 5
+		age += delta * agingPerSecond
 		if stage < STAGE.old and age > 100:
 			age_up()
 			age = 0
 
+func is_animating() -> bool:
+	return $Screen/HomeScreen.is_animating()
+
 func toggle_sleep():
-	sleeping = not sleeping
-	if sleeping:
-		emit_signal("start_sleeping")
+	if is_satisfied(awakeness) and not sleeping:
+		emit_signal("refuse")
 	else:
-		emit_signal("end_sleeping")
+		sleeping = not sleeping
+		if sleeping:
+			emit_signal("start_sleeping")
+		else:
+			emit_signal("end_sleeping")
 	
 
 func change_fullness(amount):
@@ -93,13 +100,8 @@ func change_fullness(amount):
 
 func change_awakeness(amount):
 	if amount > 0 and is_satisfied(awakeness):
-		if not sleeping:
-			emit_signal("refuse")
-		else:
-			toggle_sleep()
+		toggle_sleep()
 	else:
-		if amount > 0 and not sleeping:
-			toggle_sleep()
 		awakeness = min(awakeness + amount, 100)
 		awakeProgressBar.value = awakeness
 		die_if_dead()
@@ -170,38 +172,42 @@ func switch_to_home():
 	minigame = false
 
 func _on_FoodButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if minigame:
-		$Screen/MinigameScreen.moveLeft()
-	else:
-		change_fullness(needGain)
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if minigame:
+			$Screen/MinigameScreen.moveLeft()
+		else:
+			change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if minigame:
-		$Screen/MinigameScreen.shoot()
-	else:
-		toggle_sleep()
+	if not is_animating():
+		if minigame:
+			$Screen/MinigameScreen.shoot()
+		else:
+			toggle_sleep()
 
 
 func _on_PlayButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if stage != STAGE.egg:
-		if minigame:
-			$Screen/MinigameScreen.moveRight()
-		else:
-			change_fun(needGain)
-			switch_to_minigame()
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if stage != STAGE.egg:
+			if minigame:
+				$Screen/MinigameScreen.moveRight()
+			else:
+				change_fun(needGain)
+				switch_to_minigame()
 
 
 func _on_ExtraButton_pressed():
-	if sleeping:
-		toggle_sleep()
-	if minigame:
-		switch_to_home()
-	else:
-		change_happiness(needGain)
+	if not is_animating():
+		if sleeping:
+			toggle_sleep()
+		if minigame:
+			switch_to_home()
+		else:
+			change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):
