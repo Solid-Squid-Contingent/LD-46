@@ -17,9 +17,11 @@ __meta__ = {
 [node name="Label" type="RichTextLabel" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -79.5
-margin_right = 80.5
-margin_bottom = 16.0
+margin_left = -78.5
+margin_top = 2.0
+margin_right = 1492.5
+margin_bottom = 123.0
+rect_scale = Vector2( 0.1, 0.1 )
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3

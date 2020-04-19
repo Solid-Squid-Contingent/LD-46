@@ -20,7 +20,6 @@ scale = Vector2( 5, 5 )
 
 [node name="VNTextBox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 360, 435 )
-scale = Vector2( 5, 5 )
 
 [node name="CharacterView" parent="." instance=ExtResource( 5 )]
 position = Vector2( 360, 4 )
