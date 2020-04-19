@@ -166,6 +166,8 @@ func switch_to_home():
 	minigame = false
 
 func _on_FoodButton_pressed():
+	if sleeping:
+		toggle_sleep()
 	if minigame:
 		$Screen/MinigameScreen.moveLeft()
 	else:
@@ -179,6 +181,8 @@ func _on_SleepButton_pressed():
 
 
 func _on_PlayButton_pressed():
+	if sleeping:
+		toggle_sleep()
 	if stage != STAGE.egg:
 		if minigame:
 			$Screen/MinigameScreen.moveRight()
@@ -188,6 +192,8 @@ func _on_PlayButton_pressed():
 
 
 func _on_ExtraButton_pressed():
+	if sleeping:
+		toggle_sleep()
 	if minigame:
 		switch_to_home()
 	else:
