@@ -2,7 +2,7 @@
 
 [ext_resource path="res://VNScripts/VNTextBox.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Graphics/VNUI/character_dialogue.png" type="Texture" id=2]
-[ext_resource path="res://Resources/Fonts/Roboto.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=3]
 
 [node name="VNTextBox" type="Node2D"]
 script = ExtResource( 1 )
@@ -18,13 +18,14 @@ __meta__ = {
 }
 
 [node name="Label" type="RichTextLabel" parent="TextBox"]
-margin_left = 16.0
-margin_top = 8.0
-margin_right = 1365.0
-margin_bottom = 320.0
-rect_scale = Vector2( 0.1, 0.1 )
+margin_left = 18.0
+margin_top = 5.0
+margin_right = 2658.0
+margin_bottom = 701.0
+rect_scale = Vector2( 0.05, 0.05 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 3 )
+text = "The quick brown fox jumps over the lazy dog."
 __meta__ = {
 "_edit_use_anchors_": false
 }
