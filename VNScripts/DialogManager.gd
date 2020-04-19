@@ -8,6 +8,9 @@ signal reduce_everything(amount)
 
 signal play_music(name)
 
+signal change_characters(characters)
+signal change_background(background)
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
@@ -94,6 +97,12 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("music"):
 		emit_signal("play_music", currentData["music"])
+	
+	if currentData.has("characters"):
+		emit_signal("change_characters", currentData["characters"])
+	
+	if currentData.has("background"):
+		emit_signal("change_background", currentData["background"])
 
 
 func _on_ChoiceButtonPressed(choice):
