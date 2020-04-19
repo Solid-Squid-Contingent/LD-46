@@ -21,7 +21,8 @@
 		"name" : "Lloyd",
 		"text" : "How are you?",
 		"music" : "deep sea",
-		"reduce_fullness": 50,
+		"reduce_fullness": 100,
+		"reduce_happiness": 100,
 		"choices" :
 		[
 			{

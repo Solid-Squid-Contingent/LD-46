@@ -42,6 +42,8 @@ export(int) var agingPerSecond: int = 5
 
 export(float) var needGain = 10
 
+export(int) var minimumNeedAfterDialog: int = 15
+
 onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
 onready var awakeProgressBar = $Screen/HomeScreen/UIContainer/AwakenessUI/TextureProgress
 onready var funProgressBar = $Screen/HomeScreen/UIContainer/FunUI/TextureProgress
@@ -89,48 +91,48 @@ func toggle_sleep():
 			emit_signal("end_sleeping")
 	
 
-func change_fullness(amount):
+func change_fullness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(fullness):
 		emit_signal("refuse")
 	else:
 		if amount > 0:
 			emit_signal("eat")
-		fullness = min(fullness + amount, 100)
+		fullness = clamp(fullness + amount, min(minValue, fullness), 100)
 		fullProgressBar.value = fullness
 		react_to_low_needs()
 
-func change_awakeness(amount):
+func change_awakeness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(awakeness):
 		toggle_sleep()
 	else:
-		awakeness = min(awakeness + amount, 100)
+		awakeness = clamp(awakeness + amount, min(minValue, awakeness), 100)
 		awakeProgressBar.value = awakeness
 		react_to_low_needs()
 
-func change_fun(amount):
+func change_fun(amount, minValue = 0):
 	if amount > 0 and is_satisfied(fun):
 		emit_signal("refuse")
 	else:
-		fun = min(fun + amount, 100)
+		fun = clamp(fun + amount, min(minValue, fun), 100)
 		funProgressBar.value = fun
 		react_to_low_needs()
 
-func change_happiness(amount):
+func change_happiness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(happiness):
 		emit_signal("refuse")
 	else:
 		if amount > 0:
 			emit_signal("happy")
-		happiness = min(happiness + amount, 100)
+		happiness = clamp(happiness + amount, min(minValue, happiness), 100)
 		petHappyProgressBar.value = happiness
 		sickHappyProgressBar.value = happiness
 		react_to_low_needs()
 
-func change_all_needs(amount):
-	change_fullness(amount)
-	change_awakeness(amount)
-	change_fun(amount)
-	change_happiness(amount)
+func change_all_needs(amount, minValue = 0):
+	change_fullness(amount, minValue)
+	change_awakeness(amount, minValue)
+	change_fun(amount, minValue)
+	change_happiness(amount, minValue)
 
 func die_if_dead():
 	if fullness <= 0 or awakeness <= 0 or fun <= 0 or happiness <= 0:
@@ -222,23 +224,23 @@ func _on_ExtraButton_pressed():
 
 
 func _on_DialogManager_reduce_awakeness(amount):
-	change_awakeness(-amount)
+	change_awakeness(-amount, minimumNeedAfterDialog)
 
 
 func _on_DialogManager_reduce_fullness(amount):
-	change_fullness(-amount)
+	change_fullness(-amount, minimumNeedAfterDialog)
 
 
 func _on_DialogManager_reduce_fun(amount):
-	change_fun(-amount)
+	change_fun(-amount, minimumNeedAfterDialog)
 
 
 func _on_DialogManager_reduce_happiness(amount):
-	change_happiness(-amount)
+	change_happiness(-amount, minimumNeedAfterDialog)
 
 
 func _on_DialogManager_reduce_everything(amount):
-	change_all_needs(-amount)
+	change_all_needs(-amount, minimumNeedAfterDialog)
 
 
 func _on_TamagotchiTextBox_start_talking():
