@@ -42,10 +42,8 @@ func set_resolution_options():
 func _on_BackButton_pressed():
 	emit_signal("backButton_pressed")
 
-
 func _on_FullscreenToggle_toggled(button_pressed):
 	emit_signal("toggle_fullscreen", button_pressed)
-
 
 func _on_ResolutionButton_item_selected(id):
 	emit_signal("change_resolution", resolutions[id])

@@ -17,11 +17,10 @@ __meta__ = {
 }
 
 [node name="ButtonContainer" type="VBoxContainer" parent="."]
-visible = false
 margin_left = 8.0
-margin_top = 474.0
+margin_top = 351.0
 margin_right = 1191.0
-margin_bottom = 675.0
+margin_bottom = 672.0
 size_flags_vertical = 3
 custom_constants/separation = 7
 __meta__ = {
@@ -30,7 +29,7 @@ __meta__ = {
 
 [node name="RestartButton" type="Button" parent="ButtonContainer"]
 margin_right = 1183.0
-margin_bottom = 97.0
+margin_bottom = 157.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 3 )
@@ -41,9 +40,9 @@ __meta__ = {
 }
 
 [node name="QuitButton" type="Button" parent="ButtonContainer"]
-margin_top = 104.0
+margin_top = 164.0
 margin_right = 1183.0
-margin_bottom = 201.0
+margin_bottom = 321.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 3 )
