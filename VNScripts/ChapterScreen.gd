@@ -13,10 +13,12 @@ func popup():
 	$Subtitle.visible = false
 	$TitleAppearTimer.start()
 	$SubtitleAppearTimer.start()
+	$AudioPlayer.play()
 	emit_signal("pause_music")
 
 func go_away():
 	visible = false
+	$AudioPlayer.stop()
 	emit_signal("unpause_music")
 
 func set_chapter(number):
@@ -32,13 +34,7 @@ func _on_Main_new_chapter(number, subtitle):
 
 func _on_ChapterScreen_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
-		if not $TitleAppearTimer.is_stopped():
-			$TitleAppearTimer.stop()
-			$ChapterLabel.visible = true
-		elif not $SubtitleAppearTimer.is_stopped():
-			$SubtitleAppearTimer.stop()
-			$Subtitle.visible = true
-		else:
+		if $TitleAppearTimer.is_stopped() and $SubtitleAppearTimer.is_stopped():
 			emit_signal("hide_screen")
 
 
