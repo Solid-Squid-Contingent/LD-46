@@ -1,9 +1,13 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/heart_icon.png" type="Texture" id=3]
 [ext_resource path="res://VPSScenes/Minigame/MinigameEnemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/shoot_icon.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/left_arrow.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/exit_icon.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/right_arrow.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.81548, 71.3524 )
@@ -15,18 +19,34 @@ extents = Vector2( 45.4281, 10 )
 "minigame_objects",
 ]]
 margin_left = 3.0
-margin_top = 5.0
+margin_top = 4.96435
 margin_right = 67.0
-margin_bottom = 76.0
+margin_bottom = 75.9644
 rect_clip_content = true
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 30.2271, 24.2481 )
-scale = Vector2( 1, 1 )
+[node name="Left" type="Sprite" parent="."]
+position = Vector2( 6, 1 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Shoot" type="Sprite" parent="."]
+position = Vector2( 20, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Right" type="Sprite" parent="."]
+position = Vector2( 40, 1 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Exit" type="Sprite" parent="."]
+position = Vector2( 54, 0 )
+texture = ExtResource( 7 )
+centered = false
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
 margin_left = 2.0
@@ -53,6 +73,10 @@ margin_left = 18.0
 margin_right = 23.0
 margin_bottom = 6.0
 texture = ExtResource( 3 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 30.2271, 24.2481 )
+scale = Vector2( 1, 1 )
 
 [node name="EnemySpawnPosition1" type="Position2D" parent="."]
 position = Vector2( 5, 75 )
