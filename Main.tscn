@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -8,7 +8,9 @@
 [ext_resource path="res://VNScripts/DialogManager.gd" type="Script" id=6]
 [ext_resource path="res://GameOverScreen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://VNScenes/ChapterScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://MenuScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://AudioPlayer.gd" type="Script" id=10]
+[ext_resource path="res://OptionsScreen.tscn" type="PackedScene" id=11]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -27,6 +29,7 @@ scale = Vector2( 5, 5 )
 
 [node name="VNTextBox" parent="." instance=ExtResource( 3 )]
 position = Vector2( 360, 435 )
+scale = Vector2( 5, 5 )
 
 [node name="DialogManager" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -35,12 +38,21 @@ startFileName = "res://Resources/Dialog/test.json"
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false
 
-[node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
-script = ExtResource( 10 )
-
 [node name="ChapterScreen" parent="." instance=ExtResource( 8 )]
 visible = false
-mouse_filter = 0
+
+[node name="MenuScreen" parent="." instance=ExtResource( 9 )]
+pause_mode = 2
+visible = false
+
+[node name="OptionsScreen" parent="." instance=ExtResource( 11 )]
+pause_mode = 2
+visible = false
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+bus = "Music"
+script = ExtResource( 10 )
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
@@ -49,16 +61,25 @@ mouse_filter = 0
 [connection signal="change_background" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_background"]
 [connection signal="change_characters" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_characters"]
 [connection signal="new_chapter" from="DialogManager" to="." method="_on_DialogManager_new_chapter"]
-[connection signal="play_music" from="DialogManager" to="AudioPlayer" method="_on_DialogManager_play_music"]
+[connection signal="play_music" from="DialogManager" to="MusicPlayer" method="_on_DialogManager_play_music"]
 [connection signal="reduce_awakeness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_awakeness"]
 [connection signal="reduce_everything" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_everything"]
 [connection signal="reduce_fullness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fullness"]
 [connection signal="reduce_fun" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fun"]
 [connection signal="reduce_happiness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_happiness"]
-[connection signal="turn_tamagotchi_off" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_off"]
-[connection signal="turn_tamagotchi_on" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_on"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
-[connection signal="finished" from="AudioPlayer" to="AudioPlayer" method="_on_AudioPlayer_finished"]
 [connection signal="gui_input" from="ChapterScreen" to="ChapterScreen" method="_on_ChapterScreen_gui_input"]
 [connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]
+[connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
+[connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
+[connection signal="ContinueButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
+[connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
+[connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
+[connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
+[connection signal="change_music_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_music_volume"]
+[connection signal="change_resolution" from="OptionsScreen" to="." method="_on_OptionsScreen_change_resolution"]
+[connection signal="change_soundeffects_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_soundeffects_volume"]
+[connection signal="toggle_fullscreen" from="OptionsScreen" to="." method="_on_OptionsScreen_toggle_fullscreen"]
+[connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_AudioPlayer_finished"]
