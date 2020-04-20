@@ -10,16 +10,16 @@ export(float) var animationLength = 2
 onready var animationTimer = $AnimationTimer
 
 onready var allSprites = [
-	$BabySprite,
-	$AdultSprite,
-	$OldSprite]
+	$NormalSprites/BabySprite,
+	$NormalSprites/AdultSprite,
+	$NormalSprites/OldSprite]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func is_animating() -> bool:
-	return not animationTimer.is_stopped()
+	return not animationTimer.is_stopped()# or $HatchSprite.is_playing()
 
 func _on_Screen_eat():
 	for sprite in allSprites:
@@ -72,3 +72,15 @@ func _on_Screen_switch_to_pet():
 
 func _on_Screen_switch_to_sick():
 	emit_signal("switch_to_sick")
+
+
+func _on_Screen_hatch():
+	$NormalSprites.visible = false
+	$HatchSprite.visible = true
+	$HatchSprite.play("hatch")
+	$HatchSprite.set_frame(0)
+
+
+func _on_HatchSprite_animation_finished():
+	$NormalSprites.visible = true
+	$HatchSprite.visible = false

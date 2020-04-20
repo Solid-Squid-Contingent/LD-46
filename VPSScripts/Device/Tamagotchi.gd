@@ -13,6 +13,7 @@ signal sad
 signal not_sad
 signal start_talking
 signal end_talking
+signal hatch
 
 enum STAGE{
 	egg,
@@ -27,10 +28,10 @@ enum STATE{
 	gameOver}
 
 onready var stageSpriteMap = {
-	STAGE.egg: $Screen/HomeScreen/EggSprite,
-	STAGE.baby: $Screen/HomeScreen/BabySprite,
-	STAGE.adult: $Screen/HomeScreen/AdultSprite,
-	STAGE.old: $Screen/HomeScreen/OldSprite}
+	STAGE.egg: $Screen/HomeScreen/NormalSprites/EggSprite,
+	STAGE.baby: $Screen/HomeScreen/NormalSprites/BabySprite,
+	STAGE.adult: $Screen/HomeScreen/NormalSprites/AdultSprite,
+	STAGE.old: $Screen/HomeScreen/NormalSprites/OldSprite}
 
 var age: float = 0
 var stage: int = STAGE.egg
@@ -67,7 +68,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if stage != STAGE.egg and state != STATE.off :
+	if stage != STAGE.egg and state != STATE.off:
 		needDecay += delta * needDecayPerSecond
 		if needDecay > 10:
 			needDecay -= 10
@@ -163,6 +164,7 @@ func die():
 	emit_signal("tamagotchi_died")
 
 func age_up():
+	emit_signal("hatch")
 	hide_sprite(stage)
 	stage += 1
 	show_sprite(stage)
