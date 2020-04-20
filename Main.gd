@@ -7,6 +7,7 @@ export(int) var start_resolution = 1
 func _ready():
 	randomize()
 	show_screen($StartScreen)
+	$DialogManager.print_next_dialog_line()
 
 
 func game_over():
