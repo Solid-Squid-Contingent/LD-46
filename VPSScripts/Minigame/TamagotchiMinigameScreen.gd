@@ -1,8 +1,10 @@
 extends Container
 
+signal game_over
+
 var timePassed : float = 5
 var enemyScenes = [
-	preload("res://VPSScenes/Minigame/Enemy.tscn"),
+	preload("res://VPSScenes/Minigame/EnemyFan.tscn"),
 	preload("res://VPSScenes/Minigame/EnemyTargeted.tscn"),
 	preload("res://VPSScenes/Minigame/EnemySine.tscn"),
 	preload("res://VPSScenes/Minigame/EnemySpawning.tscn")
@@ -51,9 +53,13 @@ func _on_Player_area_entered(area):
 	for heart in $HeartContainer.get_children():
 		if heart.visible:
 			heart.visible = false
+			break
+	
+	for heart in $HeartContainer.get_children():
+		if heart.visible:
 			return
 			
-	print("You died")
+	emit_signal("game_over")
 
 
 func _on_EnemySpawnTimer_timeout():

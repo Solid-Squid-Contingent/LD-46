@@ -23,7 +23,8 @@ enum STAGE{
 enum STATE{
 	off,
 	home,
-	minigame}
+	minigame,
+	gameOver}
 
 onready var stageSpriteMap = {
 	STAGE.egg: $Screen/HomeScreen/EggSprite,
@@ -49,6 +50,9 @@ export(float) var needGain = 10
 
 export(int) var minimumNeedAfterDialog: int = 15
 
+var minigameScreenScene = preload("res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn")
+onready var minigameScreen = $Screen/MinigameScreen
+
 onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
 onready var awakeProgressBar = $Screen/HomeScreen/UIContainer/AwakenessUI/TextureProgress
 onready var funProgressBar = $Screen/HomeScreen/UIContainer/FunUI/TextureProgress
@@ -62,7 +66,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if stage != STAGE.egg and state != STATE.off:
+	if stage != STAGE.egg and state != STATE.off :
 		needDecay += delta * needDecayPerSecond
 		if needDecay > 10:
 			needDecay -= 10
@@ -180,40 +184,62 @@ func show_sprite(newStage):
 
 func switch_to_minigame():
 	$Screen/HomeScreen.visible = false
-	$Screen/MinigameScreen.visible = true
+	minigameScreen.visible = true
+	$Screen/GameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "unpause")
 	state = STATE.minigame
 
+func switch_to_gameOver():
+	$Screen/HomeScreen.visible = false
+	minigameScreen.visible = false
+	$Screen/GameOverScreen.visible = true
+	get_tree().call_group("minigame_objects", "pause")
+	state = STATE.gameOver
+
 func switch_to_off():
 	$Screen/HomeScreen.visible = false
-	$Screen/MinigameScreen.visible = false
+	minigameScreen.visible = false
+	$Screen/GameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.off
 
 func switch_to_home():
 	$Screen/HomeScreen.visible = true
-	$Screen/MinigameScreen.visible = false
+	minigameScreen.visible = false
+	$Screen/GameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.home
 
+func restart_minigame():
+	minigameScreen.queue_free()
+	minigameScreen = minigameScreenScene.instance()
+	$Screen.call_deferred("add_child", minigameScreen)
+	
+
 func _on_FoodButton_pressed():
-	if state == STATE.minigame:
-		$Screen/MinigameScreen.moveLeft()
+	if state == STATE.gameOver:
+		switch_to_home()
+	elif state == STATE.minigame:
+		minigameScreen.moveLeft()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
 		change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if state == STATE.minigame:
-		$Screen/MinigameScreen.shoot()
+	if state == STATE.gameOver:
+		switch_to_home()
+	elif state == STATE.minigame:
+		minigameScreen.shoot()
 	elif not is_animating() and state != STATE.off:
 		toggle_sleep()
 
 
 func _on_PlayButton_pressed():
-	if state == STATE.minigame:
-		$Screen/MinigameScreen.moveRight()
+	if state == STATE.gameOver:
+		switch_to_home()
+	elif state == STATE.minigame:
+		minigameScreen.moveRight()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
@@ -222,7 +248,7 @@ func _on_PlayButton_pressed():
 
 
 func _on_ExtraButton_pressed():
-	if state == STATE.minigame:
+	if state == STATE.minigame or state == STATE.gameOver:
 		switch_to_home()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
@@ -264,3 +290,8 @@ func _on_DialogManager_turn_tamagotchi_off():
 
 func _on_DialogManager_turn_tamagotchi_on():
 	switch_to_home()
+
+
+func _on_Screen_game_over():
+	restart_minigame()
+	switch_to_gameOver()

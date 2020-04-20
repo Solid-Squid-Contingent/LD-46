@@ -12,6 +12,8 @@ signal end_talking
 signal switch_to_pet
 signal switch_to_sick
 
+signal game_over
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass 
@@ -59,3 +61,7 @@ func _on_Tamagotchi_switch_to_pet():
 
 func _on_Tamagotchi_switch_to_sick():
 	emit_signal("switch_to_sick")
+
+
+func _on_MinigameScreen_game_over():
+	emit_signal("game_over")

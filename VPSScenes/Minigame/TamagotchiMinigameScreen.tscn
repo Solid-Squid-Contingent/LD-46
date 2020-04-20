@@ -3,7 +3,7 @@
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/heart_icon.png" type="Texture" id=3]
-[ext_resource path="res://VPSScenes/Minigame/Enemy.tscn" type="PackedScene" id=4]
+[ext_resource path="res://VPSScenes/Minigame/EnemyFan.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/shoot_icon.png" type="Texture" id=5]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/left_arrow.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/exit_icon.png" type="Texture" id=7]
@@ -106,10 +106,10 @@ position = Vector2( 101, 109 )
 shape = SubResource( 2 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.5
 autostart = true
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 30.468, 76.2129 )
+position = Vector2( 31.1977, 75.4453 )
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]

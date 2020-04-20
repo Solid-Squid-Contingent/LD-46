@@ -15,7 +15,3 @@ func pause():
 
 func unpause():
 	paused = false
-
-
-func _on_Bullet_area_entered(area):
-	queue_free()

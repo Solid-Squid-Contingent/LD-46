@@ -4,13 +4,13 @@
 [ext_resource path="res://VPSScripts/Minigame/EnemyBullet.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 0.973705, 0.981722 )
+extents = Vector2( 0.988567, 0.997094 )
 
 [node name="EnemyBullet" type="Area2D" groups=[
 "minigame_objects",
 ]]
 collision_layer = 8
-collision_mask = 17
+collision_mask = 21
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
