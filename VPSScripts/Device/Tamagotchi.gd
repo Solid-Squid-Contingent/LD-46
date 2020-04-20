@@ -164,11 +164,12 @@ func die():
 	emit_signal("tamagotchi_died")
 
 func age_up():
-	emit_signal("hatch")
+	if stage == STAGE.egg:
+		emit_signal("hatch")
 	hide_sprite(stage)
 	stage += 1
 	show_sprite(stage)
-	if (stage == STAGE.old):
+	if stage == STAGE.old:
 		emit_signal("switch_to_sick")
 	
 func is_satisfied(need) -> bool:
