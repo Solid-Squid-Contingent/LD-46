@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Resources/Sounds/textbox_proceed.wav" type="AudioStream" id=13]
 [ext_resource path="res://GeneralUIScripts/AdvanceDialogPlayer.gd" type="Script" id=14]
 [ext_resource path="res://GeneralUIScenes/EndScreen.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GeneralUIScenes/StartMenuScreen.tscn" type="PackedScene" id=16]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -45,6 +46,10 @@ visible = false
 visible = false
 
 [node name="MenuScreen" parent="." instance=ExtResource( 9 )]
+pause_mode = 2
+visible = false
+
+[node name="StartMenuScreen" parent="." instance=ExtResource( 16 )]
 pause_mode = 2
 visible = false
 
@@ -98,6 +103,9 @@ script = ExtResource( 14 )
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
+[connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
+[connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
 [connection signal="change_music_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_music_volume"]
 [connection signal="change_resolution" from="OptionsScreen" to="." method="_on_OptionsScreen_change_resolution"]
