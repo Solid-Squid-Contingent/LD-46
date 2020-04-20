@@ -7,6 +7,7 @@ signal reduce_happiness(amount)
 signal reduce_everything(amount)
 
 signal play_music(name)
+signal play_sound_effect(name)
 
 signal change_characters(characters)
 signal change_background(background)
@@ -99,12 +100,19 @@ func print_next_dialog_line():
 
 
 func execute_side_effects(currentData):
+	if currentData.has("new_chapter"):
+		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
+		currentChapter += 1
+		
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
 	
 	if currentData.has("music"):
 		emit_signal("play_music", currentData["music"])
+	
+	if currentData.has("sfx"):
+		emit_signal("play_sound_effect", currentData["sfx"])
 	
 	if currentData.has("characters"):
 		emit_signal("change_characters", currentData["characters"])
@@ -120,10 +128,6 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("squid_stage"):
 		emit_signal("change_squid_stage", currentData["squid_stage"])
-	
-	if currentData.has("new_chapter"):
-		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
-		currentChapter += 1
 
 
 func _on_ChoiceButtonPressed(choice):
