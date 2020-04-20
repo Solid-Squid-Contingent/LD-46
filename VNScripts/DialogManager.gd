@@ -38,7 +38,6 @@ var currentChapter : int = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	load_file(startFileName)
-	print_next_dialog_line()
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
@@ -60,6 +59,7 @@ func load_file(fileName):
 	var data_parse = JSON.parse(data_text)
 	if data_parse.error != OK:
 		print("File could not be parsed as JSON.")
+		print("Line ", data_parse.get_error_line(), ": ", data_parse.get_error_string())
 		return
 		
 	data = {"next" : data_parse.result}

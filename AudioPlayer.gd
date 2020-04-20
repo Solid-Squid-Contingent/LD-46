@@ -6,7 +6,8 @@ var introDict = {
 
 var loopDict = {
 	"deep sea" : preload("res://Resources/Music/deep_sea_loop.ogg"),
-	"deep sea creepy" : preload("res://Resources/Music/deep_sea_creepy_loop.ogg")
+	"deep sea creepy" : preload("res://Resources/Music/deep_sea_creepy_loop.ogg"),
+	"everyday" : preload("res://Resources/Music/deep_sea_loop.ogg") #TODO
 }
 
 var currentLoop

@@ -1,17 +1,15 @@
 [
 	{
-		"new_chapter" : "First Part, Chapter One"
-	},
-	{
+		"new_chapter" : "First Part, Chapter One",
 		"background" : "living room",
 		"characters" : ["lucas young"],
 		"music" : "everyday",
 		"name" : "Lucas",
-		"text" : "[i]Today is my last day with Mom.\nOur living room is quiet.\nMore quiet than usual.\nMom turned off the TV to talk with me.\nShe normally wouldn’t turn it off just to talk.\nBut today is different.\nShe produces a small plastic device from her pocket.\nI have seen it before. Many times.\nIt is her Tamagotchi. She’s had it for…\nWell as long as I can remember.[/i]"
+		"text" : "[b]Today is my last day with Mom. Our living room is quiet. More quiet than usual.\nMom turned off the TV to talk with me.\nShe normally wouldn’t turn it off just to talk.\nBut today is different.\nShe produces a small plastic device from her pocket.\nI have seen it before. Many times.\nIt is her Tamagotchi. She’s had it for…\nWell as long as I can remember.[/b]"
 	},
 	{
 		"name" : "Mom",
-		"characters" : ["christine","lucasyoung"],
+		"characters" : ["christine","lucas young"],
 		"text" : "I want to give something to you, Lucas."
 	},
 	{
@@ -132,14 +130,11 @@
 	},
 	{
 		"name" : "Mom",
+		"require_eating" : true,
 		"text" : "I’m just pulling your leg. You are much more mature than I was with ten you know?\nBut why don’t you use that chance to get a hang of the Tamagotchi?\n"
 	},
 	{
-		"require_eating" : true
-	},
-	{
-		"text" 
-		"Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit.\n But sometimes it will have other needs besides food. Like bathing. Playing.\nYou know, just like everyone else.\nExcept unlike everyone else it can’t take care of these things on its own."
+		"text" : "Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit.\n But sometimes it will have other needs besides food. Like bathing. Playing.\nYou know, just like everyone else.\nExcept unlike everyone else it can’t take care of these things on its own."
 	},
 	{
 		"name" : "Lucas",
@@ -247,11 +242,9 @@
 	},
 	{
 		"text" : "You really have a mind of your own, don’t you?\n[i]I laugh but soon my laughing returns to sobbing.\nBut it feels less painful now.\nMaybe I’m not alone after all.[/i]"
-	}
-	{
-		"new_chapter" : "First Part, Chapter Two"
 	},
 	{
+		"new_chapter" : "First Part, Chapter Two",
 		"background" : "class",
 		"music" : "everyday",
 		"text": "[i]Middle school was not really easy on me.\nBeing the guy who wouldn’t shut up about the sea or how he wanted to explore it might have gotten a pass from my peers…\nIf it hadn’t been for my obsession with my digital pet Squid.\nBut I couldn’t just ditch my Squid. It means too much to me.\nWhat young kids in elementary school found cool or interesting was very much a no-go in middle school.\nAnd I learned that the hard way.\nI will do things differently in high school.\nBe the best version of myself.\nAnd be a bit more subtle about my squid care.\nIf I can manage.[/i]"
@@ -577,7 +570,7 @@
 		"text" : "..."
 	},
 	{
-		"background" "city"
+		"background" : "city",
 		"characters" : ["lucas adult"],
 		"music" : "everyday", 
 		"name" : "Lucas",
@@ -1010,7 +1003,7 @@
 	{
 		"start_sleep" : true,
 		"text" : "[i]I enjoyed numerous hours of playing and chatting with my assertive friend before I sent him home and went to bed.[/i]"
-	}
+	},
 	{
 		"background" : "black",
 		"characters" : [],

@@ -6,6 +6,7 @@ export(int) var start_resolution = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	$DialogManager.print_next_dialog_line()
 
 func game_over():
 	show_screen($GameOverScreen)
