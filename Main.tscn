@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://GeneralUIScripts/SoundEffectPlayer.gd" type="Script" id=12]
 [ext_resource path="res://Resources/Sounds/textbox_proceed.wav" type="AudioStream" id=13]
 [ext_resource path="res://GeneralUIScripts/AdvanceDialogPlayer.gd" type="Script" id=14]
+[ext_resource path="res://GeneralUIScenes/EndScreen.tscn" type="PackedScene" id=15]
+[ext_resource path="res://GeneralUIScenes/StartMenuScreen.tscn" type="PackedScene" id=16]
+[ext_resource path="res://GeneralUIScripts/StartScreen.gd" type="Script" id=17]
+[ext_resource path="res://Resources/Graphics/GeneralUI/start_screen.png" type="Texture" id=18]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,8 +52,26 @@ visible = false
 pause_mode = 2
 visible = false
 
+[node name="StartScreen" type="TextureRect" parent="."]
+pause_mode = 2
+margin_right = 240.0
+margin_bottom = 135.0
+rect_scale = Vector2( 5, 5 )
+texture = ExtResource( 18 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartMenuScreen" parent="." instance=ExtResource( 16 )]
+pause_mode = 2
+visible = false
+
 [node name="OptionsScreen" parent="." instance=ExtResource( 11 )]
 pause_mode = 2
+visible = false
+
+[node name="EndScreen" parent="." instance=ExtResource( 15 )]
 visible = false
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
@@ -75,6 +97,7 @@ script = ExtResource( 14 )
 [connection signal="change_background" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_background"]
 [connection signal="change_characters" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_characters"]
 [connection signal="change_squid_stage" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_change_squid_stage"]
+[connection signal="game_ended" from="DialogManager" to="." method="_on_DialogManager_game_ended"]
 [connection signal="new_chapter" from="DialogManager" to="." method="_on_DialogManager_new_chapter"]
 [connection signal="play_music" from="DialogManager" to="MusicPlayer" method="_on_DialogManager_play_music"]
 [connection signal="play_sound_effect" from="DialogManager" to="DialogSoundEffectPlayer" method="_on_DialogManager_play_sound_effect"]
@@ -87,7 +110,6 @@ script = ExtResource( 14 )
 [connection signal="turn_tamagotchi_on" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_on"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
-[connection signal="gui_input" from="ChapterScreen" to="ChapterScreen" method="_on_ChapterScreen_gui_input"]
 [connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]
 [connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
 [connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
@@ -95,9 +117,15 @@ script = ExtResource( 14 )
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
+[connection signal="gui_input" from="StartScreen" to="StartScreen" method="_on_StartScreen_gui_input"]
+[connection signal="hide_screen" from="StartScreen" to="." method="_on_StartScreen_hide_screen"]
+[connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
+[connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
 [connection signal="change_music_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_music_volume"]
 [connection signal="change_resolution" from="OptionsScreen" to="." method="_on_OptionsScreen_change_resolution"]
 [connection signal="change_soundeffects_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_soundeffects_volume"]
 [connection signal="toggle_fullscreen" from="OptionsScreen" to="." method="_on_OptionsScreen_toggle_fullscreen"]
+[connection signal="hide_screen" from="EndScreen" to="." method="_on_EndScreen_hide_screen"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_AudioPlayer_finished"]

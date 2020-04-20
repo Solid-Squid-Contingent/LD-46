@@ -6,7 +6,8 @@ export(int) var start_resolution = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	$DialogManager.print_next_dialog_line()
+	show_screen($StartScreen)
+
 
 func game_over():
 	show_screen($GameOverScreen)
@@ -33,6 +34,7 @@ func quit_game():
 
 func continue_game():
 	hide_screen($MenuScreen)
+	hide_screen($StartMenuScreen)
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -60,8 +62,7 @@ func _on_MenuScreen_ContinueButton_pressed():
 	continue_game()
 
 func _on_OptionsScreen_backButton_pressed():
-	hide_screen($OptionsScreen)
-	show_screen($MenuScreen)
+	$OptionsScreen.go_away()
 
 func _on_DialogManager_new_chapter(number, subtitle):
 	show_new_chapter(number, subtitle)
@@ -95,3 +96,18 @@ func _on_ChapterScreen_pause_music():
 func _on_ChapterScreen_unpause_music():
 	$MusicPlayer.set_stream_paused(false)
 	$MusicPlayer.play()
+
+
+func _on_DialogManager_game_ended():
+	show_screen($EndScreen)
+
+
+func _on_EndScreen_hide_screen():
+	get_tree().reload_current_scene()
+	get_tree().paused = false
+
+
+func _on_StartScreen_hide_screen():
+	hide_screen($StartScreen)
+	show_screen($StartMenuScreen)
+	

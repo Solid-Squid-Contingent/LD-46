@@ -19,6 +19,7 @@ signal change_squid_stage(newStageName)
 signal new_chapter(number, subtitle)
 
 signal advance_dialog
+signal game_ended
 
 export(String, FILE) var startFileName
 
@@ -79,6 +80,10 @@ func get_current_dialog_data():
 
 
 func print_next_dialog_line():
+	if dataPosition.size() == 0:
+		emit_signal("game_ended")
+		return
+		
 	emit_signal("advance_dialog")
 	
 	var currentData = get_current_dialog_data()
@@ -95,13 +100,13 @@ func print_next_dialog_line():
 	if currentData.has("choices"):
 		inChoice = true
 	else:
-		while dataPosition.size() > 1 and \
-		 	  dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
+		while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
 			dataPosition.pop_back()
 			maxDataPosition.pop_back()
 			dialogChoices.pop_back()
-			
-		dataPosition[dataPosition.size() - 1] += 1
+		
+		if dataPosition.size() > 0:
+			dataPosition[dataPosition.size() - 1] += 1
 
 
 func execute_side_effects(currentData):
