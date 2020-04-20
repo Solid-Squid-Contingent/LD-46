@@ -6,7 +6,7 @@ export(int) var start_resolution = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	show_screen($StartMenuScreen)
+	show_screen($StartScreen)
 
 func game_over():
 	show_screen($GameOverScreen)
@@ -104,3 +104,9 @@ func _on_DialogManager_game_ended():
 func _on_EndScreen_hide_screen():
 	get_tree().reload_current_scene()
 	get_tree().paused = false
+
+
+func _on_StartScreen_hide_screen():
+	hide_screen($StartScreen)
+	show_screen($StartMenuScreen)
+	

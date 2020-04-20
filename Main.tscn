@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://GeneralUIScripts/AdvanceDialogPlayer.gd" type="Script" id=14]
 [ext_resource path="res://GeneralUIScenes/EndScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://GeneralUIScenes/StartMenuScreen.tscn" type="PackedScene" id=16]
+[ext_resource path="res://GeneralUIScripts/StartScreen.gd" type="Script" id=17]
+[ext_resource path="res://Resources/Graphics/GeneralUI/start_screen.png" type="Texture" id=18]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -48,6 +50,17 @@ visible = false
 [node name="MenuScreen" parent="." instance=ExtResource( 9 )]
 pause_mode = 2
 visible = false
+
+[node name="StartScreen" type="TextureRect" parent="."]
+pause_mode = 2
+margin_right = 240.0
+margin_bottom = 135.0
+rect_scale = Vector2( 5, 5 )
+texture = ExtResource( 18 )
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="StartMenuScreen" parent="." instance=ExtResource( 16 )]
 pause_mode = 2
@@ -103,6 +116,8 @@ script = ExtResource( 14 )
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
+[connection signal="gui_input" from="StartScreen" to="StartScreen" method="_on_StartScreen_gui_input"]
+[connection signal="hide_screen" from="StartScreen" to="." method="_on_StartScreen_hide_screen"]
 [connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
 [connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
