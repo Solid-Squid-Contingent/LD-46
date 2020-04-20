@@ -8,7 +8,6 @@ signal RestartButton_pressed()
 func _ready():
 	visible = false
 
-
 func popup():
 	visible = true
 

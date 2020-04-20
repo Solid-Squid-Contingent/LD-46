@@ -7,17 +7,17 @@
 	{
 		"name" : "Squid",
 		"text" : "Nothing, sir! ttttt",
-		"tamagotchi_on": true,
-		"background" : "thunderstorm"
+		"new_chapter": "Prologue",
+		"background" : "city"
 	},
 	{
 		"name" : "Lloyd",
 		"text" : "Really, truly? hmmmm?",
-		"tamagotchi_on": false,
 		"characters": ["thief"]
 	},{
 		"name" : "Squid",
 		"text" : "Yessssssssssssss",
+		"new_chapter": "Seeds of Friedship",
 		"characters": ["thief", "cat"]
 	},
 	{
@@ -25,7 +25,7 @@
 		"text" : "How are you?",
 		"music" : "deep sea",
 		"reduce_fullness": 100,
-		"reduce_happiness": 100,
+		"reduce_awakeness": 100,
 		"choices" :
 		[
 			{

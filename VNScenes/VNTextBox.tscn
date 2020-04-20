@@ -42,6 +42,7 @@ margin_top = 2.94452
 margin_right = 736.0
 margin_bottom = 197.945
 rect_scale = Vector2( 0.05, 0.05 )
+mouse_filter = 2
 custom_fonts/italics_font = ExtResource( 5 )
 custom_fonts/bold_font = ExtResource( 4 )
 custom_fonts/normal_font = ExtResource( 3 )
