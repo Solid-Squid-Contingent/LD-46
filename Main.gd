@@ -1,6 +1,8 @@
 extends Node2D
 signal new_chapter(number, subtitle)
 
+export(int) var start_resolution = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -65,3 +67,8 @@ func _on_DialogManager_new_chapter(number, subtitle):
 func _on_ChapterScreen_hide_screen():
 	hide_screen($ChapterScreen)
 
+func _on_OptionsScreen_toggle_fullscreen(toggle_state):
+	OS.window_fullscreen = toggle_state
+
+func _on_OptionsScreen_change_resolution(new_resolution):
+	OS.set_window_size(new_resolution)

@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Resources/Graphics/ChoiceButton.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=2]
 [ext_resource path="res://OptionsScreen.gd" type="Script" id=3]
 [ext_resource path="res://BackButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Graphics/ChoiceButton2.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Graphics/red_Button.png" type="Texture" id=6]
+[ext_resource path="res://VNTheme.tres" type="Theme" id=7]
+[ext_resource path="res://Resources/Fonts/orange-kid_small.tres" type="DynamicFont" id=8]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 91, 36 )
 
 [node name="OptionsScreen" type="TextureRect"]
 margin_right = 1200.0
@@ -19,96 +27,132 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_right = 1200.0
 margin_bottom = 675.0
-custom_constants/separation = 0
+custom_constants/separation = 29
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="TitleContainer" type="MarginContainer" parent="VBoxContainer"]
 margin_right = 1200.0
-margin_bottom = 563.0
+margin_bottom = 121.0
+
+[node name="Label" type="Label" parent="VBoxContainer/TitleContainer"]
+margin_right = 1200.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Settings"
+align = 1
+valign = 1
+
+[node name="SettingsContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 150.0
+margin_right = 1200.0
+margin_bottom = 475.0
 custom_constants/margin_right = 30
 custom_constants/margin_left = 50
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/SettingsContainer"]
 margin_left = 50.0
 margin_right = 1170.0
-margin_bottom = 563.0
+margin_bottom = 325.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/vseparation = -8
-custom_constants/hseparation = 30
+custom_constants/vseparation = 15
+custom_constants/hseparation = 15
 columns = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_right = 566.0
-margin_bottom = 193.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-custom_fonts/font = ExtResource( 2 )
+[node name="Label" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_right = 345.0
+margin_bottom = 61.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Audio:"
+text = "Music Volume:"
 
-[node name="AudioSlider" type="HSlider" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_left = 596.0
+[node name="MusicSlider" type="HSlider" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_left = 360.0
 margin_right = 1120.0
-margin_bottom = 193.0
+margin_bottom = 61.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_icons/grabber = ExtResource( 6 )
+custom_styles/slider = SubResource( 1 )
 
-[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_top = 185.0
-margin_right = 566.0
-margin_bottom = 378.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-custom_fonts/font = ExtResource( 2 )
+[node name="Soundeffects" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_top = 76.0
+margin_right = 345.0
+margin_bottom = 137.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Resolution"
+text = "Sound Effect Volume:"
 
-[node name="ResolutionButton" type="OptionButton" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_left = 596.0
-margin_top = 185.0
+[node name="SoundeffectsSlider" type="HSlider" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_left = 360.0
+margin_top = 76.0
 margin_right = 1120.0
-margin_bottom = 378.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "1200x600"
-
-[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_top = 370.0
-margin_right = 566.0
-margin_bottom = 563.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Stupidness"
-
-[node name="StupidnessSlider" type="HSlider" parent="VBoxContainer/MarginContainer/GridContainer"]
-margin_left = 596.0
-margin_top = 370.0
-margin_right = 1120.0
-margin_bottom = 563.0
+margin_bottom = 137.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
-margin_top = 563.0
+[node name="Label2" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_top = 152.0
+margin_right = 345.0
+margin_bottom = 249.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Resolution"
+
+[node name="ResolutionButton" type="OptionButton" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_left = 360.0
+margin_top = 152.0
+margin_right = 1120.0
+margin_bottom = 249.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 7 )
+text = "1200x600"
+
+[node name="Label3" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_top = 264.0
+margin_right = 345.0
+margin_bottom = 325.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fullscreen:"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="FullscreenToggle" type="CheckButton" parent="VBoxContainer/SettingsContainer/GridContainer"]
+margin_left = 360.0
+margin_top = 264.0
+margin_right = 1120.0
+margin_bottom = 325.0
+
+[node name="BackContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 504.0
 margin_right = 1200.0
 margin_bottom = 675.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_bottom = 17
 
-[node name="BackButton" parent="VBoxContainer/MarginContainer2" instance=ExtResource( 4 )]
+[node name="BackButton" parent="VBoxContainer/BackContainer" instance=ExtResource( 4 )]
 margin_right = 1200.0
-margin_bottom = 95.0
-[connection signal="pressed" from="VBoxContainer/MarginContainer2/BackButton" to="." method="_on_BackButton_pressed"]
+margin_bottom = 154.0
+[connection signal="item_selected" from="VBoxContainer/SettingsContainer/GridContainer/ResolutionButton" to="." method="_on_ResolutionButton_item_selected"]
+[connection signal="toggled" from="VBoxContainer/SettingsContainer/GridContainer/FullscreenToggle" to="." method="_on_FullscreenToggle_toggled"]
+[connection signal="pressed" from="VBoxContainer/BackContainer/BackButton" to="." method="_on_BackButton_pressed"]

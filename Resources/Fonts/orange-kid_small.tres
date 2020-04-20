@@ -3,5 +3,5 @@
 [ext_resource path="res://Resources/Fonts/orange-kid.regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 100
+size = 50
 font_data = ExtResource( 1 )
