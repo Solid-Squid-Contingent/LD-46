@@ -1,18 +1,25 @@
 extends Container
 
 var timePassed : float = 5
-var enemyScene = preload("res://VPSScenes/Minigame/Enemy.tscn")
+var enemyScenes = [
+	preload("res://VPSScenes/Minigame/Enemy.tscn"),
+	preload("res://VPSScenes/Minigame/EnemyTargeted.tscn"),
+	preload("res://VPSScenes/Minigame/EnemySine.tscn"),
+	preload("res://VPSScenes/Minigame/EnemySpawning.tscn")
+]
+
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
 
-export (int) var minX = 10
-export (int) var maxX = 70
+export (int) var minX = 5
+export (int) var maxX = 65
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$EnemySpawnTimer.set_paused(true)
+	randomize()
 
 func spawnEnemy():
-	var enemy = enemyScene.instance()
+	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
 	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
 	add_child(enemy)
 

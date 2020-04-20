@@ -9,7 +9,10 @@ func _ready():
 
 func _process(delta):
 	if not paused:
-		position += delta * velocity
+		move(delta)
+
+func move(delta):
+	position += delta * velocity
 
 func pause():
 	paused = true
@@ -18,5 +21,6 @@ func unpause():
 	paused = false
 
 
+# warning-ignore:unused_argument
 func _on_EnemyBullet_area_entered(area):
 	queue_free()

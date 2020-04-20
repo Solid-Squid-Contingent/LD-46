@@ -58,7 +58,6 @@ onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessU
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	emit_signal("switch_to_pet")
-	age_up() #TODO: Remove
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
