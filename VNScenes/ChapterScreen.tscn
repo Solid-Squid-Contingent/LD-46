@@ -3,9 +3,12 @@
 [ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Fonts/orange-kid-italics.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=4]
-[ext_resource path="res://VNScenes/ChapterScreen.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Graphics/Backgrounds/character view.png" type="Texture" id=4]
+[ext_resource path="res://VNScripts/ChapterScreen.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Graphics/GeneralUI/screen_border.png" type="Texture" id=6]
+
+
+
 
 [node name="ChapterScreen" type="TextureRect"]
 pause_mode = 2

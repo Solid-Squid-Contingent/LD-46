@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Graphics/Backgrounds/character view.png" type="Texture" id=1]
 [ext_resource path="res://Resources/Graphics/Backgrounds/shallow_sea.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Graphics/Backgrounds/living_room.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Graphics/Backgrounds/shallow_sea_creatures.png" type="Texture" id=4]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Resources/Graphics/Backgrounds/city.png" type="Texture" id=8]
 [ext_resource path="res://Resources/Graphics/Backgrounds/deep_sea.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Graphics/Backgrounds/class.png" type="Texture" id=10]
+
+
 
 [node name="CharacterView" type="Node2D"]
 script = ExtResource( 5 )
