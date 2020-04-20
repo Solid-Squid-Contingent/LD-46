@@ -5,7 +5,8 @@ var introDict = {
 }
 
 var loopDict = {
-	"deep sea" : preload("res://Resources/Music/deep_sea_loop.ogg")
+	"deep sea" : preload("res://Resources/Music/deep_sea_loop.ogg"),
+	"deep sea creepy" : preload("res://Resources/Music/deep_sea_creepy_loop.ogg")
 }
 
 var currentLoop
@@ -21,7 +22,10 @@ func _ready():
 func play_music(name: String):
 	currentLoop = loopDict[name]
 	stop()
-	set_stream(introDict[name])
+	if introDict.has(name):
+		set_stream(introDict[name])
+	else:
+		set_stream(loopDict[name])
 	play()
 	
 func _on_AudioPlayer_finished():

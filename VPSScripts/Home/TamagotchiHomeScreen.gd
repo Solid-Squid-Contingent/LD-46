@@ -47,8 +47,9 @@ func _on_Screen_refuse():
 
 func _on_Screen_sad():
 	currentIdleAnimation = "sad"
-	for sprite in allSprites:
-		sprite.animation = currentIdleAnimation
+	if not is_animating():
+		for sprite in allSprites:
+			sprite.animation = currentIdleAnimation
 
 func _on_AnimationTimer_timeout():
 	for sprite in allSprites:
