@@ -38,21 +38,6 @@ animations = [ {
 "name": "idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 12 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "talk",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "sleep",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "happy",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "eat",
@@ -62,6 +47,21 @@ animations = [ {
 "loop": true,
 "name": "sad",
 "speed": 6.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "happy",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "talk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "sleep",
+"speed": 1.0
 } ]
 
 [sub_resource type="SpriteFrames" id=2]

@@ -19,7 +19,7 @@ func _ready():
 	pass # Replace with function body.
 
 func is_animating() -> bool:
-	return not animationTimer.is_stopped()# or $HatchSprite.is_playing()
+	return not animationTimer.is_stopped() or $HatchSprite.is_playing()
 
 func _on_Screen_eat():
 	for sprite in allSprites:
@@ -84,3 +84,4 @@ func _on_Screen_hatch():
 func _on_HatchSprite_animation_finished():
 	$NormalSprites.visible = true
 	$HatchSprite.visible = false
+	$HatchSprite.stop()
