@@ -69,6 +69,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = "SoundEffects"
 script = ExtResource( 2 )
 [connection signal="button_pressed" from="." to="ButtonAudioPlayer" method="_on_Tamagotchi_button_pressed"]
 [connection signal="eat" from="." to="Screen" method="_on_Tamagotchi_eat"]
