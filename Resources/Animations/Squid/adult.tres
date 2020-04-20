@@ -27,14 +27,19 @@ animations = [ {
 "name": "idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
-"name": "eat",
-"speed": 5.0
+"name": "happy",
+"speed": 1.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "sad",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "eat",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 12 ) ],
@@ -45,10 +50,5 @@ animations = [ {
 "frames": [ ExtResource( 11 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "sleep",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "happy",
 "speed": 1.0
 } ]

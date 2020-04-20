@@ -7,7 +7,7 @@ onready var nameLabel = $TextBox/NameLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	show_all_text()
 
 
 func set_text(text):
@@ -16,7 +16,7 @@ func set_text(text):
 	$ShowTextTimer.start()
 
 func set_name(name):
-	nameLabel.bbcode_text = name + ":"
+	nameLabel.bbcode_text = "[b]" + name + ":[/b]"
 
 
 func all_text_appeared():

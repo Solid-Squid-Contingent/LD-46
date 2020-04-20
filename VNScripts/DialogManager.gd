@@ -11,6 +11,12 @@ signal play_music(name)
 signal change_characters(characters)
 signal change_background(background)
 
+signal turn_tamagotchi_on
+signal turn_tamagotchi_off
+signal change_squid_stage(newStageName)
+
+signal new_chapter(number, subtitle)
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
@@ -23,6 +29,8 @@ var dataPosition
 var dialogChoices
 var maxDataPosition
 var inChoice : bool = false
+
+var currentChapter : int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -103,6 +111,19 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("background"):
 		emit_signal("change_background", currentData["background"])
+	
+	if currentData.has("tamagotchi_on"):
+		if currentData["tamagotchi_on"]:
+			emit_signal("turn_tamagotchi_on")
+		else:
+			emit_signal("turn_tamagotchi_off")
+	
+	if currentData.has("squid_stage"):
+		emit_signal("change_squid_stage", currentData["squid_stage"])
+	
+	if currentData.has("new_chapter"):
+		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
+		currentChapter += 1
 
 
 func _on_ChoiceButtonPressed(choice):

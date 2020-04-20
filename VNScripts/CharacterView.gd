@@ -3,12 +3,12 @@ extends Node2D
 var currentCharacters = []
 
 var characterMap = {
-	"thief": preload("res://RealElvenThief.tscn"),
-	"cat": preload("res://CatDude.tscn")
+	"christine": preload("res://VNScenes/CharacterScenes/Christine.tscn"),
+	"michael": preload("res://VNScenes/CharacterScenes/Michael.tscn"),
+	"michael old": preload("res://VNScenes/CharacterScenes/MichaelOld.tscn"),
+	"sarah": preload("res://VNScenes/CharacterScenes/Sarah.tscn"),
+	"sarah old": preload("res://VNScenes/CharacterScenes/SarahOld.tscn")
 }
-
-var exampleCharacterList1 = ["thief", "cat"]
-var exampleCharacterList2 = ["cat", "thief"]
 
 onready var positions = [
 	[
@@ -24,19 +24,23 @@ onready var positions = [
 ]
 
 onready var backgroundMap = {
-	"thunderstorm": $Background1,
-	"field": $Background2,
-	"mountain": $Background1
+	"city": $BackgroundCity,
+	"class": $BackgroundClass,
+	"deep sea": $BackgroundDeepSea,
+	"deep sea eye": $BackgroundDeepSeaEye,
+	"living room": $BackgroundLivingRoom,
+	"office": $BackgroundOffice,
+	"shallow sea": $BackgroundShallowSea,
+	"shallow sea creatures": $BackgroundShallowSeaCreatures,
 }
 
-onready var foremostBackground = $Background3
+onready var foremostBackground = $BackgroundShallowSeaCreatures
 
 export (String) var startingBackground = "field"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	change_background(startingBackground)
-	add_characters(exampleCharacterList1)
 
 func add_characters(listOfCharacters):
 	for index in range(listOfCharacters.size()):

@@ -1,22 +1,58 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
-[ext_resource path="res://Resources/Graphics/Heart.png" type="Texture" id=3]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/heart_icon.png" type="Texture" id=3]
+[ext_resource path="res://VPSScenes/Minigame/EnemyFan.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/shoot_icon.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/left_arrow.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/exit_icon.png" type="Texture" id=7]
+[ext_resource path="res://Resources/Graphics/Minigame/UI/right_arrow.png" type="Texture" id=8]
 
-[node name="MinigameScreen" type="Node2D" groups=[
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.81548, 71.3524 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 45.4281, 10 )
+
+[node name="MinigameScreen" type="Container" groups=[
 "minigame_objects",
 ]]
+margin_left = 3.0
+margin_top = 4.96435
+margin_right = 67.0
+margin_bottom = 75.9644
+rect_clip_content = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 30.2271, 24.2481 )
+[node name="Left" type="Sprite" parent="."]
+position = Vector2( 6, 1 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Shoot" type="Sprite" parent="."]
+position = Vector2( 20, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Right" type="Sprite" parent="."]
+position = Vector2( 40, 1 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="Exit" type="Sprite" parent="."]
+position = Vector2( 54, 0 )
+texture = ExtResource( 7 )
+centered = false
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
-margin_left = 5.06842
-margin_top = 14.2136
-margin_right = 28.0684
-margin_bottom = 20.2136
+margin_left = 2.0
+margin_top = 9.0
+margin_right = 25.0
+margin_bottom = 15.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -38,9 +74,42 @@ margin_right = 23.0
 margin_bottom = 6.0
 texture = ExtResource( 3 )
 
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 30.2271, 24.2481 )
+scale = Vector2( 1, 1 )
+
 [node name="EnemySpawnPosition1" type="Position2D" parent="."]
-position = Vector2( 8, 80 )
+position = Vector2( 5, 75 )
 
 [node name="EnemySpawnPosition2" type="Position2D" parent="."]
-position = Vector2( 64, 80 )
+position = Vector2( 61, 75 )
+
+[node name="OutOfBoundsArea" type="Area2D" parent="."]
+position = Vector2( -68.9486, -4.96664 )
+collision_layer = 16
+collision_mask = 14
+
+[node name="Left" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 48, 47 )
+shape = SubResource( 1 )
+
+[node name="Right" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 154, 47 )
+shape = SubResource( 1 )
+
+[node name="Top" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 101, -15 )
+shape = SubResource( 2 )
+
+[node name="Top2" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 101, 109 )
+shape = SubResource( 2 )
+
+[node name="EnemySpawnTimer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[node name="Enemy" parent="." instance=ExtResource( 4 )]
+position = Vector2( 31.1977, 75.4453 )
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
+[connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]

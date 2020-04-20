@@ -12,6 +12,7 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 needDecayPerSecond = 2
+agingPerSecond = 15
 needGain = 20.0
 
 [node name="Screen" parent="." instance=ExtResource( 1 )]
@@ -69,6 +70,7 @@ size_flags_vertical = 3
 [connection signal="end_sleeping" from="." to="Screen" method="_on_Tamagotchi_end_sleeping"]
 [connection signal="end_talking" from="." to="Screen" method="_on_Tamagotchi_end_talking"]
 [connection signal="happy" from="." to="Screen" method="_on_Tamagotchi_happy"]
+[connection signal="hatch" from="." to="Screen" method="_on_Tamagotchi_hatch"]
 [connection signal="not_sad" from="." to="Screen" method="_on_Tamagotchi_not_sad"]
 [connection signal="refuse" from="." to="Screen" method="_on_Tamagotchi_refuse"]
 [connection signal="sad" from="." to="Screen" method="_on_Tamagotchi_sad"]
@@ -76,6 +78,7 @@ size_flags_vertical = 3
 [connection signal="start_talking" from="." to="Screen" method="_on_Tamagotchi_start_talking"]
 [connection signal="switch_to_pet" from="." to="Screen" method="_on_Tamagotchi_switch_to_pet"]
 [connection signal="switch_to_sick" from="." to="Screen" method="_on_Tamagotchi_switch_to_sick"]
+[connection signal="game_over" from="Screen" to="." method="_on_Screen_game_over"]
 [connection signal="pressed" from="FoodButton" to="." method="_on_FoodButton_pressed"]
 [connection signal="pressed" from="SleepButton" to="." method="_on_SleepButton_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]

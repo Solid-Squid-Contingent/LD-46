@@ -2,14 +2,13 @@ extends Area2D
 
 var paused: bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 
 func _process(delta):
 	if not paused:
-		position.y += delta * 50
+		position.y += delta * 70
 
 func pause():
 	paused = true
