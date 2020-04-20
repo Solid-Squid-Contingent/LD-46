@@ -50,6 +50,8 @@ pause_mode = 2
 visible = false
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+bus = "Music"
 script = ExtResource( 10 )
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
@@ -69,11 +71,15 @@ script = ExtResource( 10 )
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
 [connection signal="gui_input" from="ChapterScreen" to="ChapterScreen" method="_on_ChapterScreen_gui_input"]
 [connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]
+[connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
+[connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
 [connection signal="ContinueButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
+[connection signal="change_music_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_music_volume"]
 [connection signal="change_resolution" from="OptionsScreen" to="." method="_on_OptionsScreen_change_resolution"]
+[connection signal="change_soundeffects_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_soundeffects_volume"]
 [connection signal="toggle_fullscreen" from="OptionsScreen" to="." method="_on_OptionsScreen_toggle_fullscreen"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_AudioPlayer_finished"]

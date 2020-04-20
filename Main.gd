@@ -72,3 +72,24 @@ func _on_OptionsScreen_toggle_fullscreen(toggle_state):
 
 func _on_OptionsScreen_change_resolution(new_resolution):
 	OS.set_window_size(new_resolution)
+
+func _on_OptionsScreen_change_music_volume(new_volume):
+	if new_volume == 0:
+		AudioServer.set_bus_mute(1, true)
+	else:
+		AudioServer.set_bus_mute(1, false)
+		AudioServer.set_bus_volume_db(1, 10 * log(new_volume/100))
+
+func _on_OptionsScreen_change_soundeffects_volume(new_volume):
+	if new_volume == 0:
+		AudioServer.set_bus_mute(2, true)
+	else:
+		AudioServer.set_bus_mute(2, false)
+		AudioServer.set_bus_volume_db(2, 10 * log(new_volume/100))
+
+func _on_ChapterScreen_pause_music():
+	get_node("MusicPlayer").set_stream_paused(true)
+
+func _on_ChapterScreen_unpause_music():
+	get_node("MusicPlayer").set_stream_paused(false)
+	get_node("MusicPlayer").play()

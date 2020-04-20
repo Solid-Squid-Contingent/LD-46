@@ -84,6 +84,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_icons/grabber = ExtResource( 6 )
 custom_styles/slider = SubResource( 1 )
+value = 100.0
 
 [node name="Soundeffects" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
 margin_top = 76.0
@@ -101,6 +102,7 @@ margin_right = 1120.0
 margin_bottom = 137.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+value = 100.0
 __meta__ = {
 "_editor_description_": ""
 }
@@ -123,6 +125,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 7 )
 text = "1200x600"
+align = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer/SettingsContainer/GridContainer"]
 margin_top = 264.0
@@ -153,6 +156,8 @@ custom_constants/margin_bottom = 17
 [node name="BackButton" parent="VBoxContainer/BackContainer" instance=ExtResource( 4 )]
 margin_right = 1200.0
 margin_bottom = 154.0
+[connection signal="value_changed" from="VBoxContainer/SettingsContainer/GridContainer/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/SettingsContainer/GridContainer/SoundeffectsSlider" to="." method="_on_SoundeffectsSlider_value_changed"]
 [connection signal="item_selected" from="VBoxContainer/SettingsContainer/GridContainer/ResolutionButton" to="." method="_on_ResolutionButton_item_selected"]
 [connection signal="toggled" from="VBoxContainer/SettingsContainer/GridContainer/FullscreenToggle" to="." method="_on_FullscreenToggle_toggled"]
 [connection signal="pressed" from="VBoxContainer/BackContainer/BackButton" to="." method="_on_BackButton_pressed"]

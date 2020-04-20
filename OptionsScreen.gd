@@ -3,6 +3,8 @@ extends TextureRect
 signal backButton_pressed
 signal toggle_fullscreen(toggle_state)
 signal change_resolution(new_resolution)
+signal change_music_volume(new_volume)
+signal change_soundeffects_volume(new_volume)
 
 var resolutions = [
 	Vector2(960, 540),
@@ -47,3 +49,10 @@ func _on_FullscreenToggle_toggled(button_pressed):
 
 func _on_ResolutionButton_item_selected(id):
 	emit_signal("change_resolution", resolutions[id])
+
+func _on_MusicSlider_value_changed(value):
+	emit_signal("change_music_volume", value)
+
+
+func _on_SoundeffectsSlider_value_changed(value):
+	emit_signal("change_soundeffects_volume", value)

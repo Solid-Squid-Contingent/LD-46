@@ -1,6 +1,8 @@
 extends TextureRect
 
 signal hide_screen
+signal pause_music
+signal unpause_music
 
 func _ready():
 	visible = false
@@ -11,9 +13,11 @@ func popup():
 	$Subtitle.visible = false
 	$TitleAppearTimer.start()
 	$SubtitleAppearTimer.start()
+	emit_signal("pause_music")
 
 func go_away():
 	visible = false
+	emit_signal("unpause_music")
 
 func set_chapter(number):
 	$ChapterLabel.bbcode_text = "[center]Chapter " + String(number)
