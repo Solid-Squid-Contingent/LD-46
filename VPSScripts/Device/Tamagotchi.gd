@@ -58,6 +58,7 @@ onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessU
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	emit_signal("switch_to_pet")
+	age_up() #TODO: Remove
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -196,42 +197,37 @@ func switch_to_home():
 	state = STATE.home
 
 func _on_FoodButton_pressed():
-	if not is_animating() and state != STATE.off:
+	if state == STATE.minigame:
+		$Screen/MinigameScreen.moveLeft()
+	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
-		if state == STATE.minigame:
-			$Screen/MinigameScreen.moveLeft()
-		else:
-			change_fullness(needGain)
+		change_fullness(needGain)
 
 func _on_SleepButton_pressed():
-	if not is_animating() and state != STATE.off:
-		if state == STATE.minigame:
-			$Screen/MinigameScreen.shoot()
-		else:
-			toggle_sleep()
+	if state == STATE.minigame:
+		$Screen/MinigameScreen.shoot()
+	elif not is_animating() and state != STATE.off:
+		toggle_sleep()
 
 
 func _on_PlayButton_pressed():
-	if not is_animating() and state != STATE.off:
+	if state == STATE.minigame:
+		$Screen/MinigameScreen.moveRight()
+	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
 		if stage != STAGE.egg:
-			if state == STATE.minigame:
-				$Screen/MinigameScreen.moveRight()
-			else:
-				change_fun(needGain)
-				switch_to_minigame()
+			switch_to_minigame()
 
 
 func _on_ExtraButton_pressed():
-	if not is_animating() and state != STATE.off:
+	if state == STATE.minigame:
+		switch_to_home()
+	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
-		if state == STATE.minigame:
-			switch_to_home()
-		else:
-			change_happiness(needGain)
+		change_happiness(needGain)
 
 
 func _on_DialogManager_reduce_awakeness(amount):

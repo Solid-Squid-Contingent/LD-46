@@ -5,6 +5,9 @@ var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
 var paused: bool = true
 
+export (int) var minX = 10
+export (int) var maxX = 70
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -24,9 +27,14 @@ func spawnEnemy():
 
 func moveLeft():
 	$Player.position.x -= 10
+	if $Player.position.x < minX:
+		$Player.position.x += 10
 
 func moveRight():
 	$Player.position.x += 10
+	if $Player.position.x > maxX:
+		$Player.position.x -= 10
+	
 
 func shoot():
 	var bullet = bulletScene.instance()

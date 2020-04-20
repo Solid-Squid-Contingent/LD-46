@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/heart_icon.png" type="Texture" id=3]
+[ext_resource path="res://VPSScenes/Minigame/OutOfBoundsArea.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.81548, 71.3524 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 45.4281, 10 )
 
 [node name="MinigameScreen" type="Node2D" groups=[
 "minigame_objects",
@@ -44,4 +51,27 @@ position = Vector2( 8, 80 )
 
 [node name="EnemySpawnPosition2" type="Position2D" parent="."]
 position = Vector2( 64, 80 )
+
+[node name="OutOfBoundsArea" type="Area2D" parent="."]
+position = Vector2( -62.5687, 0.581131 )
+collision_layer = 16
+collision_mask = 14
+script = ExtResource( 4 )
+
+[node name="Left" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 51.5385, 52.8681 )
+shape = SubResource( 1 )
+
+[node name="Right" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 157.728, 52.8681 )
+shape = SubResource( 1 )
+
+[node name="Top" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 104.744, -8.58553 )
+shape = SubResource( 2 )
+
+[node name="Top2" type="CollisionShape2D" parent="OutOfBoundsArea"]
+position = Vector2( 104.744, 114.02 )
+shape = SubResource( 2 )
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
+[connection signal="area_entered" from="OutOfBoundsArea" to="OutOfBoundsArea" method="_on_OutOfBoundsArea_area_entered"]
