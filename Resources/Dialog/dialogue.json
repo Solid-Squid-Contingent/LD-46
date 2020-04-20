@@ -1,5 +1,8 @@
 [
 	{
+		"new_chapter" : "First Part, Chapter One"
+	},
+	{
 		"background" : "living room",
 		"characters" : ["lucas young"],
 		"music" : "everyday",
@@ -24,6 +27,8 @@
 		"text" : "[i]She opens my tiny hand and puts her Tamagotchi in it.[/i]"
 	},
 	{
+		"tamagotchi_on" : true,
+		"stage" : "young",
 		"name" : "Mom",
 		"text" : "Isn't it cute?"
 	},
@@ -95,7 +100,7 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "hat’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count.\nIn many ways it is more reliable than a real friend…\nBut of course no substitute for one.\nNow, as this day will be our last for a while, why don’t you go ahead and say where you want to go for dinner? We can go anywhere you want."
+		"text" : "That’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count.\nIn many ways it is more reliable than a real friend…\nBut of course no substitute for one.\nNow, as this day will be our last for a while, why don’t you go ahead and say where you want to go for dinner? We can go anywhere you want."
 	},
 	{
 		"name" : "Lucas",
@@ -103,53 +108,58 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "[i]Sigh[/i] Even Ryan's Burger Joint, yes."
+		"text" : "[i]sigh[/i] Even Ryan's Burger Joint, yes."
 	},
 	{
-		"name": "Squid",
+		"name" : "Squid",
 		"reduce_fullness" : 86,
-		"text": "I’m really hungry!"
+		"text" : "I’m really hungry!"
 	},
 	{
-		"text": "Oh, another one’s hungry?"
+		"text" : "Oh, another one’s hungry?"
 	},
 	{
-		"name": "Lucas",
-		"text": "It talks?"
+		"name" : "Lucas",
+		"text" : "It talks?"
 	},
 	{
-		"name": "Mom",
-		"text": "Yes, occasionally. You know I wasn’t joking when I said the squid gave me advice and encouraged me.\nWell to be fair it usually demands more than it gives, haha.\n… Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
+		"name" : "Mom",
+		"text" : "Yes, occasionally. You know I wasn’t joking when I said the squid gave me advice and encouraged me.\nWell to be fair it usually demands more than it gives, haha.\n… Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
 	},
 	{
-		"name": "Lucas",
-		"text": "Mom! I’m not a baby anymore."
+		"name" : "Lucas",
+		"text" : "Mom! I’m not a baby anymore."
 	},
 	{
-		"name": "Mom",
-		"text": "I’m just pulling your leg. You are much more mature than I was with ten you know?\nBut why don’t you use that chance to get a hang of the Tamagotchi?\n"
-		-- Feed Tamagotchi to advance\n
+		"name" : "Mom",
+		"text" : "I’m just pulling your leg. You are much more mature than I was with ten you know?\nBut why don’t you use that chance to get a hang of the Tamagotchi?\n"
+	},
+	{
+		"require_eating" : true
+	},
+	{
+		"text" 
 		"Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit.\n But sometimes it will have other needs besides food. Like bathing. Playing.\nYou know, just like everyone else.\nExcept unlike everyone else it can’t take care of these things on its own."
 	},
 	{
-		"name": "Lucas",
-		"text": "Leave them to me!"
+		"name" : "Lucas",
+		"text" : "Leave them to me!"
 	},
 	{
-		"name": "Squid",
-		"text": "Let’s be friends!"
+		"name" : "Squid",
+		"text" : "Let’s be friends!"
 	},
 	{
-		"name": "Lucas",
-		"text": "Whoa, did it just respond to me?"
+		"name" : "Lucas",
+		"text" : "Whoa, did it just respond to me?"
 	},
 	{
-		"name": "Mom",
-		"text": "Maybe. Hehe. \nSometimes I really think it has a mind of its own.\nWell then… Let’s go to Ryan’s Burger Joint."
+		"name" : "Mom",
+		"text" : "Maybe. Hehe. \nSometimes I really think it has a mind of its own.\nWell then… Let’s go to Ryan’s Burger Joint."
 	},
 	{
-		"name": "Lucas",
-		"text": "Yeah!"
+		"name" : "Lucas",
+		"text" : "Yeah!"
 	},
 	{
 		"background" : "black",
@@ -238,9 +248,11 @@
 	{
 		"text" : "You really have a mind of your own, don’t you?\n[i]I laugh but soon my laughing returns to sobbing.\nBut it feels less painful now.\nMaybe I’m not alone after all.[/i]"
 	}
-
 	{
-		"background" : "school",
+		"new_chapter" : "First Part, Chapter Two"
+	},
+	{
+		"background" : "class",
 		"music" : "everyday",
 		"text": "[i]Middle school was not really easy on me.\nBeing the guy who wouldn’t shut up about the sea or how he wanted to explore it might have gotten a pass from my peers…\nIf it hadn’t been for my obsession with my digital pet Squid.\nBut I couldn’t just ditch my Squid. It means too much to me.\nWhat young kids in elementary school found cool or interesting was very much a no-go in middle school.\nAnd I learned that the hard way.\nI will do things differently in high school.\nBe the best version of myself.\nAnd be a bit more subtle about my squid care.\nIf I can manage.[/i]"
 	},
@@ -253,7 +265,7 @@
 		"text" : "[i]It will be difficult.[/i]"
 	},
 	{	
-		"characters" : ["lucas adult", "michael adult"],
+		"characters" : ["lucas adult", "michael"],
 		"name" : "???",
 		"text" : "Is that a Tamagotchi you got there?"
 	},
@@ -572,7 +584,7 @@
 		"text" : "[i]My first day at high school went surprisingly well.\nI actually was able to make a few conversations.\nI guess I have Michael to thank for that.\nNot only did he talk to me a lot, he also tried to include me in almost every conversation he had.\nAnd he had a lot of conversations.\nIt seems like it’s really easy for him to talk to people, even if what he says is so…\nDifferent.\nSpeaking of the devil.[/i]"
 	},
 	{
-		"characters" : ["lucas adult", "michael adult"],
+		"characters" : ["lucas adult", "michael"],
 		"name" : "Michael",
 		"text" : "Yo."
 	},
@@ -665,7 +677,7 @@
 		"text" : "[i]Today that underwater compendium has invaded my house.[/i]"
 	},
 	{
-		"characters" : ["lucas adult", "michael adult"],
+		"characters" : ["lucas adult", "michael"],
 		"name" : "Michael",
 		"text" : "Dude, you have your house all for yourself?"
 	},
@@ -996,7 +1008,7 @@
 		"text" : "I… uh.. Yes.\n[i]And just like that Michael wrestled control away from me.\nNot that I ever was in control with him around.\nNo, not even in my own house.[/i]\n"
 	},
 	{
-		Squid Sleeping
+		"start_sleep" : true,
 		"text" : "[i]I enjoyed numerous hours of playing and chatting with my assertive friend before I sent him home and went to bed.[/i]"
 	}
 	{
@@ -1037,6 +1049,7 @@
 		"text" : "..."
 	},
 	{
+		"end_sleep" : true,
 		"background" : "living room",
 		"characters" : ["lucas adult"],
 		"music" : "everyday",
@@ -1062,14 +1075,14 @@
 		"text" : "..."
 	},
 	{
-		"background" : "school",
+		"background" : "class",
 		"characters" : ["lucas adult"],
 		"music" : "everyday",
 		"name" : "Lucas",
 		"text" : "[i]Today Michael has been avoiding me for some reason.\nMaybe he is embarrassed about the corny shit he said yesterday.\nOr he finally got sick of my attitude.\nNeither is unlikely.[/i]\nYo, Michael…"
 	},
 	{
-		"characters" : ["lucas adult", "michael adult"],
+		"characters" : ["lucas adult", "michael"],
 		"name" : "Lucas",
 		"text" : "[i]Michael gestures towards the class and points on the girl with auburn hair.\nIn a whispering voice he says.[/i]"
 	},
@@ -1107,7 +1120,7 @@
 		"text" : "[i]Does he think that’s cool?\nWell best not comment on it.\nI’m in no position to criticise his coolness.\nRight now I’m wobbling to Sarah - a complete stranger - like a seasick toddler.\n[/i]\nH-hey.\n[i]Smooth start.[/i]"
 	},
 	{
-		"characters" : ["lucas adult", "sarah adult"],
+		"characters" : ["lucas adult", "sarah"],
 		"name" : "Lucas",
 		"text" : "[i]She turns around to face me.\nI must have been close enough to notice her freckles before…\nBut I never got close enough to her to see how beautiful she was.\nI more or less forgot everything I wanted to say at this exact moment.\nWhich, admittedly, was not a lot, but it still felt like a significant loss.[/i]"
 	},
@@ -1125,8 +1138,16 @@
 				"next" :
 				[
 					{
-						"name" : "",
-						"text" : ""
+						"name" : "Sarah",
+						"text" : "What about?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : " Ah… well.\nThe weather, maybe?\nThe world, the sea, the human condition, the duality of man?"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "As a principle of mine I don’t debate the human condition with someone I don’t know a lot about.\nYou know, things can get quite heated if you don’t know who you are really talking to.\nBut that would still leave us with… the world, the sea and the duality of man."
 					}
 				]
 			},
@@ -1135,21 +1156,802 @@
 				"next" :
 				[
 					{
-						"name" : "",
-						"text" : ""
+						"name" : "Sarah",
+						"text" : "Nevermind what?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "My, uh…"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Attempt at talking to me?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yes."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "… You can try again if you want."
 					}
 				]
 			},
 			{
-				"text" : " You look great.",
+				"text" : "You look great.",
 				"next" :
 				[
 					{
-						"name" : "",
-						"text" : ""
+						"name" : "Sarah",
+						"text" : "…"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]To my surprise she does not look at me in disgust.\nShe smiles and blushes ever so slightly.[/i]"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Thank you."
 					}
 				]
 			}
 		]
+	},
+	{
+		"reduce_happiness" : 30,
+		"name" : "Squid",
+		"text" : "Give me snuggles!"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Excuse me?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Fuck.[/i]\nSorry, that, uh…\nWas my Tamagotchi."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Well that’s a daring Tamagotchi you have there.\nCan I see it?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Uhh, sure"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Hmmm… \nWell that’s a cute squid. I wouldn’t mind giving it snuggles.\nThat really surprised me though.\nI have never seen a talking Tamagotchi."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Sorry, you must think I’m weird for having it."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Why?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well, because it’s a children’s toy?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You think so?\nIt might be digital, but I still think it counts as a pet.\nWhat’s wrong with having a pet?"
+	},
+	{
+		"name" : "Squid",
+		"text" : "I’m not feeling so well."
+	},
+	{
+		"text" : "Are you taking proper care of your pet?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I am.\nBut lately, no matter what I did, it said it felt sick."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Hmmm…\nMaybe it got lonely with only you around."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "You think it can?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Why not? Your’s seems special anyway.\nCan I… touch it?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "… Go for it.\n[i]Sarah reaches out to touch the Tamagotchi.\nI hear her press a button.\n[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Whow!"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "What is it?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "It uh… Sorta turned into an egg?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "What?"
+	},
+	{
+		"stage" : "egg",
+		"text" : "[i]It sure as hell turned into an egg.[/i]",
+		"choices" :
+		[
+			{
+				"text" : "Whack.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "I’m sorry, I didn’t mean to transform your squid into an egg."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Few people do."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I guess so."
+					}
+				]
+			},
+			{
+				"text" : "I’ll sue.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "Please don’t.\nI’m sorry… I."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]Sarah looks seriously troubled.\nMaybe that joke was a little too much.[/i]\nI won’t sue, sorry that was a tasteless joke."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "But I messed up your pet."
+					},
+				]
+			},
+			{
+				"text" : "It never did that with me.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "I’m sorry…"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Don’t be.\nWhat button did you press?"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I don’t remember."
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well, it’s probably alright. "
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You think so?"
+	},
+	{
+		"name" : "",
+		"text" : "Yeah, it’s not like it has died or anything.\nIt’s just… Unprecedented.\n[i]Narrator: I say that, but I would lie if I said I wasn’t worried.\nIt never did anything like that in six years.[/i]"
+	},
+	{
+		"characters" : ["lucas adult", "sarah", "michael"],
+		"name" : "Michael",
+		"text" : "Yo, what’s up guys?"
+	},
+	{
+		"name" : "",
+		"text" : "I kinda turned his squid into an egg."
+	},
+	{
+		"name" : "",
+		"text" : "You what now?"
+	},
+	{
+		"name" : "",
+		"text" : "She said she kinda turned my squid into an egg."
+	},
+	{
+		"name" : "",
+		"text" : "Yes, I heard that, hence why I asked ‘You what now?’."
+	},
+	{
+		"name" : "",
+		"text" : "[i]I show Michael my Tamagotchi.[/i]"
+	},
+	{
+		"name" : "",
+		"text" : "Well, I’ll be.\nNow I will be extra careful for Sarah not to touch me.\nDon’t wanna be turned into an egg…"
+	},
+	{
+		"name" : "",
+		"text" : "You should be fine as long as you are not a squid"
+	},
+	{
+		"name" : "",
+		"text" : "I’m fucked."
+	},
+	{
+		"name" : "",
+		"text" : "You are not a squid, Michael."
+	},
+	{
+		"name" : "",
+		"text" : "How do you know?"
+	},
+	{
+		"name" : "",
+		"text" : "Now that you mention it… I don’t."
+	},
+	{
+		"name" : "",
+		"text" : "You guys sure get along."
+	},
+	{
+		"name" : "",
+		"text" : "I doubt there is someone who doesn’t get along with Michael."
+	},
+	{
+		"name" : "",
+		"text" : "True. He is awfully sociable for a squid."
+	},
+	{
+		"name" : "",
+		"text" : "You're making me blush…\nYou guys give me too much credit."
+	},
+	{
+		"name" : "",
+		"text" : "[i]He is not denying to be squid.\nSuspicious.[/i]"
+	},
+	{
+		"name" : "",
+		"text" : "Hey, why don’t we meet up at your place tomorrow?\nYou know, to check up on your squid."
+	},
+	{
+		"name" : "",
+		"text" : "Yeah, I still feel bad for doing that to it.\nGotta take responsibility for that.\nI mean, if that is ok with you?"
+	},
+	{
+		"name" : "",
+		"text" : "Uhm… Sure, why not?\n[i]I can feel a smug aura emanating from Michael.\nHe probably thinks he did me a favor there.\nWell, maybe he did.\nThe more the merrier, right?[/i]"
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"text" : "[i]I rush back to my house.\nThere is not much time until tomorrow.[/i]"
+	},
+	{
+		"background" : "living room",
+		"music" : "everyday",
+		"text" : "[i]Just tidy up a bit…\nVacuum clean the floor…\nClean the windows…\nThe bathroom…\nHide a few things…\nAnd clear my browser history.[/i]"
+	},
+	{
+		"background" : "black",
+		"music" : "",
+		"text" : "[i]Before I realized it, it was past two.\nThat’s the struggle if you have an entire house for yourself.\nJust how did Mom manage to do this on top of her work?\n…\nMom...[/i]"
+	},
+	{
+		"stage" : "adult",
+		"background" : "living room",
+		"characters" : ["lucas adult"],
+		"music" : "everyday",
+		"sfx" : "doorbell",
+		"text" : "…"
+	},
+	{
+		"sfx" : "doorbell",
+		"text" : "[i]… Five more min-[/i]"
+	},
+	{
+		"sfx" : "doorbell",
+		"text" : "[i]Huh?\nI look at the time.\nIt’s half past ten.\nI’m in my pyjamas.\nI have not showered yet, or brushed my teeth, or made myself look like a human being.[/i]"
+	},
+	{
+		"reduce_fullness" : "40",
+		"name" : "Squid",
+		"text" : "It’s time for breakfast."
+	},
+	{
+		"text" : "No time for tha-\nWhat the heck happened to you?!"
+	},
+	{
+		"sfx" : "doorbell",
+		"text" : "Oh fuck.\n[i]I hastily type a message for Michael explaining my situation.\nHe says ‘leave it to me!’\nI’m concerned, but there is no time for that.\nWhile I’m breaking the world record for fastest morning routine, I see Sarah and Michael walking through my garden.\nIt seems like Michael is giving her a guided tour, which is impressive considering I never gave him one.\nHe picks up a garden gnome and moves it through the air…\nMaybe imitating an airplane.\nSarah giggles.\nMaybe he got this after all.\nI’m finally done and open the door to the garden.[/i]\nSorry for the holdup guys. You can come in.\n[i]Michael hastily puts down the garden gnome.[/i]"
+	},
+	{
+		"characters": ["michael", "lucas adult", "sarah"],
+		"name" : "Michael",
+		"text" : "Don’t mind if we do."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Pardon the intrusion."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Damn, it wasn’t nearly as clean when I-"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]He must have seen the despair in my eyes and quickly shuts up.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "This place is huge.\nYou parents must be pretty well off."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "…"
+	},
+	{
+		"name" : "Michael",
+		"text" : "That uh…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well they are not around anymore.\n[i]Sarah looks like she is ready to die of guilt.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I’m sorry, I should have…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I smile for her.[/i]\nHaha, don’t worry about it, that’s in the past.\nI’m just glad you guys came over.\nCan I get you anything to drink?[i]We sit down and talk for a bit.\nMichael does his best to lift up the mood.\nAnd he succeeds, as usual.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "So both of you guys want to be marine biologists?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well, I do.\nI think what Lucas wants is a bit different than that."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "How so?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : " I, uh, more or less want to be a deep sea explorer.\nI think Michael would be fine with anything related to the ocean.\nI just... want to go down as deep as I can."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Can I ask you a personal question?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Sure. Don’t hold back"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Why do you want to be a deep sea explorer when that’s how your mother…",
+		"choices" :
+		[
+			{
+				"text" : "It’s hard to explain.",
+				"next" :
+				[
+					{
+						"name" : "Lucas",
+						"text" : "For many reasons I think.\nBut none of them are easy to put into words.\nI’m sorry I can’t explain it to you properly."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I can imagine."
+					}
+				]
+			},
+			{
+				"text" : "I want to see what she saw.",
+				"next" :
+				[
+					{
+						"name" : "Lucas",
+						"text" : "… She really liked her job.\nSo much so, that she sometimes would stay away for many many days.\nI want to know what made her do a job that required her to stay away from home…\nFrom me."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "That must have been difficult for you…"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "… Yeah.\nIt was.\nBut I don’t blame her for doing it.\nI know she must have had heer reasons.\nAnd that’s exactly what I want to find out…\nWhat was she looking for down there?"
+					}
+				]
+			},
+			{
+				"text" : "I want to find her.",
+				"next" :
+				[
+					{
+						"text" : "You want to… find her?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yeah.\nI’m doubting she found the underwater city of myth und decided to stay there…\nI mean… I don’t think she…Is alive, you know?\nBut as things are now, it’s still hard for me to really accept that she is gone.\nI’m sorry, I’m not really making sense, am I?\nHaha…"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "No… I think I know what you mean."
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Lucas",
+		"text" : "You know… That Tamagotchi belonged to her.\nShe gave it to me the day before she left…\nIt really means a lot to me.\nHehe, that really sounds like the plot of a drama doesn’t it?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well, maybe you are just bigger than life, Lucas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "No way."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Talking about your squid, is it still an egg?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Oh about that, it hatched."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Really? Can I see?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Oh sure.\n[i]Michael and Sarah come closer to inspect my reborn squid.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Damn, it evolved.\nDid you level it up?\nMaybe Sarah is like a waterstone or something?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Maybe."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "It’s like 30% less cute now."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Really?\nI think it got even cuter."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I agree.\nWhat a beauty."
+	},
+	{
+		"name" : "Squid",
+		"text" : "I love having a friend like you!"
+	},
+	{
+		"text" : "Its voice changed too!\nIt seems like I made your squid an adult…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "… Uhh."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Did its needs change?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Not as far as I could tell."
+	},
+	{
+		"name" : "Michael",
+		"text" : "It’s not in sudden needs of alcohol to cope with existing?\nCan you really call it an adult then?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Just how bleak is your outlook on adulthood, Michael."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "He says some dark shit sometimes.\nI think he is in his edgy phase."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Hehehe."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Oh you, got guts making fun of me, Mr_Tamagotchi_Lover."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Huh, what’s that Mr_Edgy_Ocean_Lover?"
+	},
+	{
+		"reduce_fullness" : 40,
+		"name" : "Squid",
+		"text" : "I crave nourishment."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Hear that?\nIt craves nourishment.\nAren’t you gonna feed it?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "… I am. But not because you told me to, you smug prick.\n[i]While we were bantering like two idiots, Sarah just watched us and laughed.\nAnd sometimes she would chime in to add fuel to our conflict, or dealt jabs of her own.\nI think it was there that I fell for her.\n...\nIt’s really fun… Being with these two.\nI think I’m not alone anymore, Mom.[/i]"
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"text" : "[i]We had fun fooling and goofing around from then on.\nAnd like this weeks passed, then months then years.\nWe three stuck together like seaweed tangled in a net.\nMichaels words, not mine.[/i]"
+	},
+	{
+		"background" : "class",
+		"characters" : ["lucas adult"],
+		"music" : "everyday",
+		"text" : "[i]Today is the day of our graduation.\nMichael graduated on top of our class.\nThe teachers repeatedly told him that he could aim for literally anything he wanted to.\nThat he did not have to be so dead set on becoming a marine biologist.\nBut, of course, he already made up his mind.\nAs did I.\nWe would be a team. Or that’s the plan at least.\nSarah on the other hand decided to study in law in a different university than us.\nStill in the same city, but we surely won’t see each other as regularly as before.\n[/i]"
+	},
+	{
+		"reduce_happiness" : 30,
+		"name" : "Squid",
+		"text" : "A bit of your attention, please?"
+	},
+	{
+		"text" : "[i]sigh[/i] I’m, like, in the middle of an explanation here.\nWell, fine…\nSarah asked me to meet up with her before we went our ways."
+	},
+	{
+		"characters" : ["sarah", "lucas adult"],
+		"text" : "[i]Hence why I’m here, and she is there.[/i]\nYo, Sarah."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Yo."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Where is Michael?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I dunno. Maybe he is waiting for us at the gate."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Then we should go see him."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I actually wanted to talk to you.\nJust you."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "What did that bastard do to you?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Jeez, can’t you be serious for more than 30 seconds?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Sorry, it kinda became a reflex with Michael around."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Haha… I know what you mean."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "So what is it you wanted to talk about?\n[i]Sarah grows silent, fidgeting ever so slightly.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I… Uh. I just wanted to let you know that I will miss you.",
+		"choices" :
+		[
+			{
+				"text" : "But we won’t stop seeing each other altogether.",
+				"next" :
+				[
+					{
+						"text" : "YYeah, but I mean…\nSeeing you as often as this."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yeah. It will certainly be a lot less than now."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "..."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "..."
+					}
+				]
+			},
+			{
+				"text" : "I’m gonna miss you too.",
+				"next" :
+				[
+					{
+						"text" : "Really?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yeah. The time we spent together, you and I…"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "..."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "And Michael... it is really precious to me.\nAnd I don’t want it to be over.\nLet’s meet up as often as we can.\n"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "..."
+					}
+				]
+			},
+			{
+				"text" : "...",
+				"next" :
+				[
+					{
+						"text" : "Don’t you… want to say anything?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I’m still thinking about what to say."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Oh… take your time."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "...\n[i]What would Michael say now...[/i]"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i] Sarah starts looking annoyed.\nIt seems her nervousness disappeared to accommodate her newly found annoyance.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You really are the densest element on our planet.\nIf you so much as set foot into the ocean, I bet you would sink down immediately.\n…\nI like [i]you[/i], you idiot."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i] It seems Sarah’s wording surprised even herself…\nNow she just looks at me expectantly, but also worried…\nMost likely because she fears I still do not understand what she said.\nBut I do. And I probably even understood before she had to say it to my face.\nI really am an idiot…\nI-[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "Never stop chasing your dreams.",
+		"choices" :
+		[
+			{
+				"text" : "I like you too.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "…\nAs friends?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]I knew it, she still doesn’t think I know what she means.\nNot that I can blame her.[/i]\nNo… as more than a friend.\n… And more than a best friend.\n...\nWill you go out with me?\n[i]I can see Sarah tear up a bit.\nShe rushes over to hug me.[/i]"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "… Yeah. Let’s."
+					}
+				]
+			},
+			{
+				"text" : "… I love you.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "Oh, you don’t have to gi-\n… What did you just say?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]Shit, did I jump the gun after all?\nI turn around in embarrassment.\nShould have figured that it wasn’t about that.\nHaha, what am I saying, I know she doesn’t -\nBut before I can finish my thought I can feel Sarah hugging me from behind.\nWe stand like that for thirty incredibly short seconds before she lets me go.\nHer face is reddened and her eyes are wet.[/i]"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I can’t believe you made me wait three years for this."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I’m sorry."
+					}
+				]
+			},
+			{
+				"text" : "You sure you don’t like Michael?",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "[i]sigh[/i] Yes.\nAnd I think he will never like anyone as much as the sea.\nAre you sure that [i]you[/i] don’t like Michael?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Well, I [i]do[/i] like Michael."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Oh, for fucks sake."
+					},
+					{
+						"name" : "Lucas",
+						"text" : " But Michael I like as a friend."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "..."
+					},
+					{
+						"name" : "Lucas",
+						"text" : " And… I think I like you as more than a friend.\nI’m sorry, I shouldn’t have brought Michael up."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Yeah… no kidding."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]Sarah looks at me.\nHer face is reddened and her eyes are wet.[/i]\nWill you go out with me?"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Yes… you idiot."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yeah… I really am an idiot."
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]She closes her eyes.\nAnd I close mine.\n[/i]"
+	},
+	{
+		"new_chapter" : "First Part, Chapter Three"
 	}
 ]
