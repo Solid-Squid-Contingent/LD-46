@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/everyday_intro.ogg-c0b35af7eb28cb9fcd4a0fb937b4925c.oggstr"
+
+[deps]
+
+source_file="res://Resources/Music/everyday_intro.ogg"
+dest_files=[ "res://.import/everyday_intro.ogg-c0b35af7eb28cb9fcd4a0fb937b4925c.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
