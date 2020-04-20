@@ -15,6 +15,8 @@ signal start_talking
 signal end_talking
 signal hatch
 
+signal button_pressed
+
 enum STAGE{
 	egg,
 	baby,
@@ -228,6 +230,7 @@ func restart_minigame():
 	
 
 func _on_FoodButton_pressed():
+	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
@@ -238,6 +241,7 @@ func _on_FoodButton_pressed():
 		change_fullness(needGain)
 
 func _on_SleepButton_pressed():
+	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
@@ -247,6 +251,7 @@ func _on_SleepButton_pressed():
 
 
 func _on_PlayButton_pressed():
+	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
@@ -259,6 +264,7 @@ func _on_PlayButton_pressed():
 
 
 func _on_ExtraButton_pressed():
+	emit_signal("button_pressed")
 	if state == STATE.minigame or state == STATE.gameOver:
 		switch_to_home()
 	elif not is_animating() and state != STATE.off:

@@ -18,6 +18,8 @@ signal change_squid_stage(newStageName)
 
 signal new_chapter(number, subtitle)
 
+signal advance_dialog
+
 export(String, FILE) var startFileName
 
 var choiceButtonScene = preload("res://VNScenes/ChoiceButton.tscn")
@@ -76,6 +78,8 @@ func get_current_dialog_data():
 
 
 func print_next_dialog_line():
+	emit_signal("advance_dialog")
+	
 	var currentData = get_current_dialog_data()
 	
 	if currentData.has("name") and currentData["name"] == "Squid":
