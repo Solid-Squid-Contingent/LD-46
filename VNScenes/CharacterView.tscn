@@ -109,7 +109,7 @@ __meta__ = {
 position = Vector2( 90, 23 )
 
 [node name="2CharacterPosition1" type="Position2D" parent="."]
-position = Vector2( 130, 23 )
+position = Vector2( 122, 23 )
 
 [node name="2CharacterPosition2" type="Position2D" parent="."]
-position = Vector2( 38, 23 )
+position = Vector2( 27, 23 )
