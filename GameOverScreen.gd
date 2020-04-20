@@ -10,7 +10,6 @@ func _ready():
 
 func popup():
 	visible = true
-	get_tree().paused = true
 
 func _on_QuitButton_pressed():
 	emit_signal("QuitButton_pressed")
