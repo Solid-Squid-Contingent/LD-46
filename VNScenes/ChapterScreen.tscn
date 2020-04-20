@@ -74,5 +74,6 @@ one_shot = true
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 bus = "SoundEffects"
+[connection signal="gui_input" from="." to="." method="_on_ChapterScreen_gui_input"]
 [connection signal="timeout" from="TitleAppearTimer" to="." method="_on_TitleAppearTimer_timeout"]
 [connection signal="timeout" from="SubtitleAppearTimer" to="." method="_on_SubtitleAppearTimer_timeout"]

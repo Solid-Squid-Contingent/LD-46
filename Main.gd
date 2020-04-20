@@ -94,3 +94,12 @@ func _on_ChapterScreen_pause_music():
 func _on_ChapterScreen_unpause_music():
 	$MusicPlayer.set_stream_paused(false)
 	$MusicPlayer.play()
+
+
+func _on_DialogManager_game_ended():
+	show_screen($EndScreen)
+
+
+func _on_EndScreen_hide_screen():
+	get_tree().reload_current_scene()
+	get_tree().paused = false
