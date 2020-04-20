@@ -24,9 +24,14 @@ onready var positions = [
 ]
 
 onready var backgroundMap = {
-	"thunderstorm": $Background1,
-	"field": $Background2,
-	"mountain": $Background1
+	"city": $BackgroundCity,
+	"class": $BackgroundClass,
+	"deep sea": $BackgroundDeepSea,
+	"deep sea eye": $BackgroundDeepSeaEye,
+	"living room": $BackgroundLivingRoom,
+	"office": $BackgroundOffice,
+	"shallow sea": $BackgroundShallowSea,
+	"shallow sea creatures": $BackgroundShallowSeaCreatures,
 }
 
 onready var foremostBackground = $Background3
