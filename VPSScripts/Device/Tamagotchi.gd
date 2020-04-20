@@ -214,6 +214,7 @@ func restart_minigame():
 	minigameScreen.queue_free()
 	minigameScreen = minigameScreenScene.instance()
 	$Screen.call_deferred("add_child", minigameScreen)
+	minigameScreen.connect("game_over", $Screen, "_on_MinigameScreen_game_over")
 	
 
 func _on_FoodButton_pressed():
