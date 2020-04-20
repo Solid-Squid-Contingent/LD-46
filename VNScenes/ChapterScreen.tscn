@@ -7,9 +7,9 @@
 [ext_resource path="res://VNScenes/ChapterScreen.gd" type="Script" id=5]
 
 [node name="ChapterScreen" type="TextureRect"]
-margin_right = 538.0
-margin_bottom = 303.0
-rect_scale = Vector2( 2.23, 2.23 )
+pause_mode = 2
+margin_right = 1200.0
+margin_bottom = 675.0
 texture = ExtResource( 4 )
 expand = true
 script = ExtResource( 5 )
@@ -22,11 +22,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -269.0
-margin_top = -72.1255
-margin_right = 1525.0
-margin_bottom = 149.874
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = -600.0
+margin_top = -180.5
+margin_right = 600.0
+margin_bottom = 41.5
+mouse_filter = 1
 custom_fonts/italics_font = ExtResource( 2 )
 custom_fonts/bold_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 1 )
@@ -38,10 +38,11 @@ __meta__ = {
 }
 
 [node name="Subtitle" type="RichTextLabel" parent="."]
-margin_top = 157.331
-margin_right = 2691.0
-margin_bottom = 701.331
-rect_scale = Vector2( 0.2, 0.2 )
+margin_top = 409.0
+margin_right = 2970.0
+margin_bottom = 617.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 1
 custom_fonts/italics_font = ExtResource( 2 )
 custom_fonts/bold_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 1 )
@@ -51,3 +52,13 @@ text = "A Dark Beginning"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TitleAppearTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="SubtitleAppearTimer" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+[connection signal="timeout" from="TitleAppearTimer" to="." method="_on_TitleAppearTimer_timeout"]
+[connection signal="timeout" from="SubtitleAppearTimer" to="." method="_on_SubtitleAppearTimer_timeout"]

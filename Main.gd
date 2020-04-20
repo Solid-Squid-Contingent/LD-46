@@ -58,3 +58,10 @@ func _on_MenuScreen_ContinueButton_pressed():
 func _on_OptionsScreen_backButton_pressed():
 	hide_screen($OptionsScreen)
 	show_screen($MenuScreen)
+
+func _on_DialogManager_new_chapter(number, subtitle):
+	show_new_chapter(number, subtitle)
+
+func _on_ChapterScreen_hide_screen():
+	hide_screen($ChapterScreen)
+

@@ -51,6 +51,9 @@ visible = false
 
 [node name="AudioPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource( 10 )
+
+mouse_filter = 0
+
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
@@ -58,6 +61,7 @@ script = ExtResource( 10 )
 [connection signal="all_text_appeared" from="VNTextBox" to="DialogManager" method="_on_VNTextBox_all_text_appeared"]
 [connection signal="change_background" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_background"]
 [connection signal="change_characters" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_characters"]
+[connection signal="new_chapter" from="DialogManager" to="." method="_on_DialogManager_new_chapter"]
 [connection signal="play_music" from="DialogManager" to="AudioPlayer" method="_on_DialogManager_play_music"]
 [connection signal="reduce_awakeness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_awakeness"]
 [connection signal="reduce_everything" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_everything"]
@@ -72,3 +76,5 @@ script = ExtResource( 10 )
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
 [connection signal="finished" from="AudioPlayer" to="AudioPlayer" method="_on_AudioPlayer_finished"]
+[connection signal="gui_input" from="ChapterScreen" to="ChapterScreen" method="_on_ChapterScreen_gui_input"]
+[connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]
