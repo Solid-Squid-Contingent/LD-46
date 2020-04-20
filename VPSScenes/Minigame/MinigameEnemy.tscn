@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Resources/Animations/cassy.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Resources/Graphics/Minigame/Enemies/enemy_1.png" type="Texture" id=1]
 [ext_resource path="res://VPSScripts/Minigame/MinigameEnemy.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 14.294
-height = 22.5213
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3.00406, 2.00542 )
 
 [node name="MinigameEnemy" type="Area2D" groups=[
 "minigame_objects",
@@ -17,10 +24,10 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1.8335, -0.73291 )
-scale = Vector2( 0.0449548, 0.0449548 )
-frames = ExtResource( 1 )
+frames = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.35273, -0.248917 )
-shape = SubResource( 1 )
+visible = false
+position = Vector2( -1.93766, -0.745254 )
+shape = SubResource( 2 )
 [connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]

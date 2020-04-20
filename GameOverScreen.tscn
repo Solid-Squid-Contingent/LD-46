@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GameOverScreen.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Graphics/swimming-pool-4942724_640.jpg" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=3]
+[ext_resource path="res://QuitButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://RestartButton.tscn" type="PackedScene" id=5]
 
 [node name="GameOverScreen" type="TextureRect"]
 pause_mode = 2
-margin_right = 1200.0
+margin_right = 1215.0
 margin_bottom = 675.0
 texture = ExtResource( 2 )
 expand = true
@@ -15,92 +18,53 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 1200.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 8.0
+margin_top = 438.0
+margin_right = 1191.0
 margin_bottom = 675.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+size_flags_vertical = 3
+custom_constants/separation = 7
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer2"]
-margin_right = 1196.0
-margin_bottom = 647.0
+[node name="RestartButton" parent="VBoxContainer" instance=ExtResource( 5 )]
+
+[node name="QuitButton" parent="VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 122.0
+margin_bottom = 237.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 8.0
+margin_right = 1191.0
+margin_bottom = 337.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2/MarginContainer"]
-margin_right = 1196.0
-margin_bottom = 647.0
-text = "
-
-
-
-
-
-
-
-																														Game Over"
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+margin_right = 1183.0
+margin_bottom = 337.0
+custom_fonts/bold_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.368627, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][b]GAME OVER"
+text = "GAME OVER"
+scroll_active = false
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="HBoxContainer" parent="VBoxContainer2"]
-margin_top = 651.0
-margin_right = 1196.0
-margin_bottom = 671.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 8.0
+margin_right = 1191.0
+margin_bottom = 675.0
+custom_constants/separation = 0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
-
-[node name="QuitButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
-margin_right = 596.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="VBoxContainer2/VBoxContainer/QuitButton"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
-text = "Quit"
-
-[node name="RestartButton" type="Button" parent="VBoxContainer2/VBoxContainer"]
-margin_left = 600.0
-margin_right = 1196.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="VBoxContainer2/VBoxContainer/RestartButton"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -22.0
-margin_top = -8.0
-margin_right = 23.0
-margin_bottom = 6.0
-size_flags_horizontal = 3
-size_flags_vertical = 6
-text = "Restart"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="VBoxContainer2/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
-[connection signal="pressed" from="VBoxContainer2/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
