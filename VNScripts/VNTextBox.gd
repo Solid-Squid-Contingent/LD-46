@@ -16,7 +16,10 @@ func set_text(text):
 	$ShowTextTimer.start()
 
 func set_name(name):
-	nameLabel.bbcode_text = "[b]" + name + ":[/b]"
+	if name.length() == 0:
+		nameLabel.bbcode_text = ""
+	else:
+		nameLabel.bbcode_text = "[b]" + name + ":[/b]"
 
 
 func all_text_appeared():

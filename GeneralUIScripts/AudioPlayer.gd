@@ -20,13 +20,17 @@ func _ready():
 
 
 func play_music(name: String):
-	currentLoop = loopDict[name]
-	stop()
-	if introDict.has(name):
-		set_stream(introDict[name])
+	if name.length() == 0:
+		set_stream_paused(true)
 	else:
-		set_stream(loopDict[name])
-	play()
+		currentLoop = loopDict[name]
+		stop()
+		if introDict.has(name):
+			set_stream(introDict[name])
+		else:
+			set_stream(loopDict[name])
+		play()
+		set_stream_paused(false)
 	
 func _on_AudioPlayer_finished():
 	set_stream(currentLoop)
