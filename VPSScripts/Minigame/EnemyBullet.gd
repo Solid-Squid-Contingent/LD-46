@@ -8,7 +8,7 @@ func _ready():
 
 func _process(delta):
 	if not paused:
-		position.y += delta * 70
+		position.y -= delta * 50
 
 func pause():
 	paused = true
