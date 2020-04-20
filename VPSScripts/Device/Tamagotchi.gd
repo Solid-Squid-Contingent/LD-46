@@ -13,6 +13,7 @@ signal sad
 signal not_sad
 signal start_talking
 signal end_talking
+signal hatch
 
 enum STAGE{
 	egg,
@@ -27,10 +28,16 @@ enum STATE{
 	gameOver}
 
 onready var stageSpriteMap = {
-	STAGE.egg: $Screen/HomeScreen/EggSprite,
-	STAGE.baby: $Screen/HomeScreen/BabySprite,
-	STAGE.adult: $Screen/HomeScreen/AdultSprite,
-	STAGE.old: $Screen/HomeScreen/OldSprite}
+	STAGE.egg: $Screen/HomeScreen/NormalSprites/EggSprite,
+	STAGE.baby: $Screen/HomeScreen/NormalSprites/BabySprite,
+	STAGE.adult: $Screen/HomeScreen/NormalSprites/AdultSprite,
+	STAGE.old: $Screen/HomeScreen/NormalSprites/OldSprite}
+
+onready var stageNameMap = {
+	"egg" : STAGE.egg,
+	"young" : STAGE.baby,
+	"adult" : STAGE.adult,
+	"old" : STAGE.old}
 
 var age: float = 0
 var stage: int = STAGE.egg
@@ -67,7 +74,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if stage != STAGE.egg and state != STATE.off :
+	if stage != STAGE.egg and state != STATE.off:
 		needDecay += delta * needDecayPerSecond
 		if needDecay > 10:
 			needDecay -= 10
@@ -84,7 +91,7 @@ func _process(delta):
 	if state == STATE.home:
 		age += delta * agingPerSecond
 		if stage < STAGE.old and age > 100:
-			age_up()
+			change_stage_to(stage + 1)
 			age = 0
 
 func is_animating() -> bool:
@@ -162,11 +169,13 @@ func react_to_low_needs():
 func die():
 	emit_signal("tamagotchi_died")
 
-func age_up():
+func change_stage_to(newStage):
+	if stage == STAGE.egg:
+		emit_signal("hatch")
 	hide_sprite(stage)
-	stage += 1
+	stage = newStage
 	show_sprite(stage)
-	if (stage == STAGE.old):
+	if stage == STAGE.old:
 		emit_signal("switch_to_sick")
 	
 func is_satisfied(need) -> bool:
@@ -297,3 +306,7 @@ func _on_DialogManager_turn_tamagotchi_on():
 func _on_Screen_game_over():
 	restart_minigame()
 	switch_to_gameOver()
+
+
+func _on_DialogManager_change_squid_stage(newStageName):
+	change_stage_to(stageNameMap[newStageName])

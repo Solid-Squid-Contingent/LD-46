@@ -38,6 +38,7 @@ __meta__ = {
 [connection signal="end_sleeping" from="." to="HomeScreen" method="_on_Screen_end_sleeping"]
 [connection signal="end_talking" from="." to="HomeScreen" method="_on_Screen_end_talking"]
 [connection signal="happy" from="." to="HomeScreen" method="_on_Screen_happy"]
+[connection signal="hatch" from="." to="HomeScreen" method="_on_Screen_hatch"]
 [connection signal="not_sad" from="." to="HomeScreen" method="_on_Screen_not_sad"]
 [connection signal="refuse" from="." to="HomeScreen" method="_on_Screen_refuse"]
 [connection signal="sad" from="." to="HomeScreen" method="_on_Screen_sad"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Resources/Animations/Squid/egg.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://VPSScenes/Home/UIContainer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_2.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Animations/Squid/baby.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://Resources/Animations/Squid/adult.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Resources/Graphics/Squid/Old/Eating/old_eating_1.png" type="Texture" id=6]
@@ -19,6 +20,11 @@
 [ext_resource path="res://Resources/Graphics/Squid/Old/Refuse/old_refuse_2.png" type="Texture" id=18]
 [ext_resource path="res://Resources/Graphics/Squid/Old/Sad/old_sad_1.png" type="Texture" id=19]
 [ext_resource path="res://VPSScripts/Home/TamagotchiHomeScreen.gd" type="Script" id=20]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_3.png" type="Texture" id=21]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_4.png" type="Texture" id=22]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_1.png" type="Texture" id=23]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_6.png" type="Texture" id=24]
+[ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_5.png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -58,6 +64,14 @@ animations = [ {
 "speed": 1.0
 } ]
 
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "hatch",
+"speed": 5.0
+} ]
+
 [node name="HomeScreen" type="Node2D"]
 script = ExtResource( 20 )
 
@@ -65,34 +79,41 @@ script = ExtResource( 20 )
 margin_bottom = 17.0
 rect_scale = Vector2( 1, 1 )
 
-[node name="EggSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 35.8952, 49.3454 )
+[node name="NormalSprites" type="Node2D" parent="."]
+
+[node name="EggSprite" type="AnimatedSprite" parent="NormalSprites"]
+position = Vector2( 36, 49 )
 frames = ExtResource( 1 )
 animation = "idle"
-frame = 1
 playing = true
 
-[node name="BabySprite" type="AnimatedSprite" parent="."]
+[node name="BabySprite" type="AnimatedSprite" parent="NormalSprites"]
 visible = false
-position = Vector2( 35.8952, 44.1415 )
+position = Vector2( 36, 44 )
 frames = ExtResource( 4 )
 animation = "idle"
 
-[node name="AdultSprite" type="AnimatedSprite" parent="."]
+[node name="AdultSprite" type="AnimatedSprite" parent="NormalSprites"]
 visible = false
-position = Vector2( 37.1558, 45 )
+position = Vector2( 37, 45 )
 frames = ExtResource( 5 )
 animation = "idle"
-frame = 1
 
-[node name="OldSprite" type="AnimatedSprite" parent="."]
+[node name="OldSprite" type="AnimatedSprite" parent="NormalSprites"]
 visible = false
-position = Vector2( 37.1558, 45 )
+position = Vector2( 37, 45 )
 frames = SubResource( 1 )
 animation = "idle"
+
+[node name="HatchSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 32, 49 )
+frames = SubResource( 2 )
+animation = "hatch"
 
 [node name="AnimationTimer" type="Timer" parent="."]
 one_shot = true
 [connection signal="switch_to_pet" from="." to="UIContainer" method="_on_HomeScreen_switch_to_pet"]
 [connection signal="switch_to_sick" from="." to="UIContainer" method="_on_HomeScreen_switch_to_sick"]
+[connection signal="animation_finished" from="HatchSprite" to="." method="_on_HatchSprite_animation_finished"]
 [connection signal="timeout" from="AnimationTimer" to="." method="_on_AnimationTimer_timeout"]

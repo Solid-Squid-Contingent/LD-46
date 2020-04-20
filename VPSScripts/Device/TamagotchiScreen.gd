@@ -8,6 +8,7 @@ signal sad
 signal not_sad
 signal start_talking
 signal end_talking
+signal hatch
 
 signal switch_to_pet
 signal switch_to_sick
@@ -65,3 +66,7 @@ func _on_Tamagotchi_switch_to_sick():
 
 func _on_MinigameScreen_game_over():
 	emit_signal("game_over")
+
+
+func _on_Tamagotchi_hatch():
+	emit_signal("hatch")
