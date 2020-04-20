@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://MenuScreen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://AudioPlayer.gd" type="Script" id=10]
 [ext_resource path="res://OptionsScreen.tscn" type="PackedScene" id=11]
+[ext_resource path="res://SoundEffectPlayer.gd" type="Script" id=12]
+[ext_resource path="res://Resources/Sounds/textbox_proceed.wav" type="AudioStream" id=13]
+[ext_resource path="res://AdvanceDialogPlayer.gd" type="Script" id=14]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -53,16 +56,27 @@ visible = false
 pause_mode = 2
 bus = "Music"
 script = ExtResource( 10 )
+
+[node name="DialogSoundEffectPlayer" type="AudioStreamPlayer" parent="."]
+bus = "SoundEffects"
+script = ExtResource( 12 )
+
+[node name="AdvanceDialogPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "SoundEffects"
+script = ExtResource( 14 )
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]
 [connection signal="all_text_appeared" from="VNTextBox" to="DialogManager" method="_on_VNTextBox_all_text_appeared"]
+[connection signal="advance_dialog" from="DialogManager" to="AdvanceDialogPlayer" method="_on_DialogManager_advance_dialog"]
 [connection signal="change_background" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_background"]
 [connection signal="change_characters" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_characters"]
 [connection signal="change_squid_stage" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_change_squid_stage"]
 [connection signal="new_chapter" from="DialogManager" to="." method="_on_DialogManager_new_chapter"]
 [connection signal="play_music" from="DialogManager" to="MusicPlayer" method="_on_DialogManager_play_music"]
+[connection signal="play_sound_effect" from="DialogManager" to="DialogSoundEffectPlayer" method="_on_DialogManager_play_sound_effect"]
 [connection signal="reduce_awakeness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_awakeness"]
 [connection signal="reduce_everything" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_everything"]
 [connection signal="reduce_fullness" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_reduce_fullness"]
