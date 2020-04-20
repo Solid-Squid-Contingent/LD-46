@@ -34,7 +34,7 @@ onready var backgroundMap = {
 	"shallow sea creatures": $BackgroundShallowSeaCreatures,
 }
 
-onready var foremostBackground = $Background3
+onready var foremostBackground = $BackgroundShallowSeaCreatures
 
 export (String) var startingBackground = "field"
 
