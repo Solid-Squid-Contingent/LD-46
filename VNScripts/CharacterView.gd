@@ -43,6 +43,7 @@ onready var positions = [
 ]
 
 onready var backgroundMap = {
+	"black": $Black,
 	"city": $BackgroundCity,
 	"class": $BackgroundClass,
 	"deep sea": $BackgroundDeepSea,
@@ -62,6 +63,12 @@ func _ready():
 	change_background(startingBackground)
 
 func add_characters(listOfCharacters):
+	#TODO: Remove if we get lucas sprites
+	listOfCharacters.erase("lucas young")
+	listOfCharacters.erase("lucas")
+	listOfCharacters.erase("lucas old")
+	listOfCharacters.erase("lucas adult")
+	
 	for index in range(listOfCharacters.size()):
 		var character = add_character(listOfCharacters[index], positions[listOfCharacters.size() - 1][index])
 		if index % 2 == 1:

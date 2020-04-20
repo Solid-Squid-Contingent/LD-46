@@ -20,10 +20,10 @@ __meta__ = {
 
 [node name="Label" type="RichTextLabel" parent="TextBox"]
 margin_left = 18.0
-margin_top = 12.9445
-margin_right = 2658.0
-margin_bottom = 539.945
-rect_scale = Vector2( 0.05, 0.05 )
+margin_top = 13.0
+margin_right = 3308.0
+margin_bottom = 681.0
+rect_scale = Vector2( 0.04, 0.04 )
 mouse_filter = 2
 custom_fonts/italics_font = ExtResource( 5 )
 custom_fonts/bold_font = ExtResource( 4 )
