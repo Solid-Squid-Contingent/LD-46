@@ -17,5 +17,5 @@ func unpause():
 	paused = false
 
 
-func _on_Area2D_area_entered(area):
+func _on_Bullet_area_entered(area):
 	queue_free()

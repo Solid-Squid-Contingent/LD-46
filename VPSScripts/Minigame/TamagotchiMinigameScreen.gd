@@ -1,4 +1,4 @@
-extends Node2D
+extends Container
 
 var timePassed : float = 5
 var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
@@ -18,14 +18,14 @@ func spawnEnemy():
 
 
 func moveLeft():
-	$Player.position.x -= 10
+	$Player.position.x -= 5
 	if $Player.position.x < minX:
-		$Player.position.x += 10
+		$Player.position.x += 5
 
 func moveRight():
-	$Player.position.x += 10
+	$Player.position.x += 5
 	if $Player.position.x > maxX:
-		$Player.position.x -= 10
+		$Player.position.x -= 5
 	
 
 func shoot():

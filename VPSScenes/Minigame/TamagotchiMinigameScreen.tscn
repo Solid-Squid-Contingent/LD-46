@@ -14,6 +14,11 @@ extents = Vector2( 45.4281, 10 )
 [node name="MinigameScreen" type="Container" groups=[
 "minigame_objects",
 ]]
+margin_left = 3.0
+margin_top = 5.0
+margin_right = 67.0
+margin_bottom = 76.0
+rect_clip_content = true
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,10 +29,10 @@ position = Vector2( 30.2271, 24.2481 )
 scale = Vector2( 1, 1 )
 
 [node name="HeartContainer" type="HBoxContainer" parent="."]
-margin_left = 5.06842
-margin_top = 14.2136
-margin_right = 28.0684
-margin_bottom = 20.2136
+margin_left = 2.0
+margin_top = 9.0
+margin_right = 25.0
+margin_bottom = 15.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,31 +55,30 @@ margin_bottom = 6.0
 texture = ExtResource( 3 )
 
 [node name="EnemySpawnPosition1" type="Position2D" parent="."]
-position = Vector2( 8, 80 )
+position = Vector2( 5, 75 )
 
 [node name="EnemySpawnPosition2" type="Position2D" parent="."]
-position = Vector2( 64, 80 )
+position = Vector2( 61, 75 )
 
 [node name="OutOfBoundsArea" type="Area2D" parent="."]
-visible = false
 position = Vector2( -68.9486, -4.96664 )
 collision_layer = 16
 collision_mask = 14
 
 [node name="Left" type="CollisionShape2D" parent="OutOfBoundsArea"]
-position = Vector2( 51.5385, 52.8681 )
+position = Vector2( 48, 47 )
 shape = SubResource( 1 )
 
 [node name="Right" type="CollisionShape2D" parent="OutOfBoundsArea"]
-position = Vector2( 157.728, 52.8681 )
+position = Vector2( 154, 47 )
 shape = SubResource( 1 )
 
 [node name="Top" type="CollisionShape2D" parent="OutOfBoundsArea"]
-position = Vector2( 104.744, -8.58553 )
+position = Vector2( 101, -15 )
 shape = SubResource( 2 )
 
 [node name="Top2" type="CollisionShape2D" parent="OutOfBoundsArea"]
-position = Vector2( 104.744, 114.02 )
+position = Vector2( 101, 109 )
 shape = SubResource( 2 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
@@ -82,6 +86,6 @@ wait_time = 3.0
 autostart = true
 
 [node name="MinigameEnemy" parent="." instance=ExtResource( 4 )]
-position = Vector2( 29.6358, 82.5928 )
+position = Vector2( 30.468, 76.2129 )
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
