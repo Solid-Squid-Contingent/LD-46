@@ -66,6 +66,7 @@ stream = ExtResource( 13 )
 bus = "SoundEffects"
 script = ExtResource( 14 )
 [connection signal="new_chapter" from="." to="ChapterScreen" method="_on_Main_new_chapter"]
+[connection signal="eat" from="Tamagotchi" to="DialogManager" method="_on_Tamagotchi_eat"]
 [connection signal="tamagotchi_died" from="Tamagotchi" to="." method="_on_Tamagotchi_tamagotchi_died"]
 [connection signal="end_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_end_talking"]
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]

@@ -23,6 +23,7 @@
 		"text" : "Yessssssssssssss",
 		"new_chapter": "Seeds of Friedship",
 		"squid_stage": "adult",
+		"require_eating": true,
 		"characters": ["sarah", "michael"]
 	},
 	{
