@@ -1,32 +1,41 @@
-extends Node2D
+extends Container
+
+signal game_over
 
 var timePassed : float = 5
-var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
+var enemyScenes = [
+	preload("res://VPSScenes/Minigame/EnemyFan.tscn"),
+	preload("res://VPSScenes/Minigame/EnemyTargeted.tscn"),
+	preload("res://VPSScenes/Minigame/EnemySine.tscn"),
+	preload("res://VPSScenes/Minigame/EnemySpawning.tscn")
+]
+
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
-var paused: bool = true
+
+export (int) var minX = 5
+export (int) var maxX = 65
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-func _process(delta):
-	if not paused:
-		timePassed += delta
-		if timePassed > 5:
-			timePassed -= 5
-			spawnEnemy()
+	$EnemySpawnTimer.set_paused(true)
+	randomize()
 
 func spawnEnemy():
-	var enemy = enemyScene.instance()
+	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
 	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
 	add_child(enemy)
 
 
 func moveLeft():
-	$Player.position.x -= 10
+	$Player.position.x -= 5
+	if $Player.position.x < minX:
+		$Player.position.x += 5
 
 func moveRight():
-	$Player.position.x += 10
+	$Player.position.x += 5
+	if $Player.position.x > maxX:
+		$Player.position.x -= 5
+	
 
 func shoot():
 	var bullet = bulletScene.instance()
@@ -34,16 +43,24 @@ func shoot():
 	add_child(bullet)
 
 func pause():
-	paused = true
+	$EnemySpawnTimer.set_paused(true)
 
 func unpause():
-	paused = false
+	$EnemySpawnTimer.set_paused(false)
 
 
 func _on_Player_area_entered(area):
 	for heart in $HeartContainer.get_children():
 		if heart.visible:
 			heart.visible = false
+			break
+	
+	for heart in $HeartContainer.get_children():
+		if heart.visible:
 			return
 			
-	print("You died")
+	emit_signal("game_over")
+
+
+func _on_EnemySpawnTimer_timeout():
+	spawnEnemy()

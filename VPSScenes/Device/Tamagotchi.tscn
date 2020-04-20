@@ -76,6 +76,7 @@ size_flags_vertical = 3
 [connection signal="start_talking" from="." to="Screen" method="_on_Tamagotchi_start_talking"]
 [connection signal="switch_to_pet" from="." to="Screen" method="_on_Tamagotchi_switch_to_pet"]
 [connection signal="switch_to_sick" from="." to="Screen" method="_on_Tamagotchi_switch_to_sick"]
+[connection signal="game_over" from="Screen" to="." method="_on_Screen_game_over"]
 [connection signal="pressed" from="FoodButton" to="." method="_on_FoodButton_pressed"]
 [connection signal="pressed" from="SleepButton" to="." method="_on_SleepButton_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_PlayButton_pressed"]
