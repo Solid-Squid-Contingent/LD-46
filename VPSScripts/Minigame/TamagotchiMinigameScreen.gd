@@ -1,7 +1,7 @@
 extends Container
 
 var timePassed : float = 5
-var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
+var enemyScene = preload("res://VPSScenes/Minigame/Enemy.tscn")
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
 
 export (int) var minX = 10

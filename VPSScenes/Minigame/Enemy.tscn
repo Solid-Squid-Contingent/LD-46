@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Resources/Graphics/Minigame/Enemies/enemy_1.png" type="Texture" id=1]
-[ext_resource path="res://VPSScripts/Minigame/MinigameEnemy.gd" type="Script" id=2]
+[ext_resource path="res://VPSScripts/Minigame/Enemy.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -14,7 +14,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 3.00406, 2.00542 )
 
-[node name="MinigameEnemy" type="Area2D" groups=[
+[node name="Enemy" type="Area2D" groups=[
 "minigame_objects",
 ]]
 collision_layer = 2
