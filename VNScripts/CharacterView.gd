@@ -3,12 +3,12 @@ extends Node2D
 var currentCharacters = []
 
 var characterMap = {
-	"thief": preload("res://RealElvenThief.tscn"),
-	"cat": preload("res://CatDude.tscn")
+	"christine": preload("res://VNScenes/CharacterScenes/Christine.tscn"),
+	"michael": preload("res://VNScenes/CharacterScenes/Michael.tscn"),
+	"michael old": preload("res://VNScenes/CharacterScenes/MichaelOld.tscn"),
+	"sarah": preload("res://VNScenes/CharacterScenes/Sarah.tscn"),
+	"sarah old": preload("res://VNScenes/CharacterScenes/SarahOld.tscn")
 }
-
-var exampleCharacterList1 = ["thief", "cat"]
-var exampleCharacterList2 = ["cat", "thief"]
 
 onready var positions = [
 	[
@@ -41,7 +41,6 @@ export (String) var startingBackground = "field"
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	change_background(startingBackground)
-	add_characters(exampleCharacterList1)
 
 func add_characters(listOfCharacters):
 	for index in range(listOfCharacters.size()):
