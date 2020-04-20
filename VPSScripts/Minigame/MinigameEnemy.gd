@@ -11,18 +11,24 @@ func _ready():
 
 func _process(delta):
 	if not paused:
-		position.y -= delta * 10
+		position.y -= delta * 2
 
 func pause():
 	paused = true
+	$BulletTimer.set_paused(true)
 
 func unpause():
 	paused = false
+	$BulletTimer.set_paused(false)
 
 func shoot():
-	var bullet = bulletScene.instance()
-	bullet.position = position
-	get_parent().add_child(bullet)
+	for i in range(6):
+		var bullet = bulletScene.instance()
+		bullet.position = position
+		bullet.velocity = Vector2(0, -15).rotated(int(i / 2) * 0.5)
+		if i % 2:
+			bullet.velocity.x = -bullet.velocity.x
+		get_parent().add_child(bullet)
 
 
 func _on_Area2D_area_entered(area):

@@ -3,21 +3,13 @@ extends Node2D
 var timePassed : float = 5
 var enemyScene = preload("res://VPSScenes/Minigame/MinigameEnemy.tscn")
 var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
-var paused: bool = true
 
 export (int) var minX = 10
 export (int) var maxX = 70
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-func _process(delta):
-	if not paused:
-		timePassed += delta
-		if timePassed > 5:
-			timePassed -= 5
-			spawnEnemy()
+	$EnemySpawnTimer.set_paused(true)
 
 func spawnEnemy():
 	var enemy = enemyScene.instance()
@@ -42,10 +34,10 @@ func shoot():
 	add_child(bullet)
 
 func pause():
-	paused = true
+	$EnemySpawnTimer.set_paused(true)
 
 func unpause():
-	paused = false
+	$EnemySpawnTimer.set_paused(false)
 
 
 func _on_Player_area_entered(area):
@@ -55,3 +47,7 @@ func _on_Player_area_entered(area):
 			return
 			
 	print("You died")
+
+
+func _on_EnemySpawnTimer_timeout():
+	spawnEnemy()
