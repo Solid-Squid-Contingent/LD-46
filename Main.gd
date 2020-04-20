@@ -88,8 +88,8 @@ func _on_OptionsScreen_change_soundeffects_volume(new_volume):
 		AudioServer.set_bus_volume_db(2, 10 * log(new_volume/100))
 
 func _on_ChapterScreen_pause_music():
-	get_node("MusicPlayer").set_stream_paused(true)
+	$MusicPlayer.set_stream_paused(true)
 
 func _on_ChapterScreen_unpause_music():
-	get_node("MusicPlayer").set_stream_paused(false)
-	get_node("MusicPlayer").play()
+	$MusicPlayer.set_stream_paused(false)
+	$MusicPlayer.play()
