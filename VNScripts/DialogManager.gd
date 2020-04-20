@@ -13,6 +13,7 @@ signal change_background(background)
 
 signal turn_tamagotchi_on
 signal turn_tamagotchi_off
+signal change_squid_stage(newStageName)
 
 signal new_chapter(number, subtitle)
 
@@ -116,6 +117,9 @@ func execute_side_effects(currentData):
 			emit_signal("turn_tamagotchi_on")
 		else:
 			emit_signal("turn_tamagotchi_off")
+	
+	if currentData.has("squid_stage"):
+		emit_signal("change_squid_stage", currentData["squid_stage"])
 	
 	if currentData.has("new_chapter"):
 		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])

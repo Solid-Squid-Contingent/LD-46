@@ -33,6 +33,12 @@ onready var stageSpriteMap = {
 	STAGE.adult: $Screen/HomeScreen/NormalSprites/AdultSprite,
 	STAGE.old: $Screen/HomeScreen/NormalSprites/OldSprite}
 
+onready var stageNameMap = {
+	"egg" : STAGE.egg,
+	"young" : STAGE.baby,
+	"adult" : STAGE.adult,
+	"old" : STAGE.old}
+
 var age: float = 0
 var stage: int = STAGE.egg
 var state: int = STATE.home
@@ -85,7 +91,7 @@ func _process(delta):
 	if state == STATE.home:
 		age += delta * agingPerSecond
 		if stage < STAGE.old and age > 100:
-			age_up()
+			change_stage_to(stage + 1)
 			age = 0
 
 func is_animating() -> bool:
@@ -163,11 +169,11 @@ func react_to_low_needs():
 func die():
 	emit_signal("tamagotchi_died")
 
-func age_up():
+func change_stage_to(newStage):
 	if stage == STAGE.egg:
 		emit_signal("hatch")
 	hide_sprite(stage)
-	stage += 1
+	stage = newStage
 	show_sprite(stage)
 	if stage == STAGE.old:
 		emit_signal("switch_to_sick")
@@ -300,3 +306,7 @@ func _on_DialogManager_turn_tamagotchi_on():
 func _on_Screen_game_over():
 	restart_minigame()
 	switch_to_gameOver()
+
+
+func _on_DialogManager_change_squid_stage(newStageName):
+	change_stage_to(stageNameMap[newStageName])

@@ -9,16 +9,19 @@
 		"name" : "Squid",
 		"text" : "Nothing, sir! ttttt",
 		"new_chapter": "Prologue",
+		"squid_stage": "young",
 		"background" : "city"
 	},
 	{
 		"name" : "Lloyd",
 		"text" : "Really, truly? hmmmm?",
+		"squid_stage": "egg",
 		"characters": ["sarah"]
 	},{
 		"name" : "Squid",
 		"text" : "Yessssssssssssss",
 		"new_chapter": "Seeds of Friedship",
+		"squid_stage": "adult",
 		"characters": ["sarah", "michael"]
 	},
 	{
