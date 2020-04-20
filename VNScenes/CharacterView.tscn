@@ -11,8 +11,6 @@
 [ext_resource path="res://Resources/Graphics/Backgrounds/deep_sea.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Graphics/Backgrounds/class.png" type="Texture" id=10]
 
-
-
 [node name="CharacterView" type="Node2D"]
 script = ExtResource( 5 )
 startingBackground = "class"

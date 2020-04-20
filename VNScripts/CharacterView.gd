@@ -3,11 +3,30 @@ extends Node2D
 var currentCharacters = []
 
 var characterMap = {
-	"christine": preload("res://VNScenes/CharacterScenes/Christine.tscn"),
-	"michael": preload("res://VNScenes/CharacterScenes/Michael.tscn"),
-	"michael old": preload("res://VNScenes/CharacterScenes/MichaelOld.tscn"),
-	"sarah": preload("res://VNScenes/CharacterScenes/Sarah.tscn"),
-	"sarah old": preload("res://VNScenes/CharacterScenes/SarahOld.tscn")
+	"christine": preload("res://VNScenes/CharacterScenes/Christine/Christine.tscn"),
+	"christine happy": preload("res://VNScenes/CharacterScenes/Christine/ChristineHappy.tscn"),
+	"christine sad": preload("res://VNScenes/CharacterScenes/Christine/ChristineSad.tscn"),
+	"christine surprised": preload("res://VNScenes/CharacterScenes/Christine/ChristineSurprised.tscn"),
+	
+	"michael": preload("res://VNScenes/CharacterScenes/Michael/Michael.tscn"),
+	"michael happy": preload("res://VNScenes/CharacterScenes/Michael/MichaelHappy.tscn"),
+	"michael sad": preload("res://VNScenes/CharacterScenes/Michael/MichaelSad.tscn"),
+	"michael surprised": preload("res://VNScenes/CharacterScenes/Michael/MichaelSurprised.tscn"),
+	
+	"michael old": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOld.tscn"),
+	"michael old happy": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldHappy.tscn"),
+	"michael old sad": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldSad.tscn"),
+	"michael old surprised": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldSurprised.tscn"),
+	
+	"sarah": preload("res://VNScenes/CharacterScenes/Sarah/Sarah.tscn"),
+	"sarah happy": preload("res://VNScenes/CharacterScenes/Sarah/SarahHappy.tscn"),
+	"sarah sad": preload("res://VNScenes/CharacterScenes/Sarah/SarahSad.tscn"),
+	"sarah surprised": preload("res://VNScenes/CharacterScenes/Sarah/SarahSurprised.tscn"),
+	
+	"sarah old": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOld.tscn"),
+	"sarah old happy": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldHappy.tscn"),
+	"sarah old sad": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldSad.tscn"),
+	"sarah old surprised": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldSurprised.tscn"),
 }
 
 onready var positions = [
