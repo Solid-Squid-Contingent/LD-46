@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ChoiceButton2.png-49a854ff3f4cbc9908bc757805fc5028.stex"
+path="res://.import/character view.png-ad09a2384bd49926c4cb66d90c44dd30.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Graphics/ChoiceButton2.png"
-dest_files=[ "res://.import/ChoiceButton2.png-49a854ff3f4cbc9908bc757805fc5028.stex" ]
+source_file="res://Resources/Graphics/Backgrounds/character view.png"
+dest_files=[ "res://.import/character view.png-ad09a2384bd49926c4cb66d90c44dd30.stex" ]
 
 [params]
 

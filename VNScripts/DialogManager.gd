@@ -32,6 +32,7 @@ var dataPosition
 var dialogChoices
 var maxDataPosition
 var inChoice : bool = false
+var require_eating : bool = false
 
 var currentChapter : int = 1
 
@@ -45,7 +46,7 @@ func _unhandled_input(event):
 			vnTextBox.show_all_text()
 		elif not tamagotchiTextBox.all_text_appeared():
 			tamagotchiTextBox.show_all_text()
-		elif not inChoice:
+		elif not inChoice and not require_eating:
 			print_next_dialog_line()
 
 
@@ -132,6 +133,9 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("squid_stage"):
 		emit_signal("change_squid_stage", currentData["squid_stage"])
+	
+	if currentData.has("require_eating"):
+		require_eating = true
 
 
 func _on_ChoiceButtonPressed(choice):
@@ -157,3 +161,9 @@ func _on_VNTextBox_all_text_appeared():
 			button.set_label(currentData["choices"][i]["text"]) 
 			button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
 			choiceButtonContainer.add_child(button)
+
+
+func _on_Tamagotchi_eat():
+	if require_eating and vnTextBox.all_text_appeared() and tamagotchiTextBox.all_text_appeared():
+		require_eating = false
+		print_next_dialog_line()

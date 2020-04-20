@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/EnemyBullet.tscn" type="PackedScene" id=1]
-[ext_resource path="res://VPSScenes/Minigame/EnemyBulletSpawning.gd" type="Script" id=2]
+[ext_resource path="res://VPSScripts/Minigame/EnemyBulletSpawning.gd" type="Script" id=2]
 [ext_resource path="res://Resources/Graphics/Minigame/Player/player_shot.png" type="Texture" id=3]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1.46186, 1.45286 )
