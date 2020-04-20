@@ -18,7 +18,6 @@ export (int) var maxX = 65
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$EnemySpawnTimer.set_paused(true)
-	randomize()
 
 func spawnEnemy():
 	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()

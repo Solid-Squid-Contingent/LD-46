@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Resources/Fonts/orange-kid.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Resources/Fonts/orange-kid-italics.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Resources/Fonts/orange-kid-bold.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Resources/Graphics/character view.png" type="Texture" id=4]
 [ext_resource path="res://VNScenes/ChapterScreen.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Graphics/GeneralUI/screen_border.png" type="Texture" id=6]
 
 [node name="ChapterScreen" type="TextureRect"]
 pause_mode = 2
@@ -13,6 +14,15 @@ margin_bottom = 675.0
 texture = ExtResource( 4 )
 expand = true
 script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1200.0
+margin_bottom = 675.0
+texture = ExtResource( 6 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

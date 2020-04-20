@@ -9,6 +9,7 @@
 		"name" : "Squid",
 		"text" : "Nothing, sir! ttttt",
 		"new_chapter": "Prologue",
+		"sfx" : "whale",
 		"squid_stage": "young",
 		"background" : "city"
 	},
