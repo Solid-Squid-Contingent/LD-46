@@ -398,7 +398,7 @@
 		"text" : "Is that a Tamagotchi you got there?"
 	},
 	{
-		"name:" : "Lucas",
+		"name" : "Lucas",
 		"text" : "[i]In front of me stands a handsome boy approximately my age.\nHis longish brown hair slightly covers one side of his bespectacled face.\nWhether that is intentional I have no idea.[/i]"
 	},
 	{
@@ -411,7 +411,7 @@
 		"text" : "[i]… I can’t believe that I could not even hide my obsession for one day.[/i]"
 	},
 	{
-		"name:" : "Lucas",
+		"name" : "Lucas",
 		"text" : "Gotta play this cool.",
 		"choices" :
 		[
@@ -778,7 +778,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : " Well, that’s their loss.\nYou don’t need to thank me for talking to you.\nI do that because I like it."
+		"text" : "Well, that’s their loss.\nYou don’t need to thank me for talking to you.\nI do that because I like it."
 	},
 	{
 		"text" : "Talking about liking things.\nWhat do you like, Lucas?"
@@ -844,7 +844,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : " I really don’t mind.\nAnd like you said, we just met but I want you to know that you can talk to me about that."
+		"text" : "I really don’t mind.\nAnd like you said, we just met but I want you to know that you can talk to me about that."
 	},
 	{
 		"text" : "Of course, only if you are comfortable with sharing it.\nI will listen.\nAs long as you can also stand listening to me once in a while."
@@ -941,7 +941,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : " You really are not used to this kind of thing, huh?\nYou know visiting your friends is normal.\nYou don’t need a profound reason for it."
+		"text" : "You really are not used to this kind of thing, huh?\nYou know visiting your friends is normal.\nYou don’t need a profound reason for it."
 	},
 	{
 		"text" : "Or any other reasons besides wanting to see them more.\nYou gotta hang out with more people, you will get what I mean."
@@ -999,7 +999,7 @@
 					},
 					{
 						"name" : "Michael",
-						"text" : " Can you even name three people in our class?"
+						"text" : "Can you even name three people in our class?"
 					},
 					{
 						"name" : "Lucas",
@@ -1062,7 +1062,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : " I admit my knowledge on digital squids is lacking.\nWell go on and take care of it."
+		"text" : "I admit my knowledge on digital squids is lacking.\nWell go on and take care of it."
 	},
 	{
 		"name" : "Lucas",
@@ -1074,7 +1074,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : " I just got really fast at doing it.\nFaster than you can see.\nIn fact I do it all the time without anyone noticing."
+		"text" : "I just got really fast at doing it.\nFaster than you can see.\nIn fact I do it all the time without anyone noticing."
 	},
 	{
 		"name" : "Michael",
@@ -1434,7 +1434,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : " Ah… well.\nThe weather, maybe?\nThe world, the sea, the human condition, the duality of man?"
+						"text" : "Ah… well.\nThe weather, maybe?\nThe world, the sea, the human condition, the duality of man?"
 					},
 					{
 						"name" : "Sarah",
@@ -1899,7 +1899,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : " I, uh, more or less want to be a deep sea explorer.\nI think Michael would be fine with anything related to the ocean.\nI just... want to go down as deep as I can."
+		"text" : "I, uh, more or less want to be a deep sea explorer.\nI think Michael would be fine with anything related to the ocean.\nI just... want to go down as deep as I can."
 	},
 	{
 		"name" : "Sarah",
@@ -2367,7 +2367,7 @@
 						"text" : "[i]sigh[/i]"
 					},
 					{
-						"text" : " Yes.\nAnd I think he will never like anyone as much as the sea.\nAre you sure that [i]you[/i] don’t like Michael?"
+						"text" : "Yes.\nAnd I think he will never like anyone as much as the sea.\nAre you sure that [i]you[/i] don’t like Michael?"
 					},
 					{
 						"name" : "Lucas",
@@ -2379,7 +2379,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : " But Michael I like as a friend."
+						"text" : "But Michael I like as a friend."
 					},
 					{
 						"name" : "Sarah",
@@ -2387,7 +2387,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : " And… I think I like you as more than a friend.\nI’m sorry, I shouldn’t have brought Michael up."
+						"text" : "And… I think I like you as more than a friend.\nI’m sorry, I shouldn’t have brought Michael up."
 					},
 					{
 						"name" : "Sarah",
@@ -3219,7 +3219,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : " Yeah, I don’t want to impose on you.\nI didn’t even announce myself."
+		"text" : "Yeah, I don’t want to impose on you.\nI didn’t even announce myself."
 	},
 	{
 		"name" : "Sarah",
@@ -3663,7 +3663,7 @@
     },
     {
         "name" : "Michael",
-        "text" : " I’m not. You read the manual?"
+        "text" : "I’m not. You read the manual?"
     },
     {
         "name" : "Lucas",
@@ -3722,7 +3722,7 @@
     },
     {
         "name" : "Michael",
-        "text" : " Divers can’t be choosers.\nNow get in the fucking sub, Lucas."
+        "text" : "Divers can’t be choosers.\nNow get in the fucking sub, Lucas."
     },
     {
         "name" : "Lucas",
