@@ -272,7 +272,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text " : "So you want my attention, huh? You know, I think I understand you little one.\nYeah… Guess I’m lonely too. I hope Mum will be back soon."
+		"text" : "So you want my attention, huh? You know, I think I understand you little one.\nYeah… Guess I’m lonely too. I hope Mum will be back soon."
 	},
 	{
 		"text" : "[i]The squid was in constant need of playing and talked to me quite a bit but not once throughout this week it asked for food.[/i]"
@@ -282,7 +282,7 @@
 	},
 	{
 		"name" : "Aunt Mary",
-		"text " : "Can you come down for a bit Lucas?"
+		"text" : "Can you come down for a bit Lucas?"
 	},
 	{
 		"background" : "black",
