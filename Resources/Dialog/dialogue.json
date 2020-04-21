@@ -36,7 +36,7 @@
 	},
 	{
 		"tamagotchi_on" : true,
-		"stage" : "young",
+		"squid_stage" : "young",
 		"name" : "Mom",
 		"text" : "Isn't it cute?"
 	},
@@ -107,11 +107,14 @@
 		"text" : "Well... and it also is my responsibility."
 	},
 	{
-		"text" : "My team and I have been working day and night for this project, you know?\nIt would be like... letting your friends down after you promised them something."
+		"text" : "My team and I have been working day and night for this project, you know?"
+	},
+	{
+		"text" : "It would be like... letting your friends down after you promised them something."
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]Narrator: I look down in defeat.\nMy effort of convincing my mother to stay was - as always - fruitless.\nMaybe she will listen to me when I’m older. For now I can only hope.[/i]"
+		"text" : "[i]I look down in defeat.\nMy effort of convincing my mother to stay was - as always - fruitless.\nMaybe she will listen to me when I’m older. For now I can only hope.[/i]"
 	},
 	{
 		"name" : "Mom",
@@ -143,7 +146,10 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "[i]sigh[/i] Even Ryan's Burger Joint, yes."
+		"text" : "[i]sigh[/i]"
+	},
+	{
+		"text" : "Even Ryan's Burger Joint, yes."
 	},
 	{
 		"name" : "Squid",
@@ -1580,7 +1586,7 @@
 		"text" : "What?"
 	},
 	{
-		"stage" : "egg",
+		"squid_stage" : "egg",
 		"text" : "[i]It sure as hell turned into an egg.[/i]",
 		"choices" :
 		[
@@ -1769,7 +1775,7 @@
 		"text" : "[i]\n…\nMom...[/i]"
 	},
 	{
-		"stage" : "adult",
+		"squid_stage" : "adult",
 		"background" : "living room",
 		"characters" : ["lucas adult"],
 		"music" : "everyday",
