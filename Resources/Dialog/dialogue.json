@@ -3878,7 +3878,7 @@
 		"text" : "[i]Darkness?\nDevoid of life and meaning?[/i]",
 	},
 	{
-		"name" : "",
+		"name" : "Lucas",
 		"text" : "...",
 	},
 	{
@@ -3914,7 +3914,7 @@
 		"text" : "Well, alright, I guess."
 	},
 	{
-		"name" : "",
+		"name" : "Lucas",
 		"text" : "..."
 	},
 	{
@@ -4269,7 +4269,7 @@
 		"text" : "[i]That’s impossible.\nAm I dreaming again?[/i]"
 	},
 	{
-		"name" : "",
+		"name" : "Lucas",
 		"text" : "..."
 	},
 	{
