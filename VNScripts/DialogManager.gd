@@ -1,9 +1,14 @@
 extends Node
 
+# warning-ignore:unused_signal
 signal reduce_fullness(amount)
+# warning-ignore:unused_signal
 signal reduce_awakeness(amount)
+# warning-ignore:unused_signal
 signal reduce_fun(amount)
+# warning-ignore:unused_signal
 signal reduce_happiness(amount)
+# warning-ignore:unused_signal
 signal reduce_everything(amount)
 
 signal play_music(name)
@@ -158,18 +163,19 @@ func spawn_choice_buttons():
 
 
 func _on_ChoiceButtonPressed(choice):
-	var currentData = get_current_dialog_data()
-	
-	dialogChoices.push_back(choice)
-	dataPosition.push_back(0)
-	maxDataPosition.push_back(currentData["choices"][choice]["next"].size())
-	
-	for child in choiceButtonContainer.get_children():
-		child.queue_free()
-	
-	inChoice = false
-	
-	print_next_dialog_line()
+	if inChoice:
+		var currentData = get_current_dialog_data()
+		
+		dialogChoices.push_back(choice)
+		dataPosition.push_back(0)
+		maxDataPosition.push_back(currentData["choices"][choice]["next"].size())
+		
+		for child in choiceButtonContainer.get_children():
+			child.queue_free()
+		
+		inChoice = false
+		
+		print_next_dialog_line()
 
 
 func _on_VNTextBox_all_text_appeared():

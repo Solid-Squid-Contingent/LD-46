@@ -48,6 +48,7 @@ func unpause():
 	$EnemySpawnTimer.set_paused(false)
 
 
+# warning-ignore:unused_argument
 func _on_Player_area_entered(area):
 	for heart in $HeartContainer.get_children():
 		if heart.visible:

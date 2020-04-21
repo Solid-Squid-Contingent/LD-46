@@ -25,5 +25,5 @@ func _on_Timer_timeout():
 	show_buttons()
 
 func _on_GameOverScreen_gui_input(event):
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		show_buttons()

@@ -8,7 +8,3 @@ func _ready():
 
 func set_label(label):
 	$Label.bbcode_text = "[center]" + label + "[/center]"
-
-
-func _on_Label_meta_hover_started(meta):
-	pass # Replace with function body.

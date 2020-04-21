@@ -28,6 +28,7 @@ func shoot():
 	get_parent().add_child(bullet)
 
 
+# warning-ignore:unused_argument
 func _on_Area2D_area_entered(area):
 	queue_free()
 
