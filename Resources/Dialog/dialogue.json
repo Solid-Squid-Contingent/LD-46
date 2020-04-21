@@ -1516,7 +1516,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Uhh, sure"
+		"text" : "Uhh, sure."
 	},
 	{
 		"name" : "Sarah",
@@ -2142,7 +2142,13 @@
 		"text" : "[i]sigh[/i]"
 	},
 	{
-		"text" : "I’m, like, in the middle of an explanation here.\nWell, fine…\nSarah asked me to meet up with her before we went our ways."
+		"text" : "I’m, like, in the middle of an explanation here."
+	},
+	{
+		"text" : "Well, fine…"
+	},
+	{
+		"text" : "Sarah asked me to meet up with her before we went our ways."
 	},
 	{
 		"characters" : ["sarah", "lucas adult"],
@@ -2273,7 +2279,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i] Sarah starts looking annoyed.\nIt seems her nervousness disappeared to accommodate her newly found annoyance.[/i]"
+		"text" : "[i]Sarah starts looking annoyed.\nIt seems her nervousness disappeared to accommodate her newly found annoyance.[/i]"
 	},
 	{
 		"name" : "Sarah",
@@ -2454,7 +2460,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "A soul bond?\nNevermind that, I thought you were just unhappy with my driving skills"
+		"text" : "A soul bond?\nNevermind that, I thought you were just unhappy with my driving skills."
 	},
 	{
 		"name" : "Michael",
@@ -2465,7 +2471,10 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I won’t pull any stunts.\nAnd there is no traffic deep down there, nothing to get my blood pressure up.\nAlso, most things down there are smart enough not to mess with a sub."
+		"text" : "I won’t pull any stunts.\nAnd there is no traffic deep down there, nothing to get my blood pressure up."
+	},
+	{
+		"text" : "Also, most things down there are smart enough not to mess with a sub."
 	},
 	{
 		"name" : "Michael",
@@ -2599,7 +2608,10 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I can see that, but did you have to spend…\nI think you did a good job."
+		"text" : "I can see that, but did you have to spend…"
+	},
+	{
+		"text" : "I think you did a good job."
 	},
 	{
 		"text" : "You know, it’s alright."
@@ -2716,7 +2728,7 @@
 		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating… Sleeping… Hiding…[/i]"
 	},
 	{
-		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop[/i]"
+		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop.[/i]"
 	},
 	{
 		"text" : "[i]Which makes this the only quiet place in the world.[/i]"
@@ -2742,7 +2754,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i] try to take breath but I can’t.\nMy lungs burn like they are filled to the brim with fire.\nI start coughing up water.[/i]"
+		"text" : "[i]I try to take breath but I can’t.\nMy lungs burn like they are filled to the brim with fire.\nI start coughing up water.[/i]"
 	},
 	{
 		"name" : "Michael",
@@ -3176,7 +3188,7 @@
 				"next" :
 				[
 					{
-						"text" : "[i]Michael stares daggers at me.His eyes scream ‘traitor’.[/i]"
+						"text" : "[i]Michael stares daggers at me. His eyes scream ‘traitor’.[/i]"
 					},
 					{
 						"name" : "Michael",
@@ -3184,7 +3196,7 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "Did he think of a desk"
+						"text" : "Did he think of a desk?"
 					},
 					{
 						"name" : "Lucas",
@@ -3454,7 +3466,7 @@
 	},
 	{
 		"name" : "Squid",
-		"text" : "Don’t you want to see [i]her[/i]?"
+		"text" : "Don’t you want to see her?"
 	},
 	{
 		"text" : "… I do."
@@ -3553,8 +3565,8 @@
 		]
 	},
 	{
-		"name" : "Rise and shine, squiddo.",
-		"text" : "Squid"
+		"name" : "Squid",
+		"text" : "Rise and shine, squiddo."
 	},
 	{
 		"name" : "Squid",
@@ -3614,7 +3626,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "It might be his final evolution… "
+		"text" : "It might be its final evolution… "
 	},
 	{
 		"characters" : ["lucas old surprised","sarah old"],
@@ -3631,7 +3643,7 @@
 	},
 	{
 		"characters" : ["lucas old surprised","sarah old"],
-		"name" : "",
+		"name" : "Lucas",
 		"text" : "Damn, you are right."
 	},
     {
@@ -3748,7 +3760,7 @@
 		"text" : "[i]… Maybe even worse.[/i]"
 	},
 	{
-		"text" : "[i]I’m not a claustrophobic like Michael, but I still don’t exactly feel comfortable.[/i]"
+		"text" : "[i]I’m not claustrophobic like Michael, but I still don’t exactly feel comfortable.[/i]"
 	},
 	{
 		"name" : "Michael",
@@ -3836,7 +3848,7 @@
 		"text" : "[i]I can’t see the ground.[/i]"
 	},
 	{
-		"text" : "[i]I stop the sub and turn it around.\nBut I still can’t see the ground.\nJust when did I lose sight of it[/i]"
+		"text" : "[i]I stop the sub and turn it around.\nBut I still can’t see the ground.\nJust when did I lose sight of it?[/i]"
 	},
 	{
 		"text" : "Michael?",
