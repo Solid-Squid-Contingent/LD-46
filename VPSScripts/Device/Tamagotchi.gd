@@ -52,7 +52,7 @@ var fun: float = 100
 var happiness: float = 100
 
 var needDecay: float = 0
-export(float) var needDecayPerSecond: int = 1
+export(float) var needDecayPerSecond: float = 1
 export(int) var agingPerSecond: int = 5
 
 export(float) var needGain = 10

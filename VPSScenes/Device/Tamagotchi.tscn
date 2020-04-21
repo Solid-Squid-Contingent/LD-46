@@ -12,7 +12,6 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
-needDecayPerSecond = 2
 agingPerSecond = 15
 needGain = 20.0
 
