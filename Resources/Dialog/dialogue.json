@@ -241,7 +241,7 @@
 	},
 	{
 		"background" : "black",
-		"music" : "",
+		"music" : "sad",
 		"reduce_happiness" :  50,
 		"reduce_awakeness" : 50,
 		"reduce_fun" : 50,
@@ -265,7 +265,6 @@
 	{
 		"background" : "living room",
 		"characters" : ["lucas young"],
-		"music" : "everyday",
 		"reduce_happiness" : 30,
 		"name" : "Squid",
 		"text" : "Are you lonely? I am lonely."
@@ -286,7 +285,6 @@
 	},
 	{
 		"background" : "black",
-		"music" : "sad",
 		"name" : "Lucas",
 		"text" : "My aunt's voice is hoarse and quieter than usual.\nI walk down the stairs and I hear my aunt sobbing."
 	},
