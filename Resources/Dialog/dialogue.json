@@ -2417,9 +2417,7 @@
 		"text" : "[i]She closes her eyes.\nAnd I close mine.\n[/i]"
 	},
 	{
-		"new_chapter" : "My Deescent"
-	},
-	{
+		"new_chapter" : "My Descent",
 		"background" : "city",
 		"characters" : ["michael_old", "lucas_old"],
 		"music" : "everyday",
