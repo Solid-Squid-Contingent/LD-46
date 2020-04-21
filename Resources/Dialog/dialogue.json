@@ -3576,6 +3576,11 @@
 		"text" : "...Hmm."
 	},
 	{
+		"squid_stage" : "egg",
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"characters" : ["lucas old surprised"],
 		"text" : "?!"
 	},
