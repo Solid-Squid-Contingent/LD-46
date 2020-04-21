@@ -2534,7 +2534,7 @@
 		"text" : "Is that a harpoon?"
 	},
 	{
-		"characters" : ["lucas_old", "michael_old"],
+		"characters" : ["lucas old", "michael old"],
 		"name" : "Michael",
 		"text" : "What does it look like to you?"
 	},
@@ -2588,7 +2588,13 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I can see that, but did you have to spend…\nYou know, it’s alright.\nI think you did a good job.\nYou even hung up our diplomas in here.\nBut may I ask why there only is one chair in here?"
+		"text" : "I can see that, but did you have to spend…\nI think you did a good job."
+	},
+	{
+		"text" : "You know, it’s alright."
+	},
+	{
+		"text" : "You even hung up our diplomas in here.\nBut may I ask why there only is one chair in here?"
 	},
 	{
 		"name" : "Michael",
@@ -2619,7 +2625,10 @@
 		"text" : "Always give it your all!"
 	},
 	{
-		"text" : "My, someone is talkative today.\nThe squid is right, you know?\nLet’s prepare for our diving gig next week.\nYou still have to read the manual for the sub, right?"
+		"text" : "My, someone is talkative today.\nThe squid is right, you know?\nLet’s prepare for our diving gig next week."
+	},
+	{
+		"text" : "You still have to read the manual for the sub, right?"
 	},
 	{
 		"name" : "Lucas",
@@ -2646,7 +2655,10 @@
 				"next" :
 				[
 					{
-						"text" : "Haha.\nI’m gonna show you the power of…\nMy lungs!\nBut hey, don’t overdo it."
+						"text" : "Haha.\nI’m gonna show you the power of…\nMy lungs!"
+					},
+					{
+						"text" : "But hey, don’t overdo it."
 					},
 					{
 						"name" : "Lucas",
@@ -2690,10 +2702,10 @@
 	},
 	{
 		"background" : "shallow sea creatures",
-		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating… Sleeping… Hiding…\n[/i]"
+		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating… Sleeping… Hiding…[/i]"
 	},
 	{
-		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop\n[/i]"
+		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop[/i]"
 	},
 	{
 		"text" : "[i]Which makes this the only quiet place in the world.[/i]"
@@ -2723,7 +2735,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "You idiot!\nWhat were you thinking?!\nFuck! Get it all out.\n"
+		"text" : "You idiot!\nWhat were you thinking?!\nFuck! Get it all out."
 	},
 	{
 		"text" : "Just like that.\n…"
@@ -3316,7 +3328,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "I uh…\nWouldn’t know…\n"
+						"text" : "I uh…\nWouldn’t know…"
 					},
 					{
 						"name" : "Sarah",
