@@ -1627,7 +1627,7 @@
 						"text" : "[i]Sarah looks seriously troubled.\nMaybe that joke was a little too much.[/i]"
 					},
 					{
-						"text" : "I won’t sue, sorry that was a tasteless joke."
+						"text" : "I won’t sue.\nsorry that was a tasteless joke."
 					},
 					{
 						"name" : "Sarah",
@@ -1800,7 +1800,7 @@
 		"text" : "[i]I’m in my pyjamas.\nI have not showered yet, or brushed my teeth, or made myself look like a human being.[/i]"
 	},
 	{
-		"reduce_fullness" : "40",
+		"reduce_fullness" : 40,
 		"name" : "Squid",
 		"text" : "It’s time for breakfast."
 	},
@@ -2425,7 +2425,7 @@
 	{
 		"new_chapter" : "My Descent",
 		"background" : "city",
-		"characters" : ["michael_old", "lucas_old"],
+		"characters" : ["michael old", "lucas old"],
 		"music" : "everyday",
 		"name" : "Lucas",
 		"text" : "...\nSo…\nWho of us is gonna pilot it?"
@@ -3330,7 +3330,7 @@
 					},
 					{
 						"characters" : ["sarah old","lucas old"],
-						"name" : "",
+						"name" : "Lucas",
 						"text" : "… Yeah"
 					},
 					{

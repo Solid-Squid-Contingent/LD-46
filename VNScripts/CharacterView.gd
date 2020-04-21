@@ -67,10 +67,10 @@ func _ready():
 
 func add_characters(listOfCharacters):
 	#TODO: Remove if we get lucas sprites
-	listOfCharacters.erase("lucas young")
-	listOfCharacters.erase("lucas")
-	listOfCharacters.erase("lucas old")
-	listOfCharacters.erase("lucas adult")
+	for character in listOfCharacters:
+		if character.begins_with("lucas"):
+			listOfCharacters.erase(character)
+			break
 	
 	for index in range(listOfCharacters.size()):
 		var character = add_character(listOfCharacters[index], positions[listOfCharacters.size() - 1][index])
