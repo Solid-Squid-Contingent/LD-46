@@ -113,6 +113,9 @@ func print_next_dialog_line():
 
 
 func execute_side_effects(currentData):
+	if currentData.has("music"):
+		emit_signal("play_music", currentData["music"])
+		
 	if currentData.has("new_chapter"):
 		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
 		currentChapter += 1
@@ -120,9 +123,6 @@ func execute_side_effects(currentData):
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
-	
-	if currentData.has("music"):
-		emit_signal("play_music", currentData["music"])
 	
 	if currentData.has("sfx"):
 		emit_signal("play_sound_effect", currentData["sfx"])

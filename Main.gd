@@ -7,7 +7,6 @@ export(int) var start_resolution = 1
 func _ready():
 	randomize()
 	show_screen($StartScreen)
-	$DialogManager.print_next_dialog_line()
 
 
 func game_over():
@@ -35,7 +34,6 @@ func quit_game():
 
 func continue_game():
 	hide_screen($MenuScreen)
-	hide_screen($StartMenuScreen)
 
 func _input(event):
 	if event.is_action_pressed("menu"):
@@ -112,3 +110,8 @@ func _on_StartScreen_hide_screen():
 	hide_screen($StartScreen)
 	show_screen($StartMenuScreen)
 	
+
+
+func _on_StartMenuScreen_ContinueButton_pressed():
+	hide_screen($StartMenuScreen)
+	$DialogManager.print_next_dialog_line()

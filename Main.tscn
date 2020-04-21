@@ -121,7 +121,7 @@ script = ExtResource( 14 )
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
 [connection signal="gui_input" from="StartScreen" to="StartScreen" method="_on_StartScreen_gui_input"]
 [connection signal="hide_screen" from="StartScreen" to="." method="_on_StartScreen_hide_screen"]
-[connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_ContinueButton_pressed"]
 [connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]

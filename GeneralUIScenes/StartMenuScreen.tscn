@@ -94,7 +94,6 @@ text = "Quit"
 __meta__ = {
 "_editor_description_": ""
 }
-[connection signal="QuitButton_pressed" from="." to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
