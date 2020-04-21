@@ -32,6 +32,7 @@ var data
 var dataPosition
 var dialogChoices
 var maxDataPosition
+var beforeChoice : bool = false
 var inChoice : bool = false
 var require_eating : bool = false
 
@@ -47,7 +48,7 @@ func _unhandled_input(event):
 			vnTextBox.show_all_text()
 		elif not tamagotchiTextBox.all_text_appeared():
 			tamagotchiTextBox.show_all_text()
-		elif not inChoice and not require_eating:
+		elif not inChoice and not beforeChoice and not require_eating:
 			print_next_dialog_line()
 
 
@@ -98,7 +99,7 @@ func print_next_dialog_line():
 	execute_side_effects(currentData)
 	
 	if currentData.has("choices"):
-		inChoice = true
+		beforeChoice = true
 	else:
 		while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
 			dataPosition.pop_back()
@@ -146,6 +147,8 @@ func execute_side_effects(currentData):
 		require_eating = true
 
 func spawn_choice_buttons():
+	beforeChoice = false
+	inChoice = true
 	var currentData = get_current_dialog_data()
 	for i in range(currentData["choices"].size()):
 		var button = choiceButtonScene.instance()
@@ -170,7 +173,7 @@ func _on_ChoiceButtonPressed(choice):
 
 
 func _on_VNTextBox_all_text_appeared():
-	if inChoice:
+	if beforeChoice:
 		spawn_choice_buttons()
 
 
@@ -181,5 +184,5 @@ func _on_Tamagotchi_eat():
 
 
 func _on_TamagotchiTextBox_all_text_appeared():
-	if inChoice:
+	if beforeChoice:
 		spawn_choice_buttons()
