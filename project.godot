@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Ld 46"
+config/name="Abyssal Accessory"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
