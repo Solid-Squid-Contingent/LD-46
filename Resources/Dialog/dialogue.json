@@ -2678,7 +2678,7 @@
 		]
 	},
 	{
-		"tamagotchi_off" : true,
+		"tamagotchi_on" : false,
 		"background" : "black",
 		"characters" : [],
 		"music" : "",
