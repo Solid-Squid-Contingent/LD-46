@@ -1588,6 +1588,10 @@
 		"text" : "What?"
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"squid_stage" : "egg",
 		"text" : "[i]It sure as hell turned into an egg.[/i]",
 		"choices" :
