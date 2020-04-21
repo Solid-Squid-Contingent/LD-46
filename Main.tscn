@@ -28,6 +28,7 @@ scale = Vector2( 5, 5 )
 
 [node name="Tamagotchi" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 5, 5 )
+needDecayPerSecond = 0
 
 [node name="TamagotchiTextBox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 435 )
@@ -39,7 +40,7 @@ scale = Vector2( 5, 5 )
 
 [node name="DialogManager" type="Node" parent="."]
 script = ExtResource( 6 )
-startFileName = "res://Resources/Dialog/test.json"
+startFileName = "res://Resources/Dialog/dialogue.json"
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false
