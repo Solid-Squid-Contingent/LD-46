@@ -2405,5 +2405,1902 @@
 	},
 	{
 		"new_chapter" : "First Part, Chapter Three"
+	},
+
+	{
+		"background" : "city",
+		"characters" : ["michael_old", "lucas_old"],
+		"music" : "everyday",
+		"name" : "Lucas",
+		"text" : "...\nSo…\nWho of us is gonna pilot it?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "You."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well that was quick.\nWhat gives?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "I’m not good with cramped places.\nI even get anxious in cars.\nSo, unless they ever conceive a spacious submarine... I’m out."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "And you couldn’t have mentioned that before?\nIn the what? Eight years we spent together?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "I’m honestly surprised that you didn’t find out such an important thing in eight years, Lucas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "But you easily could have brought it up before.\nLike when we were driving around in my car."
+	},
+	{
+		"name" : "Michael",
+		"text" : "You couldn’t feel my profound uneasiness when you were driving?\nI thought we had some kind of soul bond."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "A soul bond?\nNevermind that, I thought you were just unhappy with my driving skills"
+	},
+	{
+		"name" : "Michael",
+		"text" : "That too.\nI can’t believe a laid-back guy like you would be such an aggressive driver.\nMaybe I should pilot the sub after all.\nI don’t want you to kill yourself with reckless deep sea driving maneuvers."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I won’t pull any stunts.\nAnd there is no traffic deep down there, nothing to get my blood pressure up.\nAlso, most things down there are smart enough not to mess with a sub."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Yeah, I’m just pulling your leg.\nYou know, I still can’t believe we really get to use a submarine."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Yeah… It feels like a dream."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Never stop chasing your dream."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Maybe I should shift my research to your Tamagotchi.\nSometimes it’s really uncanny how fitting the things it says are."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well, it must have some words it recognises… Maybe."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Why should a Tamagotchi have that?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Beats me.\nMaybe so it can be a better friend for you?\nIt worked for me."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Yeah, maybe.\nSo, you wanna check out our office too?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Yeah.\nAlthough, I gotta admit that I am sceptical."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Why?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Because I left the interior design to you of course."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well, make sure to hold on to your socks lest they will be blown off."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "A-ha…"
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"background" : "office",
+		"music" : "everyday",
+		"name" : "Michael",
+		"text" : "Ta-dah!!!"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I gotta say, it’s more than I expected."
+	},
+	{
+		"name" : "Michael",
+		"text" : "You are making me blush."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Is that a harpoon?"
+	},
+	{
+		"characters" : ["lucas_old", "michael_old"],
+		"name" : "Michael",
+		"text" : "What does it look like to you?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "A harpoon."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Exactly."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "So… it is a harpoon?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Hm? Oh, no.\nNo, no, no.\nIt’s a [i]model[/i] of a harpoon."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "So… why do we have a model of a harpoon gun?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "What do you mean why?\nTo liven up the room.\nAs decoration you know?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Right… That’s what you spent our 3000 bucks budget on?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Hm? No."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "So… you have money left, right?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Uhhh… No, should I?\nI spent most of it on that painting."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "You mean that poster?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Same difference.\nIt was painted by a talented artist, you know?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I can see that, but did you have to spend…\nYou know, it’s alright.\nI think you did a good job.\nYou even hung up our diplomas in here.\nBut may I ask why there only is one chair in here?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "I knew you would ask that.\n…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "So?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "We were on a budget."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Right."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Time to play!"
+	},
+	{
+		"name" : "Michael",
+		"text" : "More like time to work.\nYou know, our fight starts now."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Always give it your all!"
+	},
+	{
+		"text" : "My, someone is talkative today.\nThe squid is right, you know?\nLet’s prepare for our diving gig next week.\nYou still have to read the manual for the sub, right?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Uh-huh… Well… I read most of it already.\nUntil then, let’s do a bit of freediving… Fieldwork I mean."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Yeah.\nBy the way, what was your record for holding your breath again?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Uh… Six minutes and a few seconds."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Wow, look at you, tough guy."
+	},
+	{
+		"text" : "Wanna make it a competition?",
+		"choices" :
+		[
+			{
+				"text" : "You’re on.",
+				"next" :
+				[
+					{
+						"text" : "Haha.\nI’m gonna show you the power of…\nMy lungs!\nBut hey, don’t overdo it."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I know. Lets’ go."
+					}
+				]
+			},
+			{
+				"text" : "Let’s not.",
+				"next" :
+				[
+					{
+						"text" : "Well, that probably is the right decision.\nLet’s not overdo it.\nDon’t wanna drown my partner after we got this far."
+					}
+				]
+			}
+		]
+	},
+	{
+		"tamagotchi_off" : true,
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"name" : "Lucas",
+		"text" : "..."
+	},
+	{
+		"sfx" : "watersplash",
+		"text" : "[i]Ah, the water is cold.\nPleasingly cold.\nI open my eyes.[/i]"
+	},
+	{
+		"background" : "shallow sea",
+		"music" : "deep sea",
+		"text" : "[i]Ah…\nThat vast blue.\nThe seaweed sways mildly.[/i]"
+	},
+	{
+		"text" : "[i]I don’t move a muscle.\nA few meters away from me I see Michael floating elegantly through the water.[/i]"
+	},
+	{
+		"text" : "[i]It seems he made friends with an inquisitive eel.\nAs expected of Micheel…\nI hold that thought while I investigate my surroundings.[/i]"
+	},
+	{
+		"background" : "shallow sea creatures",
+		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating… Sleeping… Hiding…\n[/i]"
+	},
+	{
+		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop\n[/i]"
+	},
+	{
+		"text" : "[i]Which makes this the only quiet place in the world.[/i]"
+	},
+	{
+		"background" : "black",
+		"text" : "[i]I close my eyes and enjoy the silence.\nI feel myself sinking again. The most peaceful feeling there is.[/i]"
+	},
+	{
+		"text" : "[i]I sink…\nDeeper.\nAnd deeper.[/i]"
+	},
+	{
+		"text" : "[i]…\n… -as.\nA voice?[/i]"
+	},
+	{
+		"text" : "[i]… -cas.\n…\n… Mom?[/i]"
+	},
+	{
+		"characters" : ["michael old surprised"],
+		"music" : "",
+		"name" : "Michael",
+		"text" : "Lucas!"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i] try to take breath but I can’t.\nMy lungs burn like they are filled to the brim with fire.\nI start coughing up water.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "You idiot!\nWhat were you thinking?!\nFuck! Get it all out.\n"
+	},
+	{
+		"text" : "Just like that.\n…"
+	},
+	{
+		"characters" : ["michael old surprised","lucas old"],
+		"text" : "Dude… don’t do that to me again.\nFuck…\nWhat would I have told Sarah if…"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Hey! Stay with me!"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]He slaps my face a tad too strongly.[/i]"
+	},
+	{
+		"characters" : ["michael old surprised","lucas old surprised"],
+		"text" : "Ouch, fuck!\nHey, I’m with you. Don’t slap me like that."
+	},
+	{
+		"characters" : ["michael old sad","lucas old surprised"],
+		"name" : "Michael",
+		"text" : "What do you mean you are with me?\nYou just called me ‘Mom’ some seconds ago!\nYou are not with anyone right now."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I look at Michael, still slightly in a daze.\nMichaels eyes are swollen and red.[/i]",
+		"choices" :
+		[
+			{
+				"text" : "Were you crying?",
+				"next" :
+				[
+					{
+						"name" : "Michael",
+						"text" : "What?\nYou mean that?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]He points towards his eyes.[/i]"
+					},
+					{
+						"name" : "Michael",
+						"text" : "That’s just a little barotrauma…\nBut I also must have cried a bit."
+					},
+					{
+						"characters" : ["michael old happy","lucas old surprised"],
+						"text" : "Hey, I’m just glad you are fit enough to make cheeky comments again."
+					}
+				]
+			},
+			{
+				"text" : "Thanks for saving me.",
+				"next" :
+				[
+					{
+						"name" : "Michael",
+						"text" : "You are welcome…\nBut you better work your ass off to make up for this."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Yeah…\nI will."
+					}
+				]
+			},
+			{
+				"text" : "What happened?",
+				"next" :
+				[
+					{
+						"characters" : ["michael old","lucas old surprised"],
+						"name" : "Michael",
+						"text" : "[i]sigh[/i]"
+					},
+					{
+						"text" : "I lost sight of you when playing with my eel."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Excuse me?"
+					},
+					{
+						"name" : "Michael",
+						"text" : "I played around with an eel and lost sight of you."
+					},
+					{
+						"characters" : ["michael old","lucas old"],
+						"name" : "Lucas",
+						"text" : "..."
+					},
+					{
+						"name" : "Michael",
+						"text" : "We were already past five minutes, so I dove back up to see if you were there.\nBut you weren’t."
+					},
+					{
+						"text" : "So I kinda panicked and dove down a bit too quickly.\nI found you floating through some seaweed with your mouth open…"
+					},
+					{
+						"text" : "As if you were a frogfish waiting for its prey…\nBut your eyes were open too."
+					},
+					{
+						"text" : "You were already down there for like seven minutes, so I grabbed you and swam up…\nAlso a bit too quickly."
+					},
+					{
+						"text" : "Hence why my eyes look like this.\nYours do too by the way."
+					}
+				]
+			}
+		]
+	},
+	{
+		"characters" : ["michael old","lucas old"],
+		"name" : "Lucas",
+		"text" : "I’m sorry. I must have drifted off."
+	},
+	{
+		"name" : "Michael",
+		"text" : "I hope you did not intend that pun."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I didn’t."
+	},
+	{
+		"name" : "Michael",
+		"text" : "You are a rare breed of dumbass to fall asleep underwater.\nIt’s settled then: no more freediving for you."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Eeeeh?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Don’t ‘eeeeh’ me you idiot.\nYou almost fucking died.\nYou are soon to be a father so don’t fucking die."
+	},
+	{
+		"text" : "That’s like the ‘Being a Dad 101’:\n‘Don’t die before your child is born.’\n‘And best not die before it reached adulthood either.’"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Thanks, Michael."
+	},
+	{
+		"name" : "Michael",
+		"text" : "For what?\nThe advice?\nThe verbal abuse?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Those too.\nAnd…\nCan we keep it a secret from Sarah?"
+	},
+	{
+		"characters" : ["michael old surprised","lucas old"],
+		"name" : "",
+		"text" : "Are you out of your mind?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Michael… Please.\nI don’t want to worry Sarah with the baby coming."
+	},
+	{
+		"name" : "Michael",
+		"text" : "But she should be worried... with a reckless person like you."
+	},
+	{
+		"characters" : ["michael old","lucas old"],
+		"text" : "… Fine."
+	},
+	{
+
+		"text" : "But, please, be careful from now on. You owe it to me.\nAnd her…Them.\nDeal?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Deal."
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"tamagotchi_on" : true,
+		"background" : "city",
+		"characters" : ["michael old","lucas old"],
+		"music" : "everyday",
+		"name" : "Michael",
+		"text" : "Well let’s get you back home, shall we?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "You are driving me?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "What? No.\nYou know I don’t have a license."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well then I will-"
+	},
+	{
+		"name" : "Michael",
+		"text" : "No, we will take the bus.\nYou, uh, shouldn’t strain yourself."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]He probably just doesn’t want to be my passenger…\nBut I guess that’s fine.[/i]"
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"background" : "living room",
+		"characters" : ["lucas old"],
+		"music" : "everyday",
+		"name" : "Lucas",
+		"text" : "I’m back."
+	},
+	{
+		"characters" : ["lucas old","sarah old"],
+		"name" : "Lucas",
+		"text" : "Hey, babe. How was your day?\nDid Michael ‘fuck up the office’?"
+	},
+	{
+		"characters" : ["lucas old","sarah old","michael old"],
+		"name" : "",
+		"text" : "Yo, Sarah."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Hey, Michael!\nCome in."
+	},
+	{
+		"text" : "And that with fucking up the office came from Lucas, not me."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Way to sell me out, Sarah."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "… Just how do you two look?!\nWhat happened to you?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Ah, you know, the usual.\nMinor barotrauma."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Yes, I can see that.\nWhat I meant is, how did this happen?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "We went freediving for a bit."
+	},
+	{
+		"reduce_happiness" : 30,
+		"name" : "Squid",
+		"text" : "Care to play with me for a bit?"
+	},
+	{
+		"text" : "Shhh…"
+	},
+	{
+		"text" : "Ah yes and I played with my eel."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Sorry, what was that?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Why does everyone get hung up on that?"
+	},
+	{
+		"text" : "Well, long story short we ran out of air and had to dive up quickly.\nSo yeah, that’s why we look like we hit a massive blunt."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You sure you didn’t actually hit a blunt?\nYou know, to celebrate the deal with the submarine and your office?"
+	},
+	{
+		"text" : "I wouldn’t be mad with you."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Oh, she would. And she would have every right to be.\nThe truth, of course, is worse than that.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Do we look stoned to you?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I can’t tell whether or not you're stoned only judging by your behaviour, Michael.\nIt makes too little of a difference with you to say for sure."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Michael theatrically grasps for air.\nEven after all these years, Michael is Sarah's best friend.[/i]"
+	},
+	{
+		"text" : "[i]His eyes show a noticeable shadow of guilt.\nMaybe I shouldn’t have made him keep the truth from her.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "The office is fabulous by the way.\nNot fucked up at all."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Michael looks at me, expecting me to back up his claim.[/i]",
+		"choices" :
+		[
+			{
+				"text" : "It was absolutely breathtaking.",
+				"next" :
+				[
+					{
+						"text" : "[i]A lie for a lie.\nThus is the law of equal exchange.\nBut I shouldn’t stop here.[/i]"
+					},
+					{
+						"text" : "I’m still in awe with Michael’s interior design skills.\nThe moment I stepped foot into the office, I knew…"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "What did you know?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "… That Michael has an overwhelmingly… impressive sense for aesthetics."
+					},
+					{
+						"text" : "Yes, it was like an aesthetic post, nay, even more breathtaking."
+					},
+					{
+						"text" : "It made me wonder whether Michael had actually studied art instead."
+					},
+					{
+						"name" : "Michael",
+						"text" : "You could have just said that when you saw the room."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Don’t make this more complicated, Michael!"
+					},
+					{
+						"text" : "I was too overwhelmed when I saw it."
+					},
+					{
+						"name" : "Michael",
+						"text" : "Checks out."
+					}
+				]
+			},
+			{
+				"text" : "It surpassed my wildest expectations.",
+				"next" :
+				[
+					{
+						"name" : "Sarah",
+						"text" : "But… You were not expecting anything at all.\nOr so you told me."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I uh…"
+					},
+					{
+						"name" : "Michael",
+						"text" : "Damn, that really hurts, Lucas."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "But I stand corrected!"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "So what was it like?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "… Imagine the coolest, hippest office you have ever seen…\nLike in one of those hip start-ups where you only have to work as much as you want."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Yeah?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Now, take that times two in terms of… everything.\nAnd add to that…"
+					},
+					{
+						"text" : "A harpoon."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "A harpoon?\nWhat do you need a harpoon for?"
+					},
+					{
+						"name" : "Michael",
+						"text" : "It’s a model of a harpoon.\nA toy harpoon, if you will."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "As decoration?"
+					},
+					{
+						"name" : "Michael",
+						"text" : "Precisely.\nSee, at least there is someone who understands my artistic vision."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I wouldn’t go that far."
+					},
+					{
+						"name" : "Michael",
+						"text" : "Right."
+					}
+				]
+			},
+			{
+				"text" : "We only have one chair...",
+				"next" :
+				[
+					{
+						"text" : "[i]Michael stares daggers at me.His eyes scream ‘traitor’.[/i]"
+					},
+					{
+						"name" : "Michael",
+						"text" : "But you should see it, it’s made from the wood of-"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Did he think of a desk"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "He did. I was flabbergasted.\nThat alone makes up for the lack of a second chair."
+					},
+					{
+						"name" : "Michael",
+						"text" : "I knew you would come around."
+					}
+				]
+			}
+		]
+	},
+	{
+		"text" : "So… Enough about the office.\nHow is the baby?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]He looks at Sarah’s pregnant belly.\nSarah sighs but can’t hide a faint smile.[/i]"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You really don’t need to ask every other day.\nShe is fine, just like me.\nI think she will be coming soon."
+	},
+	{
+		"name" : "Michael",
+		"text" : "That’s great.\nWell, keep me up to date."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Are you leaving already?"
+	},
+	{
+		"name" : "Michael",
+		"text" : " Yeah, I don’t want to impose on you.\nI didn’t even announce myself."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You are not imposing on us."
+	},
+	{
+		"reduce_fullness" : 35,
+		"name" : "Squid",
+		"text" : "Dinnertime!"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well, that reminds me…\nI have to prepare dinner for my little lady."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "You would be a great dad, you know?\nThe way you care for your tortoise is nothing short of impressive."
+	},
+	{
+		"name" : "Michael",
+		"text" : "You think so?\nWell I learned from the best."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]He gives me a wink and leaves.[/i]"
+	},
+	{
+		"characters" : ["sarah old","lucas old"],
+		"name" : "Sarah",
+		"text" : "Did something happen with Michael?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "What do you mean?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "I don’t know, call it a hunch.\nHe talked way less right now.\nLike he was feeling bad for something.",
+		"choices" :
+		[
+			{
+				"text" : "Tell her the truth.",
+				"next" :
+				[
+					{
+						"name" : "Lucas",
+						"text" : "[i]This is going to be difficult.\nBut I shouldn’t take Sarah’s perceptiveness lightly.\nAnd… She deserves to know.[/i]"
+					},
+					{
+						"characters" : ["sarah old","lucas old sad"],
+						"music" : "sad",
+						"text" : "I… I had an accident while diving.\nIf it hadn’t been for Michael…\nI would be -"
+					},
+					{
+						"text" : "[i]Sarah hugs me gently and waits for me to calm down.\nDidn’t think I would be the one breaking down.[/i]"
+					},
+					{
+						"text" : "[i]I'm pathetic.[/i]"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "You are not pathetic, you know?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I didn’t say anything…"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "You didn’t need to.\nIt’s alright."
+					},
+					{
+						"text" : "..."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I’m so sorry."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I know.\nJust…"
+					},
+					{
+						"text" : "Don’t do that to me again.\nPlease be careful… and value your own life."
+					},
+					{
+						"text" : "I need you."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "[i]She takes my hand and places it on her belly.\nI feel her warmth… and the gentle kicks of tiny feet.[/i]"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "She needs you."
+					},
+					{
+						"characters" : ["sarah old","lucas old"],
+						"name" : "",
+						"text" : "… Yeah"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Let’s go to bed, ok?"
+					}
+				]
+			},
+			{
+				"text" : "He felt a bit queasy from diving.",
+				"next" :
+				[
+					{
+						"text" : "Oh, he normally doesn’t…\nUsually he is even more energetic afterwards."
+					},
+					{
+						"text" : "Has it something to do with his ‘eel’ he mentioned?\nPotency problems maybe?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I uh…\nWouldn’t know…\n"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "You guys don’t talk about this kinda thing?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "Not with Michael I don’t."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Then with whom do you talk about this kind of thing?"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "You…?"
+					},
+					{
+						"name" : "Sarah",
+						"text" : "So Michael doesn’t have anyone to talk about this kind of thing?\nMaybe I should talk about it with him."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I’m sure his ‘eel’ is fine.\nI think you can spare him from that talk."
+					},
+					{
+						"text" : "I… Uh. Can ask about the well-being of his little Micheel.\nIf you insist."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I will think about it.\nFor now, let’s go to bed."
+					}
+				]
+			},
+			{
+				"text" : "I’m not sure.",
+				"next" :
+				[
+					{
+						"name" : "Lucas",
+						"text" : "Maybe he was upset about what I said about our office."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "I thought you liked it."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "It was passable."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "Hm, it’s not like Michael to dwell on things like that."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "You are right."
+					},
+					{
+						"text" : "..."
+					},
+					{
+						"name" : "Sarah",
+						"text" : "…\nWell, let’s go to bed for today, okay?"
+					}
+				]
+			}
+		]
+	},
+	{
+		"music" : "",
+		"name" : "Lucas",
+		"text" : "Yeah..."
+	},
+	{
+		"background" : "black",
+		"characters" : [],
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"music" : "deep sea",
+		"name" : "Lucas",
+		"text" : "[i]This sensation…\nAm I diving again?[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "That's right."
+	},
+	{
+		"background" : "shallow sea creatures",	
+		"name" : "Squid",
+		"text" : "You are dreaming."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Dreaming of diving."
+	},
+	{
+		"text" : "I… almost died today."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Yeah. That wasn’t good."
+	},
+	{
+		"text" : "No shit."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Don’t waste your life like that."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Don’t you want to see [i]her[/i]?"
+	},
+	{
+		"text" : "… I do."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Then hold on to your life."
+	},
+	{
+		"name" : "Squid",
+		"text" : "And find her, deep down below."
+	},
+	{
+		"text" : "[i]Am I rising?[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "You are waking up, Lucas.",
+		"choices" :
+		[
+			{
+				"text" : "I don’t wanna.",
+				"next" :
+				[
+					{
+						"name" : "Squid",
+						"text" : "[i]sigh[/i]"
+					},
+					{
+						"name" : "Squid",
+						"text" : "What good does lingering here do?"
+					},
+					{
+						"text" : "..."
+					},
+					{
+						"text" : "..."
+					},
+					{
+						"text" : "..."
+					},
+					{
+						"name" : "Squid",
+						"text" : "Are you buying time?"
+					},
+					{
+						"text" : "No..."
+					},
+					{
+						"text" : "..."
+					}
+				]
+			},
+			{
+				"text" : "About time.",
+				"next" :
+				[
+					{
+						"name" : "Squid",
+						"text" : "Did you come to loathe the sea?"
+					},
+					{
+						"text" : "No…\nI just feel like I should be awake.\nAnd not here."
+					},
+					{
+						"name" : "Squid",
+						"text" : "Well then…"
+					}
+				]
+			},
+			{
+				"text" : "Where is Mom?",
+				"next" :
+				[
+					{
+						"name" : "Squid",
+						"text" : "You will find her soon enough."
+					},
+					{
+						"name" : "Squid",
+						"text" : "I hope."
+					},
+					{
+						"text" : "You hope?"
+					},
+					{
+						"name" : "Squid",
+						"text" : "I’m a dream squid, not a medium."
+					},
+					{
+						"name" : "Squid",
+						"text" : "Now…"
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Rise and shine, squiddo.",
+		"text" : "Squid"
+	},
+	{
+		"name" : "Squid",
+		"text" : "And, goodbye."
+	},
+	{
+		"background" : "black",
+		"music" : "",
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"background" : "living room",
+		"characters" : ["lucas old"],
+		"music" : "everyday",
+		"name" : "Lucas",
+		"text" : "...Hmm."
+	},
+	{
+		"characters" : ["lucas old surprised"],
+		"text" : "?!"
+	},
+	{
+		"characters" : ["lucas old surprised","sarah old"],
+		"name" : "Sarah",
+		"text" : "What’s up, babe?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "The squid did that thing again."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "That thing?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "You know, what happened six years ago?"
+	},
+	{
+		"name" : "Sarah",
+		"text" : "What do you mean? I’m still half asleep…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "It’s back to being an egg."
+	},
+	{
+		"characters" : ["lucas old surprised","sarah old surprised"],
+		"name" : "Sarah",
+		"text" : "Oh. Well I don’t remember touching it…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "It might be his final evolution… "
+	},
+	{
+		"characters" : ["lucas old surprised","sarah old"],
+		"name" : "Sarah",
+		"text" : "Or it goes back to it’s baby form."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Maybe. Time will tell."
+	},
+	{
+		"name" : "Sarah",
+		"text" : "Enough about the squid, you need to go to work."
+	},
+	{
+		"characters" : ["lucas old surprised","sarah old"],
+		"name" : "",
+		"text" : "Damn, you are right."
+	},
+    {
+		"background" : "black",
+		"characters" : [],
+		"music" : "",
+		"name" : "",
+		"text" : "..."
+	},
+    {
+		"background" : "office",
+		"characters" : ["lucas old", "michael old"],
+		"music" : "everyday",
+		"name" : "Michael",
+		"text" : "Where have you been?\nMr. Lawrence just came by."
+
+    },
+    {
+        "name" : "Lucas",
+        "text" : "What did he say?"
+    },
+    {
+        "name" : "Michael",
+        "text" : "That we will do our test dive today."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "You are kidding."
+    },
+    {
+        "name" : "Michael",
+        "text" : " I’m not. You read the manual?"
+    },
+    {
+        "name" : "Lucas",
+        "text" : "Yeah… "
+    },
+    {
+        "name" : "Michael",
+        "text" : "I don’t like the sound of that but you can wing it.\nProbably."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "I think I got this."
+    },
+    {
+        "name" : "Michael",
+        "text" : "We will be going… 4000 Meters deep."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "In what world is that a test run?"
+    },
+    {
+        "name" : "Michael",
+        "text" : "Believe it or not: in yours…\nHow are your lungs?"
+    },
+    {
+        "name" : "Lucas",
+        "text" : "They are fine."
+    },
+    {
+        "name" : "Michael",
+        "text" : "Good.\nDon’t worry, I will be with you."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "Thank god, I think I would panic if I had to pilot that thing alone today."
+    },
+    {
+        "name" : "Michael",
+        "text" : "…"
+    },
+    {
+        "name" : "Lucas",
+        "text" : "What?"
+    },
+    {
+        "name" : "Michael",
+        "text" : "You have to pilot that thing alone today, Lucas.\nIt’s a one-person submarine.\nYou know that."
+    },
+    {
+        "text" : "I mean I will be there to talk with you, over radio."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "Fantastic."
+    },
+    {
+        "name" : "Michael",
+        "text" : " Divers can’t be choosers.\nNow get in the fucking sub, Lucas."
+    },
+    {
+        "name" : "Lucas",
+        "text" : "Alright, alright. No need to push me."
+    },
+    {
+        "name" : "Michael",
+        "text" : "Sorry, I don’t know why I worded it like that.\nWell anyways, get to business."
+    },
+    {
+		"name" : "",
+		"music": "",
+		"characters": [],
+		"text" : "...",
+		"background" : "black"
+	},
+	{
+		"name" : "Lucas",
+		"characters": ["lucas"],
+		"text" : "[i]I jump into the submarine.\nIt’s about as cramped in here as economy class on a discount airline.[/i]"
+	},
+	{
+		"text" : "[i]… Maybe even worse.[/i]"
+	},
+	{
+		"text" : "[i]I’m not a claustrophobic like Michael, but I still don’t exactly feel comfortable.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"characters": ["lucas", "michael"],
+		"text" : "We will let you in now, buckle up."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Ok, just give me a count-"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Down.",
+		"characters": ["lucas"],
+		"sfx" : "watersplash",
+		"background": "shallow sea",
+		"music" : "deep sea"
+	},
+	{
+		"name" : "Michael",
+		"text" : "See anything?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "How could I not see anything?\nThere is a literal window in front of me."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Alright.\n... Hm? ..."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I handle the interface as best as I can.\nAnd sure enough I start going down.[/i]"
+	},
+	{
+		"text" : "[i]The engine is humming quietly.\nI enjoy the views around me as I go deeper and deeper.\nUntil I stop recognizing most of the animals and plants.[/i]",
+		"background" : "shallow sea creatures"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Wow...\nI wish I was sitting in your seat right now."
+	},
+	{
+		"text" : "And at the same time I’m also happy sitting here and not [i]there[/i]."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Maybe you can try it one day."
+	},
+	{
+		"text" : "The window kinda gives the impression of an open space.\nIt’s more like panoramic scuba diving."
+	},
+	{
+		"name" : "Mr. Lawrence",
+		"text" : "Please stop your idle chit-chat, gentlemen."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Oh, sure… "
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Grumpy son of gun…[/i]"
+	},
+	{
+		"text" : "[i]But maybe a bit of quiet is nice too.[/i]"
+	},
+	{
+		"text" : "[i]I accelerate my descent.[/i]"
+	},
+	{
+		"text" : "[i]And go down.[/i]"
+	},
+	{
+		"text" : "[i]Slowly the light starts fading.[/i]"
+	},
+	{
+		"text" : "[i]I turn the headlights to maximum brightness.\nTo no avail.[/i]",
+		"background" : "black"
+	},
+	{
+		"text" : "[i]They illuminate maybe the first 30 meters in front of me.\nAnd I don’t see anything but floating particles and dark.[/i]"
+	},
+	{
+		"text" : "[i]I can’t see the ground.[/i]"
+	},
+	{
+		"text" : "[i]I stop the sub and turn it around.\nBut I still can’t see the ground.\nJust when did I lose sight of it[/i]"
+	},
+	{
+		"text" : "Michael?",
+	},
+	{
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Michael?"
+	},
+	{
+		"text" : "… Fuck."
+	},
+	{
+		"text" : "[i]I’m starting to feel kind of tense.[/i]"
+	},
+	{
+		"text" : "[i]Seeing absolutely nothing after turning the lights on is a scary sensation.[/i]",
+		"squid_stage" : "old"
+	},
+	{
+		"text" : "[i]I lean back and sigh.\nIs that what Mom saw?[/i]",
+	},
+	{
+		"text" : "[i]Darkness?\nDevoid of life and meaning?[/i]",
+	},
+	{
+		"name" : "",
+		"text" : "...",
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Hm?"
+	},
+	{
+		"name" : "Squid",
+		"text" : "Heyo, Squiddo."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Whoa… When did you?",
+		"reduce_happiness" : 80
+	},
+	{
+		"text" : "Hm… No more pets?"
+	},
+	{
+		"name" : "Squid",
+		"text" : "Care to help an old squid?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Hmmm… You need…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Medicine now?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well, alright, I guess."
+	},
+	{
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Lucas?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Michael?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Oh, you are back.\nDon’t scare me like that."
+	},
+	{
+		"text" : "I thought I lost you… Again."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "I called for you but you didn’t respond."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Weird…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Well anyway, can you help me orientate?\nI kinda lost sight of the ground and I’m in a bit of pickle here."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well figures, I mean you went beyond the continental shelf.\nAnd the continental slope is steep."
+	},
+	{
+		"text" : "Are you sure you have a Master of Science in marine biology?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Sh- shut up."
+	},
+	{
+		"text" : "It feels different in here, kinda lost my focus.\nThere is no textbook that prepares you for… That."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Oh, you mean that absolute, all encompassing darkness?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Yes, that."
+	},
+	{
+		"text" : "And being stuck in a room the size of an airplane toilet.\nIt’s starting to smell like one too.\nFor the first time in a while I was happy to hear your voice."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Charming."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Hm, I’m quite hungry…",
+		"reduce_fullness" : 50
+	},
+	{
+		"name" : "Michael",
+		"text" : "Wait, did you take your squid with you?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Yeah, I did.\nIt’s old and wrinkly now."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Happens to the best of us."
+	},
+	{
+		"text" : "Oh!\nContinue your descent, please. We are not quite there yet."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Gotcha."
+	},
+	{
+		"text" : "Wait stop!\nDid you see that?"
+	},
+	{
+		"name" : "Michael",
+		"text" : "I think I saw an anglerfish."
+	},
+	{
+		"text" : "Oh, man.\nI’ll just have to review the video recordings.\nNext time please stop if you see something."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "But I didn’t see it."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Well then stop if I tell you to stop."
+	},
+	{
+		"text" : "Ok, we should shortly be reaching the abyssal plane."
+	},
+	{
+		"text" : "Wait, stop your engine.\nThat is…"
+	},
+	{
+		"text" : "Dear god… ",
+		"sfx" : "whale"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Below me I see a gargantuan shadow moving.\nIt’s swimming very slowly towards the surface…[/i]"
+	},
+	{
+		"text" : "[i]In my direction.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Quick, turn off your lights."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I do as Michael says.\nAnd I immediately see why he told me to.[/i]"
+	},
+	{
+		"text" : "[i]The creature is bioluminescent.\nI watch in awe as it swims by, barely more than 20 meters away from the sub.[/i]"
+	},
+	{
+		"text" : "[i]Once it’s gone I hear Michael scream in ecstasy.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "What the heck?"
+	},
+	{
+		"text" : "What the heck, man?!\nThat was awesome!"
+	},
+	{
+		"text" : "I never saw anything like that.\nWe might have just made the discovery of a century.\nA bioluminescent whale?!",
+		"choices" :
+		[
+			{
+				"text" : "Hell yeah.",
+				"next" :
+				[
+					{
+						"name" : "Michael",
+						"text" : "Woooh… That really got my blood pumping."
+					}
+				]
+			},
+			{
+				"text" : "We’re gonna be famous.",
+				"next" :
+				[
+					{
+						"name" : "Michael",
+						"text" : "Eeeeh? I don’t wanna."
+					},
+					{
+						"text" : "But I want that whale to be famous.\nI already decided on a name for it."
+					},
+					{
+						"name" : "Lucas",
+						"text" : "I’m not sure I want to hear it."
+					},
+					{
+						"name" : "Michael",
+						"text" : "‘Shining Michael’"
+					},
+					{
+						"text" : "Although shining would be inaccurate.\nBut ‘Bioluminescent Michael’ lacks that certain ring…"
+					},
+					{
+						"name" : "Lucas",
+						"text" : "So you wanna be famous after all?"
+					},
+					{
+						"name" : "Michael",
+						"text" : "What? No..."
+					}
+				]
+			},
+			{
+				"text" : "Was that… A whale?",
+				"next" :
+				[
+					{
+						"name" : "Michael",
+						"text" : "I don’t know.\nIt resembled one in form and voice."
+					},
+					{
+						"text" : "Well let’s not jump the gun here, it could be anything, really."
+					}
+				]
+			}
+		]
+	},
+	{
+		"name" : "Michael",
+		"text" : "That thing... It was probably more than 50 meters long.\nThat’s crazy… For something so big living down here."
+	},
+	{
+		"text" : "Well if it’s a whale it must go up to breath from time to time.\nHow come we never saw such a big whale on the surface before?"
+	},
+	{
+		"text" : "How mysterios.\nWell, I will have to review that footage…"
+	},
+	{
+		"text" : "For the next three years of my life.\nBut maybe you will find even more crazy things down there."
+	},
+	{
+		"name" : "Squid",
+		"text" : "Never stop going forward!"
+	},
+	{
+		"name" : "Michael",
+		"text" : "That’s gotta be a sign."
+	},
+	{
+		"text" : "Oh hold on, Mr. Grumpy is coming back."
+	},
+	{
+		"name" : "Mr. Lawrence",
+		"text" : "I saw the video feed.\nThat was nothing short of amazing…"
+	},
+	{
+		"text" : "To think that you would discover a new species of such proportions on a test run."
+	},
+	{
+		"text" : "It seems like you were the right candidates for this kind of mission."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Thanks, Mr. Lawrence."
+	},
+	{
+		"name" : "Mr. Lawrence",
+		"text" : "Do you think you can keep going?"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Sir?"
+	},
+	{
+		"name" : "Mr. Lawrence",
+		"text" : "I mean down the trench.\nWhere the creature came from."
+	},
+	{
+		"text" : "The submarine should be able to withstand the pressure of 11000 meters depths or even more."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Sir, I don’t think that’s a good idea."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "It’s okay Michael, I will go. Mom would have done the same."
+	},
+	{
+		"name" : "Michael",
+		"text" : "Lucas…"
+	},
+	{
+		"text" : "But what-"
+	},
+	{
+		"name" : "Mr. Lawrence",
+		"text" : "He said he is gonna do it."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "Michael, I got this…"
+	},
+	{
+		"name" : "Michael",
+		"text" : "…"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I look down into the unknown.[/i]"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]And I feel… something.[/i]"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]It must be what Mom felt.\nIt’s like a mix of fascination and dread.\nIt draws me in and doesn’t let me go.[/i]"
+	},
+	{
+		"name" : "Michael",
+		"text" : "Lucas your ox-",
+		"sfx" : "static"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]The radio?[/i]",
+		"music": "deep sea creepy"
+	},
+	{
+		"text" : "[i]...[/i]",
+	},
+	{
+		"text" : "[i]I’m already… below 8000 meters.[/i]",
+	},
+	{
+		"text" : "Michael? Mr. Lawrence?",
+	},
+	{
+		"name" : "",
+		"text" : "...",
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I have come too far down to go back now.[/i]"
+	},
+	{
+		"text" : "[i]I can feel her…\nShe is close.[/i]"
+	},
+	{
+		"text" : "[i]She must be.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "You are close, Lucas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Mom? Are you really waiting there for me?[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "She is.",
+		"background" : "deep sea"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I can finally see a stretch of ground beneath me.\nThe headlights of the sub barely illuminate anything with their range.[/i]"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]Just how deep did I go?[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "About 13.000 meters."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]That’s impossible.\nAm I dreaming again?[/i]"
+	},
+	{
+		"name" : "",
+		"text" : "..."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]I search the ground for… Anything.[/i]"
+	},
+	{
+		"text" : "[i]For her.[/i]"
+	},
+	{
+		"text" : "[i]Buried, within the mud I recognise the outline of a submarine… And another one.[/i]"
+	},
+	{
+		"text" : "[i]I frantically search the area for more.\nThere is no end to them.[/i]"
+	},
+	{
+		"text" : "[i]That doesn’t make sense.\nThere are too many of them.[/i]"
+	},
+	{
+		"text" : "[i]Suddenly, I see it: a tiny scientific submarine.\nThe one I saw in pictures.[/i]"
+	},
+	{
+		"text" : "[i]Pictures my mother showed me when she was boasting about piloting her own submarine.[/i]"
+	},
+	{
+		"text" : "[i]A sudden flood of emotion washed over me and the first time since my mother's disappearance I cried for her.[/i]"
+	},
+	{
+		"text" : "[i]But it was not only grief I felt.\nI also felt...[/i]"
+	},
+	{
+		"text" : "[i]Relief.[/i]"
+	},
+	{
+		"text" : "[i]That my search was not for nothing.\nThat I had found her.\nAnd that my lifelong ambition was finally fulfilled.[/i]"
+	},
+	{
+		"text" : "[i]I had served my purpose.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "Not yet, Lucas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "What do you mean?"
+	},
+	{
+		"name" : "Squid",
+		"text" : "You have one final purpose."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]A sudden chill goes down my spine.[/i]"
+	},
+	{
+		"text" : "[i]Something on the ground changed.\nSomething moved. Stirred.\nSomething that has been down here forever.[/i]"
+	},
+	{
+		"text" : "[i]Covered in mud and ancient sediments…\nI see it…\nI see it now, the thing that you saw.[/i]"
+	},
+	{
+		"text" : "[i]It’s beautiful.\nLike you said, Mom.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : "Feed me. One last time.",
+		"background" : "deep sea eye",
+		"music" : "",
+		"reduce_fullness" : 100
+	},
+	{
+		"name" : "Lucas",
+		"text" : "My last purpose… ",
 	}
 ]
