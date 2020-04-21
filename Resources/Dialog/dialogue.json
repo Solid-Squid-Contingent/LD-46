@@ -2406,7 +2406,6 @@
 	{
 		"new_chapter" : "First Part, Chapter Three"
 	},
-
 	{
 		"background" : "city",
 		"characters" : ["michael_old", "lucas_old"],
@@ -2448,7 +2447,10 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "That too.\nI can’t believe a laid-back guy like you would be such an aggressive driver.\nMaybe I should pilot the sub after all.\nI don’t want you to kill yourself with reckless deep sea driving maneuvers."
+		"text" : "That too.\nI can’t believe a laid-back guy like you would be such an aggressive driver."
+	},
+	{
+		"text" : "Maybe I should pilot the sub after all.\nI don’t want you to kill yourself with reckless deep sea driving maneuvers."
 	},
 	{
 		"name" : "Lucas",
