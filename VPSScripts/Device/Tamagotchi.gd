@@ -78,16 +78,16 @@ func _ready():
 func _process(delta):
 	if stage != STAGE.egg and state != STATE.off:
 		needDecay += delta * needDecayPerSecond
-		if needDecay > 10:
-			needDecay -= 10
+		if needDecay > 5:
+			needDecay -= 5
 			if state == STATE.minigame:
-				change_fun(5)
+				change_fun(20)
 			elif not sleeping:
-				change_all_needs(-10)
+				change_all_needs(-5)
 			else:
-				change_fullness(-5)
-				change_fun(-5)
-				change_happiness(-5)
+				change_fullness(-2)
+				change_fun(-2)
+				change_happiness(-2)
 				change_awakeness(20)
 	
 	if state == STATE.home:
