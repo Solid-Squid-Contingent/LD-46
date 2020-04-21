@@ -43,6 +43,9 @@ onready var positions = [
 ]
 
 onready var backgroundMap = {
+	"beach": $BackgroundBeach,
+	"deep sea creatures": $BackgroundDeepSeaCreatures,
+	"living room night": $BackgroundLivingRoomNight,
 	"city": $BackgroundCity,
 	"class": $BackgroundClass,
 	"deep sea": $BackgroundDeepSea,
