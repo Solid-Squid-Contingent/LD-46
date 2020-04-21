@@ -11,5 +11,5 @@ dest_files=[ "res://.import/everyday_intro.ogg-c0b35af7eb28cb9fcd4a0fb937b4925c.
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -17,7 +17,7 @@
 [ext_resource path="res://GeneralUIScenes/EndScreen.tscn" type="PackedScene" id=15]
 [ext_resource path="res://GeneralUIScenes/StartMenuScreen.tscn" type="PackedScene" id=16]
 [ext_resource path="res://GeneralUIScripts/StartScreen.gd" type="Script" id=17]
-[ext_resource path="res://Resources/Graphics/GeneralUI/start_screen.png" type="Texture" id=18]
+[ext_resource path="res://Resources/Graphics/GeneralUI/title_Screen.png" type="Texture" id=18]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
