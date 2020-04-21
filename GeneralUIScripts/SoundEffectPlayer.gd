@@ -3,7 +3,7 @@ extends AudioStreamPlayer
 var sfxDict = {
 	"doorbell" : preload("res://Resources/Sounds/doorbell.wav"),
 	"static" : preload("res://Resources/Sounds/static.wav"),
-	"watersplash" : preload("res://Resources/Sounds/doorbell.wav"),
+	"watersplash" : preload("res://Resources/Sounds/watersplash.wav"),
 	"whale" : preload("res://Resources/Sounds/whale.wav")
 }
 

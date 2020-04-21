@@ -37,9 +37,9 @@ __meta__ = {
 
 [node name="NameLabel" type="RichTextLabel" parent="TextBox"]
 margin_left = 18.0
-margin_top = 2.94452
-margin_right = 736.0
-margin_bottom = 197.945
+margin_top = 3.0
+margin_right = 2503.0
+margin_bottom = 198.0
 rect_scale = Vector2( 0.05, 0.05 )
 mouse_filter = 2
 custom_fonts/italics_font = ExtResource( 5 )
