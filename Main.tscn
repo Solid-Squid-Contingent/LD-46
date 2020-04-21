@@ -28,7 +28,7 @@ scale = Vector2( 5, 5 )
 
 [node name="Tamagotchi" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 5, 5 )
-needDecayPerSecond = 0.5
+needDecayPerSecond = 0.25
 agingPerSecond = 0
 
 [node name="TamagotchiTextBox" parent="." instance=ExtResource( 4 )]
