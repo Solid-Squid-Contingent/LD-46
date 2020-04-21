@@ -733,7 +733,7 @@
 	},
 
 	{
-		"reduce_happiness" : 30,
+		"reduce_awakeness" : 30,
 		"name" : "Squid",
 		"text" : "I’m tired."
 	},
