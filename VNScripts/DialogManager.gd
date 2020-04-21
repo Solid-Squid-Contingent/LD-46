@@ -107,6 +107,9 @@ func print_next_dialog_line():
 		
 		if dataPosition.size() > 0:
 			dataPosition[dataPosition.size() - 1] += 1
+	
+	if currentData["text"].length() == 0:
+		print_next_dialog_line()
 
 
 func execute_side_effects(currentData):
@@ -142,6 +145,14 @@ func execute_side_effects(currentData):
 	if currentData.has("require_eating"):
 		require_eating = true
 
+func spawn_choice_buttons():
+	var currentData = get_current_dialog_data()
+	for i in range(currentData["choices"].size()):
+		var button = choiceButtonScene.instance()
+		button.set_label(currentData["choices"][i]["text"]) 
+		button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
+		choiceButtonContainer.add_child(button)
+
 
 func _on_ChoiceButtonPressed(choice):
 	var currentData = get_current_dialog_data()
@@ -160,15 +171,15 @@ func _on_ChoiceButtonPressed(choice):
 
 func _on_VNTextBox_all_text_appeared():
 	if inChoice:
-		var currentData = get_current_dialog_data()
-		for i in range(currentData["choices"].size()):
-			var button = choiceButtonScene.instance()
-			button.set_label(currentData["choices"][i]["text"]) 
-			button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
-			choiceButtonContainer.add_child(button)
+		spawn_choice_buttons()
 
 
 func _on_Tamagotchi_eat():
 	if require_eating and vnTextBox.all_text_appeared() and tamagotchiTextBox.all_text_appeared():
 		require_eating = false
 		print_next_dialog_line()
+
+
+func _on_TamagotchiTextBox_all_text_appeared():
+	if inChoice:
+		spawn_choice_buttons()

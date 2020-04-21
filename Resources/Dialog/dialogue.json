@@ -320,7 +320,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]I heard what my aunt said but I can’t really make sense of them.\nShe must have seen my lost expression and explained it to me again.\nAnd again.\nAnd now I think I know what she means.[/i]"
+		"text" : "[i]I heard what my aunt said but I can’t really make sense of them.[/i]"
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]She must have seen my lost expression and explained it to me again.\nAnd again.\nAnd now I think I know what she means.[/i]"
 	},
 	{
 		"text" : "[i]Despite my aunt being there I feel like I’m alone.[/i]"
@@ -648,7 +652,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : ""
+		"text" : "...Sorry for derailing our conversation like that."
 	},
 	{
 		"reduce_happiness" : 25,
@@ -1217,7 +1221,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "But I didn’t even…]"
+		"text" : "But I didn’t even…"
 	},
 	{
 		"name" : "Michael",
@@ -1247,7 +1251,7 @@
 		"text" : "It sounds like… I’m underwater?"
 	},
 	{
-		"background" : "deep sea",
+		"background" : "deep sea creatures",
 		"music" : "deep sea",
 		"text" : "This is…\nThe ocean."
 	},
@@ -1347,7 +1351,7 @@
 	{
 		"characters" : ["lucas adult", "michael"],
 		"name" : "Lucas",
-		"text" : "[i]Michael gestures towards the class and points on the girl with auburn hair.\nIn a whispering voice he says.[/i]"
+		"text" : "[i]Michael gestures towards the class and points at the girl with auburn hair.\nIn a whispering voice he says.[/i]"
 	},
 	{
 		"name" : "Michael",
@@ -1656,7 +1660,7 @@
 		"text" : "You think so?"
 	},
 	{
-		"name" : "",
+		"name" : "Lucas",
 		"text" : "Yeah, it’s not like it has died or anything.\nIt’s just… Unprecedented."
 	},
 	{
@@ -1676,7 +1680,7 @@
 		"text" : "You what now?"
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "She said she kinda turned my squid into an egg."
 	},
 	{
@@ -1684,7 +1688,7 @@
 		"text" : "Yes, I heard that, hence why I asked ‘You what now?’."
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "[i]I show Michael my Tamagotchi.[/i]"
 	},
 	{
@@ -1692,7 +1696,7 @@
 		"text" : "Well, I’ll be damned.\nNow I will be extra careful for Sarah not to touch me.\nDon’t wanna be turned into an egg…"
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "You should be fine as long as you are not a squid"
 	},
 	{
@@ -1712,7 +1716,7 @@
 		"text" : "Now that you mention it… I don’t."
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "You guys sure get along."
 	},
 	{
@@ -1720,7 +1724,7 @@
 		"text" : "I doubt there is someone who doesn’t get along with Michael."
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "True. He is awfully sociable for a squid."
 	},
 	{
@@ -1728,7 +1732,7 @@
 		"text" : "You're making me blush…\nYou guys give me too much credit."
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "[i]He is not denying to be squid.\nSuspicious.[/i]"
 	},
 	{
@@ -1740,7 +1744,7 @@
 		"text" : "Yeah, I still feel bad for doing that to it.\nGotta take responsibility for that.\nI mean, if that is ok with you?"
 	},
 	{
-		"name" : "Lukas",
+		"name" : "Lucas",
 		"text" : "Uhm… Sure, why not?"
 	},
 	{
@@ -1953,10 +1957,16 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Yeah.\nI’m doubting she found the underwater city of myth und decided to stay there…\nI mean… I don’t think she…Is alive, you know?"
+						"text" : "Yeah.\nI’m doubting she found the underwater city of myth und decided to stay there…"
 					},
 					{
-						"text" : "But as things are now, it’s still hard for me to really accept that she is gone.\nI’m sorry, I’m not really making sense, am I?\nHaha…"
+						"text" : "I mean… I don’t think she… Is alive, you know?"
+					},
+					{
+						"text" : "But as things are now, it’s still hard for me to really accept that she is gone."
+					},
+					{
+						"text" : "I’m sorry, I’m not really making sense, am I?\nHaha…"
 					},
 					{
 						"name" : "Sarah",
@@ -2087,15 +2097,16 @@
 		"text" : "[i]I think it was there that I fell for her.[/i]"
 	},
 	{
-		"text" : "[i]...\nIt’s really fun… Being with these two.\nI think I’m not alone anymore, Mom.[/i]"
+		"text" : "[i]...\nIt’s really fun… Being with these two.[/i]"
 	},
-
-
+	{
+		"text" : "[i]I think I’m not alone anymore, Mom.[/i]"
+	},
 	{
 		"background" : "black",
 		"characters" : [],
 		"music" : "",
-		"text" : "[i]We had fun fooling and goofing around from then on.\nAnd like this weeks passed, then months then years.[/i]"
+		"text" : "[i]We had fun fooling and goofing around from then on.\nAnd like this weeks passed, then months, then years.[/i]"
 	},
 	{
 		"text" : "[i]We three stuck together like seaweed tangled in a net.\nMichaels words, not mine.[/i]"
@@ -2189,7 +2200,7 @@
 				"next" :
 				[
 					{
-						"text" : "YYeah, but I mean…\nSeeing you as often as this."
+						"text" : "Yeah, but I mean…\nSeeing you as often as this."
 					},
 					{
 						"name" : "Lucas",
