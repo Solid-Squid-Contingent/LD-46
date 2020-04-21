@@ -2,13 +2,15 @@ extends AudioStreamPlayer
 
 var introDict = {
 	"deep sea" : preload("res://Resources/Music/deep_sea_intro.ogg"),
-	"everyday" : preload("res://Resources/Music/everyday_intro.ogg")
+	"everyday" : preload("res://Resources/Music/everyday_intro.ogg"),
+	"sad" : preload("res://Resources/Music/sad_intro.ogg")
 }
 
 var loopDict = {
 	"deep sea" : preload("res://Resources/Music/deep_sea_loop.ogg"),
 	"deep sea creepy" : preload("res://Resources/Music/deep_sea_creepy_loop.ogg"),
-	"everyday" : preload("res://Resources/Music/everyday_loop.ogg")
+	"everyday" : preload("res://Resources/Music/everyday_loop.ogg"),
+	"sad" : preload("res://Resources/Music/sad_loop.ogg")
 }
 
 var currentLoop
