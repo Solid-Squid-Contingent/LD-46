@@ -1,6 +1,6 @@
 [
 	{
-		"new_chapter" : "First Part, Chapter One",
+		"new_chapter" : "My Mother",
 		"background" : "living room",
 		"characters" : ["lucas young"],
 		"music" : "everyday",
@@ -362,7 +362,7 @@
 		"text" : "[i]Maybe I’m not alone after all.[/i]"
 	},
 	{
-		"new_chapter" : "First Part, Chapter Two",
+		"new_chapter" : "My Friends",
 		"background" : "class",
 		"music" : "everyday",
 		"text": "[i]Middle school was not really easy on me.[/i]"
@@ -2404,7 +2404,7 @@
 		"text" : "[i]She closes her eyes.\nAnd I close mine.\n[/i]"
 	},
 	{
-		"new_chapter" : "First Part, Chapter Three"
+		"new_chapter" : "My Deescent"
 	},
 	{
 		"background" : "city",
