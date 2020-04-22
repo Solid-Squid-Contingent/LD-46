@@ -3,9 +3,9 @@
 		"new_chapter" : "My Mother",
 		"background" : "living room",
 		"characters" : ["lucas young"],
-		"music" : "everyday",
 		"name" : "Lucas",
 		"tamagotchi_on" : false,
+		"squid_stage" : "young",
 		"text" : "[i]Today is my last day with Mom.[/i]"
 	},
 	{
@@ -20,6 +20,7 @@
 	{
 		"name" : "Mom",
 		"characters" : ["christine","lucas young"],
+		"music" : "everyday",
 		"text" : "I want to give something to you, Lucas."
 	},
 	{
@@ -193,7 +194,7 @@
 		"text" : "Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit."
 	},
 	{
-		"text" : "But sometimes it will have other needs besides food. Like bathing. Playing.\nYou know, just like everyone else."
+		"text" : "But sometimes it will have other needs besides food. Like sleeping. Playing.\nYou know, just like everyone else."
 	},
 	{
 		"text" : "Except unlike everyone else it can’t take care of these things on its own."
@@ -380,7 +381,8 @@
 	{
 		"new_chapter" : "My Friends",
 		"background" : "class",
-		"music" : "everyday",
+		"music" : "sad",
+		"name" : "Lucas",
 		"text": "[i]Middle school was not really easy on me.[/i]"
 	},
 	{
@@ -413,6 +415,7 @@
 	{	
 		"characters" : ["lucas adult", "michael"],
 		"name" : "???",
+		"music" : "everyday",
 		"text" : "Is that a Tamagotchi you got there?"
 	},
 	{
@@ -841,10 +844,10 @@
 		"text" : "It brings back a lot of memories of her."
 	},
 	{
-		"text" : "But don’t get me wrong, I still love the sea.\nAnd I want to see it with my own eyes."
+		"text" : "But don’t get me wrong, I still love the sea."
 	},
 	{
-		"text" : "The things my mother saw.\nMaybe I even will find her."
+		"text" : "And I want to see it with my own eyes.\nThe things my mother saw.\nMaybe I even will find her."
 	},
 	{
 		"name" : "Michael",
@@ -1346,9 +1349,9 @@
 		"text" : "I don’t know...\nNot really.\nBut I don’t have time to talk to you right now little one."
 	},
 	{
-		"reduce_happiness" : 86,
 		"name" : "Squid",
-		"text" : "I don’t feel so well."
+		"text" : "I don’t feel so well.",
+		"reduce_everything" : 40
 	},
 	{
 		"text" : "Hmmm.\nWell I got no choice but to take you to a veterinarian then..."
@@ -1788,7 +1791,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Yeah, I still feel bad for doing that to it.\nGotta take responsibility for that.\nI mean, if that is ok with you?"
+		"text" : "Yeah, I still feel bad for doing this to it.\nGotta take responsibility for that.\nI mean, if it's ok with you?"
 	},
 	{
 		"name" : "Lucas",
@@ -1912,6 +1915,9 @@
 		"text" : "Well they are not around anymore."
 	},
 	{
+		"text" : "I never knew my father.\nAnd my mom got lost while exploring the deep sea."
+	},
+	{
 		"text" : "[i]Sarah looks like she is ready to die of guilt.[/i]"
 	},
 	{
@@ -2028,15 +2034,10 @@
 		"text" : "You know... That Tamagotchi belonged to her.\nShe gave it to me the day before she left...\nIt really means a lot to me."
 	},
 	{
-		"text" : "Hehe, that really sounds like the plot of a drama doesn’t it?"
+		"text" : "..."
 	},
 	{
-		"name" : "Michael",
-		"text" : "Well, maybe you are just bigger than life, Lucas."
-	},
-	{
-		"name" : "Lucas",
-		"text" : "No way."
+		"text" : "[i]This certainly is awkward now.[/i]"
 	},
 	{
 		"name" : "Sarah",
@@ -2044,6 +2045,9 @@
 	},
 	{
 		"name" : "Lucas",
+		"text" : "[i]Whew. I'm glad she managed to change the topic like this.[/i]"
+	},
+	{
 		"text" : "Oh about that, it hatched."
 	},
 	{
@@ -2147,9 +2151,11 @@
 	{
 		"text" : "[i]And sometimes she would chime in to add fuel to our conflict, or deal jabs of her own.[/i]"
 	},
-
 	{
 		"text" : "[i]I think it was there that I fell for her.[/i]"
+	},
+	{
+		"text" : "[i]...[/i]"
 	},
 	{
 		"text" : "[i]...\nIt’s really fun... Being with these two.[/i]"
@@ -2177,7 +2183,7 @@
 		"text" : "[i]But, of course, he already made up his mind.\nAs did I.[/i]"
 	},
 	{
-		"text" : "[i]We would be a team. Or that’s the plan at least.\nSarah on the other hand decided to study in law in a different university than us.[/i]"
+		"text" : "[i]We're gonna be be a team. Or that’s the plan at least.\nSarah on the other hand decided to study in law in a different university than us.[/i]"
 	},
 	{
 		"text" : "[i]Still in the same city, but we surely won’t see each other as regularly as before.[/i]"
@@ -2228,7 +2234,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "I actually wanted to talk to you.\nJust you."
+		"text" : "I actually wanted to talk to you.\nJust you.\nWithout Michael."
 	},
 	{
 		"name" : "Lucas",
@@ -2834,7 +2840,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]I try to take breath but I can’t.\nMy lungs burn like they are filled to the brim with fire.\nI start coughing up water.[/i]"
+		"text" : "[i]I try to take a breath but I can’t.\nMy lungs burn like they are filled to the brim with fire.\nI start coughing up water.[/i]"
 	},
 	{
 		"name" : "Michael",
@@ -3064,7 +3070,7 @@
 	{
 		"characters" : ["lucas old","sarah old"],
 		"name" : "Sarah",
-		"text" : "Hey, babe. How was your day?\nDid Michael ‘fuck up the office’?"
+		"text" : "Hey, handsome. How was your day?\nDid Michael ‘fuck up the office’?"
 	},
 	{
 		"characters" : ["lucas old","sarah old","michael old"],
@@ -3682,7 +3688,7 @@
 	{
 		"characters" : ["lucas old surprised","sarah old"],
 		"name" : "Sarah",
-		"text" : "What’s up, babe?"
+		"text" : "What’s up, handsome?"
 	},
 	{
 		"name" : "Lucas",

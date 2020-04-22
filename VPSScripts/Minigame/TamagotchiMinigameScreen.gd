@@ -22,6 +22,7 @@ func _ready():
 func spawnEnemy():
 	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
 	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
+	enemy.position.x -= fmod(enemy.position.x, 5.0)
 	add_child(enemy)
 
 
