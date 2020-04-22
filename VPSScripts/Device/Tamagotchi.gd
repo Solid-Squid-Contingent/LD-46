@@ -174,6 +174,10 @@ func die():
 func change_stage_to(newStage):
 	if stage == STAGE.egg:
 		emit_signal("hatch")
+	if newStage == STAGE.egg and state == STATE.minigame:
+		restart_minigame()
+		switch_to_home()
+		
 	hide_sprite(stage)
 	stage = newStage
 	show_sprite(stage)
