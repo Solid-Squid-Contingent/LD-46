@@ -15,7 +15,7 @@
 		"text" : "[i]She normally wouldn’t turn it off just to talk.\nBut today is different.\nShe produces a small plastic device from her pocket.[/i]"
 	},
 	{
-		"text" : "[i]I have seen it before. Many times.\nIt is her Tamagotchi. She’s had it for…\nWell as long as I can remember.[/i]"
+		"text" : "[i]I have seen it before. Many times.\nIt is her Tamagotchi. She’s had it for...\nWell as long as I can remember.[/i]"
 	},
 	{
 		"name" : "Mom",
@@ -132,7 +132,7 @@
 		"text" : "That’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count."
 	},
 	{
-		"text" : "In many ways it is more reliable than a real friend…"
+		"text" : "In many ways it is more reliable than a real friend..."
 	},
 	{
 		"text" : "But of course no substitute for one."
@@ -153,7 +153,7 @@
 	},
 	{
 		"name" : "Squid",
-		"reduce_fullness" : 86,
+		"reduce_fullness" : 75,
 		"text" : "I’m really hungry!"
 	},
 	{
@@ -171,7 +171,7 @@
 		"text" : "Well to be fair it usually demands more than it gives, haha."
 	},
 	{
-		"text" : "… Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
+		"text" : "... Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
 	},
 	{
 		"name" : "Lucas",
@@ -184,6 +184,10 @@
 	{
 		"require_eating" : true,
 		"text" : "But why don’t you use that chance to get a hang of the Tamagotchi?"
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"text" : "Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit."
@@ -211,7 +215,7 @@
 		"text" : "Maybe. Hehe.\nSometimes I really think it has a mind of its own."
 	},
 	{
-		"text" : "Well then… Let’s go to Ryan’s Burger Joint."
+		"text" : "Well then... Let’s go to Ryan’s Burger Joint."
 	},
 	{
 		"name" : "Lucas",
@@ -220,13 +224,11 @@
 	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "city",
-		"music" : "everyday",
 		"name": "Lucas",
 		"text" : "[i]We enjoyed our dinner at Ryan’s Burger Joint. The best burger joint in town, at least I think so.\nIt’s little more than a rundown shack which happens to offer food.[/i]"
 	},
@@ -265,19 +267,23 @@
 	{
 		"background" : "living room",
 		"characters" : ["lucas young"],
-		"reduce_happiness" : 30,
+		"reduce_happiness" : 60,
 		"name" : "Squid",
 		"text" : "Are you lonely? I am lonely."
 	},
 	{
 		"name" : "Lucas",
-		"text" : "So you want my attention, huh? You know, I think I understand you little one.\nYeah… Guess I’m lonely too. I hope Mum will be back soon."
+		"text" : "So you want my attention, huh? You know, I think I understand you little one.\nYeah... Guess I’m lonely too. I hope Mum will be back soon."
 	},
 	{
 		"text" : "[i]The squid was in constant need of playing and talked to me quite a bit but not once throughout this week it asked for food.[/i]"
 	},
 	{
 		"text" : "[i]Maybe our time at Ryan’s filled it up for good.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Aunt Mary",
@@ -297,7 +303,7 @@
 	},
 	{
 		"name" : "Aunt Mary",
-		"text" : "No… It was nothing like that Lucas.\nPlease, come sit with me here for a second."
+		"text" : "No... It was nothing like that Lucas.\nPlease, come sit with me here for a second."
 	},
 	{
 		"name" : "Lucas",
@@ -305,7 +311,7 @@
 	},
 	{
 		"name" : "Aunt Mary",
-		"text" : "Chris- …"
+		"text" : "Chris- ..."
 	},
 	{
 		"name" : "Lucas",
@@ -316,7 +322,7 @@
 		"text" : "Your mother is missing.\nThey lost contact with her submarine a few days ago."
 	},
 	{
-		"text" : "She- … they think she is dead."
+		"text" : "She- ... they think she is dead."
 	},
 	{
 		"name" : "Lucas",
@@ -330,7 +336,7 @@
 		"text" : "[i]Despite my aunt being there I feel like I’m alone.[/i]"
 	},
 	{
-		"text" : "[i]I don’t really remember what happened afterwards.\nI must have cried.\nMy pillow is soaked…[/i]"
+		"text" : "[i]I don’t really remember what happened afterwards.\nI must have cried.\nMy pillow is soaked...[/i]"
 	},
 	{
 		"reduce_fun" : 40,
@@ -338,10 +344,10 @@
 		"text" : "Don’t be sad. Play with me!"
 	},
 	{
-		"text" : "… How do you know I’m sad?"
+		"text" : "... How do you know I’m sad?"
 	},
 	{
-		"text" : "…"
+		"text" : "..."
 	},
 	{
 		"text" : "Not about to respond to me, are you?\nMum said I wouldn’t be alone. That I had you."
@@ -364,13 +370,21 @@
 		"text" : "[i]Maybe I’m not alone after all.[/i]"
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
+		"name" : "",
+		"text" : "..."
+	},
+	{
 		"new_chapter" : "My Friends",
 		"background" : "class",
 		"music" : "everyday",
 		"text": "[i]Middle school was not really easy on me.[/i]"
 	},
 	{
-		"text" : "[i]Being the guy who wouldn’t shut up about the sea or how he wanted to explore it might have gotten a pass from my peers…\nIf it hadn’t been for my obsession with my digital pet Squid.[/i]"
+		"text" : "[i]Being the guy who wouldn’t shut up about the sea or how he wanted to explore it might have gotten a pass from my peers...\nIf it hadn’t been for my obsession with my digital pet Squid.[/i]"
 	},
 	{
 		"text" : "[i]But I couldn’t just ditch my Squid. It means too much to me.[/i]"
@@ -385,12 +399,16 @@
 		"text" : "[i]If I can manage.[/i]"
 	},
 	{
-		"reduce_fullness" : 60,
+		"reduce_fullness" : 65,
 		"name" : "Squid",
 		"text" : "I’m sooo hungry."
 	},
 	{
 		"text" : "[i]It will be difficult.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{	
 		"characters" : ["lucas adult", "michael"],
@@ -408,7 +426,7 @@
 		"text" : "[i]But nevermind his looks.[/i]"
 	},
 	{
-		"text" : "[i]… I can’t believe that I could not even hide my obsession for one day.[/i]"
+		"text" : "[i]... I can’t believe that I could not even hide my obsession for one day.[/i]"
 	},
 	{
 		"name" : "Lucas",
@@ -425,7 +443,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "You… dig it?"
+						"text" : "You... dig it?"
 					},
 					{
 						"name" : "???",
@@ -433,7 +451,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Oh…"
+						"text" : "Oh..."
 					},
 					{
 						"name" : "???",
@@ -441,7 +459,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Ah. I don’t know.\nI have had it for… six years?\nBut as far as I know it is even older than that."
+						"text" : "Ah. I don’t know.\nI have had it for... six years?\nBut as far as I know it is even older than that."
 					},
 					{
 						"name" : "???",
@@ -500,15 +518,15 @@
 				[
 					{
 						"name" : "???",
-						"text" : "…"
+						"text" : "..."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "…"
+						"text" : "..."
 					},
 					{
 						"name" : "???",
-						"text" : "…\nI really hate to break it for you but no matter how you look at it, that is not a smartphone."
+						"text" : "...\nI really hate to break it for you but no matter how you look at it, that is not a smartphone."
 					},
 					{
 						"name" : "Lucas",
@@ -554,7 +572,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "And that is… a good thing?"
+		"text" : "And that is... a good thing?"
 	},
 	{
 		"name" : "Michael",
@@ -627,11 +645,11 @@
 					},
 					{
 						"name" : "Michael",
-						"text" : "Well… Then I guess your eyes are just bad story tellers."
+						"text" : "Well... Then I guess your eyes are just bad story tellers."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "… Right."
+						"text" : "... Right."
 					}
 				]
 			},
@@ -641,7 +659,7 @@
 				[
 					{
 						"name" : "Michael",
-						"text" : "… Oh."
+						"text" : "... Oh."
 					},
 					{
 						"text" : "I feared as much.\nA bit preachy, innit?\nWell I appreciate your opinion."
@@ -680,7 +698,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Me neither. I wish I could mute it sometimes"
+						"text" : "Me neither. I wish I could mute it sometimes."
 					},
 					{
 						"name" : "Michael",
@@ -694,7 +712,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Uh… Good."
+						"text" : "Uh... Good."
 					}
 				]
 			},
@@ -723,7 +741,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]Michael sure is something else.\nWhich, coming from me…\nWell, nevermind that.[/i]"
+		"text" : "[i]Michael sure is something else.\nWhich, coming from me...\nWell, nevermind that.[/i]"
 	},
 	{
 		"text" : "[i]It was awkward, but I’m sure he is a nice guy.\nMaybe being different is not too bad after all.\nWell but being too different probably is.[/i]"
@@ -733,20 +751,22 @@
 	},
 
 	{
-		"reduce_awakeness" : 30,
+		"reduce_awakeness" : 60,
 		"name" : "Squid",
 		"text" : "I’m tired."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "city",
 		"characters" : ["lucas adult"],
-		"music" : "everyday", 
 		"name" : "Lucas",
 		"text" : "[i]My first day at high school went surprisingly well.\nI actually was able to make a few conversations.\nI guess I have Michael to thank for that.[/i]"
 	},
@@ -754,7 +774,7 @@
 		"text" : "[i]Not only did he talk to me a lot, he also tried to include me in almost every conversation he had.\nAnd he had a lot of conversations.[/i]"
 	},
 	{
-		"text" : "[i]It seems like it’s really easy for him to talk to people, even if what he says is so…\nDifferent.[/i]"
+		"text" : "[i]It seems like it’s really easy for him to talk to people, even if what he says is so...\nDifferent.[/i]"
 	},
 	{
 		"text" : "[i]Speaking of the devil.[/i]"
@@ -788,7 +808,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I… like the sea.\nIt’s vast and mysterious.\nIt’s vibrant and brimming with life."
+		"text" : "I... like the sea.\nIt’s vast and mysterious.\nIt’s vibrant and brimming with life."
 	},
 	{
 		"name" : "Michael",
@@ -815,7 +835,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Oh sorry. I didn’t mean to…\nLook like this.\nIt’s just that, my mother disappeared while exploring the deep."
+		"text" : "Oh sorry. I didn’t mean to... Look like this.\nIt’s just that, my mother disappeared while exploring the deep."
 	},
 	{
 		"text" : "It brings back a lot of memories of her."
@@ -832,7 +852,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I know that… She won’t be alive if I found her.\nIt would be mostly for closure…\nI’m sorry, I just met you and here I’m ranting about..."
+		"text" : "I know that... She won’t be alive if I found her.\nIt would be mostly for closure...\nI’m sorry, I just met you and here I’m ranting about..."
 	},
 	{
 		"name" : "Michael",
@@ -902,7 +922,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I… don’t know. But it’s not like I’m struggling."
+		"text" : "I... don’t know. But it’s not like I’m struggling."
 	},
 	{
 		"name" : "Michael",
@@ -948,11 +968,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "… Yeah."
+		"text" : "... Yeah."
 	},
 	{
 		"name" : "Michael",
-		"text" : "I don’t wanna talk you into anything but…"
+		"text" : "I don’t wanna talk you into anything but..."
 	},
 	{
 		"name" : "Lucas",
@@ -977,11 +997,11 @@
 				]
 			},
 			{
-				"text" : "No… But I can try",
+				"text" : "No... But I can try",
 				"next" :
 				[
 					{
-						"text" : "Michael: Now that’s the spirit, Lucas.\nI will be there for you when…\nNevermind you got this."
+						"text" : "Michael: Now that’s the spirit, Lucas.\nI will be there for you when...\nNevermind you got this."
 					}
 				]
 			},
@@ -991,7 +1011,7 @@
 				[
 					{
 
-						"text" : "… No you don’t."
+						"text" : "... No you don’t."
 					},
 					{
 						"name" : "Lucas",
@@ -1003,7 +1023,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Michael… Lucas."
+						"text" : "Michael... Lucas."
 					},
 					{
 						"name" : "Michael",
@@ -1011,7 +1031,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Alright… Uh.\nJudith, Marc… Robby?"
+						"text" : "Alright... Uh.\nJudith, Marc... Robby?"
 					},
 					{
 						"name" : "Michael",
@@ -1019,7 +1039,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "…"
+						"text" : "..."
 					},
 					{
 						"name" : "Michael",
@@ -1042,7 +1062,8 @@
 	},
 	{
 		"name" : "Squid",
-		"text" : "I don’t feel so well."
+		"text" : "I don’t feel so well.",
+		"reduce_everything" : 40
 	},
 	{
 		"name" : "Michael",
@@ -1058,11 +1079,15 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I am… I think.\nAnd I don’t think your advice would apply to a digital Squid."
+		"text" : "I am... I think.\nAnd I don’t think your advice would apply to a digital Squid."
 	},
 	{
 		"name" : "Michael",
 		"text" : "I admit my knowledge on digital squids is lacking.\nWell go on and take care of it."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Lucas",
@@ -1086,7 +1111,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "That’s impressive… I think."
+		"text" : "That’s impressive... I think."
 	},
 	{
 		"name" : "Lucas",
@@ -1118,7 +1143,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "… Hey this might come out of nowhere but…\nDo you think we will work together in the future?\nI mean our interests align pretty well, don’t you think?"
+		"text" : "... Hey this might come out of nowhere but...\nDo you think we will work together in the future?\nI mean our interests align pretty well, don’t you think?"
 	},
 	{
 		"text" : "I think we would have great synergy.",
@@ -1163,7 +1188,7 @@
 						"text" : "Well, you are right.\nBut I’m being serious here.\nWe would be a good team, iconic."
 					},
 					{
-						"text" : "With my brain and your… and you, we would be unbeatable."
+						"text" : "With my brain and your... and you, we would be unbeatable."
 					},
 					{
 						"name" : "Lucas",
@@ -1213,7 +1238,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "…"
+		"text" : "..."
 	},
 	{
 		"name" : "Michael",
@@ -1221,7 +1246,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "But I didn’t even…"
+		"text" : "But I didn’t even..."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Michael",
@@ -1229,7 +1258,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I… uh.. Yes."
+		"text" : "I... uh.. Yes."
 	},
 	{
 		"text" : "[i]And just like that Michael wrestled control away from me.\nNot that I ever was in control with him around.\nNo, not even in my own house.[/i]"
@@ -1242,18 +1271,18 @@
 		"background" : "black",
 		"characters" : [],
 		"music" : "",
-		"text" : "…...\n..."
+		"text" : "...\n..."
 	},
 	{
-		"text" : "I am…\nWhere am I?\nIt’s cold. I can barely see."
+		"text" : "I am...\nWhere am I?\nIt’s cold. I can barely see."
 	},
 	{
-		"text" : "It sounds like… I’m underwater?"
+		"text" : "It sounds like... I’m underwater?"
 	},
 	{
 		"background" : "deep sea creatures",
 		"music" : "deep sea",
-		"text" : "This is…\nThe ocean."
+		"text" : "This is...\nThe ocean."
 	},
 	{
 		"text" : "[i]It’s so dark. How deep am I?\nThere is barely any animal here.\nIs this the abyssal zone?[/i]"
@@ -1265,7 +1294,7 @@
 		"text" : "[i]...[/i]"
 	},
 	{
-		"text" : "[i]This… is peaceful.[/i]"
+		"text" : "[i]This... is peaceful.[/i]"
 	},
 	{
 		"text" : "[i]...[/i]"
@@ -1280,7 +1309,7 @@
 	},
 	{
 		"name" : "???",
-		"text" : "Honey...\nI am waiting for you down here.\nYou have to see this…"
+		"text" : "Honey...\nI am waiting for you down here.\nYou have to see this..."
 	},
 	{
 		"text" : "...\nIt’s beautiful."
@@ -1288,7 +1317,7 @@
 
 	{
 		"background" : "black",
-		"music" : "",
+		"music" : "everyday",
 		"name" : "",
 		"text" : "..."
 	},
@@ -1301,7 +1330,7 @@
 		"text" : "[i]...\nA dream.[/i]"
 	},
 	{
-		"text" : "[i]It feels like I had it before…\nJust wait for me Mom.\nI will see it with my own eyes.[/i]"
+		"text" : "[i]It feels like I had it before...\nJust wait for me Mom.\nI will see it with my own eyes.[/i]"
 	},
 	{
 		"text" : "..."
@@ -1310,12 +1339,11 @@
 		"end_sleep" : true,
 		"background" : "living room",
 		"characters" : ["lucas adult"],
-		"music" : "everyday",
 		"name" : "Squid",
 		"text" : "Good Morning! Did you sleep well?"
 	},
 	{
-		"text" : "I don’t know…\nNot really.\nBut I don’t have time to talk to you right now little one."
+		"text" : "I don’t know...\nNot really.\nBut I don’t have time to talk to you right now little one."
 	},
 	{
 		"reduce_happiness" : 86,
@@ -1329,16 +1357,18 @@
 		"text" : "Except I can’t.\nWish they had Tamagotchi vets."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "class",
 		"characters" : ["lucas adult"],
-		"music" : "everyday",
 		"name" : "Lucas",
 		"text" : "[i]Today Michael has been avoiding me for some reason.\nMaybe he is embarrassed about the corny shit he said yesterday.\nOr he finally got sick of my attitude.[/i]"
 	},
@@ -1346,7 +1376,7 @@
 		"text" : "[i]Neither is unlikely.[/i]"
 	},
 	{
-		"text" : "Yo, Michael…"
+		"text" : "Yo, Michael..."
 	},
 	{
 		"characters" : ["lucas adult", "michael"],
@@ -1410,7 +1440,7 @@
 	{
 		"characters" : ["lucas adult", "sarah"],
 		"name" : "Lucas",
-		"text" : "[i]She turns around to face me.\nI must have been close enough to notice her freckles before…\nBut I never got close enough to her to see how beautiful she was.[/i]"
+		"text" : "[i]She turns around to face me.\nI must have been close enough to notice her freckles before...\nBut I never got close enough to her to see how beautiful she was.[/i]"
 	},
 	{
 		"text" : "[i]I more or less forgot everything I wanted to say at this exact moment.\nWhich, admittedly, was not a lot, but it still felt like a significant loss.[/i]"
@@ -1434,7 +1464,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Ah… well.\nThe weather, maybe?\nThe world, the sea, the human condition, the duality of man?"
+						"text" : "Ah... well.\nThe weather, maybe?\nThe world, the sea, the human condition, the duality of man?"
 					},
 					{
 						"name" : "Sarah",
@@ -1444,7 +1474,7 @@
 						"text" : "You know, things can get quite heated if you don’t know who you are really talking to."
 					},
 					{
-						"text" : "But that would still leave us with… the world, the sea and the duality of man."
+						"text" : "But that would still leave us with... the world, the sea and the duality of man."
 					}
 				]
 			},
@@ -1458,7 +1488,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "My, uh…"
+						"text" : "My, uh..."
 					},
 					{
 						"name" : "Sarah",
@@ -1470,7 +1500,7 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "… You can try again if you want."
+						"text" : "... You can try again if you want."
 					}
 				]
 			},
@@ -1480,7 +1510,7 @@
 				[
 					{
 						"name" : "Sarah",
-						"text" : "…"
+						"text" : "..."
 					},
 					{
 						"name" : "Lucas",
@@ -1495,7 +1525,7 @@
 		]
 	},
 	{
-		"reduce_happiness" : 30,
+		"reduce_happiness" : 50,
 		"name" : "Squid",
 		"text" : "Give me snuggles!"
 	},
@@ -1508,7 +1538,7 @@
 		"text" : "[i]Fuck.[/i]"
 	},
 	{
-		"text" : "Sorry, that, uh…\nWas my Tamagotchi."
+		"text" : "Sorry, that, uh...\nWas my Tamagotchi."
 	},
 	{
 		"name" : "Sarah",
@@ -1519,8 +1549,12 @@
 		"text" : "Uhh, sure."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"name" : "Sarah",
-		"text" : "Hmmm…"
+		"text" : "Hmmm..."
 	},
 	{
 		"text" : "Well that’s a cute squid. I wouldn’t mind giving it snuggles.\nThat really surprised me though.\nI have never seen a talking Tamagotchi."
@@ -1554,7 +1588,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Hmmm…\nMaybe it got lonely with only you around."
+		"text" : "Hmmm...\nMaybe it got lonely with only you around."
 	},
 	{
 		"name" : "Lucas",
@@ -1562,14 +1596,22 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Why not? Your’s seems special anyway.\nCan I… touch it?"
+		"text" : "Why not? Your’s seems special anyway.\nCan I... try it out?"
 	},
 	{
 		"name" : "Lucas",
-		"text" : "… Go for it."
+		"text" : "... Go for it."
 	},
 	{
-		"text" : "[i]Sarah reaches out to touch the Tamagotchi.\nI hear her press a button.[/i]"
+		"text" : "[i]Sarah reaches out to take the Tamagotchi.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"tamagotchi_on" : false,
+		"text" : ""
+	},
+	{
+		"text" : "[i]I hear her press a button.[/i]"
 	},
 	{
 		"name" : "Sarah",
@@ -1581,7 +1623,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "It uh… Sorta turned into an egg?"
+		"text" : "It uh... Sorta turned into an egg?"
 	},
 	{
 		"name" : "Lucas",
@@ -1589,6 +1631,7 @@
 	},
 	{
 		"name" : "Squid",
+		"tamagotchi_on" : true,
 		"text" : ""
 	},
 	{
@@ -1620,14 +1663,14 @@
 				[
 					{
 						"name" : "Sarah",
-						"text" : "Please don’t.\nI’m sorry… I."
+						"text" : "Please don’t.\nI’m sorry... I."
 					},
 					{
 						"name" : "Lucas",
 						"text" : "[i]Sarah looks seriously troubled.\nMaybe that joke was a little too much.[/i]"
 					},
 					{
-						"text" : "I won’t sue.\nsorry that was a tasteless joke."
+						"text" : "I won’t sue.\nSorry that was a tasteless joke."
 					},
 					{
 						"name" : "Sarah",
@@ -1641,7 +1684,7 @@
 				[
 					{
 						"name" : "Sarah",
-						"text" : "I’m sorry…"
+						"text" : "I’m sorry..."
 					},
 					{
 						"name" : "Lucas",
@@ -1665,7 +1708,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Yeah, it’s not like it has died or anything.\nIt’s just… Unprecedented."
+		"text" : "Yeah, it’s not like it has died or anything.\nIt’s just... Unprecedented."
 	},
 	{
 		"text" : "[i]I say that, but I would lie if I said I wasn’t worried.\nIt never did anything like that in six years.[/i]"
@@ -1697,7 +1740,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Well, I’ll be damned.\nNow I will be extra careful for Sarah not to touch me.\nDon’t wanna be turned into an egg…"
+		"text" : "Well, I’ll be damned.\nNow I will be extra careful for Sarah not to touch me.\nDon’t wanna be turned into an egg..."
 	},
 	{
 		"name" : "Lucas",
@@ -1717,7 +1760,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Now that you mention it… I don’t."
+		"text" : "Now that you mention it... I don’t."
 	},
 	{
 		"name" : "Lucas",
@@ -1733,7 +1776,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "You're making me blush…\nYou guys give me too much credit."
+		"text" : "You're making me blush...\nYou guys give me too much credit."
 	},
 	{
 		"name" : "Lucas",
@@ -1749,7 +1792,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Uhm… Sure, why not?"
+		"text" : "Uhm... Sure, why not?"
 	},
 	{
 		"text" : "[i]I can feel a smug aura emanating from Michael.\nHe probably thinks he did me a favor there.[/i]"
@@ -1761,36 +1804,32 @@
 	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"text" : "[i]I rush back to my house.\nThere is not much time until tomorrow.[/i]"
 	},
 	{
 		"background" : "living room",
-		"music" : "everyday",
-		"text" : "[i]Just tidy up a bit…\nVacuum clean the floor…\nClean the windows…[/i]"
+		"text" : "[i]Just tidy up a bit...\nVacuum clean the floor...\nClean the windows...[/i]"
 	},
 	{
-		"text" : "[i]The bathroom…\nHide a few things…\nAnd clear my browser history.[/i]"
+		"text" : "[i]The bathroom...\nHide a few things...\nAnd clear my browser history.[/i]"
 	},
 	{
 		"background" : "black",
-		"music" : "",
 		"text" : "[i]Before I realized it, it was past two.\nThat’s the struggle if you have an entire house for yourself.\nJust how did Mom manage to do this on top of her work?[/i]"
 	},
 	{
-		"text" : "[i]\n…\nMom...[/i]"
+		"text" : "[i]\n...\nMom...[/i]"
 	},
 	{
 		"squid_stage" : "adult",
 		"background" : "living room",
 		"characters" : ["lucas adult"],
-		"music" : "everyday",
 		"sfx" : "doorbell",
-		"text" : "…"
+		"text" : "..."
 	},
 	{
 		"sfx" : "doorbell",
-		"text" : "[i]… Five more min-[/i]"
+		"text" : "[i]... Five more min-[/i]"
 	},
 	{
 		"sfx" : "doorbell",
@@ -1812,6 +1851,10 @@
 		"text" : "Oh fuck."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"text" : "[i]I hastily type a message for Michael explaining my situation.\nHe says ‘leave it to me!’\nI’m concerned, but there is no time for that.[/i]"
 	},
 	{
@@ -1821,7 +1864,7 @@
 		"text" : "[i]It seems like Michael is giving her a guided tour, which is impressive considering I never gave him one.[/i]"
 	},
 	{
-		"text" : "[i]He picks up a garden gnome and moves it through the air…\nMaybe imitating an airplane.[/i]"
+		"text" : "[i]He picks up a garden gnome and moves it through the air...\nMaybe imitating an airplane.[/i]"
 	},
 	{
 		"text" : "[i]Sarah giggles.\nMaybe he got this after all.[/i]"
@@ -1858,11 +1901,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "…"
+		"text" : "..."
 	},
 	{
 		"name" : "Michael",
-		"text" : "That uh…"
+		"text" : "That uh..."
 	},
 	{
 		"name" : "Lucas",
@@ -1873,7 +1916,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "I’m sorry, I should have…"
+		"text" : "I’m sorry, I should have..."
 	},
 	{
 		"name" : "Lucas",
@@ -1911,7 +1954,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Why do you want to be a deep sea explorer when that’s how your mother…",
+		"text" : "Why do you want to be a deep sea explorer when that’s how your mother...",
 		"choices" :
 		[
 			{
@@ -1934,21 +1977,21 @@
 				[
 					{
 						"name" : "Lucas",
-						"text" : "… She really liked her job.\nSo much so, that she sometimes would stay away for many many days."
+						"text" : "... She really liked her job.\nSo much so, that she sometimes would stay away for many many days."
 					},
 					{
-						"text" : "I want to know what made her do a job that required her to stay away from home…\nFrom me."
+						"text" : "I want to know what made her do a job that required her to stay away from home...\nFrom me."
 					},
 					{
 						"name" : "Sarah",
-						"text" : "That must have been difficult for you…"
+						"text" : "That must have been difficult for you..."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "… Yeah.\nIt was.\nBut I don’t blame her for doing it."
+						"text" : "... Yeah.\nIt was.\nBut I don’t blame her for doing it."
 					},
 					{
-						"text" : "I know she must have had heer reasons.\nAnd that’s exactly what I want to find out…\nWhat was she looking for down there?"
+						"text" : "I know she must have had her reasons.\nAnd that’s exactly what I want to find out...\nWhat was she looking for down there?"
 					}
 				]
 			},
@@ -1957,24 +2000,24 @@
 				"next" :
 				[
 					{
-						"text" : "You want to… find her?"
+						"text" : "You want to... find her?"
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Yeah.\nI’m doubting she found the underwater city of myth und decided to stay there…"
+						"text" : "Yeah.\nI’m doubting she found the underwater city of myth und decided to stay there..."
 					},
 					{
-						"text" : "I mean… I don’t think she… Is alive, you know?"
+						"text" : "I mean... I don’t think she... Is alive, you know?"
 					},
 					{
 						"text" : "But as things are now, it’s still hard for me to really accept that she is gone."
 					},
 					{
-						"text" : "I’m sorry, I’m not really making sense, am I?\nHaha…"
+						"text" : "I’m sorry, I’m not really making sense, am I?\nHaha..."
 					},
 					{
 						"name" : "Sarah",
-						"text" : "No… I think I know what you mean."
+						"text" : "No... I think I know what you mean."
 					}
 				]
 			}
@@ -1982,7 +2025,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "You know… That Tamagotchi belonged to her.\nShe gave it to me the day before she left…\nIt really means a lot to me."
+		"text" : "You know... That Tamagotchi belonged to her.\nShe gave it to me the day before she left...\nIt really means a lot to me."
 	},
 	{
 		"text" : "Hehe, that really sounds like the plot of a drama doesn’t it?"
@@ -2016,7 +2059,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Damn, it evolved.\nDid you level it up?\nMaybe Sarah is like a waterstone or something?"
+		"text" : "Damn, it evolved.\nDid you level it up?\nMaybe Sarah is like a water stone or something?"
 	},
 	{
 		"name" : "Sarah",
@@ -2024,7 +2067,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "It’s like 30% less cute now."
+		"text" : "It’s like 30 percent less cute now."
 	},
 	{
 		"name" : "Michael",
@@ -2039,11 +2082,15 @@
 		"text" : "I love having a friend like you!"
 	},
 	{
-		"text" : "Its voice changed too!\nIt seems like I made your squid an adult…"
+		"text" : "Its voice changed too!\nIt seems like I made your squid an adult..."
 	},
 	{
 		"name" : "Lucas",
-		"text" : "… Uhh."
+		"text" : "... Uhh."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Michael",
@@ -2078,7 +2125,7 @@
 		"text" : "Huh, what’s that Mr_Edgy_Ocean_Lover?"
 	},
 	{
-		"reduce_fullness" : 40,
+		"reduce_fullness" : 60,
 		"name" : "Squid",
 		"text" : "I crave nourishment."
 	},
@@ -2088,20 +2135,24 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "… I am. But not because you told me to, you smug prick."
+		"text" : "... I am. But not because you told me to, you smug prick."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"text" : "[i]While we were bantering like two idiots, Sarah just watched us and laughed.[/i]"
 	},
 	{
-		"text" : "[i]And sometimes she would chime in to add fuel to our conflict, or dealt jabs of her own.[/i]"
+		"text" : "[i]And sometimes she would chime in to add fuel to our conflict, or deal jabs of her own.[/i]"
 	},
 
 	{
 		"text" : "[i]I think it was there that I fell for her.[/i]"
 	},
 	{
-		"text" : "[i]...\nIt’s really fun… Being with these two.[/i]"
+		"text" : "[i]...\nIt’s really fun... Being with these two.[/i]"
 	},
 	{
 		"text" : "[i]I think I’m not alone anymore, Mom.[/i]"
@@ -2109,7 +2160,6 @@
 	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"text" : "[i]We had fun fooling and goofing around from then on.\nAnd like this weeks passed, then months, then years.[/i]"
 	},
 	{
@@ -2118,8 +2168,7 @@
 	{
 		"background" : "class",
 		"characters" : ["lucas adult"],
-		"music" : "everyday",
-		"text" : "[i]Today is the day of our graduation.\nMichael graduated on top of our class.[/i]"
+		"text" : "[i]Today is the day of our graduation.\nMichael graduated at the top of our class.[/i]"
 	},
 	{
 		"text" : "[i]The teachers repeatedly told him that he could aim for literally anything he wanted to.\nThat he did not have to be so dead set on becoming a marine biologist.[/i]"
@@ -2134,7 +2183,7 @@
 		"text" : "[i]Still in the same city, but we surely won’t see each other as regularly as before.[/i]"
 	},
 	{
-		"reduce_happiness" : 30,
+		"reduce_happiness" : 60,
 		"name" : "Squid",
 		"text" : "A bit of your attention, please?"
 	},
@@ -2145,10 +2194,14 @@
 		"text" : "I’m, like, in the middle of an explanation here."
 	},
 	{
-		"text" : "Well, fine…"
+		"text" : "Well, fine..."
 	},
 	{
-		"text" : "Sarah asked me to meet up with her before we went our ways."
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
+		"text" : "[i]Sarah asked me to meet up with her before we went our ways.[/i]"
 	},
 	{
 		"characters" : ["sarah", "lucas adult"],
@@ -2191,7 +2244,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Haha… I know what you mean."
+		"text" : "Haha... I know what you mean."
 	},
 	{
 		"name" : "Lucas",
@@ -2202,7 +2255,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "I… Uh. I just wanted to let you know that I will miss you.",
+		"text" : "I... Uh. I just wanted to let you know that I will miss you.",
 		"choices" :
 		[
 			{
@@ -2210,7 +2263,7 @@
 				"next" :
 				[
 					{
-						"text" : "Yeah, but I mean…\nSeeing you as often as this."
+						"text" : "Yeah, but I mean...\nSeeing you as often as this."
 					},
 					{
 						"name" : "Lucas",
@@ -2235,7 +2288,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Yeah. The time we spent together, you and I…"
+						"text" : "Yeah. The time we spent together, you and I..."
 					},
 					{
 						"name" : "Sarah",
@@ -2256,7 +2309,7 @@
 				"next" :
 				[
 					{
-						"text" : "Don’t you… want to say anything?"
+						"text" : "Don’t you... want to say anything?"
 					},
 					{
 						"name" : "Lucas",
@@ -2264,7 +2317,7 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "Oh… take your time."
+						"text" : "Oh... take your time."
 					},
 					{
 						"name" : "Lucas",
@@ -2286,17 +2339,17 @@
 		"text" : "You really are the densest element on our planet.\nIf you so much as set foot into the ocean, I bet you would sink down immediately."
 	},
 	{
-		"text" : "…"
+		"text" : "..."
 	},
 	{
-		"text" : "I like [i]you[/i], you idiot."
+		"text" : "I [i]like[/i] you, you idiot."
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]It seems Sarah’s wording surprised even herself…\nNow she just looks at me expectantly, but also worried…\nMost likely because she fears I still do not understand what she said.[/i]"
+		"text" : "[i]It seems Sarah’s wording surprised even herself...\nNow she just looks at me expectantly, but also worried...\nMost likely because she fears I still do not understand what she said.[/i]"
 	},
 	{
-		"text" : "[i]But I do. And I probably even understood before she had to say it to my face.\nI really am an idiot…[/i]"
+		"text" : "[i]But I do. And I probably even understood before she had to say it to my face.\nI really am an idiot...[/i]"
 	},
 	{
 		"text" : "[i]I-[/i]"
@@ -2312,14 +2365,14 @@
 				[
 					{
 						"name" : "Sarah",
-						"text" : "…\nAs friends?"
+						"text" : "...\nAs friends?"
 					},
 					{
 						"name" : "Lucas",
 						"text" : "[i]I knew it, she still doesn’t think I know what she means.\nNot that I can blame her.[/i]"
 					},
 					{
-						"text" : "No… as more than a friend.\n… And more than a best friend."
+						"text" : "No... as more than a friend.\n... And more than a best friend."
 					},
 					{
 						"text" : "..."
@@ -2332,17 +2385,17 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "… Yeah. Let’s."
+						"text" : "... Yeah. Let’s."
 					}
 				]
 			},
 			{
-				"text" : "… I love you.",
+				"text" : "... I love you.",
 				"next" :
 				[
 					{
 						"name" : "Sarah",
-						"text" : "Oh, you don’t have to gi-\n… What did you just say?"
+						"text" : "Oh, you don’t have to gi-\n... What did you just say?"
 					},
 					{
 						"name" : "Lucas",
@@ -2393,11 +2446,11 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "And… I think I like you as more than a friend.\nI’m sorry, I shouldn’t have brought Michael up."
+						"text" : "And... I think I like you as more than a friend.\nI’m sorry, I shouldn’t have brought Michael up."
 					},
 					{
 						"name" : "Sarah",
-						"text" : "Yeah… no kidding."
+						"text" : "Yeah... no kidding."
 					},
 					{
 						"name" : "Lucas",
@@ -2408,11 +2461,11 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "Yes… you idiot."
+						"text" : "Yes... you idiot."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Yeah… I really am an idiot."
+						"text" : "Yeah... I really am an idiot."
 					}
 				]
 			}
@@ -2423,12 +2476,20 @@
 		"text" : "[i]She closes her eyes.\nAnd I close mine.\n[/i]"
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
+		"name" : "",
+		"text" : "..."
+	},
+	{
 		"new_chapter" : "My Descent",
 		"background" : "city",
 		"characters" : ["michael old", "lucas old"],
 		"music" : "everyday",
 		"name" : "Lucas",
-		"text" : "...\nSo…\nWho of us is gonna pilot it?"
+		"text" : "...\nSo...\nWho of us is gonna pilot it?"
 	},
 	{
 		"name" : "Michael",
@@ -2482,7 +2543,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Yeah… It feels like a dream."
+		"text" : "Yeah... It feels like a dream."
 	},
 	{
 		"name" : "Squid",
@@ -2494,7 +2555,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Well, it must have some words it recognises… Maybe."
+		"text" : "Well, it must have some words it recognises... Maybe."
 	},
 	{
 		"name" : "Michael",
@@ -2503,6 +2564,10 @@
 	{
 		"name" : "Lucas",
 		"text" : "Beats me.\nMaybe so it can be a better friend for you?\nIt worked for me."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Michael",
@@ -2526,18 +2591,16 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "A-ha…"
+		"text" : "A-ha..."
 	},
 	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "office",
-		"music" : "everyday",
 		"name" : "Michael",
 		"text" : "Ta-dah!!!"
 	},
@@ -2568,7 +2631,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "So… it is a harpoon?"
+		"text" : "So... it is a harpoon?"
 	},
 	{
 		"name" : "Michael",
@@ -2576,7 +2639,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "So… why do we have a model of a harpoon gun?"
+		"text" : "So... why do we have a model of a harpoon gun?"
 	},
 	{
 		"name" : "Michael",
@@ -2584,7 +2647,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Right… That’s what you spent our 3000 bucks budget on?"
+		"text" : "Right... That’s what you spent our 3000 bucks budget on?"
 	},
 	{
 		"name" : "Michael",
@@ -2592,11 +2655,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "So… you have money left, right?"
+		"text" : "So... you have money left, right?"
 	},
 	{
 		"name" : "Michael",
-		"text" : "Uhhh… No, should I?\nI spent most of it on that painting."
+		"text" : "Uhhh... No, should I?\nI spent most of it on that painting."
 	},
 	{
 		"name" : "Lucas",
@@ -2608,7 +2671,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "I can see that, but did you have to spend…"
+		"text" : "I can see that, but did you have to spend..."
 	},
 	{
 		"text" : "I think you did a good job."
@@ -2621,7 +2684,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "I knew you would ask that.\n…"
+		"text" : "I knew you would ask that.\n..."
 	},
 	{
 		"name" : "Lucas",
@@ -2655,7 +2718,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Uh-huh… Well… I read most of it already.\nUntil then, let’s do a bit of freediving… Fieldwork I mean."
+		"text" : "Uh-huh... Well... I read most of it already.\nUntil then, let’s do a bit of freediving... Fieldwork I mean."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Michael",
@@ -2663,7 +2730,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Uh… Six minutes and a few seconds."
+		"text" : "Uh... Six minutes and a few seconds."
 	},
 	{
 		"name" : "Michael",
@@ -2678,7 +2745,7 @@
 				"next" :
 				[
 					{
-						"text" : "Haha.\nI’m gonna show you the power of…\nMy lungs!"
+						"text" : "Haha.\nI’m gonna show you the power of...\nMy lungs!"
 					},
 					{
 						"text" : "But hey, don’t overdo it."
@@ -2715,20 +2782,20 @@
 	{
 		"background" : "shallow sea",
 		"music" : "deep sea",
-		"text" : "[i]Ah…\nThat vast blue.\nThe seaweed sways mildly.[/i]"
+		"text" : "[i]Ah...\nThat vast blue.\nThe seaweed sways mildly.[/i]"
 	},
 	{
 		"text" : "[i]I don’t move a muscle.\nA few meters away from me I see Michael floating elegantly through the water.[/i]"
 	},
 	{
-		"text" : "[i]It seems he made friends with an inquisitive eel.\nAs expected of Micheel…\nI hold that thought while I investigate my surroundings.[/i]"
+		"text" : "[i]It seems he made friends with an inquisitive eel.\nAs expected of Micheel...\nI hold that thought while I investigate my surroundings.[/i]"
 	},
 	{
 		"background" : "shallow sea creatures",
-		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating… Sleeping… Hiding…[/i]"
+		"text" : "[i]Only now I spot the fish that are swimming through the seaweed.\nEating... Sleeping... Hiding...[/i]"
 	},
 	{
-		"text" : "[i]I love being here.\nIt’s so… peaceful.\nThe only place where Michael isn’t talking non-stop.[/i]"
+		"text" : "[i]I love being here.\nIt’s so... peaceful.\nThe only place where Michael isn’t talking non-stop.[/i]"
 	},
 	{
 		"text" : "[i]Which makes this the only quiet place in the world.[/i]"
@@ -2738,13 +2805,26 @@
 		"text" : "[i]I close my eyes and enjoy the silence.\nI feel myself sinking again. The most peaceful feeling there is.[/i]"
 	},
 	{
-		"text" : "[i]I sink…\nDeeper.\nAnd deeper.[/i]"
+		"text" : "[i]I sink...\nDeeper.\nAnd deeper.[/i]"
 	},
 	{
-		"text" : "[i]…\n… -as.\nA voice?[/i]"
+		"text" : "[i]...[/i]"
 	},
 	{
-		"text" : "[i]… -cas.\n…\n… Mom?[/i]"
+		"name" : "???",
+		"text" : "... -as."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "[i]A voice?[/i]"
+	},
+	{
+		"name" : "???",
+		"text" : "... -cas."
+	},
+	{
+		"name" : "Lucas",
+		"text" : "...\n... Mom?"
 	},
 	{
 		"characters" : ["michael old surprised"],
@@ -2761,11 +2841,11 @@
 		"text" : "You idiot!\nWhat were you thinking?!\nFuck! Get it all out."
 	},
 	{
-		"text" : "Just like that.\n…"
+		"text" : "Just like that.\n..."
 	},
 	{
 		"characters" : ["michael old surprised","lucas old"],
-		"text" : "Dude… don’t do that to me again.\nFuck…\nWhat would I have told Sarah if…"
+		"text" : "Dude... don’t do that to me again.\nFuck...\nWhat would I have told Sarah if..."
 	},
 	{
 		"name" : "Michael",
@@ -2803,7 +2883,7 @@
 					},
 					{
 						"name" : "Michael",
-						"text" : "That’s just a little barotrauma…\nBut I also must have cried a bit."
+						"text" : "That’s just a little barotrauma...\nBut I also must have cried a bit."
 					},
 					{
 						"characters" : ["michael old happy","lucas old surprised"],
@@ -2817,11 +2897,11 @@
 				[
 					{
 						"name" : "Michael",
-						"text" : "You are welcome…\nBut you better work your ass off to make up for this."
+						"text" : "You are welcome...\nBut you better work your ass off to make up for this."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Yeah…\nI will."
+						"text" : "Yeah...\nI will."
 					}
 				]
 			},
@@ -2855,13 +2935,13 @@
 						"text" : "We were already past five minutes, so I dove back up to see if you were there.\nBut you weren’t."
 					},
 					{
-						"text" : "So I kinda panicked and dove down a bit too quickly.\nI found you floating through some seaweed with your mouth open…"
+						"text" : "So I kinda panicked and dove down a bit too quickly.\nI found you floating through some seaweed with your mouth open..."
 					},
 					{
-						"text" : "As if you were a frogfish waiting for its prey…\nBut your eyes were open too."
+						"text" : "As if you were a frogfish waiting for its prey...\nBut your eyes were open too."
 					},
 					{
-						"text" : "You were already down there for like seven minutes, so I grabbed you and swam up…\nAlso a bit too quickly."
+						"text" : "You were already down there for like seven minutes, so I grabbed you and swam up...\nAlso a bit too quickly."
 					},
 					{
 						"text" : "Hence why my eyes look like this.\nYours do too by the way."
@@ -2908,16 +2988,16 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Those too.\nAnd…\nCan we keep it a secret from Sarah?"
+		"text" : "Those too.\nAnd...\nCan we keep it a secret from Sarah?"
 	},
 	{
 		"characters" : ["michael old surprised","lucas old"],
-		"name" : "",
+		"name" : "Michael",
 		"text" : "Are you out of your mind?"
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Michael… Please.\nI don’t want to worry Sarah with the baby coming."
+		"text" : "Michael... Please.\nI don’t want to worry Sarah with the baby coming."
 	},
 	{
 		"name" : "Michael",
@@ -2925,11 +3005,11 @@
 	},
 	{
 		"characters" : ["michael old","lucas old"],
-		"text" : "… Fine."
+		"text" : "... Fine."
 	},
 	{
 
-		"text" : "But, please, be careful from now on. You owe it to me.\nAnd her…Them.\nDeal?"
+		"text" : "But, please, be careful from now on. You owe it to me.\nAnd her...Them.\nDeal?"
 	},
 	{
 		"name" : "Lucas",
@@ -2967,30 +3047,28 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]He probably just doesn’t want to be my passenger…\nBut I guess that’s fine.[/i]"
+		"text" : "[i]He probably just doesn’t want to be my passenger...\nBut I guess that’s fine.[/i]"
 	},
 	{
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "living room",
 		"characters" : ["lucas old"],
-		"music" : "everyday",
 		"name" : "Lucas",
 		"text" : "I’m back."
 	},
 	{
 		"characters" : ["lucas old","sarah old"],
-		"name" : "Lucas",
+		"name" : "Sarah",
 		"text" : "Hey, babe. How was your day?\nDid Michael ‘fuck up the office’?"
 	},
 	{
 		"characters" : ["lucas old","sarah old","michael old"],
-		"name" : "",
+		"name" : "Michael",
 		"text" : "Yo, Sarah."
 	},
 	{
@@ -3006,7 +3084,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "… Just how do you two look?!\nWhat happened to you?"
+		"text" : "... Just how do you two look?!\nWhat happened to you?"
 	},
 	{
 		"name" : "Michael",
@@ -3026,7 +3104,11 @@
 		"text" : "Care to play with me for a bit?"
 	},
 	{
-		"text" : "Shhh…"
+		"text" : "Shhh..."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"text" : "Ah yes and I played with my eel."
@@ -3085,7 +3167,7 @@
 						"text" : "[i]A lie for a lie.\nThus is the law of equal exchange.\nBut I shouldn’t stop here.[/i]"
 					},
 					{
-						"text" : "I’m still in awe with Michael’s interior design skills.\nThe moment I stepped foot into the office, I knew…"
+						"text" : "I’m still in awe with Michael’s interior design skills.\nThe moment I stepped foot into the office, I knew..."
 					},
 					{
 						"name" : "Sarah",
@@ -3093,7 +3175,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "… That Michael has an overwhelmingly… impressive sense for aesthetics."
+						"text" : "... That Michael has an overwhelmingly... impressive sense for aesthetics."
 					},
 					{
 						"text" : "Yes, it was like an aesthetic post, nay, even more breathtaking."
@@ -3124,11 +3206,11 @@
 				[
 					{
 						"name" : "Sarah",
-						"text" : "But… You were not expecting anything at all.\nOr so you told me."
+						"text" : "But... You were not expecting anything at all.\nOr so you told me."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "I uh…"
+						"text" : "I uh..."
 					},
 					{
 						"name" : "Michael",
@@ -3144,7 +3226,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "… Imagine the coolest, hippest office you have ever seen…\nLike in one of those hip start-ups where you only have to work as much as you want."
+						"text" : "... Imagine the coolest, hippest office you have ever seen...\nLike in one of those hip start-ups where you only have to work as much as you want."
 					},
 					{
 						"name" : "Sarah",
@@ -3152,7 +3234,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "Now, take that times two in terms of… everything.\nAnd add to that…"
+						"text" : "Now, take that times two in terms of... everything.\nAnd add to that..."
 					},
 					{
 						"text" : "A harpoon."
@@ -3211,7 +3293,7 @@
 		]
 	},
 	{
-		"text" : "So… Enough about the office.\nHow is the baby?"
+		"text" : "So... Enough about the office.\nHow is the baby?"
 	},
 	{
 		"name" : "Lucas",
@@ -3238,13 +3320,13 @@
 		"text" : "You are not imposing on us."
 	},
 	{
-		"reduce_fullness" : 35,
+		"reduce_fullness" : 60,
 		"name" : "Squid",
 		"text" : "Dinnertime!"
 	},
 	{
 		"name" : "Michael",
-		"text" : "Well, that reminds me…\nI have to prepare dinner for my little lady."
+		"text" : "Well, that reminds me...\nI have to prepare dinner for my little lady."
 	},
 	{
 		"name" : "Sarah",
@@ -3257,6 +3339,10 @@
 	{
 		"name" : "Lucas",
 		"text" : "[i]He gives me a wink and leaves.[/i]"
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"characters" : ["sarah old","lucas old"],
@@ -3278,12 +3364,12 @@
 				[
 					{
 						"name" : "Lucas",
-						"text" : "[i]This is going to be difficult.\nBut I shouldn’t take Sarah’s perceptiveness lightly.\nAnd… She deserves to know.[/i]"
+						"text" : "[i]This is going to be difficult.\nBut I shouldn’t take Sarah’s perceptiveness lightly.\nAnd... She deserves to know.[/i]"
 					},
 					{
 						"characters" : ["sarah old","lucas old sad"],
 						"music" : "sad",
-						"text" : "I… I had an accident while diving.\nIf it hadn’t been for Michael…\nI would be -"
+						"text" : "I... I had an accident while diving.\nIf it hadn’t been for Michael...\nI would be -"
 					},
 					{
 						"text" : "[i]Sarah hugs me gently and waits for me to calm down.\nDidn’t think I would be the one breaking down.[/i]"
@@ -3297,7 +3383,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "I didn’t say anything…"
+						"text" : "I didn’t say anything..."
 					},
 					{
 						"name" : "Sarah",
@@ -3312,17 +3398,17 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "I know.\nJust…"
+						"text" : "I know.\nJust..."
 					},
 					{
-						"text" : "Don’t do that to me again.\nPlease be careful… and value your own life."
+						"text" : "Don’t do that to me again.\nPlease be careful... and value your own life."
 					},
 					{
 						"text" : "I need you."
 					},
 					{
 						"name" : "Lucas",
-						"text" : "[i]She takes my hand and places it on her belly.\nI feel her warmth… and the gentle kicks of tiny feet.[/i]"
+						"text" : "[i]She takes my hand and places it on her belly.\nI feel her warmth... and the gentle kicks of tiny feet.[/i]"
 					},
 					{
 						"name" : "Sarah",
@@ -3331,7 +3417,7 @@
 					{
 						"characters" : ["sarah old","lucas old"],
 						"name" : "Lucas",
-						"text" : "… Yeah"
+						"text" : "... Yeah"
 					},
 					{
 						"name" : "Sarah",
@@ -3344,14 +3430,14 @@
 				"next" :
 				[
 					{
-						"text" : "Oh, he normally doesn’t…\nUsually he is even more energetic afterwards."
+						"text" : "Oh, he normally doesn’t...\nUsually he is even more energetic afterwards."
 					},
 					{
 						"text" : "Has it something to do with his ‘eel’ he mentioned?\nPotency problems maybe?"
 					},
 					{
 						"name" : "Lucas",
-						"text" : "I uh…\nWouldn’t know…"
+						"text" : "I uh...\nWouldn’t know..."
 					},
 					{
 						"name" : "Sarah",
@@ -3367,7 +3453,7 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "You…?"
+						"text" : "You...?"
 					},
 					{
 						"name" : "Sarah",
@@ -3378,7 +3464,7 @@
 						"text" : "I’m sure his ‘eel’ is fine.\nI think you can spare him from that talk."
 					},
 					{
-						"text" : "I… Uh. Can ask about the well-being of his little Micheel.\nIf you insist."
+						"text" : "I... Uh. Can ask about the well-being of his little Micheel.\nIf you insist."
 					},
 					{
 						"name" : "Sarah",
@@ -3415,27 +3501,27 @@
 					},
 					{
 						"name" : "Sarah",
-						"text" : "…\nWell, let’s go to bed for today, okay?"
+						"text" : "...\nWell, let’s go to bed for today, okay?"
 					}
 				]
 			}
 		]
 	},
 	{
-		"music" : "",
 		"name" : "Lucas",
 		"text" : "Yeah..."
 	},
 	{
 		"background" : "black",
 		"characters" : [],
+		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"music" : "deep sea",
 		"name" : "Lucas",
-		"text" : "[i]This sensation…\nAm I diving again?[/i]"
+		"text" : "[i]This sensation...\nAm I diving again?[/i]"
 	},
 	{
 		"name" : "Squid",
@@ -3451,7 +3537,7 @@
 		"text" : "Dreaming of diving."
 	},
 	{
-		"text" : "I… almost died today."
+		"text" : "I... almost died today."
 	},
 	{
 		"name" : "Squid",
@@ -3469,7 +3555,7 @@
 		"text" : "Don’t you want to see her?"
 	},
 	{
-		"text" : "… I do."
+		"text" : "... I do."
 	},
 	{
 		"name" : "Squid",
@@ -3529,11 +3615,11 @@
 						"text" : "Did you come to loathe the sea?"
 					},
 					{
-						"text" : "No…\nI just feel like I should be awake.\nAnd not here."
+						"text" : "No...\nI just feel like I should be awake.\nAnd not here."
 					},
 					{
 						"name" : "Squid",
-						"text" : "Well then…"
+						"text" : "Well then..."
 					}
 				]
 			},
@@ -3558,7 +3644,7 @@
 					},
 					{
 						"name" : "Squid",
-						"text" : "Now…"
+						"text" : "Now..."
 					}
 				]
 			}
@@ -3573,25 +3659,24 @@
 		"text" : "And, goodbye."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"background" : "black",
-		"music" : "",
+		"music" : "everyday",
 		"name" : "",
 		"text" : "..."
 	},
 	{
 		"background" : "living room",
 		"characters" : ["lucas old"],
-		"music" : "everyday",
 		"name" : "Lucas",
 		"text" : "...Hmm."
 	},
 	{
-		"squid_stage" : "egg",
-		"name" : "Squid",
-		"text" : ""
-	},
-	{
 		"characters" : ["lucas old surprised"],
+		"squid_stage" : "egg",
 		"text" : "?!"
 	},
 	{
@@ -3613,7 +3698,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "What do you mean? I’m still half asleep…"
+		"text" : "What do you mean? I’m still half asleep..."
 	},
 	{
 		"name" : "Lucas",
@@ -3622,11 +3707,11 @@
 	{
 		"characters" : ["lucas old surprised","sarah old surprised"],
 		"name" : "Sarah",
-		"text" : "Oh. Well I don’t remember touching it…"
+		"text" : "Oh. Well I don’t remember touching it..."
 	},
 	{
 		"name" : "Lucas",
-		"text" : "It might be its final evolution… "
+		"text" : "It might be its final evolution... "
 	},
 	{
 		"characters" : ["lucas old surprised","sarah old"],
@@ -3649,14 +3734,12 @@
     {
 		"background" : "black",
 		"characters" : [],
-		"music" : "",
 		"name" : "",
 		"text" : "..."
 	},
     {
 		"background" : "office",
 		"characters" : ["lucas old", "michael old"],
-		"music" : "everyday",
 		"name" : "Michael",
 		"text" : "Where have you been?\nMr. Lawrence just came by."
 
@@ -3679,7 +3762,7 @@
     },
     {
         "name" : "Lucas",
-        "text" : "Yeah… "
+        "text" : "Yeah... "
     },
     {
         "name" : "Michael",
@@ -3691,7 +3774,7 @@
     },
     {
         "name" : "Michael",
-        "text" : "We will be going… 4000 Meters deep."
+        "text" : "We will be going... 4000 Meters deep."
     },
     {
         "name" : "Lucas",
@@ -3699,7 +3782,7 @@
     },
     {
         "name" : "Michael",
-        "text" : "Believe it or not: in yours…\nHow are your lungs?"
+        "text" : "Believe it or not: in yours...\nHow are your lungs?"
     },
     {
         "name" : "Lucas",
@@ -3715,7 +3798,7 @@
     },
     {
         "name" : "Michael",
-        "text" : "…"
+        "text" : "..."
     },
     {
         "name" : "Lucas",
@@ -3757,7 +3840,7 @@
 		"text" : "[i]I jump into the submarine.\nIt’s about as cramped in here as economy class on a discount airline.[/i]"
 	},
 	{
-		"text" : "[i]… Maybe even worse.[/i]"
+		"text" : "[i]... Maybe even worse.[/i]"
 	},
 	{
 		"text" : "[i]I’m not claustrophobic like Michael, but I still don’t exactly feel comfortable.[/i]"
@@ -3819,11 +3902,11 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Oh, sure… "
+		"text" : "Oh, sure... "
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]Grumpy son of gun…[/i]"
+		"text" : "[i]Grumpy son of gun...[/i]"
 	},
 	{
 		"text" : "[i]But maybe a bit of quiet is nice too.[/i]"
@@ -3851,7 +3934,7 @@
 		"text" : "[i]I stop the sub and turn it around.\nBut I still can’t see the ground.\nJust when did I lose sight of it?[/i]"
 	},
 	{
-		"text" : "Michael?",
+		"text" : "Michael?"
 	},
 	{
 		"name" : "",
@@ -3862,7 +3945,7 @@
 		"text" : "Michael?"
 	},
 	{
-		"text" : "… Fuck."
+		"text" : "... Fuck."
 	},
 	{
 		"text" : "[i]I’m starting to feel kind of tense.[/i]"
@@ -3872,14 +3955,14 @@
 		"squid_stage" : "old"
 	},
 	{
-		"text" : "[i]I lean back and sigh.\nIs that what Mom saw?[/i]",
+		"text" : "[i]I lean back and sigh.\nIs that what Mom saw?[/i]"
 	},
 	{
-		"text" : "[i]Darkness?\nDevoid of life and meaning?[/i]",
+		"text" : "[i]Darkness?\nDevoid of life and meaning?[/i]"
 	},
 	{
 		"name" : "Lucas",
-		"text" : "...",
+		"text" : "..."
 	},
 	{
 		"name" : "Lucas",
@@ -3891,11 +3974,11 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Whoa… When did you?",
+		"text" : "Whoa... When did you?",
 		"reduce_happiness" : 80
 	},
 	{
-		"text" : "Hm… No more pets?"
+		"text" : "Hm... No more pets?"
 	},
 	{
 		"name" : "Squid",
@@ -3903,7 +3986,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Hmmm… You need…"
+		"text" : "Hmmm... You need..."
 	},
 	{
 		"name" : "Lucas",
@@ -3918,6 +4001,10 @@
 		"text" : "..."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"name" : "Michael",
 		"text" : "Lucas?"
 	},
@@ -3930,7 +4017,7 @@
 		"text" : "Oh, you are back.\nDon’t scare me like that."
 	},
 	{
-		"text" : "I thought I lost you… Again."
+		"text" : "I thought I lost you... Again."
 	},
 	{
 		"name" : "Lucas",
@@ -3938,7 +4025,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Weird…"
+		"text" : "Weird..."
 	},
 	{
 		"name" : "Lucas",
@@ -3956,7 +4043,7 @@
 		"text" : "Sh- shut up."
 	},
 	{
-		"text" : "It feels different in here, kinda lost my focus.\nThere is no textbook that prepares you for… That."
+		"text" : "It feels different in here, kinda lost my focus.\nThere is no textbook that prepares you for... That."
 	},
 	{
 		"name" : "Michael",
@@ -3975,8 +4062,8 @@
 	},
 	{
 		"name" : "Squid",
-		"text" : "Hm, I’m quite hungry…",
-		"reduce_fullness" : 50
+		"text" : "Hm, I’m quite hungry...",
+		"reduce_fullness" : 60
 	},
 	{
 		"name" : "Michael",
@@ -3989,6 +4076,10 @@
 	{
 		"name" : "Michael",
 		"text" : "Happens to the best of us."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"text" : "Oh!\nContinue your descent, please. We are not quite there yet."
@@ -4019,15 +4110,15 @@
 		"text" : "Ok, we should shortly be reaching the abyssal plane."
 	},
 	{
-		"text" : "Wait, stop your engine.\nThat is…"
+		"text" : "Wait, stop your engine.\nThat is..."
 	},
 	{
-		"text" : "Dear god… ",
+		"text" : "Dear god... ",
 		"sfx" : "whale"
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]Below me I see a gargantuan shadow moving.\nIt’s swimming very slowly towards the surface…[/i]"
+		"text" : "[i]Below me I see a gargantuan shadow moving.\nIt’s swimming very slowly towards the surface...[/i]"
 	},
 	{
 		"text" : "[i]In my direction.[/i]"
@@ -4063,7 +4154,7 @@
 				[
 					{
 						"name" : "Michael",
-						"text" : "Woooh… That really got my blood pumping."
+						"text" : "Woooh... That really got my blood pumping."
 					}
 				]
 			},
@@ -4087,7 +4178,7 @@
 						"text" : "‘Shining Michael’"
 					},
 					{
-						"text" : "Although shining would be inaccurate.\nBut ‘Bioluminescent Michael’ lacks that certain ring…"
+						"text" : "Although shining would be inaccurate.\nBut ‘Bioluminescent Michael’ lacks that certain ring..."
 					},
 					{
 						"name" : "Lucas",
@@ -4100,7 +4191,7 @@
 				]
 			},
 			{
-				"text" : "Was that… A whale?",
+				"text" : "Was that... A whale?",
 				"next" :
 				[
 					{
@@ -4116,13 +4207,13 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "That thing... It was probably more than 50 meters long.\nThat’s crazy… For something so big living down here."
+		"text" : "That thing... It was probably more than 50 meters long.\nThat’s crazy... For something so big living down here."
 	},
 	{
 		"text" : "Well if it’s a whale it must go up to breath from time to time.\nHow come we never saw such a big whale on the surface before?"
 	},
 	{
-		"text" : "How mysterios.\nWell, I will have to review that footage…"
+		"text" : "How mysterios.\nWell, I will have to review that footage..."
 	},
 	{
 		"text" : "For the next three years of my life.\nBut maybe you will find even more crazy things down there."
@@ -4140,7 +4231,7 @@
 	},
 	{
 		"name" : "Mr. Lawrence",
-		"text" : "I saw the video feed.\nThat was nothing short of amazing…"
+		"text" : "I saw the video feed.\nThat was nothing short of amazing..."
 	},
 	{
 		"text" : "To think that you would discover a new species of such proportions on a test run."
@@ -4177,7 +4268,7 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Lucas…"
+		"text" : "Lucas..."
 	},
 	{
 		"text" : "But what-"
@@ -4188,11 +4279,15 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Michael, I got this…"
+		"text" : "Michael, I got this..."
 	},
 	{
 		"name" : "Michael",
-		"text" : "…"
+		"text" : "..."
+	},
+	{
+		"name" : "Squid",
+		"text" : ""
 	},
 	{
 		"name" : "Lucas",
@@ -4200,7 +4295,7 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "[i]And I feel… something.[/i]"
+		"text" : "[i]And I feel... something.[/i]"
 	},
 	{
 		"name" : "Lucas",
@@ -4217,24 +4312,24 @@
 		"music": "deep sea creepy"
 	},
 	{
-		"text" : "[i]...[/i]",
+		"text" : "[i]...[/i]"
 	},
 	{
-		"text" : "[i]I’m already… below 8000 meters.[/i]",
+		"text" : "[i]I’m already... below 8000 meters.[/i]"
 	},
 	{
-		"text" : "Michael? Mr. Lawrence?",
+		"text" : "Michael? Mr. Lawrence?"
 	},
 	{
 		"name" : "",
-		"text" : "...",
+		"text" : "..."
 	},
 	{
 		"name" : "Lucas",
 		"text" : "[i]I have come too far down to go back now.[/i]"
 	},
 	{
-		"text" : "[i]I can feel her…\nShe is close.[/i]"
+		"text" : "[i]I can feel her...\nShe is close.[/i]"
 	},
 	{
 		"text" : "[i]She must be.[/i]"
@@ -4273,14 +4368,18 @@
 		"text" : "..."
 	},
 	{
+		"name" : "Squid",
+		"text" : ""
+	},
+	{
 		"name" : "Lucas",
-		"text" : "[i]I search the ground for… Anything.[/i]"
+		"text" : "[i]I search the ground for... Anything.[/i]"
 	},
 	{
 		"text" : "[i]For her.[/i]"
 	},
 	{
-		"text" : "[i]Buried, within the mud I recognise the outline of a submarine… And another one.[/i]"
+		"text" : "[i]Buried, within the mud I recognise the outline of a submarine... And another one.[/i]"
 	},
 	{
 		"text" : "[i]I frantically search the area for more.\nThere is no end to them.[/i]"
@@ -4329,7 +4428,7 @@
 		"text" : "[i]Something on the ground changed.\nSomething moved. Stirred.\nSomething that has been down here forever.[/i]"
 	},
 	{
-		"text" : "[i]Covered in mud and ancient sediments…\nI see it…\nI see it now, the thing that you saw.[/i]"
+		"text" : "[i]Covered in mud and ancient sediments...\nI see it...\nI see it now, the thing that you saw.[/i]"
 	},
 	{
 		"text" : "[i]It’s beautiful.\nLike you said, Mom.[/i]"
@@ -4343,6 +4442,6 @@
 	},
 	{
 		"name" : "Lucas",
-		"text" : "My last purpose… ",
+		"text" : "My last purpose... "
 	}
 ]
