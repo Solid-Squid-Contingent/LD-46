@@ -158,7 +158,7 @@ func die_if_dead():
 		die()
 
 func be_sad_if_not_cared_for():
-	if fullness <= 15 or awakeness <= 15 or fun <= 15 or happiness <= 15:
+	if fullness <= 25 or awakeness <= 25 or fun <= 25 or happiness <= 25:
 		if not is_animating() and not sleeping:
 			emit_signal("sad")
 	else:
