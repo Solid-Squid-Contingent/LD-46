@@ -1,24 +1,11 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Resources/Animations/Squid/egg.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://VPSScenes/Home/UIContainer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_2.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Animations/Squid/baby.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://Resources/Animations/Squid/adult.tres" type="SpriteFrames" id=5]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Eating/old_eating_1.png" type="Texture" id=6]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Eating/old_eating_2.png" type="Texture" id=7]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Sleep/old_sleep_1.png" type="Texture" id=8]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Talk/old_talk_2.png" type="Texture" id=9]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Sleep/old_sleep_2.png" type="Texture" id=10]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Sad/old_sad_2.png" type="Texture" id=11]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Talk/old_talk_1.png" type="Texture" id=12]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Happy/old_happy2.png" type="Texture" id=13]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Idle/old_idle.png" type="Texture" id=14]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Happy/old_happy1.png" type="Texture" id=15]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Idle/old_idle2.png" type="Texture" id=16]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Refuse/old_refuse_1.png" type="Texture" id=17]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Refuse/old_refuse_2.png" type="Texture" id=18]
-[ext_resource path="res://Resources/Graphics/Squid/Old/Sad/old_sad_1.png" type="Texture" id=19]
+[ext_resource path="res://Resources/Animations/Squid/old.tres" type="SpriteFrames" id=6]
 [ext_resource path="res://VPSScripts/Home/TamagotchiHomeScreen.gd" type="Script" id=20]
 [ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_3.png" type="Texture" id=21]
 [ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_4.png" type="Texture" id=22]
@@ -27,44 +14,6 @@
 [ext_resource path="res://Resources/Graphics/Squid/Hatching/egg_crack_5.png" type="Texture" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "refuse",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "idle",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "eat",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "sad",
-"speed": 6.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "happy",
-"speed": 1.0
-}, {
-"frames": [ ExtResource( 12 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "talk",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "sleep",
-"speed": 1.0
-} ]
-
-[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 23 ), ExtResource( 3 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 25 ), ExtResource( 24 ) ],
 "loop": false,
@@ -102,13 +51,13 @@ animation = "idle"
 [node name="OldSprite" type="AnimatedSprite" parent="NormalSprites"]
 visible = false
 position = Vector2( 37, 45 )
-frames = SubResource( 1 )
+frames = ExtResource( 6 )
 animation = "idle"
 
 [node name="HatchSprite" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 32, 49 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "hatch"
 
 [node name="AnimationTimer" type="Timer" parent="."]
