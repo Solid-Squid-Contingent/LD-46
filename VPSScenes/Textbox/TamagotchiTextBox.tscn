@@ -5,7 +5,7 @@
 [ext_resource path="res://VPSScripts/Textbox/TamagotchiTextBox.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 40
+size = 50
 font_data = ExtResource( 1 )
 
 [node name="TamagotchiTextBox" type="Node2D"]

@@ -3579,7 +3579,7 @@
 				[
 					{
 						"name" : "Squid",
-						"text" : "[i]sigh[/i]"
+						"text" : "sigh"
 					},
 					{
 						"name" : "Squid",
@@ -4207,13 +4207,13 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "That thing... It was probably more than 50 meters long.\nThat’s crazy... For something so big living down here."
+		"text" : "That thing... It was probably more than 50 meters long.\nThat’s crazy... For something so big to be living down here."
 	},
 	{
 		"text" : "Well if it’s a whale it must go up to breath from time to time.\nHow come we never saw such a big whale on the surface before?"
 	},
 	{
-		"text" : "How mysterios.\nWell, I will have to review that footage..."
+		"text" : "How mysterious.\nWell, I will have to review that footage..."
 	},
 	{
 		"text" : "For the next three years of my life.\nBut maybe you will find even more crazy things down there."
