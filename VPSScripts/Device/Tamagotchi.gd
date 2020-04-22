@@ -267,7 +267,10 @@ func _on_PlayButton_pressed():
 
 func _on_ExtraButton_pressed():
 	emit_signal("button_pressed")
-	if state == STATE.minigame or state == STATE.gameOver:
+	if state == STATE.gameOver:
+		switch_to_home()
+	elif state == STATE.minigame:
+		restart_minigame()
 		switch_to_home()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
