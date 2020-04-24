@@ -1,32 +1,35 @@
 extends Node2D
 
-var currentCharacters = []
+var currentCharacters = {}
+var talkingCharacterName : String = "lucas"
+
+var characterScene = preload("res://VNScenes/CharacterAnimation.tscn")
 
 var characterMap = {
-	"christine": preload("res://VNScenes/CharacterScenes/Christine/Christine.tscn"),
-	"christine happy": preload("res://VNScenes/CharacterScenes/Christine/ChristineHappy.tscn"),
-	"christine sad": preload("res://VNScenes/CharacterScenes/Christine/ChristineSad.tscn"),
-	"christine surprised": preload("res://VNScenes/CharacterScenes/Christine/ChristineSurprised.tscn"),
+	"christine": preload("res://Resources/Animations/Characters/Christine/Christine.tres"),
+	"christine happy": preload("res://Resources/Animations/Characters/Christine/ChristineHappy.tres"),
+	"christine sad": preload("res://Resources/Animations/Characters/Christine/ChristineSad.tres"),
+	"christine surprised": preload("res://Resources/Animations/Characters/Christine/ChristineSurprised.tres"),
 	
-	"michael": preload("res://VNScenes/CharacterScenes/Michael/Michael.tscn"),
-	"michael happy": preload("res://VNScenes/CharacterScenes/Michael/MichaelHappy.tscn"),
-	"michael sad": preload("res://VNScenes/CharacterScenes/Michael/MichaelSad.tscn"),
-	"michael surprised": preload("res://VNScenes/CharacterScenes/Michael/MichaelSurprised.tscn"),
+	"michael": preload("res://Resources/Animations/Characters/Michael/Michael.tres"),
+	"michael happy": preload("res://Resources/Animations/Characters/Michael/MichaelHappy.tres"),
+	"michael sad": preload("res://Resources/Animations/Characters/Michael/MichaelSad.tres"),
+	"michael surprised": preload("res://Resources/Animations/Characters/Michael/MichaelSurprised.tres"),
 	
-	"michael old": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOld.tscn"),
-	"michael old happy": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldHappy.tscn"),
-	"michael old sad": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldSad.tscn"),
-	"michael old surprised": preload("res://VNScenes/CharacterScenes/MichaelOld/MichaelOldSurprised.tscn"),
+	"michael old": preload("res://Resources/Animations/Characters/MichaelOld/MichaelOld.tres"),
+	"michael old happy": preload("res://Resources/Animations/Characters/MichaelOld/MichaelOldHappy.tres"),
+	"michael old sad": preload("res://Resources/Animations/Characters/MichaelOld/MichaelOldSad.tres"),
+	"michael old surprised": preload("res://Resources/Animations/Characters/MichaelOld/MichaelOldSurprised.tres"),
 	
-	"sarah": preload("res://VNScenes/CharacterScenes/Sarah/Sarah.tscn"),
-	"sarah happy": preload("res://VNScenes/CharacterScenes/Sarah/SarahHappy.tscn"),
-	"sarah sad": preload("res://VNScenes/CharacterScenes/Sarah/SarahSad.tscn"),
-	"sarah surprised": preload("res://VNScenes/CharacterScenes/Sarah/SarahSurprised.tscn"),
+	"sarah": preload("res://Resources/Animations/Characters/Sarah/Sarah.tres"),
+	"sarah happy": preload("res://Resources/Animations/Characters/Sarah/SarahHappy.tres"),
+	"sarah sad": preload("res://Resources/Animations/Characters/Sarah/SarahSad.tres"),
+	"sarah surprised": preload("res://Resources/Animations/Characters/Sarah/SarahSurprised.tres"),
 	
-	"sarah old": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOld.tscn"),
-	"sarah old happy": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldHappy.tscn"),
-	"sarah old sad": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldSad.tscn"),
-	"sarah old surprised": preload("res://VNScenes/CharacterScenes/SarahOld/SarahOldSurprised.tscn"),
+	"sarah old": preload("res://Resources/Animations/Characters/SarahOld/SarahOld.tres"),
+	"sarah old happy": preload("res://Resources/Animations/Characters/SarahOld/SarahOldHappy.tres"),
+	"sarah old sad": preload("res://Resources/Animations/Characters/SarahOld/SarahOldSad.tres"),
+	"sarah old surprised": preload("res://Resources/Animations/Characters/SarahOld/SarahOldSurprised.tres"),
 }
 
 onready var positions = [
@@ -88,16 +91,17 @@ func change_background(newBackground: String):
 func flip_character(character):
 	character.get_node("Sprite").flip_h = true
 
-func add_character(character: String, position):
-	var new_character = characterMap[character].instance()
-	new_character.position = position
-	add_child_below_node(foremostBackground, new_character)
-	currentCharacters.append(new_character)
-	return new_character
+func add_character(characterName: String, position):
+	var newCharacter = characterScene.instance()
+	newCharacter.position = position
+	add_child_below_node(foremostBackground, newCharacter)
+	newCharacter.set_sprite_frames(characterMap[characterName])
+	currentCharacters[characterName] = newCharacter
+	return newCharacter
 
 func remove_characters():
-	for character in currentCharacters:
-		character.queue_free()
+	for characterName in currentCharacters:
+		currentCharacters[characterName].queue_free()
 	currentCharacters.clear()
 
 
@@ -108,3 +112,20 @@ func _on_DialogManager_change_background(background):
 func _on_DialogManager_change_characters(characters):
 	remove_characters()
 	add_characters(characters)
+
+
+func _on_DialogManager_end_talking():
+	for characterName in currentCharacters:
+		if characterName.begins_with(talkingCharacterName):
+			currentCharacters[characterName].stop_animating()
+
+
+func _on_DialogManager_start_talking(name):
+	if name.length() != 0:
+		talkingCharacterName = name.to_lower()
+		if talkingCharacterName == "mom":
+			talkingCharacterName = "christine"
+	
+	for characterName in currentCharacters:
+		if characterName.begins_with(talkingCharacterName):
+			currentCharacters[characterName].start_animating()
