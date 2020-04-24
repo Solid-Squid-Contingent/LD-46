@@ -7,3 +7,6 @@ script = ExtResource( 3 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 11.9277, 35.5331 )
+
+[node name="NextFrameTimer" type="Timer" parent="."]
+[connection signal="timeout" from="NextFrameTimer" to="." method="_on_NextFrameTimer_timeout"]
