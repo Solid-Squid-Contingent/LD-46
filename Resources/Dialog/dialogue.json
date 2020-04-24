@@ -415,6 +415,7 @@
 	{	
 		"characters" : ["lucas adult", "michael"],
 		"name" : "???",
+		"talking_name" : "michael",
 		"music" : "everyday",
 		"text" : "Is that a Tamagotchi you got there?"
 	},
@@ -442,6 +443,7 @@
 				[
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Man, that’s crazy. I dig it."
 					},
 					{
@@ -450,6 +452,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Yeah, I had one too. Years back.\nFun thing. A dolphin if you can believe that.\nIt died."
 					},
 					{
@@ -458,6 +461,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Yeah. Maybe that says something about me?\nWell I guess they never last too long.\nHow old is yours?"
 					},
 					{
@@ -466,6 +470,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Are you kidding me?\nThat’s crazy."
 					},
 					{
@@ -474,6 +479,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Absolutely crazy.\nYours looks young too. Is it one of these Tamagotchi that doesn’t age?"
 					},
 					{
@@ -488,6 +494,7 @@
 				[
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "So... you are taking care of the Tamagotchi of someone else?"
 					},
 					{
@@ -496,6 +503,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "You guess you take care of the Tamagotchi of someone else?"
 					},
 					{
@@ -504,6 +512,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "You sure guess a lot of things."
 					},
 					{
@@ -521,6 +530,7 @@
 				[
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "..."
 					},
 					{
@@ -529,6 +539,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "...\nI really hate to break it for you but no matter how you look at it, that is not a smartphone."
 					},
 					{
@@ -540,6 +551,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "With no touchscreen and four buttons?\nA two-colored display?\nNo cameras whatsoever?"
 					},
 					{
@@ -548,6 +560,7 @@
 					},
 					{
 						"name" : "???",
+						"talking_name" : "michael",
 						"text" : "Well but I already saw your Tamagotchi, so even if this is a phone, which I do not doubt, mind you...\nThen it’s still at the very least a Tamagotchi App?"
 					},
 					{
@@ -563,6 +576,7 @@
 	},
 	{
 		"name" : "???",
+		"talking_name" : "michael",
 		"text" : "Oh, sorry, I’m Michael by the way."
 	},
 	{

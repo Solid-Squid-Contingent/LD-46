@@ -17,6 +17,9 @@ signal play_sound_effect(name)
 signal change_characters(characters)
 signal change_background(background)
 
+signal start_talking(name)
+signal end_talking()
+
 signal turn_tamagotchi_on
 signal turn_tamagotchi_off
 signal change_squid_stage(newStageName)
@@ -94,14 +97,23 @@ func print_next_dialog_line():
 	
 	var currentData = get_current_dialog_data()
 	
+	execute_side_effects(currentData)
+	
 	if currentData.has("name") and currentData["name"] == "Squid":
 		tamagotchiTextBox.set_text(currentData["text"])
 	else:
 		if currentData.has("name"):
 			vnTextBox.set_name(currentData["name"])
+		
+		if currentData.has("talking_name"):
+			emit_signal("start_talking", currentData["talking_name"])
+		elif currentData.has("name"):
+			if currentData["name"].length() != 0:
+				emit_signal("start_talking", currentData["name"])
+		else:
+			emit_signal("start_talking", "")
+			
 		vnTextBox.set_text(currentData["text"])
-	
-	execute_side_effects(currentData)
 	
 	if currentData.has("choices"):
 		beforeChoice = true
@@ -181,6 +193,7 @@ func _on_ChoiceButtonPressed(choice):
 func _on_VNTextBox_all_text_appeared():
 	if beforeChoice:
 		spawn_choice_buttons()
+	emit_signal("end_talking")
 
 
 func _on_Tamagotchi_eat():

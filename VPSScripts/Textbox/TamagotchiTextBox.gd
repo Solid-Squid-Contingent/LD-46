@@ -5,6 +5,7 @@ signal end_talking
 signal all_text_appeared
 
 onready var label = $TextBox/Label
+onready var timer = $ShowTextTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +14,7 @@ func _ready():
 func set_text(text):
 	label.bbcode_text = text
 	label.set_visible_characters(0)
-	$ShowTextTimer.start()
+	timer.start()
 	emit_signal("start_talking")
 
 func all_text_appeared():
@@ -21,11 +22,14 @@ func all_text_appeared():
 
 func show_all_text():
 	label.set_visible_characters(label.get_total_character_count())
+	timer.stop()
+	emit_signal("all_text_appeared")
+	emit_signal("end_talking")
 
 func _on_ShowTextTimer_timeout():
 	label.set_visible_characters(label.get_visible_characters() + 1)
 	if not all_text_appeared():
-		$ShowTextTimer.start()
+		timer.start()
 	else:
 		emit_signal("all_text_appeared")
 		emit_signal("end_talking")
