@@ -266,7 +266,7 @@
 		"text" : "[i]The scary people with grim faces made my aunt cry and then they left.[/i]"
 	},
 	{
-		"background" : "living room",
+		"background" : "living room night",
 		"characters" : ["lucas young"],
 		"reduce_happiness" : 60,
 		"name" : "Squid",
@@ -296,7 +296,7 @@
 		"text" : "My aunt's voice is hoarse and quieter than usual.\nI walk down the stairs and I hear my aunt sobbing."
 	},
 	{
-		"background" : "living room",
+		"background" : "living room night",
 		"text" : "[i]I feel bad for not having been at her side when those guys came, but she sent me upstairs.[/i]"
 	},
 	{
@@ -1282,6 +1282,7 @@
 	},
 	{
 		"start_sleep" : true,
+		"background" : "living room night",
 		"text" : "[i]I enjoyed numerous hours of playing and chatting with my assertive friend before I sent him home and went to bed.[/i]"
 	},
 	{
@@ -2848,6 +2849,7 @@
 	},
 	{
 		"characters" : ["michael old surprised"],
+		"background" : "beach",
 		"music" : "",
 		"name" : "Michael",
 		"text" : "Lucas!"
@@ -3076,7 +3078,7 @@
 		"text" : "..."
 	},
 	{
-		"background" : "living room",
+		"background" : "living room night",
 		"characters" : ["lucas old"],
 		"name" : "Lucas",
 		"text" : "I’m back."
