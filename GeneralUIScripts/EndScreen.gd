@@ -1,6 +1,7 @@
 extends TextureRect
 
-signal hide_screen
+signal hide_screen()
+signal button_pressed()
 
 func _ready():
 	pass
@@ -16,5 +17,7 @@ func _on_EndScreen_gui_input(event):
 		if $EatingSquid.visible:
 			$EatingSquid.visible = false
 			$Credits.visible = true
+			emit_signal("button_pressed")
 		else:
+			emit_signal("button_pressed")
 			emit_signal("hide_screen")

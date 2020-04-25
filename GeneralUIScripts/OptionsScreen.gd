@@ -5,6 +5,7 @@ signal toggle_fullscreen(toggle_state)
 signal change_resolution(new_resolution)
 signal change_music_volume(new_volume)
 signal change_soundeffects_volume(new_volume)
+signal button_pressed()
 
 var resolutions = [
 	Vector2(960, 540),
@@ -41,12 +42,15 @@ func set_resolution_options():
 
 func _on_BackButton_pressed():
 	emit_signal("backButton_pressed")
+	emit_signal("button_pressed")
 
 func _on_FullscreenToggle_toggled(button_pressed):
 	emit_signal("toggle_fullscreen", button_pressed)
+	emit_signal("button_pressed")
 
 func _on_ResolutionButton_item_selected(id):
 	emit_signal("change_resolution", resolutions[id])
+	emit_signal("button_pressed")
 
 func _on_MusicSlider_value_changed(value):
 	emit_signal("change_music_volume", value)
