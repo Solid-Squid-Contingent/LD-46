@@ -64,9 +64,35 @@ onready var foremostBackground = $BackgroundShallowSeaCreatures
 
 export (String) var startingBackground = "field"
 
-# Called when the node enters the scene tree for the first time.
+# Used only for saving/loading purposes
+var currentCharacterNames setget set_currentCharacterNames, get_currentCharacterNames
+var backgroundName setget set_backgroundName, get_backgroundName
+
 func _ready():
 	change_background(startingBackground)
+
+func savedProperties():
+	return ["currentCharacterNames",
+		"backgroundName",
+		"talkingCharacterName"]
+
+func get_currentCharacterNames():
+	currentCharacterNames = []
+	for characterName in currentCharacters:
+		currentCharacterNames.append(characterName)
+	return currentCharacterNames
+	
+func set_currentCharacterNames(newCharacterNames):
+	add_characters(newCharacterNames)
+
+func get_backgroundName():
+	for backgroundName in backgroundMap:
+		if backgroundMap[backgroundName].visible:
+			return backgroundName
+	return "black"
+	
+func set_backgroundName(newBackgroundName):
+	change_background(newBackgroundName)
 
 func add_characters(listOfCharacters):
 	#TODO: Remove if we get lucas sprites

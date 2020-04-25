@@ -105,14 +105,12 @@ func _on_EndScreen_hide_screen():
 # warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
 	get_tree().paused = false
-
+	
 
 func _on_StartScreen_hide_screen():
 	hide_screen($StartScreen)
 	show_screen($StartMenuScreen)
-	
 
-
-func _on_StartMenuScreen_ContinueButton_pressed():
+func _on_StartMenuScreen_StartButton_pressed():
 	hide_screen($StartMenuScreen)
 	$DialogManager.print_next_dialog_line()

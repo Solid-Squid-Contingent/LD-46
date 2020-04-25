@@ -96,6 +96,15 @@ func _process(delta):
 			change_stage_to(stage + 1)
 			age = 0
 
+func savedProperties():
+	return ["age",
+		"stage",
+		"state",
+		"fullness",
+		"awakeness",
+		"fun",
+		"happiness"]
+
 func is_animating() -> bool:
 	return $Screen/HomeScreen.is_animating()
 

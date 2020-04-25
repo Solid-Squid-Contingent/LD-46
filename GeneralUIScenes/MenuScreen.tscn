@@ -56,24 +56,36 @@ __meta__ = {
 margin_left = 20.0
 margin_top = 20.0
 margin_right = 972.0
-margin_bottom = 816.0
+margin_bottom = 821.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
 margin_right = 952.0
-margin_bottom = 196.0
+margin_bottom = 157.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
 text = "Continue"
 expand_icon = true
 
-[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 200.0
+[node name="SaveButton" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 161.0
 margin_right = 952.0
-margin_bottom = 396.0
+margin_bottom = 318.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "Save Game"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="RestartButton" type="Button" parent="MarginContainer/VBoxContainer"]
+margin_top = 322.0
+margin_right = 952.0
+margin_bottom = 479.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -84,9 +96,9 @@ __meta__ = {
 }
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 400.0
+margin_top = 483.0
 margin_right = 952.0
-margin_bottom = 596.0
+margin_bottom = 640.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -97,9 +109,9 @@ __meta__ = {
 }
 
 [node name="QuitButton" type="Button" parent="MarginContainer/VBoxContainer"]
-margin_top = 600.0
+margin_top = 644.0
 margin_right = 952.0
-margin_bottom = 796.0
+margin_bottom = 801.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -108,6 +120,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ContinueButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

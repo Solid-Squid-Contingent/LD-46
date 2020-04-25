@@ -1,10 +1,9 @@
 extends TextureRect
 
 signal QuitButton_pressed()
-signal RestartButton_pressed()
+signal LoadButton_pressed()
 signal OptionsButton_pressed()
-signal ContinueButton_pressed()
-signal SaveButton_pressed()
+signal StartButton_pressed()
 signal button_pressed()
 
 
@@ -23,18 +22,15 @@ func _on_QuitButton_pressed():
 	emit_signal("QuitButton_pressed")
 	emit_signal("button_pressed")
 
-func _on_RestartButton_pressed():
-	emit_signal("RestartButton_pressed")
+func _on_LoadButton_pressed():
+	emit_signal("LoadButton_pressed")
+	emit_signal("StartButton_pressed")
 	emit_signal("button_pressed")
 
 func _on_OptionsButton_pressed():
 	emit_signal("OptionsButton_pressed")
 	emit_signal("button_pressed")
 
-func _on_ContinueButton_pressed():
-	emit_signal("ContinueButton_pressed")
-	emit_signal("button_pressed")
-
-func _on_SaveButton_pressed():
-	emit_signal("SaveButton_pressed")
+func _on_StartButton_pressed():
+	emit_signal("StartButton_pressed")
 	emit_signal("button_pressed")
