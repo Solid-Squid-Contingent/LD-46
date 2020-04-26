@@ -18,12 +18,12 @@ func save_object(object):
 
 func save_game():
 	var saveFile = File.new()
-	saveFile.open("user://AbyssalAccessory.save", File.WRITE)
+	saveFile.open("user://saves/AbyssalAccessory.save", File.WRITE)
 	saveFile.store_line(String(currentSaveVersion))
 	var saveNodes = get_tree().get_nodes_in_group("Persistent")
 	for node in saveNodes:
 		var nodeData = save_object(node)
-		saveFile.store_line((nodeData))
+		saveFile.store_line(to_json(nodeData))
 	saveFile.close()
 	
 
@@ -34,10 +34,10 @@ func load_object(object, data):
 
 func load_game():
 	var saveFile = File.new()
-	if not saveFile.file_exists("user://AbyssalAccessory.save"):
+	if not saveFile.file_exists("user://saves/AbyssalAccessory.save"):
 		return # Error! We don't have a save to load. TODO
 
-	saveFile.open("user://AbyssalAccessory.save", File.READ)
+	saveFile.open("user://saves/AbyssalAccessory.save", File.READ)
 	var savedSaveVersion = int(saveFile.get_line())
 	if savedSaveVersion != currentSaveVersion:
 		return # Error! Wrong version. TODO
@@ -45,7 +45,7 @@ func load_game():
 	while not saveFile.eof_reached():
 		var currentLine = saveFile.get_line()
 		if currentLine.length() > 0:
-			var currentData = to_json(currentLine)
+			var currentData = parse_json(currentLine)
 			
 			var saveNodes = get_tree().get_nodes_in_group("Persistent")
 			for node in saveNodes:

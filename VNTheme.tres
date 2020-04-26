@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=26 format=2]
+[gd_resource type="Theme" load_steps=28 format=2]
 
 [ext_resource path="res://Resources/Graphics/GeneralUI/button_pressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://Resources/Fonts/orange-kid.regular.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,15 @@
 [ext_resource path="res://Resources/Graphics/GeneralUI/eq.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Graphics/GeneralUI/toggle_on.png" type="Texture" id=7]
 [ext_resource path="res://Resources/Graphics/GeneralUI/toggle_off.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Graphics/GeneralUI/menu_button_disabled.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxTexture" id=18]
+content_margin_left = 30.0
+content_margin_right = 10.0
+content_margin_top = 0.0
+content_margin_bottom = 60.0
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 168, 25 )
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -62,7 +71,7 @@ Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 0
 Button/fonts/font = null
-Button/styles/disabled = null
+Button/styles/disabled = SubResource( 18 )
 Button/styles/focus = SubResource( 1 )
 Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = ExtResource( 3 )
