@@ -41,7 +41,7 @@ onready var stageNameMap = {
 	"adult" : STAGE.adult,
 	"old" : STAGE.old}
 
-var age: float = 0
+#TODO: More setter
 var stage: int = STAGE.egg setget change_stage_to
 var state: int = STATE.home setget change_state_to
 var sleeping: bool = false
@@ -52,11 +52,9 @@ var fun: float = 100
 var happiness: float = 100
 
 var needDecay: float = 0
+
 export(float) var needDecayPerSecond: float = 1
-export(int) var agingPerSecond: int = 5
-
 export(float) var needGain = 10
-
 export(int) var minimumNeedAfterDialog: int = 15
 
 var minigameScreenScene = preload("res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn")
@@ -89,16 +87,9 @@ func _process(delta):
 				change_fun(-0.5)
 				change_happiness(-0.5)
 				change_awakeness(10)
-	
-	if state == STATE.home:
-		age += delta * agingPerSecond
-		if stage < STAGE.old and age > 100:
-			change_stage_to(stage + 1)
-			age = 0
 
 func savedProperties():
-	return ["age",
-		"stage",
+	return ["stage",
 		"state",
 		"fullness",
 		"awakeness",
