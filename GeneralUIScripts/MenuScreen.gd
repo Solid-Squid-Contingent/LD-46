@@ -14,7 +14,6 @@ func _ready():
 
 func popup():
 	visible = true
-	get_tree().paused = true
 
 func go_away():
 	visible = false

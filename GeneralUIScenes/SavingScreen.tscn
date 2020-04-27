@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://VNTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Resources/Graphics/GeneralUI/menu_background.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/orange-kid.regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GeneralUIScripts/SavingScreen.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="SavingScreen" type="TextureRect"]
+pause_mode = 2
+margin_right = 1200.0
+margin_bottom = 675.0
+theme = ExtResource( 1 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 148.0
+margin_right = 1348.0
+margin_bottom = 868.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_constants/separation = 29
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="TitleContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_right = 1200.0
+margin_bottom = 121.0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="VBoxContainer/TitleContainer"]
+margin_right = 1200.0
+margin_bottom = 121.0
+custom_fonts/font = SubResource( 1 )
+text = "Select a name for the save"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 150.0
+margin_right = 1200.0
+margin_bottom = 257.0
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/MarginContainer"]
+margin_right = 1200.0
+margin_bottom = 107.0
+clear_button_enabled = true
+placeholder_text = "Save name"
+
+[node name="ListContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 286.0
+margin_right = 1200.0
+margin_bottom = 586.0
+custom_constants/margin_right = 30
+custom_constants/margin_left = 50
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ItemList" type="ItemList" parent="VBoxContainer/ListContainer"]
+margin_left = 50.0
+margin_right = 1170.0
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 615.0
+margin_right = 1200.0
+margin_bottom = 868.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_top = 83
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BackButton" type="Button" parent="VBoxContainer/BackContainer"]
+margin_top = 83.0
+margin_right = 1200.0
+margin_bottom = 253.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+[connection signal="text_entered" from="VBoxContainer/MarginContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="item_selected" from="VBoxContainer/ListContainer/ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="pressed" from="VBoxContainer/BackContainer/BackButton" to="." method="_on_BackButton_pressed"]

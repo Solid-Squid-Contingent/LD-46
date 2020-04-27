@@ -90,3 +90,27 @@ func _on_ChapterScreen_pause_music():
 func _on_ChapterScreen_unpause_music():
 	$MusicPlayer.set_stream_paused(false)
 	$MusicPlayer.play()
+
+
+func _on_StartMenuScreen_LoadButton_pressed():
+	show_screen($LoadingScreen)
+
+func _on_LoadingScreen_backButton_pressed():
+	$LoadingScreen.go_away()
+
+func _on_LoadingScreen_loadButton_pressed(fileName):
+	$SaveManager.load_game(fileName)
+	hide_screen($LoadingScreen)
+	hide_screen($StartMenuScreen)
+	$DialogManager.print_next_dialog_line()
+
+func _on_MenuScreen_SaveButton_pressed():
+	show_screen($SavingScreen)
+
+func _on_SavingScreen_backButton_pressed():
+	$SavingScreen.go_away()
+
+func _on_SavingScreen_save(fileName):
+	$SaveManager.save_game(fileName)
+	hide_screen($SavingScreen)
+	hide_screen($MenuScreen)

@@ -27,11 +27,6 @@ animations = [ {
 "name": "idle",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "sad",
-"speed": 6.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "eat",
@@ -41,6 +36,11 @@ animations = [ {
 "loop": true,
 "name": "happy",
 "speed": 1.5
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "sad",
+"speed": 6.0
 }, {
 "frames": [ ExtResource( 7 ), ExtResource( 4 ) ],
 "loop": true,

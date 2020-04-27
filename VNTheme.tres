@@ -10,15 +10,13 @@
 [ext_resource path="res://Resources/Graphics/GeneralUI/toggle_off.png" type="Texture" id=8]
 [ext_resource path="res://Resources/Graphics/GeneralUI/menu_button_disabled.png" type="Texture" id=9]
 
-[sub_resource type="StyleBoxTexture" id=18]
+[sub_resource type="StyleBoxTexture" id=1]
 content_margin_left = 30.0
 content_margin_right = 10.0
 content_margin_top = 0.0
 content_margin_bottom = 60.0
 texture = ExtResource( 9 )
 region_rect = Rect2( 0, 0, 168, 25 )
-
-[sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
@@ -32,14 +30,14 @@ region_rect = Rect2( 0, 0, 168, 25 )
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxTexture" id=9]
+[sub_resource type="StyleBoxTexture" id=10]
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 224, 9 )
-
-[sub_resource type="ImageTexture" id=10]
 
 [sub_resource type="ImageTexture" id=11]
 
@@ -51,7 +49,9 @@ region_rect = Rect2( 0, 0, 224, 9 )
 
 [sub_resource type="ImageTexture" id=15]
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="ImageTexture" id=16]
+
+[sub_resource type="StyleBoxTexture" id=17]
 content_margin_left = 5.0
 content_margin_right = 5.0
 content_margin_top = 5.0
@@ -59,20 +59,20 @@ content_margin_bottom = 5.0
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 162, 82 )
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=18]
 size = 80
 font_data = ExtResource( 2 )
 
 [resource]
-default_font = SubResource( 17 )
+default_font = SubResource( 18 )
 Button/colors/font_color = Color( 0.784314, 0.784314, 0.784314, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 0
 Button/fonts/font = null
-Button/styles/disabled = SubResource( 18 )
-Button/styles/focus = SubResource( 1 )
+Button/styles/disabled = SubResource( 1 )
+Button/styles/focus = SubResource( 2 )
 Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = ExtResource( 3 )
 Button/styles/pressed = ExtResource( 1 )
@@ -88,12 +88,12 @@ CheckButton/icons/off = ExtResource( 8 )
 CheckButton/icons/off_disabled = null
 CheckButton/icons/on = ExtResource( 7 )
 CheckButton/icons/on_disabled = null
-CheckButton/styles/disabled = SubResource( 2 )
-CheckButton/styles/focus = SubResource( 3 )
-CheckButton/styles/hover = SubResource( 4 )
-CheckButton/styles/hover_pressed = SubResource( 5 )
-CheckButton/styles/normal = SubResource( 6 )
-CheckButton/styles/pressed = SubResource( 7 )
+CheckButton/styles/disabled = SubResource( 3 )
+CheckButton/styles/focus = SubResource( 4 )
+CheckButton/styles/hover = SubResource( 5 )
+CheckButton/styles/hover_pressed = SubResource( 6 )
+CheckButton/styles/normal = SubResource( 7 )
+CheckButton/styles/pressed = SubResource( 8 )
 HScrollBar/icons/decrement = null
 HScrollBar/icons/decrement_highlight = null
 HScrollBar/icons/increment = null
@@ -107,8 +107,8 @@ HSlider/icons/grabber = ExtResource( 4 )
 HSlider/icons/grabber_disabled = ExtResource( 4 )
 HSlider/icons/grabber_highlight = ExtResource( 4 )
 HSlider/icons/tick = null
-HSlider/styles/grabber_area = SubResource( 8 )
-HSlider/styles/slider = SubResource( 9 )
+HSlider/styles/grabber_area = SubResource( 9 )
+HSlider/styles/slider = SubResource( 10 )
 OptionButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 OptionButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 OptionButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -116,7 +116,7 @@ OptionButton/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 OptionButton/constants/arrow_margin = 2
 OptionButton/constants/hseparation = 2
 OptionButton/fonts/font = null
-OptionButton/icons/arrow = SubResource( 10 )
+OptionButton/icons/arrow = SubResource( 11 )
 OptionButton/styles/disabled = null
 OptionButton/styles/focus = null
 OptionButton/styles/hover = null
@@ -129,14 +129,14 @@ PopupMenu/colors/font_color_hover = Color( 0.88, 0.88, 0.88, 1 )
 PopupMenu/constants/hseparation = 4
 PopupMenu/constants/vseparation = 4
 PopupMenu/fonts/font = null
-PopupMenu/icons/checked = SubResource( 11 )
-PopupMenu/icons/radio_checked = SubResource( 12 )
-PopupMenu/icons/radio_unchecked = SubResource( 13 )
-PopupMenu/icons/submenu = SubResource( 14 )
-PopupMenu/icons/unchecked = SubResource( 15 )
+PopupMenu/icons/checked = SubResource( 12 )
+PopupMenu/icons/radio_checked = SubResource( 13 )
+PopupMenu/icons/radio_unchecked = SubResource( 14 )
+PopupMenu/icons/submenu = SubResource( 15 )
+PopupMenu/icons/unchecked = SubResource( 16 )
 PopupMenu/styles/hover = null
 PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
-PopupMenu/styles/panel = SubResource( 16 )
+PopupMenu/styles/panel = SubResource( 17 )
 PopupMenu/styles/panel_disabled = null
 PopupMenu/styles/separator = null

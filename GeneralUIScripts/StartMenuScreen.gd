@@ -24,7 +24,6 @@ func _on_QuitButton_pressed():
 
 func _on_LoadButton_pressed():
 	emit_signal("LoadButton_pressed")
-	emit_signal("StartButton_pressed")
 	emit_signal("button_pressed")
 
 func _on_OptionsButton_pressed():
