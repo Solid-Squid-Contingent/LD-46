@@ -99,11 +99,24 @@ func get_current_dialog_data():
 
 
 func print_next_dialog_line():
+	go_to_next_line()
+	print_current_dialog_line()
+
+func go_to_next_line():
+	while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
+		dataPosition.pop_back()
+		maxDataPosition.pop_back()
+		dialogChoices.pop_back()
+	
+	if dataPosition.size() > 0:
+		dataPosition[dataPosition.size() - 1] += 1
+	
+	emit_signal("advance_dialog")
+
+func print_current_dialog_line():
 	if dataPosition.size() == 0:
 		emit_signal("game_ended")
 		return
-		
-	emit_signal("advance_dialog")
 	
 	var currentData = get_current_dialog_data()
 	
@@ -112,33 +125,13 @@ func print_next_dialog_line():
 	if currentData.has("name") and currentData["name"] == "Squid":
 		tamagotchiTextBox.set_text(currentData["text"])
 	else:
-		if currentData.has("name"):
-			vnTextBox.set_name(currentData["name"])
-		
-		if currentData.has("talking_name"):
-			emit_signal("start_talking", currentData["talking_name"])
-		elif currentData.has("name"):
-			if currentData["name"].length() != 0:
-				emit_signal("start_talking", currentData["name"])
-		else:
-			emit_signal("start_talking", "")
-			
 		vnTextBox.set_text(currentData["text"])
 	
 	if currentData.has("choices"):
 		beforeChoice = true
-	else:
-		while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
-			dataPosition.pop_back()
-			maxDataPosition.pop_back()
-			dialogChoices.pop_back()
-		
-		if dataPosition.size() > 0:
-			dataPosition[dataPosition.size() - 1] += 1
 	
 	if currentData["text"].length() == 0:
 		print_next_dialog_line()
-
 
 func execute_side_effects(currentData):
 	if currentData.has("music"):
@@ -172,6 +165,18 @@ func execute_side_effects(currentData):
 	
 	if currentData.has("requireEating"):
 		requireEating = true
+	
+	if currentData.has("name") and currentData["name"] != "Squid":
+			vnTextBox.set_name(currentData["name"])
+	
+	if not currentData.has("name") or currentData["name"] != "Squid":
+		if currentData.has("talking_name"):
+			emit_signal("start_talking", currentData["talking_name"])
+		elif currentData.has("name"):
+			if currentData["name"].length() != 0:
+				emit_signal("start_talking", currentData["name"])
+		else:
+			emit_signal("start_talking", "")
 
 func spawn_choice_buttons():
 	beforeChoice = false

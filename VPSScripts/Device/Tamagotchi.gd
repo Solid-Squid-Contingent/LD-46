@@ -42,8 +42,8 @@ onready var stageNameMap = {
 	"old" : STAGE.old}
 
 var age: float = 0
-var stage: int = STAGE.egg
-var state: int = STATE.home
+var stage: int = STAGE.egg setget change_stage_to
+var state: int = STATE.home setget change_state_to
 var sleeping: bool = false
 
 var fullness: float = 100
@@ -234,6 +234,16 @@ func switch_to_home():
 	$Screen/GameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.home
+
+func change_state_to(newState):
+	if newState == STATE.off:
+		switch_to_off()
+	elif newState == STATE.gameOver:
+		switch_to_gameOver()
+	elif newState == STATE.home:
+		switch_to_home()
+	elif newState == STATE.minigame:
+		switch_to_minigame()
 
 func restart_minigame():
 	minigameScreen.queue_free()

@@ -82,7 +82,7 @@ func _on_StartScreen_hide_screen():
 
 func _on_StartMenuScreen_StartButton_pressed():
 	hide_screen($StartMenuScreen)
-	$DialogManager.print_next_dialog_line()
+	$DialogManager.print_current_dialog_line()
 
 func _on_ChapterScreen_pause_music():
 	$MusicPlayer.set_stream_paused(true)
@@ -102,7 +102,7 @@ func _on_LoadingScreen_loadButton_pressed(fileName):
 	$SaveManager.load_game(fileName)
 	hide_screen($LoadingScreen)
 	hide_screen($StartMenuScreen)
-	$DialogManager.print_next_dialog_line()
+	$DialogManager.print_current_dialog_line()
 
 func _on_MenuScreen_SaveButton_pressed():
 	show_screen($SavingScreen)
