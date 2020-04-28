@@ -13,6 +13,7 @@ signal reduce_everything(amount)
 
 signal play_music(name)
 signal play_sound_effect(name)
+signal button_pressed()
 
 signal change_characters(characters)
 signal change_background(background)
@@ -20,14 +21,14 @@ signal change_background(background)
 signal start_talking(name)
 signal end_talking()
 
-signal turn_tamagotchi_on
-signal turn_tamagotchi_off
+signal turn_tamagotchi_on()
+signal turn_tamagotchi_off()
 signal change_squid_stage(newStageName)
 
 signal new_chapter(number, subtitle)
 
-signal advance_dialog
-signal game_ended
+signal advance_dialog()
+signal game_ended()
 
 export(String, FILE) var startFileName
 
@@ -186,6 +187,7 @@ func _on_ChoiceButtonPressed(choice):
 			child.queue_free()
 		
 		inChoice = false
+		emit_signal("button_pressed")
 		
 		print_next_dialog_line()
 
