@@ -263,7 +263,7 @@ func _on_FoodButton_pressed():
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
-		minigameScreen.moveLeft()
+		minigameScreen.move_left()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
@@ -284,7 +284,7 @@ func _on_PlayButton_pressed():
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
-		minigameScreen.moveRight()
+		minigameScreen.move_right()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()

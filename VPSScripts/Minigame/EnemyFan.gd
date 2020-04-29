@@ -5,7 +5,7 @@ func shoot():
 		var bullet = bulletScene.instance()
 		bullet.position = position
 # warning-ignore:integer_division
-		bullet.velocity = Vector2(0, -15).rotated(int(i / 2) * 0.5)
+		bullet.velocity = Vector2(0, -bulletSpeed).rotated(int(i / 2) * 0.5)
 		if i % 2:
 			bullet.velocity.x = -bullet.velocity.x
 		get_parent().add_child(bullet)

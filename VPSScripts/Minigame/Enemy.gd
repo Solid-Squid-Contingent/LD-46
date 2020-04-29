@@ -1,30 +1,42 @@
 extends Area2D
 
 var paused: bool = false
+var speed: float = 2.0
+var bulletSpeed: float = 15.0
 
 export(PackedScene) var bulletScene = preload("res://VPSScenes/Minigame/EnemyBullet.tscn")
+onready var bulletTimer = $BulletTimer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 func _process(delta):
 	if not paused:
-		position.y -= delta * 2
+		position.y -= delta * speed
+
+func set_speed(newSpeed):
+	speed = newSpeed
+
+func set_bullet_speed(newSpeed):
+	bulletSpeed = newSpeed
+
+func set_bullet_time(newTime):
+	bulletTimer.set_wait_time(newTime)
+	bulletTimer.start(newTime)
 
 func pause():
 	paused = true
-	$BulletTimer.set_paused(true)
+	bulletTimer.set_paused(true)
 
 func unpause():
 	paused = false
-	$BulletTimer.set_paused(false)
+	bulletTimer.set_paused(false)
 
 func shoot():
 	var bullet = bulletScene.instance()
 	bullet.position = position
-	bullet.velocity = Vector2(0, -15)
+	bullet.velocity = Vector2(0, -bulletSpeed)
 	get_parent().add_child(bullet)
 
 
