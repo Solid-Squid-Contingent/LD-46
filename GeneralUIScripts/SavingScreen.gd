@@ -23,6 +23,9 @@ func _on_BackButton_pressed():
 	emit_signal("button_pressed")
 
 func _on_LineEdit_text_entered(new_text):
+	if not new_text.is_valid_filename():
+		return #TODO: Error message
+
 	emit_signal("save", new_text)
 	emit_signal("button_pressed")
 
