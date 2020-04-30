@@ -1,5 +1,7 @@
 extends Area2D
 
+signal death()
+
 var paused: bool = false
 var speed: float = 2.0
 var bulletSpeed: float = 15.0
@@ -42,6 +44,7 @@ func shoot():
 
 # warning-ignore:unused_argument
 func _on_Area2D_area_entered(area):
+	emit_signal("death")
 	queue_free()
 
 

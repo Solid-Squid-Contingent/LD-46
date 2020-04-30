@@ -69,7 +69,6 @@ onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessU
 func _ready():
 	emit_signal("switch_to_pet")
 	switch_to_home()
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -86,6 +85,16 @@ func _process(delta):
 				change_fun(-0.5)
 				change_happiness(-0.5)
 				change_awakeness(10)
+
+func _input(event):
+	if event.is_action_pressed("food"):
+		press_food_button()
+	elif event.is_action_pressed("sleep"):
+		press_sleep_button()
+	elif event.is_action_pressed("play"):
+		press_play_button()
+	elif event.is_action_pressed("extra"):
+		press_extra_button()
 
 func savedProperties():
 	return ["stage",
@@ -249,16 +258,16 @@ func change_state_to(newState):
 	elif newState == STATE.minigame:
 		switch_to_minigame()
 
+
 func restart_minigame():
 	minigameScreen.queue_free()
 	minigameScreen = minigameScreenScene.instance()
 	$Screen.call_deferred("add_child", minigameScreen)
 	minigameScreen.connect("game_over", $Screen, "_on_MinigameScreen_game_over")
 	get_tree().call_deferred("call_group", "minigame_objects", "pause")
-	
-	
 
-func _on_FoodButton_pressed():
+
+func press_food_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -269,7 +278,8 @@ func _on_FoodButton_pressed():
 			toggle_sleep()
 		change_fullness(needGain)
 
-func _on_SleepButton_pressed():
+
+func press_sleep_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -279,7 +289,7 @@ func _on_SleepButton_pressed():
 		toggle_sleep()
 
 
-func _on_PlayButton_pressed():
+func press_play_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -292,7 +302,7 @@ func _on_PlayButton_pressed():
 			switch_to_minigame()
 
 
-func _on_ExtraButton_pressed():
+func press_extra_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -305,46 +315,48 @@ func _on_ExtraButton_pressed():
 		change_happiness(needGain)
 
 
+func _on_FoodButton_pressed():
+	press_food_button()
+
+func _on_SleepButton_pressed():
+	press_sleep_button()
+
+func _on_PlayButton_pressed():
+	press_play_button()
+
+func _on_ExtraButton_pressed():
+	press_extra_button()
+
 func _on_DialogManager_reduce_awakeness(amount):
 	change_awakeness(-amount, minimumNeedAfterDialog)
-
 
 func _on_DialogManager_reduce_fullness(amount):
 	change_fullness(-amount, minimumNeedAfterDialog)
 
-
 func _on_DialogManager_reduce_fun(amount):
 	change_fun(-amount, minimumNeedAfterDialog)
-
 
 func _on_DialogManager_reduce_happiness(amount):
 	change_happiness(-amount, minimumNeedAfterDialog)
 
-
 func _on_DialogManager_reduce_everything(amount):
 	change_all_needs(-amount, minimumNeedAfterDialog)
-
 
 func _on_TamagotchiTextBox_start_talking():
 	emit_signal("start_talking")
 
-
 func _on_TamagotchiTextBox_end_talking():
 	emit_signal("end_talking")
-
 
 func _on_DialogManager_turn_tamagotchi_off():
 	switch_to_off()
 
-
 func _on_DialogManager_turn_tamagotchi_on():
 	switch_to_home()
-
 
 func _on_Screen_game_over():
 	restart_minigame()
 	switch_to_gameOver()
-
 
 func _on_DialogManager_change_squid_stage(newStageName):
 	change_stage_to(stageNameMap[newStageName])

@@ -10,36 +10,36 @@ const enemyScenes = [
 ]
 
 const bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
-onready var timer = $EnemySpawnTimer
+onready var scoreLabel = $ScoreLabel
+onready var spawnTimer = $EnemySpawnTimer
+onready var difficultyTimer = $EnemySpawnTimer
 
 export (int) var minX = 5
 export (int) var maxX = 65
+
 var enemySpeed = 2.0
 var enemyBulletSpeed = 15.0
 var enemyBulletTime = 3.0
+var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$EnemySpawnTimer.set_paused(true)
 
-func _input(event):
-	if event.is_action_pressed("ui_left"):
-		move_left()
-	elif event.is_action_pressed("ui_right"):
-		move_right()
-	elif event.is_action_pressed("ui_up"):
-		shoot()
-		
 
 func spawn_enemy():
 	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
 	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
 	enemy.position.x -= fmod(enemy.position.x, 5.0)
+	enemy.connect("death", self, "_on_Enemy_death")
 	add_child(enemy)
 	enemy.set_speed(enemySpeed)
 	enemy.set_bullet_time(enemyBulletTime)
 	enemy.set_bullet_speed(enemyBulletSpeed)
 
+func increase_score():
+	score += 1
+	$ScoreLabel.set_text(String(score))
 
 func move_left():
 	$Player.position.x -= 5
@@ -62,11 +62,15 @@ func pause():
 
 func unpause():
 	$EnemySpawnTimer.set_paused(false)
+
 	
 func increase_difficulty():
+	difficultyTimer.set_wait_time(difficultyTimer.get_wait_time() + 0.1)
+	difficultyTimer.start()
+	
 	var thingToIncrease = randi() % 4
 	if thingToIncrease == 0:
-		timer.set_wait_time(timer.get_wait_time() / 1.5)
+		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.5)
 	elif thingToIncrease == 1:
 		enemySpeed += 0.5
 	elif thingToIncrease == 2:
@@ -95,3 +99,7 @@ func _on_EnemySpawnTimer_timeout():
 
 func _on_DifficultyIncreaseTimer_timeout():
 	increase_difficulty()
+
+
+func _on_Enemy_death():
+	increase_score()
