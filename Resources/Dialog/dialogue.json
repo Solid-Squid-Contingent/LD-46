@@ -19,7 +19,7 @@
 	},
 	{
 		"name" : "Mom",
-		"characters" : ["christine","lucas young"],
+		"characters" : ["christine happy","lucas young"],
 		"music" : "everyday",
 		"text" : "I want to give something to you, Lucas."
 	},
@@ -50,7 +50,8 @@
 		"text" : "Hehe.\nThat it is.\nAnd you know what?"
 	},
 	{
-		"text" : "It even helped me throughout my life.\nIt encouraged and supported me.\nCan you believe that?"
+		"text" : "It even helped me throughout my life.\nIt encouraged and supported me.\nCan you believe that?",
+		"characters" : ["christine","lucas young"],
 	},
 	{
 		"text" : "But you have to promise me one thing, honey.\nYou will have to look out for it. Care for it."
@@ -65,7 +66,8 @@
 				"next" :
 				[
 					{
-						"text" : "That’s the spirit!"
+						"text" : "That’s the spirit!",
+						"characters" : ["christine happy","lucas young"],
 					}
 				]
 			},
@@ -91,21 +93,25 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "This Tamagotchi means a lot to me.\nAnd that’s exactly why I’m giving it to you.\nI can’t really look after it when I’m at the bottom of the ocean."
+		"text" : "This Tamagotchi means a lot to me.\nAnd that’s exactly why I’m giving it to you.\nI can’t really look after it when I’m at the bottom of the ocean.",
+		"characters" : ["christine","lucas young"],
 	},
 	{
 		"name" : "Lucas",
-		"text" : "Do you really have to go Mom?\nTo the bottom of the ocean? Isn’t that dangerous?"
+		"text" : "Do you really have to go Mom?\nTo the bottom of the ocean? Isn’t that dangerous?",
+		"characters" : ["christine sad","lucas young"],
 	},
 	{
 		"text" : "[i]Mom suddenly falls silent and looks out the window as if searching for something.\nHer gaze returns to me and I see her smiling gently.[/i]"
 	},
 	{
 		"name" : "Mom",
-		"text" : "Yeah. I think that is my calling."
+		"text" : "Yeah. I think that is my calling.",
+		"characters" : ["christine happy","lucas young"],
 	},
 	{
-		"text" : "Well... and it also is my responsibility."
+		"text" : "Well... and it also is my responsibility.",
+		"characters" : ["christine","lucas young"],
 	},
 	{
 		"text" : "My team and I have been working day and night for this project, you know?"
@@ -130,7 +136,8 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "That’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count."
+		"text" : "That’s right. It is a good friend. As long as you keep it alive of course.\nI have had it for more years than I can count.",
+		"characters" : ["christine happy","lucas young"],
 	},
 	{
 		"text" : "In many ways it is more reliable than a real friend..."
@@ -147,7 +154,8 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "[i]sigh[/i]"
+		"text" : "[i]sigh[/i]",
+		"characters" : ["christine","lucas young"],
 	},
 	{
 		"text" : "Even Ryan's Burger Joint, yes."
@@ -158,7 +166,8 @@
 		"text" : "I’m really hungry!"
 	},
 	{
-		"text" : "Oh, another one’s hungry?"
+		"text" : "Oh, another one’s hungry?",
+		"characters" : ["christine surprised","lucas young"]
 	},
 	{
 		"name" : "Lucas",
@@ -166,13 +175,15 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "Yes, occasionally. You know I wasn’t joking when I said the squid gave me advice and encouraged me."
+		"text" : "Yes, occasionally. You know I wasn’t joking when I said the squid gave me advice and encouraged me.",
+		"characters" : ["christine happy","lucas young"]
 	},
 	{
 		"text" : "Well to be fair it usually demands more than it gives, haha."
 	},
 	{
-		"text" : "... Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know."
+		"text" : "... Like now. It’s crying.\nGood grief, it’s almost as needy as someone else I know.",
+		"characters" : ["christine","lucas young"]
 	},
 	{
 		"name" : "Lucas",
@@ -191,13 +202,16 @@
 		"text" : ""
 	},
 	{
-		"text" : "Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit."
+		"text" : "Yeah just like that. Guess you are a natural. Now I have no qualms leaving you two alone for a bit.",
+		"characters" : ["christine happy","lucas young"]
+
 	},
 	{
 		"text" : "But sometimes it will have other needs besides food. Like sleeping. Playing.\nYou know, just like everyone else."
 	},
 	{
-		"text" : "Except unlike everyone else it can’t take care of these things on its own."
+		"text" : "Except unlike everyone else it can’t take care of these things on its own.",
+		"characters" : ["christine","lucas young"]
 	},
 	{
 		"name" : "Lucas",
@@ -213,7 +227,8 @@
 	},
 	{
 		"name" : "Mom",
-		"text" : "Maybe. Hehe.\nSometimes I really think it has a mind of its own."
+		"text" : "Maybe. Hehe.\nSometimes I really think it has a mind of its own.",
+		"characters" : ["christine happy","lucas young"]
 	},
 	{
 		"text" : "Well then... Let’s go to Ryan’s Burger Joint."
@@ -444,7 +459,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "Man, that’s crazy. I dig it."
+						"text" : "Man, that’s crazy. I dig it.",
+						"characters" : ["lucas adult", "michael happy"]
 					},
 					{
 						"name" : "Lucas",
@@ -453,7 +469,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "Yeah, I had one too. Years back.\nFun thing. A dolphin if you can believe that.\nIt died."
+						"text" : "Yeah, I had one too. Years back.\nFun thing. A dolphin if you can believe that.\nIt died.",
+						"characters" : ["lucas adult", "michael sad"]
 					},
 					{
 						"name" : "Lucas",
@@ -462,7 +479,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "Yeah. Maybe that says something about me?\nWell I guess they never last too long.\nHow old is yours?"
+						"text" : "Yeah. Maybe that says something about me?\nWell I guess they never last too long.\nHow old is yours?",
+						"characters" : ["lucas adult", "michael"]
 					},
 					{
 						"name" : "Lucas",
@@ -471,7 +489,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "Are you kidding me?\nThat’s crazy."
+						"text" : "Are you kidding me?\nThat’s crazy.",
+						"characters" : ["lucas adult", "michael surprised"]
 					},
 					{
 						"name" : "Lucas",
@@ -552,7 +571,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "With no touchscreen and four buttons?\nA two-colored display?\nNo cameras whatsoever?"
+						"text" : "With no touchscreen and four buttons?\nA two-colored display?\nNo cameras whatsoever?",
+						"characters" : ["lucas adult", "michael sad"]
 					},
 					{
 						"name" : "Lucas",
@@ -561,7 +581,8 @@
 					{
 						"name" : "???",
 						"talking_name" : "michael",
-						"text" : "Well but I already saw your Tamagotchi, so even if this is a phone, which I do not doubt, mind you...\nThen it’s still at the very least a Tamagotchi App?"
+						"text" : "Well but I already saw your Tamagotchi, so even if this is a phone, which I do not doubt, mind you...\nThen it’s still at the very least a Tamagotchi App?",
+						"characters" : ["lucas adult", "michael"]
 					},
 					{
 						"name" : "Lucas",
@@ -577,7 +598,8 @@
 	{
 		"name" : "???",
 		"talking_name" : "michael",
-		"text" : "Oh, sorry, I’m Michael by the way."
+		"text" : "Oh, sorry, I’m Michael by the way.",
+		"characters" : ["lucas adult", "michael happy"]
 	},
 	{
 		"name" : "Lucas",
@@ -601,7 +623,8 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "Only people who are different think that.\nOnce you are like everyone else you wish you were different."
+		"text" : "Only people who are different think that.\nOnce you are like everyone else you wish you were different.",
+		"characters" : ["lucas adult", "michael"]
 	},
 	{
 		"name" : "Lucas",
@@ -610,6 +633,7 @@
 	{
 		"name" : "Michael",
 		"text" : "Beats me, Lucas.\nI said that because it sounded neat.\nBut can something sounding so neat be wrong?",
+		"characters" : ["lucas adult", "michael happy"],
 		"choices" :
 		[
 			{
@@ -638,7 +662,8 @@
 				[
 					{
 						"name" : "Michael",
-						"text" : "Well you say that, Lucas, but your eyes are telling a different story."
+						"text" : "Well you say that, Lucas, but your eyes are telling a different story.",
+						"characters" : ["lucas adult", "michael"]
 					},
 					{
 						"name" : "Lucas",
@@ -676,7 +701,8 @@
 				[
 					{
 						"name" : "Michael",
-						"text" : "... Oh."
+						"text" : "... Oh.",
+						"characters" : ["lucas adult", "michael sad"]
 					},
 					{
 						"text" : "I feared as much.\nA bit preachy, innit?\nWell I appreciate your opinion."
@@ -687,7 +713,8 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "...Sorry for derailing our conversation like that."
+		"text" : "...Sorry for derailing our conversation like that.",
+		"characters" : ["lucas adult", "michael"]
 	},
 	{
 		"reduce_happiness" : 25,
@@ -725,7 +752,8 @@
 						"text" : "Alright, but I can’t really become friends with your Tamagotchi..."
 					},
 					{
-						"text" : "Unless I become friends with you first.\nHow does that sound?"
+						"text" : "Unless I become friends with you first.\nHow does that sound?",
+						"characters" : ["lucas adult", "michael happy"]
 					},
 					{
 						"name" : "Lucas",
@@ -738,7 +766,8 @@
 				"next" :
 				[
 					{
-						"text" : "Man, your voice has an impressive range, Lucas.\nWell anyways, glad you want to be my friend."
+						"text" : "Man, your voice has an impressive range, Lucas.\nWell anyways, glad you want to be my friend.",
+						"characters" : ["lucas adult", "michael happy"]
 					}
 				]
 			}
@@ -829,7 +858,8 @@
 	},
 	{
 		"name" : "Michael",
-		"text" : "You are kidding me."
+		"text" : "You are kidding me.",
+		"characters" : ["lucas adult", "michael surprised"]
 	},
 	{
 		"name" : "Lucas",
@@ -837,6 +867,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael happy"],
 		"text" : "No, I just mean I love it too.\nYou know, I want to be a marine biologist.\nIt feels like there is a whole different world down there."
 	},
 	{
@@ -848,6 +879,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "What’s with that frowny face of yours?"
 	},
 	{
@@ -855,6 +887,7 @@
 		"text" : "Oh sorry. I didn’t mean to... Look like this.\nIt’s just that, my mother disappeared while exploring the deep."
 	},
 	{
+		"characters" : ["lucas adult", "michael sad"],
 		"text" : "It brings back a lot of memories of her."
 	},
 	{
@@ -873,6 +906,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "I don’t mind.\nYou must have been through a lot."
 	},
 	{
@@ -892,6 +926,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael happy"],
 		"text" : "Yeah.\nSee you tomorrow."
 	},
 	{
@@ -917,7 +952,7 @@
 		"text" : "[i]Today that underwater compendium has invaded my house.[/i]"
 	},
 	{
-		"characters" : ["lucas adult", "michael"],
+		"characters" : ["lucas adult", "michael surprised"],
 		"name" : "Michael",
 		"text" : "Dude, you have your house all for yourself?"
 	},
@@ -935,6 +970,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "No, I mean you living alone at your age."
 	},
 	{
@@ -943,6 +979,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael happy"],
 		"text" : "That’s what you say but I bet you get really lonely all the time.\nMaybe I should visit more often?"
 	},
 	{
@@ -954,6 +991,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "So?"
 	},
 	{
@@ -1028,7 +1066,8 @@
 				[
 					{
 
-						"text" : "... No you don’t."
+						"text" : "... No you don’t.",
+						"characters" : ["lucas adult", "michael sad"]
 					},
 					{
 						"name" : "Lucas",
@@ -1044,6 +1083,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas adult", "michael"],
 						"text" : "Are you doing this on purpose?"
 					},
 					{
@@ -1128,10 +1168,12 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael surprised"],
 		"text" : "That’s impressive... I think."
 	},
 	{
 		"name" : "Lucas",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "But lately it has been acting up despite the fact that all its needs were met."
 	},
 	{
@@ -1176,6 +1218,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas adult", "michael happy"],
 						"text" : "Well, yes. More or less.\nDoes the thought terrify you? Don’t wanna commit?"
 					},
 					{
@@ -1193,6 +1236,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas adult", "michael"],
 						"text" : "Mean."
 					}
 				]
@@ -1231,6 +1275,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas adult", "michael happy"],
 						"text" : "Yeah, that’s what I’m talking about."
 					}
 				]
@@ -1239,6 +1284,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael"],
 		"text" : "It’s settled then."
 	},
 	{
@@ -1303,7 +1349,7 @@
 		"text" : "This is...\nThe ocean."
 	},
 	{
-		"text" : "[i]It’s so dark. How deep am I?\nThere is barely any animal here.\nIs this the abyssal zone?[/i]"
+		"text" : "[i]It’s so dark. How deep am I?\nThere are barely any animals here.\nIs this the abyssal zone?[/i]"
 	},
 	{
 		"text" : "[i]It’s getting even darker.\nI am sinking.[/i]"
@@ -1423,10 +1469,12 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "michael sad"],
 		"text" : "Come on.\nYou got nothing to lose.\nYou promised me yesterday."
 	},
 	{
 		"name" : "Lucas",
+		"characters" : ["lucas adult", "michael happy"],
 		"text" : "I did no such thing.\nOh, fine! I just gotta talk right?"
 	},
 	{
@@ -1486,12 +1534,14 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters" : ["lucas adult", "sarah happy"],
 						"text" : "As a principle of mine I don’t debate the human condition with someone I don’t know a lot about."
 					},
 					{
 						"text" : "You know, things can get quite heated if you don’t know who you are really talking to."
 					},
 					{
+						"characters" : ["lucas adult", "sarah"],
 						"text" : "But that would still leave us with... the world, the sea and the duality of man."
 					}
 				]
@@ -1532,6 +1582,7 @@
 					},
 					{
 						"name" : "Lucas",
+						"characters" : ["lucas adult", "sarah happy"],
 						"text" : "[i]To my surprise she does not look at me in disgust.\nShe smiles and blushes ever so slightly.[/i]"
 					},
 					{
@@ -1549,6 +1600,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah surprised"],
 		"text" : "Excuse me?"
 	},
 	{
@@ -1560,6 +1612,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah happy"],
 		"text" : "Well that’s a daring Tamagotchi you have there.\nCan I see it?"
 	},
 	{
@@ -1583,6 +1636,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah"],
 		"text" : "Why?"
 	},
 	{
@@ -1633,6 +1687,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah surprised"],
 		"text" : "Whow!"
 	},
 	{
@@ -1641,6 +1696,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah"],
 		"text" : "It uh... Sorta turned into an egg?"
 	},
 	{
@@ -1663,6 +1719,7 @@
 				[
 					{
 						"name" : "Sarah",
+						"characters" : ["lucas adult", "sarah sad"],
 						"text" : "I’m sorry, I didn’t mean to transform your squid into an egg."
 					},
 					{
@@ -1681,6 +1738,7 @@
 				[
 					{
 						"name" : "Sarah",
+						"characters" : ["lucas adult", "sarah sad"],
 						"text" : "Please don’t.\nI’m sorry... I."
 					},
 					{
@@ -1702,6 +1760,7 @@
 				[
 					{
 						"name" : "Sarah",
+						"characters" : ["lucas adult", "sarah sad"],
 						"text" : "I’m sorry..."
 					},
 					{
@@ -1722,6 +1781,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah"],
 		"text" : "You think so?"
 	},
 	{
@@ -1732,7 +1792,7 @@
 		"text" : "[i]I say that, but I would lie if I said I wasn’t worried.\nIt never did anything like that in six years.[/i]"
 	},
 	{
-		"characters" : ["lucas adult", "sarah", "michael"],
+		"characters" : ["lucas adult", "sarah", "michael happy"],
 		"name" : "Michael",
 		"text" : "Yo, what’s up guys?"
 	},
@@ -1742,6 +1802,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "sarah", "michael surprised"],
 		"text" : "You what now?"
 	},
 	{
@@ -1750,6 +1811,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "sarah", "michael"],
 		"text" : "Yes, I heard that, hence why I asked ‘You what now?’."
 	},
 	{
@@ -1758,6 +1820,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas adult", "sarah", "michael happy"],
 		"text" : "Well, I’ll be damned.\nNow I will be extra careful for Sarah not to touch me.\nDon’t wanna be turned into an egg..."
 	},
 	{
@@ -1770,6 +1833,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah happy", "michael happy"],
 		"text" : "You are not a squid, Michael."
 	},
 	{
@@ -1786,6 +1850,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas adult", "sarah", "michael happy"],
 		"text" : "I doubt there is someone who doesn’t get along with Michael."
 	},
 	{
@@ -1897,7 +1962,7 @@
 		"text" : "[i]Michael hastily puts down the garden gnome.[/i]"
 	},
 	{
-		"characters": ["michael", "lucas adult", "sarah"],
+		"characters": ["michael happy", "lucas adult", "sarah"],
 		"name" : "Michael",
 		"text" : "Don’t mind if we do."
 	},
@@ -1911,6 +1976,7 @@
 	},
 	{
 		"name" : "Lucas",
+		"characters": ["michael", "lucas adult", "sarah"],
 		"text" : "[i]He must have seen the despair in my eyes and quickly shuts up.[/i]"
 	},
 	{
@@ -1927,6 +1993,7 @@
 	},
 	{
 		"name" : "Lucas",
+		"characters": ["michael sad", "lucas adult", "sarah sad"],
 		"text" : "Well they are not around anymore."
 	},
 	{
@@ -1947,6 +2014,7 @@
 		"text" : "Haha, don’t worry about it, that’s in the past.\nI’m just glad you guys came over.\nCan I get you anything to drink?"
 	},
 	{
+		"characters": ["michael", "lucas adult", "sarah"],
 		"text" : "[i]We sit down and talk for a bit.\nMichael does his best to lift up the mood.\nAnd he succeeds, as usual.[/i]"
 	},
 	{
@@ -2005,6 +2073,7 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters": ["michael sad", "lucas adult", "sarah sad"],
 						"text" : "That must have been difficult for you..."
 					},
 					{
@@ -2046,6 +2115,7 @@
 	},
 	{
 		"name" : "Lucas",
+		"characters": ["michael sad", "lucas adult", "sarah sad"],
 		"text" : "You know... That Tamagotchi belonged to her.\nShe gave it to me the day before she left...\nIt really means a lot to me."
 	},
 	{
@@ -2056,6 +2126,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters": ["michael", "lucas adult", "sarah"],
 		"text" : "Talking about your squid, is it still an egg?"
 	},
 	{
@@ -2067,6 +2138,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters": ["michael", "lucas adult", "sarah surprised"],
 		"text" : "Really? Can I see?"
 	},
 	{
@@ -2078,6 +2150,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters": ["michael", "lucas adult", "sarah"],
 		"text" : "Damn, it evolved.\nDid you level it up?\nMaybe Sarah is like a water stone or something?"
 	},
 	{
@@ -2090,6 +2163,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters": ["michael happy", "lucas adult", "sarah happy"],
 		"text" : "Really?\nI think it got even cuter."
 	},
 	{
@@ -2125,7 +2199,7 @@
 	},
 	{
 		"name" : "Sarah",
-		"text" : "Just how bleak is your outlook on adulthood, Michael."
+		"text" : "Just how bleak is your outlook on adulthood, Michael?"
 	},
 	{
 		"name" : "Lucas",
@@ -2133,6 +2207,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters": ["michael", "lucas adult", "sarah happy"],
 		"text" : "Hehehe."
 	},
 	{
@@ -2150,6 +2225,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters": ["michael happy", "lucas adult", "sarah happy"],
 		"text" : "Hear that?\nIt craves nourishment.\nAren’t you gonna feed it?"
 	},
 	{
