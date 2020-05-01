@@ -2325,6 +2325,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["sarah sad", "lucas adult"],
 		"text" : "I actually wanted to talk to you.\nJust you.\nWithout Michael."
 	},
 	{
@@ -2341,6 +2342,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["sarah", "lucas adult"],
 		"text" : "Haha... I know what you mean."
 	},
 	{
@@ -2352,6 +2354,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["sarah happy", "lucas adult"],
 		"text" : "I... Uh. I just wanted to let you know that I will miss you.",
 		"choices" :
 		[
@@ -2368,6 +2371,7 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters" : ["sarah", "lucas adult"],
 						"text" : "..."
 					},
 					{
@@ -2397,6 +2401,7 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters" : ["sarah", "lucas adult"],
 						"text" : "..."
 					}
 				]
@@ -2429,6 +2434,7 @@
 	},
 	{
 		"name" : "Lucas",
+		"characters" : ["sarah sad", "lucas adult"],
 		"text" : "[i]Sarah starts looking annoyed.\nIt seems her nervousness disappeared to accommodate her newly found annoyance.[/i]"
 	},
 	{
@@ -2439,6 +2445,7 @@
 		"text" : "..."
 	},
 	{
+		"characters" : ["sarah", "lucas adult"],
 		"text" : "I [i]like[/i] you, you idiot."
 	},
 	{
@@ -2478,6 +2485,7 @@
 						"text" : "Will you go out with me?"
 					},
 					{
+						"characters" : ["sarah happy", "lucas adult"],
 						"text" : "[i]I can see Sarah tear up a bit.\nShe rushes over to hug me.[/i]"
 					},
 					{
@@ -2506,6 +2514,7 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters" : ["sarah happy", "lucas adult"],
 						"text" : "I can’t believe you made me wait three years for this."
 					},
 					{
@@ -2523,7 +2532,7 @@
 						"text" : "[i]sigh[/i]"
 					},
 					{
-						"text" : "Yes.\nAnd I think he will never like anyone as much as the sea.\nAre you sure that [i]you[/i] don’t like Michael?"
+						"text" : "Yes.\nAnd I know he will never like anyone as much as the sea.\nAre you sure that [i]you[/i] don’t like Michael?"
 					},
 					{
 						"name" : "Lucas",
@@ -2547,6 +2556,7 @@
 					},
 					{
 						"name" : "Sarah",
+						"characters" : ["sarah happy", "lucas adult"],
 						"text" : "Yeah... no kidding."
 					},
 					{
@@ -2614,6 +2624,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["michael old sad", "lucas old"],
 		"text" : "You couldn’t feel my profound uneasiness when you were driving?\nI thought we had some kind of soul bond."
 	},
 	{
@@ -2622,6 +2633,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["michael old", "lucas old"],
 		"text" : "That too.\nI can’t believe a laid-back guy like you would be such an aggressive driver."
 	},
 	{
@@ -2636,6 +2648,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["michael old happy", "lucas old"],
 		"text" : "Yeah, I’m just pulling your leg.\nYou know, I still can’t believe we really get to use a submarine."
 	},
 	{
@@ -2648,6 +2661,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["michael old", "lucas old"],
 		"text" : "Maybe I should shift my research to your Tamagotchi.\nSometimes it’s really uncanny how fitting the things it says are."
 	},
 	{
@@ -2684,6 +2698,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["michael old happy", "lucas old"],
 		"text" : "Well, make sure to hold on to your socks lest they will be blown off."
 	},
 	{
