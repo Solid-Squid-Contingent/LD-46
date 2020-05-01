@@ -2729,7 +2729,7 @@
 		"text" : "Is that a harpoon?"
 	},
 	{
-		"characters" : ["lucas old", "michael old"],
+		"characters" : ["lucas old", "michael old happy"],
 		"name" : "Michael",
 		"text" : "What does it look like to you?"
 	},
@@ -2763,6 +2763,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas old", "michael old"],
 		"text" : "Hm? No."
 	},
 	{
@@ -2796,6 +2797,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas old", "michael old happy"],
 		"text" : "I knew you would ask that.\n..."
 	},
 	{
@@ -2816,6 +2818,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas old", "michael old"],
 		"text" : "More like time to work.\nYou know, our fight starts now."
 	},
 	{
@@ -2846,10 +2849,12 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas old", "michael old surprised"],
 		"text" : "Wow, look at you, tough guy."
 	},
 	{
 		"text" : "Wanna make it a competition?",
+		"characters" : ["lucas old", "michael old"],
 		"choices" :
 		[
 			{
@@ -2957,7 +2962,7 @@
 		"text" : "Just like that.\n..."
 	},
 	{
-		"characters" : ["michael old surprised","lucas old"],
+		"characters" : ["michael old sad","lucas old"],
 		"text" : "Dude... don’t do that to me again.\nFuck...\nWhat would I have told Sarah if..."
 	},
 	{
@@ -2969,11 +2974,10 @@
 		"text" : "[i]He slaps my face a tad too strongly.[/i]"
 	},
 	{
-		"characters" : ["michael old surprised","lucas old surprised"],
+		"characters" : ["michael old sad","lucas old surprised"],
 		"text" : "Ouch, fuck!\nHey, I’m with you. Don’t slap me like that."
 	},
 	{
-		"characters" : ["michael old sad","lucas old surprised"],
 		"name" : "Michael",
 		"text" : "What do you mean you are with me?\nYou just called me ‘Mom’ some seconds ago!\nYou are not with anyone right now."
 	},
@@ -3044,6 +3048,7 @@
 						"text" : "..."
 					},
 					{
+						"characters" : ["michael old sad","lucas old"],
 						"name" : "Michael",
 						"text" : "We were already past five minutes, so I dove back up to see if you were there.\nBut you weren’t."
 					},
@@ -3089,6 +3094,7 @@
 		"text" : "Don’t ‘eeeeh’ me you idiot.\nYou almost fucking died.\nYou are soon to be a father so don’t fucking die."
 	},
 	{
+		"characters" : ["michael old sad","lucas old"],
 		"text" : "That’s like the ‘Being a Dad 101’:\n‘Don’t die before your child is born.’\n‘And best not die before it reached adulthood either.’"
 	},
 	{
@@ -3096,6 +3102,7 @@
 		"text" : "Thanks, Michael."
 	},
 	{
+		"characters" : ["michael old","lucas old"],
 		"name" : "Michael",
 		"text" : "For what?\nThe advice?\nThe verbal abuse?"
 	},
@@ -3197,6 +3204,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas old","sarah old sad","michael old"],
 		"text" : "... Just how do you two look?!\nWhat happened to you?"
 	},
 	{
@@ -3228,6 +3236,7 @@
 	},
 	{
 		"name" : "Sarah",
+		"characters" : ["lucas old","sarah old","michael old"],
 		"text" : "Sorry, what was that?"
 	},
 	{
@@ -3265,6 +3274,7 @@
 	},
 	{
 		"name" : "Michael",
+		"characters" : ["lucas old","sarah old","michael old happy"],
 		"text" : "The office is fabulous by the way.\nNot fucked up at all."
 	},
 	{
@@ -3327,6 +3337,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas old","sarah old","michael old sad"],
 						"text" : "Damn, that really hurts, Lucas."
 					},
 					{
@@ -3339,6 +3350,7 @@
 					},
 					{
 						"name" : "Lucas",
+						"characters" : ["lucas old","sarah old","michael old happy"],
 						"text" : "... Imagine the coolest, hippest office you have ever seen...\nLike in one of those hip start-ups where you only have to work as much as you want."
 					},
 					{
@@ -3387,6 +3399,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas old","sarah old","michael old sad"],
 						"text" : "But you should see it, it’s made from the wood of-"
 					},
 					{
@@ -3399,6 +3412,7 @@
 					},
 					{
 						"name" : "Michael",
+						"characters" : ["lucas old","sarah old","michael old happy"],
 						"text" : "I knew you would come around."
 					}
 				]
@@ -3406,6 +3420,7 @@
 		]
 	},
 	{
+		"characters" : ["lucas old","sarah old","michael old"],
 		"text" : "So... Enough about the office.\nHow is the baby?"
 	},
 	{
@@ -3458,7 +3473,7 @@
 		"text" : ""
 	},
 	{
-		"characters" : ["sarah old","lucas old"],
+		"characters" : ["sarah old sad","lucas old"],
 		"name" : "Sarah",
 		"text" : "Did something happen with Michael?"
 	},
@@ -3574,14 +3589,14 @@
 					},
 					{
 						"name" : "Lucas",
-						"text" : "I’m sure his ‘eel’ is fine.\nI think you can spare him from that talk."
+						"text" : "I’m sure his ‘eel’ is fine.\nI think we can spare him from that talk."
 					},
 					{
-						"text" : "I... Uh. Can ask about the well-being of his little Micheel.\nIf you insist."
+						"text" : "Besides, you know Michael isn't interested in that kind of stuff.\nWe shouldn't make him feel uncomfortable."
 					},
 					{
 						"name" : "Sarah",
-						"text" : "I will think about it.\nFor now, let’s go to bed."
+						"text" : "Hmmm. Well let's talk about that another day.\nFor now, let’s go to bed."
 					}
 				]
 			},
@@ -3960,7 +3975,7 @@
 	},
 	{
 		"name" : "Michael",
-		"characters": ["lucas", "michael"],
+		"characters": ["lucas old", "michael old"],
 		"text" : "We will let you in now, buckle up."
 	},
 	{
@@ -3970,7 +3985,7 @@
 	{
 		"name" : "Lucas",
 		"text" : "Down.",
-		"characters": ["lucas"],
+		"characters": [],
 		"sfx" : "watersplash",
 		"background": "shallow sea",
 		"music" : "deep sea"
