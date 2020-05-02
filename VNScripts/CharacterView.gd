@@ -83,6 +83,7 @@ func get_currentCharacterNames():
 	return currentCharacterNames
 	
 func set_currentCharacterNames(newCharacterNames):
+	remove_characters()
 	add_characters(newCharacterNames)
 
 func get_backgroundName():
