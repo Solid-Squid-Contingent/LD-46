@@ -41,7 +41,7 @@ onready var stageNameMap = {
 	"adult" : STAGE.adult,
 	"old" : STAGE.old}
 
-var stage: int = STAGE.egg setget change_stage_to
+var stage: int = STAGE.egg setget change_stage_to_without_animation
 var state: int = STATE.home setget change_state_to
 var sleeping: bool = false setget set_sleeping
 
@@ -184,9 +184,7 @@ func react_to_low_needs():
 func die():
 	emit_signal("tamagotchi_died")
 
-func change_stage_to(newStage):
-	if stage == STAGE.egg:
-		emit_signal("hatch")
+func change_stage_to_without_animation(newStage):
 	if newStage == STAGE.egg and state == STATE.minigame:
 		restart_minigame()
 		switch_to_home()
@@ -196,6 +194,11 @@ func change_stage_to(newStage):
 	show_sprite(stage)
 	if stage == STAGE.old:
 		emit_signal("switch_to_sick")
+
+func change_stage_to(newStage):
+	if stage == STAGE.egg:
+		emit_signal("hatch")
+	change_stage_to_without_animation(newStage)
 	
 func is_satisfied(need) -> bool:
 	if need >= 100:
