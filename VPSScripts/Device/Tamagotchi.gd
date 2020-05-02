@@ -52,12 +52,16 @@ var happiness: float = 100 setget set_happiness
 
 var needDecay: float = 0
 
+var highScore: int = 0 setget update_high_score
+
 export(float) var needDecayPerSecond: float = 1
 export(float) var needGain = 10
 export(int) var minimumNeedAfterDialog: int = 15
 
 const minigameScreenScene = preload("res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn")
 onready var minigameScreen = $Screen/MinigameScreen
+onready var homeScreen = $Screen/HomeScreen
+onready var gameOverScreen = $Screen/GameOverScreen
 
 onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
 onready var awakeProgressBar = $Screen/HomeScreen/UIContainer/AwakenessUI/TextureProgress
@@ -69,7 +73,6 @@ onready var sickHappyProgressBar = $Screen/HomeScreen/UIContainer/SickHappinessU
 func _ready():
 	emit_signal("switch_to_pet")
 	switch_to_home()
-	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -87,8 +90,19 @@ func _process(delta):
 				change_happiness(-0.5)
 				change_awakeness(10)
 
+func _input(event):
+	if event.is_action_pressed("food"):
+		press_food_button()
+	elif event.is_action_pressed("sleep"):
+		press_sleep_button()
+	elif event.is_action_pressed("play"):
+		press_play_button()
+	elif event.is_action_pressed("extra"):
+		press_extra_button()
+
 func savedProperties():
 	return ["stage",
+		"highScore",
 		"state",
 		"fullness",
 		"awakeness",
@@ -96,7 +110,7 @@ func savedProperties():
 		"happiness"]
 
 func is_animating() -> bool:
-	return $Screen/HomeScreen.is_animating()
+	return homeScreen.is_animating()
 	
 func set_sleeping(newState):
 	sleeping = newState
@@ -215,30 +229,31 @@ func show_sprite(newStage):
 	
 
 func switch_to_minigame():
-	$Screen/HomeScreen.visible = false
+	homeScreen.visible = false
 	minigameScreen.visible = true
-	$Screen/GameOverScreen.visible = false
+	gameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "unpause")
 	state = STATE.minigame
 
-func switch_to_gameOver():
-	$Screen/HomeScreen.visible = false
+func switch_to_game_over(score = 0):
+	homeScreen.visible = false
 	minigameScreen.visible = false
-	$Screen/GameOverScreen.visible = true
+	gameOverScreen.visible = true
+	gameOverScreen.set_score(score)
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.gameOver
 
 func switch_to_off():
-	$Screen/HomeScreen.visible = false
+	homeScreen.visible = false
 	minigameScreen.visible = false
-	$Screen/GameOverScreen.visible = false
+	gameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.off
 
 func switch_to_home():
-	$Screen/HomeScreen.visible = true
+	homeScreen.visible = true
 	minigameScreen.visible = false
-	$Screen/GameOverScreen.visible = false
+	gameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.home
 
@@ -246,11 +261,12 @@ func change_state_to(newState):
 	if newState == STATE.off:
 		switch_to_off()
 	elif newState == STATE.gameOver:
-		switch_to_gameOver()
+		switch_to_game_over()
 	elif newState == STATE.home:
 		switch_to_home()
 	elif newState == STATE.minigame:
 		switch_to_minigame()
+
 
 func restart_minigame():
 	minigameScreen.queue_free()
@@ -258,21 +274,26 @@ func restart_minigame():
 	$Screen.call_deferred("add_child", minigameScreen)
 	minigameScreen.connect("game_over", $Screen, "_on_MinigameScreen_game_over")
 	get_tree().call_deferred("call_group", "minigame_objects", "pause")
-	
-	
 
-func _on_FoodButton_pressed():
+func update_high_score(score):
+	if score > highScore:
+		highScore = score
+		gameOverScreen.set_high_score(highScore)
+
+
+func press_food_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
-		minigameScreen.moveLeft()
+		minigameScreen.move_left()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
 		change_fullness(needGain)
 
-func _on_SleepButton_pressed():
+
+func press_sleep_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -282,12 +303,12 @@ func _on_SleepButton_pressed():
 		toggle_sleep()
 
 
-func _on_PlayButton_pressed():
+func press_play_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
 	elif state == STATE.minigame:
-		minigameScreen.moveRight()
+		minigameScreen.move_right()
 	elif not is_animating() and state != STATE.off:
 		if sleeping:
 			toggle_sleep()
@@ -295,7 +316,7 @@ func _on_PlayButton_pressed():
 			switch_to_minigame()
 
 
-func _on_ExtraButton_pressed():
+func press_extra_button():
 	emit_signal("button_pressed")
 	if state == STATE.gameOver:
 		switch_to_home()
@@ -308,46 +329,49 @@ func _on_ExtraButton_pressed():
 		change_happiness(needGain)
 
 
+func _on_FoodButton_pressed():
+	press_food_button()
+
+func _on_SleepButton_pressed():
+	press_sleep_button()
+
+func _on_PlayButton_pressed():
+	press_play_button()
+
+func _on_ExtraButton_pressed():
+	press_extra_button()
+
 func _on_DialogManager_reduce_awakeness(amount):
 	change_awakeness(-amount, minimumNeedAfterDialog)
-
 
 func _on_DialogManager_reduce_fullness(amount):
 	change_fullness(-amount, minimumNeedAfterDialog)
 
-
 func _on_DialogManager_reduce_fun(amount):
 	change_fun(-amount, minimumNeedAfterDialog)
-
 
 func _on_DialogManager_reduce_happiness(amount):
 	change_happiness(-amount, minimumNeedAfterDialog)
 
-
 func _on_DialogManager_reduce_everything(amount):
 	change_all_needs(-amount, minimumNeedAfterDialog)
-
 
 func _on_TamagotchiTextBox_start_talking():
 	emit_signal("start_talking")
 
-
 func _on_TamagotchiTextBox_end_talking():
 	emit_signal("end_talking")
-
 
 func _on_DialogManager_turn_tamagotchi_off():
 	switch_to_off()
 
-
 func _on_DialogManager_turn_tamagotchi_on():
 	switch_to_home()
 
-
-func _on_Screen_game_over():
+func _on_Screen_game_over(score):
 	restart_minigame()
-	switch_to_gameOver()
-
+	update_high_score(score)
+	switch_to_game_over(score)
 
 func _on_DialogManager_change_squid_stage(newStageName):
 	change_stage_to(stageNameMap[newStageName])

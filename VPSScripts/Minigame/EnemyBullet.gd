@@ -11,6 +11,9 @@ func _process(delta):
 	if not paused:
 		move(delta)
 
+func set_velocity(newVelocity):
+	velocity = newVelocity
+
 func move(delta):
 	position += delta * velocity
 

@@ -1,67 +1,116 @@
 extends Container
 
-signal game_over
+signal game_over(score)
 
-var timePassed : float = 5
-var enemyScenes = [
+const enemyScenes = [
 	preload("res://VPSScenes/Minigame/EnemyFan.tscn"),
 	preload("res://VPSScenes/Minigame/EnemyTargeted.tscn"),
 	preload("res://VPSScenes/Minigame/EnemySine.tscn"),
 	preload("res://VPSScenes/Minigame/EnemySpawning.tscn")
 ]
 
-var bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
+const bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
+
+onready var scoreLabel = $ScoreLabel
+onready var heartContainer = $HeartContainer
+onready var spawnTimer = $EnemySpawnTimer
+onready var difficultyTimer = $EnemySpawnTimer
+onready var player = $Player 
+onready var spawnPositionLeft = $EnemySpawnPosition1
+onready var spawnPositionRight = $EnemySpawnPosition2
 
 export (int) var minX = 5
 export (int) var maxX = 65
 
+var enemySpeed = 2.0
+var enemyBulletSpeed = 15.0
+var enemyBulletTime = 3.0
+var score = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$EnemySpawnTimer.set_paused(true)
+	spawnTimer.set_paused(true)
+	difficultyTimer.set_paused(true)
 
-func spawnEnemy():
+
+func spawn_enemy():
 	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
-	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
+	enemy.position = spawnPositionLeft.position.linear_interpolate(spawnPositionRight.position, randf())
 	enemy.position.x -= fmod(enemy.position.x, 5.0)
+	enemy.connect("death", self, "_on_Enemy_death")
 	add_child(enemy)
+	enemy.set_speed(enemySpeed)
+	enemy.set_bullet_time(enemyBulletTime)
+	enemy.set_bullet_speed(enemyBulletSpeed)
 
+func increase_score():
+	score += 1
+	scoreLabel.set_text(String(score))
 
-func moveLeft():
-	$Player.position.x -= 5
-	if $Player.position.x < minX:
-		$Player.position.x += 5
+func move_left():
+	player.position.x -= 5
+	if player.position.x < minX:
+		player.position.x += 5
 
-func moveRight():
-	$Player.position.x += 5
-	if $Player.position.x > maxX:
-		$Player.position.x -= 5
+func move_right():
+	player.position.x += 5
+	if player.position.x > maxX:
+		player.position.x -= 5
 	
 
 func shoot():
 	var bullet = bulletScene.instance()
-	bullet.position = $Player.position
+	bullet.position = player.position
 	add_child(bullet)
 
 func pause():
-	$EnemySpawnTimer.set_paused(true)
+	spawnTimer.set_paused(true)
+	difficultyTimer.set_paused(true)
 
 func unpause():
-	$EnemySpawnTimer.set_paused(false)
+	spawnTimer.set_paused(false)
+	difficultyTimer.set_paused(false)
+
+	
+func increase_difficulty():
+	difficultyTimer.set_wait_time(difficultyTimer.get_wait_time() + 0.3)
+	difficultyTimer.start()
+	
+	var thingToIncrease = randi() % 4
+	if thingToIncrease == 0:
+		spawnTimer.stop()
+		spawn_enemy()
+		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.1)
+		spawnTimer.start()
+	elif thingToIncrease == 1:
+		enemySpeed += 0.5
+	elif thingToIncrease == 2:
+		enemyBulletSpeed += 2.0
+	elif thingToIncrease == 3:
+		enemyBulletTime /= 1.5
 
 
 # warning-ignore:unused_argument
 func _on_Player_area_entered(area):
-	for heart in $HeartContainer.get_children():
+	for heart in heartContainer.get_children():
 		if heart.visible:
 			heart.visible = false
 			break
 	
-	for heart in $HeartContainer.get_children():
+	for heart in heartContainer.get_children():
 		if heart.visible:
 			return
 			
-	emit_signal("game_over")
+	emit_signal("game_over", score)
 
 
 func _on_EnemySpawnTimer_timeout():
-	spawnEnemy()
+	spawn_enemy()
+
+
+func _on_DifficultyIncreaseTimer_timeout():
+	increase_difficulty()
+
+
+func _on_Enemy_death():
+	increase_score()

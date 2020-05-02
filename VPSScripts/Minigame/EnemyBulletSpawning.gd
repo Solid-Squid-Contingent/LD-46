@@ -2,9 +2,16 @@ extends "res://VPSScripts/Minigame/EnemyBullet.gd"
 
 var bulletScene = preload("res://VPSScenes/Minigame/EnemyBullet.tscn")
 
+onready var bulletTimer = $MoreBulletsTimer
+
+func set_velocity(newVelocity):
+	.set_velocity(newVelocity)
+	bulletTimer.set_wait_time(30 / newVelocity.length())
+	bulletTimer.start()
+
 func _on_MoreBulletsTimer_timeout():
 	for i in range(5):
 		var bullet = bulletScene.instance()
 		bullet.position = position
-		bullet.velocity = Vector2(0, -15).rotated((i * 2 + 1) * 2 * PI / 10)
+		bullet.velocity = velocity.rotated((i * 2 + 1) * 2 * PI / 10)
 		get_parent().add_child(bullet)

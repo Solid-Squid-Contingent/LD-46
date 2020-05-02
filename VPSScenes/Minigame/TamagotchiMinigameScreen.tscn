@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://VPSScenes/Minigame/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://VPSScripts/Minigame/TamagotchiMinigameScreen.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Resources/Graphics/Minigame/UI/left_arrow.png" type="Texture" id=6]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/exit_icon.png" type="Texture" id=7]
 [ext_resource path="res://Resources/Graphics/Minigame/UI/right_arrow.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Fonts/joystix.tres" type="DynamicFont" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.81548, 71.3524 )
@@ -79,10 +80,10 @@ position = Vector2( 30.2271, 24.2481 )
 scale = Vector2( 1, 1 )
 
 [node name="EnemySpawnPosition1" type="Position2D" parent="."]
-position = Vector2( 5, 75 )
+position = Vector2( 5, 73 )
 
 [node name="EnemySpawnPosition2" type="Position2D" parent="."]
-position = Vector2( 61, 75 )
+position = Vector2( 61, 73 )
 
 [node name="OutOfBoundsArea" type="Area2D" parent="."]
 position = Vector2( -68.9486, -4.96664 )
@@ -106,10 +107,30 @@ position = Vector2( 101, 109 )
 shape = SubResource( 2 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 1.5
+autostart = true
+
+[node name="DifficultyIncreaseTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
 autostart = true
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 31.1977, 75.4453 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+anchor_left = 0.837
+anchor_top = 0.096
+anchor_right = 0.925
+anchor_bottom = 0.15
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.1, 0.1 )
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 2
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
+[connection signal="timeout" from="DifficultyIncreaseTimer" to="." method="_on_DifficultyIncreaseTimer_timeout"]
+[connection signal="death" from="Enemy" to="." method="_on_Enemy_death"]
