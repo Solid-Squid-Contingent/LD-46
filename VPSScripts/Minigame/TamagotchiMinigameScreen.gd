@@ -73,12 +73,15 @@ func unpause():
 
 	
 func increase_difficulty():
-	difficultyTimer.set_wait_time(difficultyTimer.get_wait_time() + 0.1)
+	difficultyTimer.set_wait_time(difficultyTimer.get_wait_time() + 0.3)
 	difficultyTimer.start()
 	
 	var thingToIncrease = randi() % 4
 	if thingToIncrease == 0:
-		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.3)
+		spawnTimer.stop()
+		spawn_enemy()
+		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.1)
+		spawnTimer.start()
 	elif thingToIncrease == 1:
 		enemySpeed += 0.5
 	elif thingToIncrease == 2:

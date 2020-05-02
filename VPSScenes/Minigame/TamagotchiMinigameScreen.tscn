@@ -80,10 +80,10 @@ position = Vector2( 30.2271, 24.2481 )
 scale = Vector2( 1, 1 )
 
 [node name="EnemySpawnPosition1" type="Position2D" parent="."]
-position = Vector2( 5, 75 )
+position = Vector2( 5, 73 )
 
 [node name="EnemySpawnPosition2" type="Position2D" parent="."]
-position = Vector2( 61, 75 )
+position = Vector2( 61, 73 )
 
 [node name="OutOfBoundsArea" type="Area2D" parent="."]
 position = Vector2( -68.9486, -4.96664 )
@@ -112,6 +112,7 @@ autostart = true
 
 [node name="DifficultyIncreaseTimer" type="Timer" parent="."]
 wait_time = 2.0
+one_shot = true
 autostart = true
 
 [node name="Enemy" parent="." instance=ExtResource( 4 )]

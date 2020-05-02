@@ -25,7 +25,7 @@ func set_bullet_speed(newSpeed):
 
 func set_bullet_time(newTime):
 	bulletTimer.set_wait_time(newTime)
-	bulletTimer.start(newTime)
+	bulletTimer.start()
 
 func pause():
 	paused = true
@@ -38,8 +38,8 @@ func unpause():
 func shoot():
 	var bullet = bulletScene.instance()
 	bullet.position = position
-	bullet.velocity = Vector2(0, -bulletSpeed)
 	get_parent().add_child(bullet)
+	bullet.set_velocity(Vector2(0, -bulletSpeed))
 
 
 # warning-ignore:unused_argument
