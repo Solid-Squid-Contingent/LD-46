@@ -82,7 +82,7 @@ func _on_StartScreen_hide_screen():
 
 func _on_StartMenuScreen_StartButton_pressed():
 	hide_screen($StartMenuScreen)
-	$DialogManager.print_current_dialog_line()
+	$DialogManager.start_dialog()
 
 func _on_ChapterScreen_pause_music():
 	$MusicPlayer.set_stream_paused(true)

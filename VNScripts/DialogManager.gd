@@ -68,7 +68,11 @@ func savedProperties():
 		"inChoice",
 		"requireEating",
 		"currentChapter"]
-
+		
+		
+func start_dialog():
+	execute_advance_side_effects(get_current_dialog_data())
+	print_current_dialog_line()
 
 func load_file(fileName):
 	var data_file = File.new()
@@ -112,6 +116,7 @@ func go_to_next_line():
 		dataPosition[dataPosition.size() - 1] += 1
 	
 	emit_signal("advance_dialog")
+	execute_advance_side_effects(get_current_dialog_data())
 
 func print_current_dialog_line():
 	if dataPosition.size() == 0:
@@ -120,7 +125,7 @@ func print_current_dialog_line():
 	
 	var currentData = get_current_dialog_data()
 	
-	execute_side_effects(currentData)
+	execute_print_side_effects(currentData)
 	
 	if currentData.has("name") and currentData["name"] == "Squid":
 		tamagotchiTextBox.set_text(currentData["text"])
@@ -133,17 +138,19 @@ func print_current_dialog_line():
 	if currentData["text"].length() == 0:
 		print_next_dialog_line()
 
-func execute_side_effects(currentData):
-	if currentData.has("music"):
-		emit_signal("play_music", currentData["music"])
-		
+func execute_advance_side_effects(currentData):
 	if currentData.has("new_chapter"):
 		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
 		currentChapter += 1
-		
+	
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
+		
+
+func execute_print_side_effects(currentData):
+	if currentData.has("music"):
+		emit_signal("play_music", currentData["music"])
 	
 	if currentData.has("sfx"):
 		emit_signal("play_sound_effect", currentData["sfx"])
