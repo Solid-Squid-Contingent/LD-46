@@ -43,7 +43,7 @@ var dialogChoices
 var maxDataPosition
 var beforeChoice : bool = false
 var inChoice : bool = false
-var require_eating : bool = false
+var requireEating : bool = false
 
 var currentChapter : int = 1
 
@@ -57,9 +57,22 @@ func _unhandled_input(event):
 			vnTextBox.show_all_text()
 		elif not tamagotchiTextBox.all_text_appeared():
 			tamagotchiTextBox.show_all_text()
-		elif not inChoice and not beforeChoice and not require_eating:
+		elif not inChoice and not beforeChoice and not requireEating:
 			print_next_dialog_line()
 
+func savedProperties():
+	return ["dataPosition",
+		"dialogChoices",
+		"maxDataPosition",
+		"beforeChoice",
+		"inChoice",
+		"requireEating",
+		"currentChapter"]
+		
+		
+func start_dialog():
+	execute_advance_side_effects(get_current_dialog_data())
+	print_current_dialog_line()
 
 func load_file(fileName):
 	var data_file = File.new()
@@ -90,58 +103,54 @@ func get_current_dialog_data():
 
 
 func print_next_dialog_line():
+	go_to_next_line()
+	print_current_dialog_line()
+
+func go_to_next_line():
+	while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
+		dataPosition.pop_back()
+		maxDataPosition.pop_back()
+		dialogChoices.pop_back()
+	
+	if dataPosition.size() > 0:
+		dataPosition[dataPosition.size() - 1] += 1
+	
+	emit_signal("advance_dialog")
+	execute_advance_side_effects(get_current_dialog_data())
+
+func print_current_dialog_line():
 	if dataPosition.size() == 0:
 		emit_signal("game_ended")
 		return
-		
-	emit_signal("advance_dialog")
 	
 	var currentData = get_current_dialog_data()
 	
-	execute_side_effects(currentData)
+	execute_print_side_effects(currentData)
 	
 	if currentData.has("name") and currentData["name"] == "Squid":
 		tamagotchiTextBox.set_text(currentData["text"])
 	else:
-		if currentData.has("name"):
-			vnTextBox.set_name(currentData["name"])
-		
-		if currentData.has("talking_name"):
-			emit_signal("start_talking", currentData["talking_name"])
-		elif currentData.has("name"):
-			if currentData["name"].length() != 0:
-				emit_signal("start_talking", currentData["name"])
-		else:
-			emit_signal("start_talking", "")
-			
 		vnTextBox.set_text(currentData["text"])
 	
 	if currentData.has("choices"):
 		beforeChoice = true
-	else:
-		while dataPosition.size() > 0 and dataPosition[dataPosition.size() - 1] + 1 >= maxDataPosition[dataPosition.size() - 1]:
-			dataPosition.pop_back()
-			maxDataPosition.pop_back()
-			dialogChoices.pop_back()
-		
-		if dataPosition.size() > 0:
-			dataPosition[dataPosition.size() - 1] += 1
 	
 	if currentData["text"].length() == 0:
 		print_next_dialog_line()
 
-
-func execute_side_effects(currentData):
-	if currentData.has("music"):
-		emit_signal("play_music", currentData["music"])
-		
+func execute_advance_side_effects(currentData):
 	if currentData.has("new_chapter"):
 		emit_signal("new_chapter", currentChapter, currentData["new_chapter"])
 		currentChapter += 1
-		
+	
 	for need in ["reduce_fullness", "reduce_awakeness", "reduce_fun", "reduce_happiness", "reduce_everything"]:
 		if currentData.has(need):
 			emit_signal(need, currentData[need])
+		
+
+func execute_print_side_effects(currentData):
+	if currentData.has("music"):
+		emit_signal("play_music", currentData["music"])
 	
 	if currentData.has("sfx"):
 		emit_signal("play_sound_effect", currentData["sfx"])
@@ -161,8 +170,20 @@ func execute_side_effects(currentData):
 	if currentData.has("squid_stage"):
 		emit_signal("change_squid_stage", currentData["squid_stage"])
 	
-	if currentData.has("require_eating"):
-		require_eating = true
+	if currentData.has("requireEating"):
+		requireEating = true
+	
+	if currentData.has("name") and currentData["name"] != "Squid":
+			vnTextBox.set_name(currentData["name"])
+	
+	if not currentData.has("name") or currentData["name"] != "Squid":
+		if currentData.has("talking_name"):
+			emit_signal("start_talking", currentData["talking_name"])
+		elif currentData.has("name"):
+			if currentData["name"].length() != 0:
+				emit_signal("start_talking", currentData["name"])
+		else:
+			emit_signal("start_talking", "")
 
 func spawn_choice_buttons():
 	beforeChoice = false
@@ -199,8 +220,8 @@ func _on_VNTextBox_all_text_appeared():
 
 
 func _on_Tamagotchi_eat():
-	if require_eating and vnTextBox.all_text_appeared() and tamagotchiTextBox.all_text_appeared():
-		require_eating = false
+	if requireEating and vnTextBox.all_text_appeared() and tamagotchiTextBox.all_text_appeared():
+		requireEating = false
 		print_next_dialog_line()
 
 

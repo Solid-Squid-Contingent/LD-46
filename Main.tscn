@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -20,18 +20,25 @@
 [ext_resource path="res://Resources/Graphics/GeneralUI/title_Screen.png" type="Texture" id=18]
 [ext_resource path="res://GeneralUIScripts/MenuButtonDialogPlayer.gd" type="Script" id=19]
 [ext_resource path="res://Resources/Sounds/click.wav" type="AudioStream" id=20]
+[ext_resource path="res://GeneralUIScripts/SaveManager.gd" type="Script" id=21]
+[ext_resource path="res://GeneralUIScenes/LoadingScreen.tscn" type="PackedScene" id=22]
+[ext_resource path="res://GeneralUIScenes/SavingScreen.tscn" type="PackedScene" id=23]
+[ext_resource path="res://GeneralUIScenes/SaveDeletingScreen.tscn" type="PackedScene" id=24]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="CharacterView" parent="." instance=ExtResource( 5 )]
+[node name="CharacterView" parent="." groups=[
+"Persistent",
+] instance=ExtResource( 5 )]
 position = Vector2( 360, 2.38419e-07 )
 scale = Vector2( 5, 5 )
 
-[node name="Tamagotchi" parent="." instance=ExtResource( 2 )]
+[node name="Tamagotchi" parent="." groups=[
+"Persistent",
+] instance=ExtResource( 2 )]
 scale = Vector2( 5, 5 )
 needDecayPerSecond = 0.25
-agingPerSecond = 0
 
 [node name="TamagotchiTextBox" parent="." instance=ExtResource( 4 )]
 position = Vector2( 0, 435 )
@@ -41,9 +48,14 @@ scale = Vector2( 5, 5 )
 position = Vector2( 360, 435 )
 scale = Vector2( 5, 5 )
 
-[node name="DialogManager" type="Node" parent="."]
+[node name="DialogManager" type="Node" parent="." groups=[
+"Persistent",
+]]
 script = ExtResource( 6 )
 startFileName = "res://Resources/Dialog/dialogue.json"
+
+[node name="SaveManager" type="Node" parent="."]
+script = ExtResource( 21 )
 
 [node name="GameOverScreen" parent="." instance=ExtResource( 7 )]
 visible = false
@@ -74,6 +86,15 @@ visible = false
 pause_mode = 2
 visible = false
 
+[node name="LoadingScreen" parent="." instance=ExtResource( 22 )]
+visible = false
+
+[node name="SaveDeletingScreen" parent="." instance=ExtResource( 24 )]
+visible = false
+
+[node name="SavingScreen" parent="." instance=ExtResource( 23 )]
+visible = false
+
 [node name="EndScreen" parent="." instance=ExtResource( 15 )]
 visible = false
 
@@ -93,7 +114,7 @@ stream = ExtResource( 13 )
 bus = "SoundEffects"
 script = ExtResource( 14 )
 
-[node name="MenuButtonDialogPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MenuButtonPlayer" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 20 )
 bus = "SoundEffects"
@@ -106,7 +127,7 @@ script = ExtResource( 19 )
 [connection signal="start_talking" from="TamagotchiTextBox" to="Tamagotchi" method="_on_TamagotchiTextBox_start_talking"]
 [connection signal="all_text_appeared" from="VNTextBox" to="DialogManager" method="_on_VNTextBox_all_text_appeared"]
 [connection signal="advance_dialog" from="DialogManager" to="AdvanceDialogPlayer" method="_on_DialogManager_advance_dialog"]
-[connection signal="button_pressed" from="DialogManager" to="MenuButtonDialogPlayer" method="_on_DialogManager_button_pressed"]
+[connection signal="button_pressed" from="DialogManager" to="MenuButtonPlayer" method="_on_DialogManager_button_pressed"]
 [connection signal="change_background" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_background"]
 [connection signal="change_characters" from="DialogManager" to="CharacterView" method="_on_DialogManager_change_characters"]
 [connection signal="change_squid_stage" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_change_squid_stage"]
@@ -123,30 +144,41 @@ script = ExtResource( 19 )
 [connection signal="start_talking" from="DialogManager" to="CharacterView" method="_on_DialogManager_start_talking"]
 [connection signal="turn_tamagotchi_off" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_off"]
 [connection signal="turn_tamagotchi_on" from="DialogManager" to="Tamagotchi" method="_on_DialogManager_turn_tamagotchi_on"]
+[connection signal="loading_error" from="SaveManager" to="LoadingScreen" method="_on_SaveManager_loading_error"]
 [connection signal="QuitButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="GameOverScreen" to="." method="_on_GameOverScreen_RestartButton_pressed"]
-[connection signal="button_pressed" from="GameOverScreen" to="MenuButtonDialogPlayer" method="_on_GameOverScreen_button_pressed"]
+[connection signal="button_pressed" from="GameOverScreen" to="MenuButtonPlayer" method="_on_GameOverScreen_button_pressed"]
 [connection signal="hide_screen" from="ChapterScreen" to="." method="_on_ChapterScreen_hide_screen"]
 [connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
 [connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
 [connection signal="ContinueButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="DeleteButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_DeleteButton_pressed"]
+[connection signal="LoadButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_LoadButton_pressed"]
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
-[connection signal="button_pressed" from="MenuScreen" to="MenuButtonDialogPlayer" method="_on_MenuScreen_button_pressed"]
+[connection signal="SaveButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_SaveButton_pressed"]
+[connection signal="button_pressed" from="MenuScreen" to="MenuButtonPlayer" method="_on_MenuScreen_button_pressed"]
 [connection signal="gui_input" from="StartScreen" to="StartScreen" method="_on_StartScreen_gui_input"]
+[connection signal="hide_screen" from="StartScreen" to="MenuButtonPlayer" method="_on_StartScreen_hide_screen"]
 [connection signal="hide_screen" from="StartScreen" to="." method="_on_StartScreen_hide_screen"]
-[connection signal="hide_screen" from="StartScreen" to="MenuButtonDialogPlayer" method="_on_StartScreen_hide_screen"]
-[connection signal="ContinueButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_ContinueButton_pressed"]
+[connection signal="DeleteButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_DeleteButton_pressed"]
+[connection signal="LoadButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_LoadButton_pressed"]
 [connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
-[connection signal="button_pressed" from="StartMenuScreen" to="MenuButtonDialogPlayer" method="_on_StartMenuScreen_button_pressed"]
+[connection signal="StartButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_StartButton_pressed"]
+[connection signal="button_pressed" from="StartMenuScreen" to="MenuButtonPlayer" method="_on_StartMenuScreen_button_pressed"]
 [connection signal="backButton_pressed" from="OptionsScreen" to="." method="_on_OptionsScreen_backButton_pressed"]
-[connection signal="button_pressed" from="OptionsScreen" to="MenuButtonDialogPlayer" method="_on_OptionsScreen_button_pressed"]
-[connection signal="change_music_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_music_volume"]
-[connection signal="change_resolution" from="OptionsScreen" to="." method="_on_OptionsScreen_change_resolution"]
-[connection signal="change_soundeffects_volume" from="OptionsScreen" to="." method="_on_OptionsScreen_change_soundeffects_volume"]
-[connection signal="toggle_fullscreen" from="OptionsScreen" to="." method="_on_OptionsScreen_toggle_fullscreen"]
-[connection signal="button_pressed" from="EndScreen" to="MenuButtonDialogPlayer" method="_on_EndScreen_button_pressed"]
+[connection signal="button_pressed" from="OptionsScreen" to="MenuButtonPlayer" method="_on_OptionsScreen_button_pressed"]
+[connection signal="backButton_pressed" from="LoadingScreen" to="." method="_on_LoadingScreen_backButton_pressed"]
+[connection signal="button_pressed" from="LoadingScreen" to="MenuButtonPlayer" method="_on_LoadingScreen_button_pressed"]
+[connection signal="loadButton_pressed" from="LoadingScreen" to="." method="_on_LoadingScreen_loadButton_pressed"]
+[connection signal="backButton_pressed" from="SaveDeletingScreen" to="." method="_on_SaveDeletingScreen_backButton_pressed"]
+[connection signal="button_pressed" from="SaveDeletingScreen" to="MenuButtonPlayer" method="_on_SaveDeletingScreen_button_pressed"]
+[connection signal="deleteButton_pressed" from="SaveDeletingScreen" to="." method="_on_SaveDeletingScreen_deleteButton_pressed"]
+[connection signal="backButton_pressed" from="SavingScreen" to="." method="_on_SavingScreen_backButton_pressed"]
+[connection signal="button_pressed" from="SavingScreen" to="MenuButtonPlayer" method="_on_SavingScreen_button_pressed"]
+[connection signal="save" from="SavingScreen" to="." method="_on_SavingScreen_save"]
+[connection signal="button_pressed" from="EndScreen" to="MenuButtonPlayer" method="_on_EndScreen_button_pressed"]
 [connection signal="hide_screen" from="EndScreen" to="." method="_on_EndScreen_hide_screen"]
 [connection signal="finished" from="MusicPlayer" to="MusicPlayer" method="_on_AudioPlayer_finished"]

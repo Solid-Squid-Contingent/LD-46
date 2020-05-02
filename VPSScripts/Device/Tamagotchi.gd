@@ -41,25 +41,22 @@ onready var stageNameMap = {
 	"adult" : STAGE.adult,
 	"old" : STAGE.old}
 
-var age: float = 0
-var stage: int = STAGE.egg
-var state: int = STATE.home
-var sleeping: bool = false
+var stage: int = STAGE.egg setget change_stage_to_without_animation
+var state: int = STATE.home setget change_state_to
+var sleeping: bool = false setget set_sleeping
 
-var fullness: float = 100
-var awakeness: float = 100
-var fun: float = 100
-var happiness: float = 100
+var fullness: float = 100 setget set_fullness
+var awakeness: float = 100 setget set_awakeness
+var fun: float = 100 setget set_fun
+var happiness: float = 100 setget set_happiness
 
 var needDecay: float = 0
+
 export(float) var needDecayPerSecond: float = 1
-export(int) var agingPerSecond: int = 5
-
 export(float) var needGain = 10
-
 export(int) var minimumNeedAfterDialog: int = 15
 
-var minigameScreenScene = preload("res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn")
+const minigameScreenScene = preload("res://VPSScenes/Minigame/TamagotchiMinigameScreen.tscn")
 onready var minigameScreen = $Screen/MinigameScreen
 
 onready var fullProgressBar = $Screen/HomeScreen/UIContainer/FullnessUI/TextureProgress
@@ -89,26 +86,51 @@ func _process(delta):
 				change_fun(-0.5)
 				change_happiness(-0.5)
 				change_awakeness(10)
-	
-	if state == STATE.home:
-		age += delta * agingPerSecond
-		if stage < STAGE.old and age > 100:
-			change_stage_to(stage + 1)
-			age = 0
+
+func savedProperties():
+	return ["stage",
+		"state",
+		"fullness",
+		"awakeness",
+		"fun",
+		"happiness"]
 
 func is_animating() -> bool:
 	return $Screen/HomeScreen.is_animating()
+	
+func set_sleeping(newState):
+	sleeping = newState
+	if sleeping:
+		emit_signal("start_sleeping")
+	else:
+		emit_signal("end_sleeping")
 
 func toggle_sleep():
 	if is_satisfied(awakeness) and not sleeping:
 		emit_signal("refuse")
 	else:
-		sleeping = not sleeping
-		if sleeping:
-			emit_signal("start_sleeping")
-		else:
-			emit_signal("end_sleeping")
-	
+		set_sleeping(not sleeping)
+
+func set_fullness(newFullness):
+	fullness = newFullness
+	fullProgressBar.value = fullness
+	react_to_low_needs()
+
+func set_awakeness(newAwakeness):
+	awakeness = newAwakeness
+	awakeProgressBar.value = awakeness
+	react_to_low_needs()
+
+func set_fun(newFun):
+	fun = newFun
+	funProgressBar.value = fun
+	react_to_low_needs()
+
+func set_happiness(newHappiness):
+	happiness = newHappiness
+	petHappyProgressBar.value = happiness
+	sickHappyProgressBar.value = happiness
+	react_to_low_needs()
 
 func change_fullness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(fullness):
@@ -116,25 +138,19 @@ func change_fullness(amount, minValue = 0):
 	else:
 		if amount > 0:
 			emit_signal("eat")
-		fullness = clamp(fullness + amount, min(minValue, fullness), 100)
-		fullProgressBar.value = fullness
-		react_to_low_needs()
+		set_fullness(clamp(fullness + amount, min(minValue, fullness), 100))
 
 func change_awakeness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(awakeness):
 		toggle_sleep()
 	else:
-		awakeness = clamp(awakeness + amount, min(minValue, awakeness), 100)
-		awakeProgressBar.value = awakeness
-		react_to_low_needs()
+		set_awakeness(clamp(awakeness + amount, min(minValue, awakeness), 100))
 
 func change_fun(amount, minValue = 0):
 	if amount > 0 and is_satisfied(fun):
 		emit_signal("refuse")
 	else:
-		fun = clamp(fun + amount, min(minValue, fun), 100)
-		funProgressBar.value = fun
-		react_to_low_needs()
+		set_fun(clamp(fun + amount, min(minValue, fun), 100))
 
 func change_happiness(amount, minValue = 0):
 	if amount > 0 and is_satisfied(happiness):
@@ -142,10 +158,7 @@ func change_happiness(amount, minValue = 0):
 	else:
 		if amount > 0:
 			emit_signal("happy")
-		happiness = clamp(happiness + amount, min(minValue, happiness), 100)
-		petHappyProgressBar.value = happiness
-		sickHappyProgressBar.value = happiness
-		react_to_low_needs()
+		set_happiness(clamp(happiness + amount, min(minValue, happiness), 100))
 
 func change_all_needs(amount, minValue = 0):
 	change_fullness(amount, minValue)
@@ -171,9 +184,7 @@ func react_to_low_needs():
 func die():
 	emit_signal("tamagotchi_died")
 
-func change_stage_to(newStage):
-	if stage == STAGE.egg:
-		emit_signal("hatch")
+func change_stage_to_without_animation(newStage):
 	if newStage == STAGE.egg and state == STATE.minigame:
 		restart_minigame()
 		switch_to_home()
@@ -183,6 +194,11 @@ func change_stage_to(newStage):
 	show_sprite(stage)
 	if stage == STAGE.old:
 		emit_signal("switch_to_sick")
+
+func change_stage_to(newStage):
+	if stage == STAGE.egg:
+		emit_signal("hatch")
+	change_stage_to_without_animation(newStage)
 	
 func is_satisfied(need) -> bool:
 	if need >= 100:
@@ -225,6 +241,16 @@ func switch_to_home():
 	$Screen/GameOverScreen.visible = false
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.home
+
+func change_state_to(newState):
+	if newState == STATE.off:
+		switch_to_off()
+	elif newState == STATE.gameOver:
+		switch_to_gameOver()
+	elif newState == STATE.home:
+		switch_to_home()
+	elif newState == STATE.minigame:
+		switch_to_minigame()
 
 func restart_minigame():
 	minigameScreen.queue_free()

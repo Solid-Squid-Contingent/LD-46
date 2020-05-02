@@ -12,7 +12,6 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
-agingPerSecond = 15
 needGain = 20.0
 
 [node name="Screen" parent="." instance=ExtResource( 1 )]
