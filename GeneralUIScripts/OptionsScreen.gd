@@ -85,7 +85,6 @@ func save_options():
 	
 	var saveFile = File.new()
 	saveFile.open(optionsFileName, File.WRITE)
-	var saveNodes = get_tree().get_nodes_in_group("Persistent")
 	saveFile.store_line(to_json(optionsData))
 	saveFile.close()
 

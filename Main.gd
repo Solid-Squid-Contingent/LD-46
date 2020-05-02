@@ -112,5 +112,3 @@ func _on_SavingScreen_backButton_pressed():
 
 func _on_SavingScreen_save(fileName):
 	$SaveManager.save_game(fileName)
-	hide_screen($SavingScreen)
-	hide_screen($MenuScreen)

@@ -89,6 +89,7 @@ visible = false
 visible = false
 
 [node name="SavingScreen" parent="." instance=ExtResource( 23 )]
+visible = false
 
 [node name="EndScreen" parent="." instance=ExtResource( 15 )]
 visible = false
