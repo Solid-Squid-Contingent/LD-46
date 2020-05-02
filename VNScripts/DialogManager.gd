@@ -52,7 +52,14 @@ func _ready():
 	load_file(startFileName)
 
 func _unhandled_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+	if event.is_action_pressed("choice_1"):
+		pick_choice(1)
+	elif event.is_action_pressed("choice_2"):
+		pick_choice(2)
+	elif event.is_action_pressed("choice_3"):
+		pick_choice(3)
+	elif event.is_action_pressed("advance") or \
+	  event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		if not vnTextBox.all_text_appeared():
 			vnTextBox.show_all_text()
 		elif not tamagotchiTextBox.all_text_appeared():
@@ -188,8 +195,7 @@ func spawn_choice_buttons():
 		button.connect("pressed", self, "_on_ChoiceButtonPressed", [i])
 		choiceButtonContainer.add_child(button)
 
-
-func _on_ChoiceButtonPressed(choice):
+func pick_choice(choice):
 	if inChoice:
 		var currentData = get_current_dialog_data()
 		
@@ -204,6 +210,10 @@ func _on_ChoiceButtonPressed(choice):
 		emit_signal("button_pressed")
 		
 		print_next_dialog_line()
+
+
+func _on_ChoiceButtonPressed(choice):
+	pick_choice(choice)
 
 
 func _on_VNTextBox_all_text_appeared():
