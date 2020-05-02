@@ -64,8 +64,8 @@ func _on_Tamagotchi_switch_to_sick():
 	emit_signal("switch_to_sick")
 
 
-func _on_MinigameScreen_game_over():
-	emit_signal("game_over")
+func _on_MinigameScreen_game_over(score):
+	emit_signal("game_over", score)
 
 
 func _on_Tamagotchi_hatch():

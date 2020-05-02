@@ -107,7 +107,7 @@ position = Vector2( 101, 109 )
 shape = SubResource( 2 )
 
 [node name="EnemySpawnTimer" type="Timer" parent="."]
-wait_time = 2.5
+wait_time = 1.5
 autostart = true
 
 [node name="DifficultyIncreaseTimer" type="Timer" parent="."]
@@ -128,6 +128,7 @@ rect_scale = Vector2( 0.1, 0.1 )
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
+align = 2
 [connection signal="area_entered" from="Player" to="." method="_on_Player_area_entered"]
 [connection signal="timeout" from="EnemySpawnTimer" to="." method="_on_EnemySpawnTimer_timeout"]
 [connection signal="timeout" from="DifficultyIncreaseTimer" to="." method="_on_DifficultyIncreaseTimer_timeout"]

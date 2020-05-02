@@ -1,6 +1,6 @@
 extends Container
 
-signal game_over
+signal game_over(score)
 
 const enemyScenes = [
 	preload("res://VPSScenes/Minigame/EnemyFan.tscn"),
@@ -10,9 +10,14 @@ const enemyScenes = [
 ]
 
 const bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
+
 onready var scoreLabel = $ScoreLabel
+onready var heartContainer = $HeartContainer
 onready var spawnTimer = $EnemySpawnTimer
 onready var difficultyTimer = $EnemySpawnTimer
+onready var player = $Player 
+onready var spawnPositionLeft = $EnemySpawnPosition1
+onready var spawnPositionRight = $EnemySpawnPosition2
 
 export (int) var minX = 5
 export (int) var maxX = 65
@@ -24,12 +29,13 @@ var score = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$EnemySpawnTimer.set_paused(true)
+	spawnTimer.set_paused(true)
+	difficultyTimer.set_paused(true)
 
 
 func spawn_enemy():
 	var enemy = enemyScenes[randi() % enemyScenes.size()].instance()
-	enemy.position = $EnemySpawnPosition1.position.linear_interpolate($EnemySpawnPosition2.position, randf())
+	enemy.position = spawnPositionLeft.position.linear_interpolate(spawnPositionRight.position, randf())
 	enemy.position.x -= fmod(enemy.position.x, 5.0)
 	enemy.connect("death", self, "_on_Enemy_death")
 	add_child(enemy)
@@ -39,29 +45,31 @@ func spawn_enemy():
 
 func increase_score():
 	score += 1
-	$ScoreLabel.set_text(String(score))
+	scoreLabel.set_text(String(score))
 
 func move_left():
-	$Player.position.x -= 5
-	if $Player.position.x < minX:
-		$Player.position.x += 5
+	player.position.x -= 5
+	if player.position.x < minX:
+		player.position.x += 5
 
 func move_right():
-	$Player.position.x += 5
-	if $Player.position.x > maxX:
-		$Player.position.x -= 5
+	player.position.x += 5
+	if player.position.x > maxX:
+		player.position.x -= 5
 	
 
 func shoot():
 	var bullet = bulletScene.instance()
-	bullet.position = $Player.position
+	bullet.position = player.position
 	add_child(bullet)
 
 func pause():
-	$EnemySpawnTimer.set_paused(true)
+	spawnTimer.set_paused(true)
+	difficultyTimer.set_paused(true)
 
 func unpause():
-	$EnemySpawnTimer.set_paused(false)
+	spawnTimer.set_paused(false)
+	difficultyTimer.set_paused(false)
 
 	
 func increase_difficulty():
@@ -70,7 +78,7 @@ func increase_difficulty():
 	
 	var thingToIncrease = randi() % 4
 	if thingToIncrease == 0:
-		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.5)
+		spawnTimer.set_wait_time(spawnTimer.get_wait_time() / 1.3)
 	elif thingToIncrease == 1:
 		enemySpeed += 0.5
 	elif thingToIncrease == 2:
@@ -81,16 +89,16 @@ func increase_difficulty():
 
 # warning-ignore:unused_argument
 func _on_Player_area_entered(area):
-	for heart in $HeartContainer.get_children():
+	for heart in heartContainer.get_children():
 		if heart.visible:
 			heart.visible = false
 			break
 	
-	for heart in $HeartContainer.get_children():
+	for heart in heartContainer.get_children():
 		if heart.visible:
 			return
 			
-	emit_signal("game_over")
+	emit_signal("game_over", score)
 
 
 func _on_EnemySpawnTimer_timeout():
