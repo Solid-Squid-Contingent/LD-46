@@ -143,6 +143,7 @@ __meta__ = {
 [node name="PopupPanel" parent="." instance=ExtResource( 6 )]
 visible = false
 [connection signal="text_entered" from="VBoxContainer/MarginContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="item_activated" from="VBoxContainer/ListContainer/ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="item_selected" from="VBoxContainer/ListContainer/ItemList" to="." method="_on_ItemList_item_selected"]
 [connection signal="pressed" from="VBoxContainer/ButtonContainer/HBoxContainer/SaveButton" to="." method="_on_SaveButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

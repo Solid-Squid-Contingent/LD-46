@@ -2,6 +2,7 @@ extends TextureRect
 
 signal QuitButton_pressed()
 signal LoadButton_pressed()
+signal DeleteButton_pressed()
 signal OptionsButton_pressed()
 signal StartButton_pressed()
 signal button_pressed()
@@ -32,4 +33,8 @@ func _on_OptionsButton_pressed():
 
 func _on_StartButton_pressed():
 	emit_signal("StartButton_pressed")
+	emit_signal("button_pressed")
+
+func _on_DeleteButton_pressed():
+	emit_signal("DeleteButton_pressed")
 	emit_signal("button_pressed")

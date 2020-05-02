@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://VPSScenes/Device/Tamagotchi.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://GeneralUIScripts/SaveManager.gd" type="Script" id=21]
 [ext_resource path="res://GeneralUIScenes/LoadingScreen.tscn" type="PackedScene" id=22]
 [ext_resource path="res://GeneralUIScenes/SavingScreen.tscn" type="PackedScene" id=23]
+[ext_resource path="res://GeneralUIScenes/SaveDeletingScreen.tscn" type="PackedScene" id=24]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -88,6 +89,9 @@ visible = false
 [node name="LoadingScreen" parent="." instance=ExtResource( 22 )]
 visible = false
 
+[node name="SaveDeletingScreen" parent="." instance=ExtResource( 24 )]
+visible = false
+
 [node name="SavingScreen" parent="." instance=ExtResource( 23 )]
 visible = false
 
@@ -147,6 +151,7 @@ script = ExtResource( 19 )
 [connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
 [connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
 [connection signal="ContinueButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="DeleteButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_DeleteButton_pressed"]
 [connection signal="LoadButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_LoadButton_pressed"]
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
@@ -156,6 +161,7 @@ script = ExtResource( 19 )
 [connection signal="gui_input" from="StartScreen" to="StartScreen" method="_on_StartScreen_gui_input"]
 [connection signal="hide_screen" from="StartScreen" to="." method="_on_StartScreen_hide_screen"]
 [connection signal="hide_screen" from="StartScreen" to="MenuButtonPlayer" method="_on_StartScreen_hide_screen"]
+[connection signal="DeleteButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_DeleteButton_pressed"]
 [connection signal="LoadButton_pressed" from="StartMenuScreen" to="." method="_on_StartMenuScreen_LoadButton_pressed"]
 [connection signal="OptionsButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="StartMenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
@@ -166,6 +172,9 @@ script = ExtResource( 19 )
 [connection signal="backButton_pressed" from="LoadingScreen" to="." method="_on_LoadingScreen_backButton_pressed"]
 [connection signal="button_pressed" from="LoadingScreen" to="MenuButtonPlayer" method="_on_LoadingScreen_button_pressed"]
 [connection signal="loadButton_pressed" from="LoadingScreen" to="." method="_on_LoadingScreen_loadButton_pressed"]
+[connection signal="backButton_pressed" from="SaveDeletingScreen" to="." method="_on_SaveDeletingScreen_backButton_pressed"]
+[connection signal="button_pressed" from="SaveDeletingScreen" to="MenuButtonPlayer" method="_on_SaveDeletingScreen_button_pressed"]
+[connection signal="deleteButton_pressed" from="SaveDeletingScreen" to="." method="_on_SaveDeletingScreen_deleteButton_pressed"]
 [connection signal="backButton_pressed" from="SavingScreen" to="." method="_on_SavingScreen_backButton_pressed"]
 [connection signal="button_pressed" from="SavingScreen" to="MenuButtonPlayer" method="_on_SavingScreen_button_pressed"]
 [connection signal="save" from="SavingScreen" to="." method="_on_SavingScreen_save"]

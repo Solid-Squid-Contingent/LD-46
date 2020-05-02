@@ -30,3 +30,6 @@ func _on_LoadingScreen_button_pressed():
 
 func _on_SavingScreen_button_pressed():
 	play()
+
+func _on_SaveDeletingScreen_button_pressed():
+	play()

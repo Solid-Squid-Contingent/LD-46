@@ -54,6 +54,7 @@ func abort_overwrite():
 func save_unchecked():
 	emit_signal("save", lineEdit.text)
 	popup_saved_game()
+	Util.update_saves_list(savesList)
 	
 func save():
 	if not lineEdit.text.is_valid_filename():
@@ -81,5 +82,10 @@ func _on_ItemList_item_selected(index):
 	lineEdit.text = $VBoxContainer/ListContainer/ItemList.get_item_text(index)
 
 func _on_SaveButton_pressed():
+	save()
+	emit_signal("button_pressed")
+
+
+func _on_ItemList_item_activated(index):
 	save()
 	emit_signal("button_pressed")

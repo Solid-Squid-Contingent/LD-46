@@ -116,3 +116,15 @@ func _on_SavingScreen_save(fileName):
 
 func _on_MenuScreen_LoadButton_pressed():
 	show_screen($LoadingScreen)
+
+func _on_SaveDeletingScreen_deleteButton_pressed(fileName):
+	$SaveManager.delete_save(fileName)
+
+func _on_SaveDeletingScreen_backButton_pressed():
+	$SaveDeletingScreen.go_away()
+
+func _on_StartMenuScreen_DeleteButton_pressed():
+	show_screen($SaveDeletingScreen)
+
+func _on_MenuScreen_DeleteButton_pressed():
+	show_screen($SaveDeletingScreen)

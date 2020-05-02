@@ -53,3 +53,9 @@ func load_game(fileName):
 					load_object(node, currentData)
 				
 	saveFile.close()
+
+
+func delete_save(fileName):
+	var directory = Directory.new()
+	directory.open("user://saves/")
+	directory.remove(fileName + ".save")

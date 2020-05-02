@@ -6,6 +6,7 @@ signal OptionsButton_pressed()
 signal ContinueButton_pressed()
 signal SaveButton_pressed()
 signal LoadButton_pressed()
+signal DeleteButton_pressed()
 signal button_pressed()
 
 
@@ -41,4 +42,8 @@ func _on_SaveButton_pressed():
 
 func _on_LoadButton_pressed():
 	emit_signal("LoadButton_pressed")
+	emit_signal("button_pressed")
+
+func _on_DeleteButton_pressed():
+	emit_signal("DeleteButton_pressed")
 	emit_signal("button_pressed")

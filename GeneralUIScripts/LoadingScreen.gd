@@ -17,6 +17,11 @@ func popup():
 func go_away():
 	visible = false
 
+func send_load(index):
+	var fileName = savesList.get_item_text(index)
+	emit_signal("loadButton_pressed", fileName)
+	emit_signal("button_pressed")
+
 
 func _on_BackButton_pressed():
 	emit_signal("backButton_pressed")
@@ -24,6 +29,8 @@ func _on_BackButton_pressed():
 
 
 func _on_ItemList_item_activated(index):
-	var fileName = savesList.get_item_text(index)
-	emit_signal("loadButton_pressed", fileName)
-	emit_signal("button_pressed")
+	send_load(index)
+
+
+func _on_LoadButton_pressed():
+	send_load(savesList.get_selected_items()[0])
