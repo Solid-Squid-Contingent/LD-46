@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://VNTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Resources/Graphics/GeneralUI/menu_background.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Fonts/orange-kid.regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://GeneralUIScripts/LoadingScreen.gd" type="Script" id=4]
+[ext_resource path="res://GeneralUIScenes/PopupPanel.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -107,6 +108,8 @@ __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
 }
+
+[node name="PopupPanel" parent="." instance=ExtResource( 5 )]
 [connection signal="item_activated" from="VBoxContainer/ListContainer/ItemList" to="." method="_on_ItemList_item_activated"]
 [connection signal="pressed" from="VBoxContainer/ButtonContainer/HBoxContainer/LoadButton" to="." method="_on_LoadButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/ButtonContainer/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

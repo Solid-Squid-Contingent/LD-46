@@ -99,11 +99,11 @@ func _on_LoadingScreen_backButton_pressed():
 	$LoadingScreen.go_away()
 
 func _on_LoadingScreen_loadButton_pressed(fileName):
-	$SaveManager.load_game(fileName)
-	hide_screen($LoadingScreen)
-	hide_screen($StartMenuScreen)
-	hide_screen($MenuScreen)
-	$DialogManager.print_current_dialog_line()
+	if $SaveManager.load_game(fileName):
+		hide_screen($LoadingScreen)
+		hide_screen($StartMenuScreen)
+		hide_screen($MenuScreen)
+		$DialogManager.print_current_dialog_line()
 
 func _on_MenuScreen_SaveButton_pressed():
 	show_screen($SavingScreen)

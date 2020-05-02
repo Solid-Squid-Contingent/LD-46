@@ -1,5 +1,7 @@
 extends Node
 
+signal loading_error(message)
+
 export(int) var currentSaveVersion
 
 func _ready():
@@ -32,15 +34,17 @@ func load_object(object, data):
 		if propertyName != "filename":
 			object.set(propertyName, data[propertyName])
 
-func load_game(fileName):
+func load_game(fileName) -> bool:
 	var saveFile = File.new()
 	if not saveFile.file_exists("user://saves/" + fileName + ".save"):
-		return # Error! We don't have a save to load. TODO
+		emit_signal("loading_error", "File not found!")
+		return false
 
 	saveFile.open("user://saves/" + fileName + ".save", File.READ)
 	var savedSaveVersion = int(saveFile.get_line())
 	if savedSaveVersion != currentSaveVersion:
-		return # Error! Wrong version. TODO
+		emit_signal("loading_error", "Unfortunately, this version of the game is no longer compatible with the version of the save file. Thus it could not be loaded.")
+		return false
 		
 	while not saveFile.eof_reached():
 		var currentLine = saveFile.get_line()
@@ -53,6 +57,8 @@ func load_game(fileName):
 					load_object(node, currentData)
 				
 	saveFile.close()
+	
+	return true
 
 
 func delete_save(fileName):
