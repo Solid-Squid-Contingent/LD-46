@@ -102,6 +102,7 @@ func _on_LoadingScreen_loadButton_pressed(fileName):
 	$SaveManager.load_game(fileName)
 	hide_screen($LoadingScreen)
 	hide_screen($StartMenuScreen)
+	hide_screen($MenuScreen)
 	$DialogManager.print_current_dialog_line()
 
 func _on_MenuScreen_SaveButton_pressed():
@@ -112,3 +113,6 @@ func _on_SavingScreen_backButton_pressed():
 
 func _on_SavingScreen_save(fileName):
 	$SaveManager.save_game(fileName)
+
+func _on_MenuScreen_LoadButton_pressed():
+	show_screen($LoadingScreen)

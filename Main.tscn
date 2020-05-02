@@ -147,6 +147,7 @@ script = ExtResource( 19 )
 [connection signal="pause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_pause_music"]
 [connection signal="unpause_music" from="ChapterScreen" to="." method="_on_ChapterScreen_unpause_music"]
 [connection signal="ContinueButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_ContinueButton_pressed"]
+[connection signal="LoadButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_LoadButton_pressed"]
 [connection signal="OptionsButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_OptionsButton_pressed"]
 [connection signal="QuitButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_QuitButton_pressed"]
 [connection signal="RestartButton_pressed" from="MenuScreen" to="." method="_on_MenuScreen_RestartButton_pressed"]
