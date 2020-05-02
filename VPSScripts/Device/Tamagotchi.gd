@@ -232,12 +232,11 @@ func switch_to_minigame():
 	get_tree().call_group("minigame_objects", "unpause")
 	state = STATE.minigame
 
-func switch_to_game_over(score = null):
+func switch_to_game_over(score = 0):
 	homeScreen.visible = false
 	minigameScreen.visible = false
 	gameOverScreen.visible = true
-	if score:
-		gameOverScreen.set_score(score)
+	gameOverScreen.set_score(score)
 	get_tree().call_group("minigame_objects", "pause")
 	state = STATE.gameOver
 
