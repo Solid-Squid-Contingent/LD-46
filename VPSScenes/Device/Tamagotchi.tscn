@@ -39,32 +39,40 @@ margin_left = 11.1712
 margin_top = 79.0614
 margin_right = 16.1712
 margin_bottom = 84.0614
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 
 [node name="SleepButton" parent="." instance=ExtResource( 3 )]
 margin_left = 25.9398
 margin_top = 79.1765
 margin_right = 30.9398
 margin_bottom = 84.1765
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 
 [node name="PlayButton" parent="." instance=ExtResource( 3 )]
 margin_left = 41.2678
 margin_top = 79.1902
 margin_right = 46.2678
 margin_bottom = 84.1902
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 
 [node name="ExtraButton" parent="." instance=ExtResource( 3 )]
 margin_left = 55.6821
 margin_top = 79.15
 margin_right = 60.6821
 margin_bottom = 84.15
+focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+enabled_focus_mode = 0
 
 [node name="ButtonAudioPlayer" type="AudioStreamPlayer" parent="."]
 bus = "SoundEffects"

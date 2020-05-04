@@ -199,9 +199,11 @@ func die():
 	emit_signal("tamagotchi_died")
 
 func change_stage_to_without_animation(newStage):
-	if newStage == STAGE.egg and state == STATE.minigame:
-		restart_minigame()
-		switch_to_home()
+	if newStage == STAGE.egg:
+		if state == STATE.minigame:
+			restart_minigame()
+		if state != STATE.home:
+			switch_to_home()
 		
 	hide_sprite(stage)
 	stage = newStage
@@ -287,7 +289,7 @@ func press_food_button():
 		switch_to_home()
 	elif state == STATE.minigame:
 		minigameScreen.move_left()
-	elif not is_animating() and state != STATE.off:
+	elif not is_animating() and state != STATE.off and stage != STAGE.egg:
 		if sleeping:
 			toggle_sleep()
 		change_fullness(needGain)
@@ -299,7 +301,7 @@ func press_sleep_button():
 		switch_to_home()
 	elif state == STATE.minigame:
 		minigameScreen.shoot()
-	elif not is_animating() and state != STATE.off:
+	elif not is_animating() and state != STATE.off and stage != STAGE.egg:
 		toggle_sleep()
 
 
@@ -309,11 +311,10 @@ func press_play_button():
 		switch_to_home()
 	elif state == STATE.minigame:
 		minigameScreen.move_right()
-	elif not is_animating() and state != STATE.off:
+	elif not is_animating() and state != STATE.off and stage != STAGE.egg:
 		if sleeping:
 			toggle_sleep()
-		if stage != STAGE.egg:
-			switch_to_minigame()
+		switch_to_minigame()
 
 
 func press_extra_button():
@@ -323,7 +324,7 @@ func press_extra_button():
 	elif state == STATE.minigame:
 		restart_minigame()
 		switch_to_home()
-	elif not is_animating() and state != STATE.off:
+	elif not is_animating() and state != STATE.off and stage != STAGE.egg:
 		if sleeping:
 			toggle_sleep()
 		change_happiness(needGain)

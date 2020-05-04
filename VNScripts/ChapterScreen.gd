@@ -33,7 +33,8 @@ func _on_Main_new_chapter(number, subtitle):
 
 
 func _on_ChapterScreen_gui_input(event):
-	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+	if event.is_action_pressed("advance") or \
+	  event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		if $TitleAppearTimer.is_stopped() and $SubtitleAppearTimer.is_stopped():
 			emit_signal("hide_screen")
 
