@@ -53,11 +53,11 @@ func _ready():
 
 func _unhandled_input(event):
 	if event.is_action_pressed("choice_1"):
-		pick_choice(1)
+		pick_choice(0)
 	elif event.is_action_pressed("choice_2"):
-		pick_choice(2)
+		pick_choice(1)
 	elif event.is_action_pressed("choice_3"):
-		pick_choice(3)
+		pick_choice(2)
 	elif event.is_action_pressed("advance") or \
 	  event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
 		if not vnTextBox.all_text_appeared():
@@ -216,7 +216,7 @@ func pick_choice(choice):
 		inChoice = false
 		emit_signal("button_pressed")
 		
-		print_next_dialog_line()
+		print_current_dialog_line()
 
 
 func _on_ChoiceButtonPressed(choice):
