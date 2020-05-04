@@ -5,6 +5,10 @@ signal hide_screen
 func _ready():
 	pass
 
+func _input(event):
+	if visible and event.is_action_pressed("advance"):
+		emit_signal("hide_screen")
+
 func popup():
 	visible = true
 
