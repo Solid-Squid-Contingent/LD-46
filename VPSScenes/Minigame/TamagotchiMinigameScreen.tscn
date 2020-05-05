@@ -115,6 +115,10 @@ wait_time = 2.0
 one_shot = true
 autostart = true
 
+[node name="PlayerShootTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [node name="Enemy" parent="." instance=ExtResource( 4 )]
 position = Vector2( 31.1977, 75.4453 )
 

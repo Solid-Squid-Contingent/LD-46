@@ -161,9 +161,7 @@ func change_awakeness(amount, minValue = 0):
 		set_awakeness(clamp(awakeness + amount, min(minValue, awakeness), 100))
 
 func change_fun(amount, minValue = 0):
-	if amount > 0 and is_satisfied(fun):
-		emit_signal("refuse")
-	else:
+	if amount < 0 or not is_satisfied(fun):
 		set_fun(clamp(fun + amount, min(minValue, fun), 100))
 
 func change_happiness(amount, minValue = 0):

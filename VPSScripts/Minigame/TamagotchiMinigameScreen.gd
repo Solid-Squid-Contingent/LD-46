@@ -13,9 +13,12 @@ const bulletScene = preload("res://VPSScenes/Minigame/Bullet.tscn")
 
 onready var scoreLabel = $ScoreLabel
 onready var heartContainer = $HeartContainer
-onready var spawnTimer = $EnemySpawnTimer
-onready var difficultyTimer = $EnemySpawnTimer
 onready var player = $Player 
+
+onready var spawnTimer = $EnemySpawnTimer
+onready var difficultyTimer = $DifficultyIncreaseTimer
+onready var shootTimer = $PlayerShootTimer
+
 onready var spawnPositionLeft = $EnemySpawnPosition1
 onready var spawnPositionRight = $EnemySpawnPosition2
 
@@ -59,9 +62,11 @@ func move_right():
 	
 
 func shoot():
-	var bullet = bulletScene.instance()
-	bullet.position = player.position
-	add_child(bullet)
+	if shootTimer.is_stopped():
+		shootTimer.start()
+		var bullet = bulletScene.instance()
+		bullet.position = player.position
+		add_child(bullet)
 
 func pause():
 	spawnTimer.set_paused(true)
